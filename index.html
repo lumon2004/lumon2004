@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <style>
+    body {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      background-image: url('https://manofmany.com/wp-content/uploads/2020/03/Zoom-background-The-Simpsons.jpg');
+      background-repeat: repeat-x;
+      background-size: 100%;
+    }
+    #container {
+      width: 90vw;
+      height: 80vh;
+      margin: 5vw;
+      margin-bottom: 0;
+      border-radius: 2px;
+      background-color: rgb(255, 247, 192);
+      box-shadow: 10px 10px 35px lightgrey;
+    }
+    #container > div {
+      width: 55vw;
+      height: 70vh;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-left: 18vw;
+      margin-top: 5vh;
+      display: inline-flex;
+    }
+    #container img {
+      width: 90vw;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      background-image: url('image-product-desktop.jpg');
+      background-size: 27.25vw;
+    }
+    #container h6, #container h1, #container p, #container h2, #container h5 {
+      margin: 0;
+    }
+    #container h6 {
+      text-transform: uppercase;
+      letter-spacing: 0.5vw;
+      color: grey;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 5vh;
+    }
+    #container h1 {
+      font-size: 4vw;
+      margin-top: 2vh;
+      line-height: 0.9;
+    }
+    #container p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: grey;
+      margin-top: 2vh;
+      font-size: 1.5vw;
+    }
+    #container h2 {
+      color: green;
+      font-size: 3.25vw;
+      font-family: 'Darker Grotesque', sans-serif;
+    }
+    #container h5 {
+      color: grey;
+      text-decoration: line-through;
+      margin-top: 3.75vh;
+      margin-left: 1vw;
+      font-family: 'Darker Grotesque', sans-serif;
+    }
+    .material-symbols-outlined {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 7vw;
+    }
+    #cart {
+      display: flex; 
+      margin-top: 3vh; 
+      background-color: green; 
+      border-radius: 10px; 
+      height: 5vh; 
+      color: white; 
+      cursor: pointer;
+    }
+    #cart :nth-child(2) {
+      margin: auto; 
+      margin-left: 1vw;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    @media screen and (max-width: 415px) {
+      body {
+        background-image: none;
+        width: 100%;
+      }
+      #container {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+      }
+      #container > div {
+        margin-left: 5vw;
+        margin-top: 3vh;
+        width: 90vw;
+        display: block;
+        position: absolute;
+        height: 90vh;
+      }
+      #container img {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+        width: 90vw;
+        background-image: url('image-product-mobile.jpg');
+        background-size: 100vw;
+      }
+      #container h6 {
+        margin-top: 2vh;
+        font-size: 2.5vw;
+        letter-spacing: 1.5vw;
+      }
+      #container h1 {
+        font-size: 9vw;
+      }
+      #container p {
+        font-size: 4.52vw;
+        line-height: 1.35;
+      }
+      #container h2 {
+        font-size: 10vw;
+      }
+      #container h5 {
+        font-size: 4.5vw;
+        margin-top: 2.5vh;
+      }
+      #cart {
+        height: 7vh;
+        
+      }
+      #cart span:nth-child(1) {
+        font-size: 6vw;
+        margin-left: auto;
+      }
+      #cart span:nth-child(2) {
+        font-size: 4vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--Preview
+    Add to Cart
+  -->
+  <div id="container">
+    <div>
+      <img alt="" src="" id="images">
+      <div style="display: block; padding-left: 3vw; padding-right: 3vw;">
+        <h6>perfume</h6>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+        <div style="display: flex; margin-top: 3vh;">
+          <h2>$149.99</h2>
+          <h5>$169.99</h5>
+        </div>
+        <div id="cart">
+          <span class="material-symbols-outlined">shopping_cart</span>
+          <span>Add to Cart</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function changeImage() {
+      if (document.offsetWidth >= 415) {
+        document.getElementById('images').style.backgroundImage="url('image-product-desktop.jpg')";
+      } else if (document.offsetWidth <= 414) {
+        document.getElementById('images').style.backgroundImage="url('file:///Users/lucamonaco/Library/Mobile%20Documents/com~apple~CloudDocs/Documents/Coding/Product%20preview%20card%20component/images/image-product-mobile.jpg')";
+      }
+    }
+  </script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Luca Monaco</a>.
+  </div>
+</body>
+</html>
