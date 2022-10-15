@@ -18,6 +18,9 @@
         p {
             font-size: 1vw;
         }
+        ul#links {
+            padding-inline-start: 0;
+        }
         ul#links li {
             list-style-type: none;
             background-color: rgb(196, 196, 196);
@@ -33,14 +36,28 @@
             text-decoration: none;
             color: blue;
         }
+        @media screen and (max-width: 415px) {
+            h1 {
+                font-size: 6vw;
+                margin-top: 7vh;
+                margin-left: 5%;
+                width: 90%;
+            }
+            p {
+                font-size: 4vw;
+                margin-left: 5%;
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Click the links below to check my Frontend Mentor Challenges solutions</h1>
-    <p>Hi, I'm Luca Monaco, I'm a 18yo student and in these links below there are my Frontend Mentor Challenges solutions</p>
+    <p>Hi, I'm Luca Monaco, I'm a 18yo student and in these links below there are my Frontend Mentor Challenges solutions. <br>Check 'em out!</p>
     <ul id="links">
         <li><a href="https://lumon2004.github.io/lumon2004/Product%20preview%20card%20component/" target="_blank">Product preview card component</a></li>
         <li><a href="https://lumon2004.github.io/lumon2004/Interactive%20rating%20component/" target="_blank">Interactive rating component</a></li>
+        <li><a href="https://lumon2004.github.io/lumon2004/QR%20code%20component/" target="_blank">QR code component</a></li>
     </ul>
 </body>
 </html>
