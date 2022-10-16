@@ -1,1 +1,138 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | NFT preview card component</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(0, 100%, 36%); }
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+    body {
+        /*overflow: hidden;*/
+        margin: 0;
+        /*font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
+        font-family: 'Cabin', sans-serif;
+        background-color: rgb(0, 0, 152);
+        color: #fff;
+    }
+    #container {
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(0, 0, 78);
+        border-radius: 20px;
+        padding: 2%;
+        margin-top: 10vh;
+        margin-bottom: 0.5vh;
+    }
+    #container > img {
+        width: 100%;
+        border-radius: 20px;
+    }
+    #container > img:hover + img#aquaScreen {
+        visibility: visible;
+    }
+    img#aquaScreen {
+        background-color: rgba(99, 255, 255, 0.5);
+        position: absolute;
+        z-index: 9;
+        width: 2.5%;
+        padding: 8.75%;
+        top: 13.65%;
+        border-radius: 20px;
+        visibility: hidden;
+        right: 40%;
+    }
+    img#aquaScreen:hover {
+        visibility: visible;
+    }
+    #container p {
+        color: rgb(129, 148, 199);
+    }
+    hr {
+        border: 0.5px solid rgb(129, 148, 199);
+        margin-bottom: 5%;
+    }
+    #price div {
+        display: flex;
+        width: 50%;
+    }
+    #price div:first-of-type h3 {
+        margin-left: 5%;
+        color: rgb(99, 255, 255);
+    }
+    #price div:last-of-type {
+        color: rgb(129, 148, 199);
+    }
+    #price div:last-of-type img {
+        margin-left: auto;
+        margin-right: 3%;
+    }
+    #credit img {
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 15%;
+        margin-right: 5%;
+    }
+    #credit h4 {
+        color: rgb(129, 148, 199);
+        font-weight: 100;
+    }
+    #credit h4 > span {
+        color: #fff;
+        font-weight: 900;
+    }
+    #credit h4 > span:hover, #container h1:hover {
+        color: rgb(99, 255, 255);
+        cursor: pointer;
+    }
+    @media screen and (max-width: 415px) {
+        #container {
+            width: 80%;
+            margin-top: 3vh;
+            padding: 5%;
+        }
+        img#aquaScreen {
+            top: 5.8%;
+            padding: 30%;
+            margin-right: -30%;
+            width: 20%;
+        }
+        #credit img {
+            width: 18%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img alt="NFT" src="image-equilibrium.jpg">
+        <img id="aquaScreen" alt="View icon" src="icon-view.svg"></img>
+        <h1>Equilibrium #3429</h1>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+        <div style="display: flex;" id="price">
+            <div>
+                <img alt="Ethereum icon" src="icon-ethereum.svg">
+                <h3>0.041 ETH</h3>
+            </div>
+            <div>
+                <img alt="Clock icon" src="icon-clock.svg">
+                <h5>3 days left</h5>
+            </div>
+        </div>
+        <hr>
+        <div style="display: flex;" id="credit">
+            <img alt="Creator image" src="image-avatar.png">
+            <h4>Creation of <span>Jules Wyvern</span></h4>
+        </div>
+    </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/lumon2004">Luca Monaco</a>.
+  </div>
+</body>
+</html>
