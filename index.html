@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links to Frontend Mentor challenges solutions</title>
     <style>
+        :root {
+            --text: #000;
+            --bg: #fff;
+        }
         body {
             overflow-x: hidden;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0;
             text-align: center;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #fff;
+                --bg: #000;
+            }
         }
         h1 {
             font-size: 2vw;
