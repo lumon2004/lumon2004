@@ -42,12 +42,11 @@
       margin-top: 5vh;
       display: inline-flex;
     }
-    #container img {
-      width: 90vw;
+    #container picture img {
+      width: 27.25vw;
+      height: 100%;
       border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
-      background-image: url('image-product-desktop.jpg');
-      background-size: 27.25vw;
     }
     #container h6, #container h1, #container p, #container h2, #container h5 {
       margin: 0;
@@ -119,12 +118,11 @@
         position: absolute;
         height: 90vh;
       }
-      #container img {
+      #container picture img {
         border-bottom-left-radius: 0px;
         border-top-right-radius: 10px;
         width: 90vw;
-        background-image: url('image-product-mobile.jpg');
-        background-size: 100vw;
+        height: 40%;
       }
       #container h6 {
         margin-top: 2vh;
@@ -160,12 +158,12 @@
   </style>
 </head>
 <body>
-  <!--Preview
-    Add to Cart
-  -->
   <div id="container">
     <div>
-      <img alt="" src="" id="images">
+      <picture>
+        <source media="(max-width:415px)" srcset="image-product-mobile.jpg">
+        <img src="image-product-desktop.jpg" alt="Gabrielle Parfum">
+      </picture>
       <div style="display: block; padding-left: 3vw; padding-right: 3vw;">
         <h6>perfume</h6>
         <h1>Gabrielle Essence Eau De Parfum</h1>
