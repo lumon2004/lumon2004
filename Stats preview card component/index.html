@@ -31,8 +31,13 @@
       display: inline-flex;
       margin-top: 10%;
     }
-    #container div:not(div#stats) {
-      width: 50%;
+    div#textSide {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    div#imgSide img {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
     #container div:first-child:not(div.statCategory) {
       padding: 7%;
@@ -47,6 +52,9 @@
       display: inline-flex;
       width: 100%;
     }
+    div.statCategory {
+      width: 33.3%;
+    }
     #stats .statCategory p {
       color: rgba(255,255,255,0.6);
       margin: 0;
@@ -59,15 +67,48 @@
       font-size: 1.75vw;
     }
     #imgSide img {
-      background-color: hsl(277, 64%, 61%, .75);
+      height: 100%;
     }
-    /*@media screen and (max-width: 415px) {
+    @media screen and (max-width: 415px) {
       #container {
+        display: block;
         margin-top: 5%;
         margin-left: 5%;
         width: 90%;
       }
-    }*/
+      div#container > div#textSide {
+        width: 86%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0px;
+        text-align: center;
+        position: relative;
+        top: 42vh;
+      }
+      div#imgSide {
+        position: absolute;
+        top: 3%;
+        width: 77.5%;
+      }
+      div#imgSide img {
+        width: 116%;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 0px; 
+      }
+      #stats {
+        display: block;
+      }
+      div#textSide div#stats div.statCategory {
+        width: 100%;
+      }
+      #stats .statCategory h3 {
+        font-size: 8vw;
+        margin-top: 10%;
+      }
+      #stats .statCategory p {
+        font-size: 3vw;
+      }
+    }
   </style>
 </head>
 <body>
