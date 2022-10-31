@@ -4,78 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links to Frontend Mentor challenges solutions</title>
-    <style>
-        :root {
-            --text: #000;
-            --bg: #fff;
-        }
-        body {
-            overflow-x: hidden;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0;
-            text-align: center;
-            background-color: var(--bg);
-            color: var(--text);
-        }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text: #fff;
-                --bg: #000;
-            }
-        }
-        h1 {
-            font-size: 2vw;
-        }
-        p {
-            font-size: 1vw;
-        }
-        ul#links {
-            padding-inline-start: 0;
-        }
-        ul#links li {
-            list-style-type: none;
-            background-color: rgb(196, 196, 196);
-            padding: 2vh 2vw;
-            border-radius: 50px;
-            width: max-content;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 2vh;
-            min-width: 18vw;
-        }
-        ul#links li a {
-            text-decoration: none;
-            color: blue;
-        }
-        @media screen and (max-width: 415px) {
-            h1 {
-                font-size: 6vw;
-                margin-top: 7vh;
-                margin-left: 5%;
-                width: 90%;
-            }
-            p {
-                font-size: 4vw;
-                margin-left: 5%;
-                width: 90%;
-            }
-            ul#links li {
-                min-width: 65%;
-            }
-        }
-    </style>
+    <title>Luca Monaco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0">
 </head>
 <body>
-    <h1>Click the links below to check my Frontend Mentor Challenges solutions</h1>
-    <p>Hi, I'm Luca Monaco, I'm a 18yo student and in these links below there are my Frontend Mentor Challenges solutions. <br>Check 'em out!</p>
-    <ul id="links">
-        <li><a href="https://lumon2004.github.io/lumon2004/Product%20preview%20card%20component/" target="_blank">Product preview card component</a></li>
-        <li><a href="https://lumon2004.github.io/lumon2004/Interactive%20rating%20component/" target="_blank">Interactive rating component</a></li>
-        <li><a href="https://lumon2004.github.io/lumon2004/Qr%20code%20component/" target="_blank">QR code component</a></li>
-        <li><a href="https://lumon2004.github.io/lumon2004/NFT%20preview%20card%20component/" target="_blank">NFT preview card component</a></li>
-        <li><a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">3 column preview card component</a></li>
-        <li><a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">Stats preview card component</a></li>
+    <script src="app.js"></script>
+    <header>
+        <ul>
+            <li>
+                <span class="material-symbols-rounded" onclick="openMenu()">menu</span>
+            </li>
+            <li>
+                <h1>LM</h1>
+            </li>
+        </ul>
+    </header>
+    <ul id="sideMenu">
+        <li><span class="material-symbols-rounded" onclick="closeMenu()">close</span></li>
+        <li><h2>Contatti:</h2></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/4926/4926624.png" alt="GitHub"><a href="https://github.com/lumon2004" target="_blank">GitHub</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/3128/3128219.png" alt="LinkedIn"><a href="https://www.linkedin.com/in/lucamonacoo/" target="_blank">LinkedIn</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram"><a href="https://www.instagram.com/lucamonacoo/" target="_blank">Instagram</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter"><a href="https://www.twitter.com/lucamonacoo" target="_blank">Twitter</a></li>
+        <li><img src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_small.svg" alt="FreeCodeCamp"><a href="https://www.freecodecamp.org/lucamonaco" target="_blank">FreeCodeCamp</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/2111/2111341.png" alt="CodePen"><a href="https://codepen.io/luca-monaco" target="_blank">CodePen</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/2111/2111690.png" alt="StackOverflow"><a href="https://stackoverflow.com/users/19863559/luca" target="_blank">StackOverflow</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="email"><a href="mailto: lucamonaco04@libero.it">Indirizzo email</a></li>
     </ul>
+    <main>
+        <img src="Yosemite.jpg" alt="Background Image" id="bgImg">
+        <img src="Memoji.jpeg" alt="Profile Pic" id="profileImg">
+        <h1>Luca Monaco</h1>
+        <p>Front-End Web Developer di 18 anni da Roma, studente di ingegneria informatica all'università di RomaTre, trovate qui sotto i link ai miei progetti!<br>👇👇👇</p>
+        <ul id="links">
+            <li><a href="http://www.lyricsstorage.it/" target="_blank">Lyrics Storage</a></li>
+            <li><a href="http://www.lyricsstorage.website/" target="_blank">Marvel Website</a></li>
+            <li><a href="http://www.lyricsstorage.fun/E%20un%20ma.html">È un … ma …</a></li>
+        </ul>
+        <h2>Challenge di <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a></h2>
+        <ul id="links">
+            <li><a href="https://lumon2004.github.io/lumon2004/Product%20preview%20card%20component/" target="_blank">Product preview card component</a></li>
+            <li><a href="https://lumon2004.github.io/lumon2004/Interactive%20rating%20component/" target="_blank">Interactive rating component</a></li>
+            <li><a href="https://lumon2004.github.io/lumon2004/Qr%20code%20component/" target="_blank">QR code component</a></li>
+            <li><a href="https://lumon2004.github.io/lumon2004/NFT%20preview%20card%20component/" target="_blank">NFT preview card component</a></li>
+            <li><a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">3 column preview card component</a></li>
+            <li><a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">Stats preview card component</a></li>
+        </ul>
+    </main>
+    <footer></footer>
 </body>
 </html>
