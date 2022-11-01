@@ -10,13 +10,13 @@
 </head>
 <body>
     <script src="app.js"></script>
-    <header>
+    <header id="header">
         <ul>
             <li>
                 <span class="material-symbols-rounded" onclick="openMenu()">menu</span>
             </li>
             <li>
-                <h1>LM</h1>
+                <h1 id="logo">LM</h1>
             </li>
         </ul>
     </header>
@@ -32,11 +32,12 @@
         <li><img src="https://cdn-icons-png.flaticon.com/512/2111/2111690.png" alt="StackOverflow"><a href="https://stackoverflow.com/users/19863559/luca" target="_blank">StackOverflow</a></li>
         <li><img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="email"><a href="mailto: lucamonaco04@libero.it">Indirizzo email</a></li>
     </ul>
-    <main>
+    <main id="main">
         <img src="Yosemite.jpg" alt="Background Image" id="bgImg">
         <img src="Memoji.jpeg" alt="Profile Pic" id="profileImg">
         <h1>Luca Monaco</h1>
         <p>Front-End Web Developer di 18 anni da Roma, studente di ingegneria informatica all'università di RomaTre, trovate qui sotto i link ai miei progetti!<br>👇👇👇</p>
+        <p id="date"></p>
         <ul id="links">
             <li><a href="http://www.lyricsstorage.it/" target="_blank">Lyrics Storage</a></li>
             <li><a href="http://www.lyricsstorage.website/" target="_blank">Marvel Website</a></li>
@@ -51,6 +52,44 @@
             <li><a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">3 column preview card component</a></li>
             <li><a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">Stats preview card component</a></li>
         </ul>
+        <script>
+            const date = new Date();
+            var dateMonth = date.getMonth() + 1;
+            document.getElementById("date").innerHTML= date.getDate() + "/" + dateMonth;
+            // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
+            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() == 2 && dateMonth == 11) {
+                function Christmas() {
+                    document.getElementById("bgImg").src="Palla%20di%20Natale.jpg";
+                    document.getElementById("header").style.backgroundColor="#BD0019";
+                    document.getElementById("sideMenu").style.backgroundColor="#BD0019";
+                    document.getElementById("logo").style.color="#fff";
+                    const icons = document.getElementsByClassName("material-symbols-rounded");
+                    icons[0].style.color="#fff";
+                    icons[1].style.color="#fff";
+                    document.getElementById("bgImg").style.borderColor="#165B33"
+                    document.getElementById("profileImg").style.borderColor="#165B33"
+                    document.getElementById("main").style.backgroundColor="#146B3A";
+                    const Contatti = document.getElementsByTagName("h2");
+                    Contatti[0].style.color="#fff";
+                    const titolo = document.getElementsByTagName("h1");
+                    titolo[1].style.color="#fff";
+                    const testo = document.getElementsByTagName("p");
+                    testo[0].style.color="#fff";
+                    const links = document.getElementsByTagName("a");
+                    links[8].style.color="#BD0019";
+                    links[9].style.color="#BD0019";
+                    links[10].style.color="#BD0019";
+                    links[11].style.color="#BD0019";
+                    links[12].style.color="#BD0019";
+                    links[13].style.color="#BD0019";
+                    links[14].style.color="#BD0019";
+                    links[15].style.color="#BD0019";
+                    links[16].style.color="#BD0019";
+                    links[17].style.color="#BD0019";
+                };
+                Christmas();
+            }
+        </script>
     </main>
     <footer></footer>
 </body>

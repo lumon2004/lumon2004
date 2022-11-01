@@ -44,6 +44,7 @@ header ul li:first-child {
 }
 header ul li span.material-symbols-rounded {
     font-size: 2vw;
+    color: var(--bg);
 }
 header ul li:nth-child(2) {
     position: absolute;
@@ -101,13 +102,13 @@ main {
 }
 main #bgImg {
     width: 100%;
-    border-bottom: 5px solid;
+    border-bottom: 0.25vw solid;
     border-color: var(--headerbg);
 }
 main #profileImg {
     width: 25%;
     border-radius: 50%;
-    border: 5px solid;
+    border: 0.25vw solid;
     border-color: var(--headerbg);
     position: absolute;
     margin-left: 36.5vw;
@@ -131,7 +132,7 @@ main h2 {
     text-align: center;
 }
 main h2 a {
-    color: --text;
+    color: var(--text);
     text-decoration: none;
 }
 ul#links {
@@ -163,6 +164,14 @@ ul#links li a {
     ul#sideMenu li:last-child {
         margin-bottom: 20%;
     }
+    main #bgImg {
+        border-bottom: 1vw solid;
+        border-color: var(--headerbg);
+    }
+    main #profileImg {
+        border: 1vw solid;
+        border-color: var(--headerbg);
+    }
     main h1 {
         font-size: 10vw;
     }
@@ -172,5 +181,8 @@ ul#links li a {
     }
     ul#links li {
         min-width: 65vw;
+    }
+    ul#links li:last-child {
+        margin-bottom: 5vh;
     }
 }
