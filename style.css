@@ -273,6 +273,9 @@ ul#links li a {
 main h1, main p, ul#links, main h2 {
     z-index: 1;
 }
+#decorazioni {
+    display: none;
+}
 @media screen and (max-width: 415px) {
     header ul li:nth-child(2) {
         margin-left: 44%;
