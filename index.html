@@ -57,7 +57,7 @@
             var dateMonth = date.getMonth() + 1;
             document.getElementById("date").innerHTML= date.getDate() + "/" + dateMonth;
             // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
-            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() == 2 && dateMonth == 11) {
+            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() == 3 && dateMonth == 11) {
                 function Christmas() {
                     document.getElementById("bgImg").src="Palla%20di%20Natale.jpg";
                     document.getElementById("header").style.backgroundColor="#BD0019";
@@ -71,6 +71,8 @@
                     document.getElementById("main").style.backgroundColor="#146B3A";
                     const Contatti = document.getElementsByTagName("h2");
                     Contatti[0].style.color="#fff";
+                    const linkSideMenu = document.getElementsByTagName("li");
+                    linkSideMenu[5].style.backgroundImage="url('Yosemite.jpg')";
                     const titolo = document.getElementsByTagName("h1");
                     titolo[1].style.color="#fff";
                     const testo = document.getElementsByTagName("p");
