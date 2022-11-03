@@ -18,6 +18,10 @@
             <li>
                 <h1 id="logo">LM</h1>
             </li>
+            <li id="augurio">
+                <img src="https://cdn-icons-png.flaticon.com/512/3726/3726221.png" alt="Albero di Natale mini" class="decorazioni">
+                <p>Merry Xmas and Happy New Year!</p>
+            </li>
         </ul>
     </header>
     <ul id="sideMenu">
@@ -35,6 +39,25 @@
     <main id="main">
         <img src="Yosemite.jpg" alt="Background Image" id="bgImg">
         <img src="Memoji.jpeg" alt="Profile Pic" id="profileImg">
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/614/614114.png" alt="Palla di Natale mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331399.png" alt="Ghirlanda mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/892/892848.png" alt="Mistletoe mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726287.png" alt="Palla di Natale mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726186.png" alt="Candela e mistletoe mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726283.png" alt="Babbo Natale mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726203.png" alt="Palla di vetro con la neve mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726207.png" alt="Sacco con i regali di Natale mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726279.png" alt="Albero di Natale con i regali mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726264.png" alt="Regali di Natale mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726190.png" alt="Slitta di Babbo Natale mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726242.png" alt="Luci di Natale mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726277.png" alt="Camino mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726169.png" alt="Calzino di Natale mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726215.png" alt="Campane di Natale mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726234.png" alt="Mistletoe mini" class="decorazioni">
+            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726262.png" alt="Biscotto di Natale mini" class="decorazioni">
+        </div>
         <h1>Luca Monaco</h1>
         <p>Front-End Web Developer di 18 anni da Roma, studente di ingegneria informatica all'università di RomaTre, trovate qui sotto i link ai miei progetti!<br>👇👇👇</p>
         <p id="date"></p>
@@ -59,13 +82,14 @@
             // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
             if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() == 3 && dateMonth == 11) {
                 function Christmas() {
-                    document.getElementById("bgImg").src="Palla%20di%20Natale.jpg";
                     document.getElementById("header").style.backgroundColor="#BD0019";
                     document.getElementById("sideMenu").style.backgroundColor="#BD0019";
                     document.getElementById("logo").style.color="#fff";
+                    document.getElementById("augurio").style.display="inline-flex";
                     const icons = document.getElementsByClassName("material-symbols-rounded");
                     icons[0].style.color="#fff";
                     icons[1].style.color="#fff";
+                    document.getElementById("bgImg").src="Palla%20di%20Natale.jpg";
                     document.getElementById("bgImg").style.borderColor="#165B33"
                     document.getElementById("profileImg").style.borderColor="#165B33"
                     document.getElementById("main").style.backgroundColor="#146B3A";
