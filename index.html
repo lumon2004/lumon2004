@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luca Monaco</title>
+    <title>Luca Monaco | Front-End Web Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0">
 </head>
@@ -59,9 +59,110 @@
             <img src="https://cdn-icons-png.flaticon.com/512/3726/3726262.png" alt="Biscotto di Natale mini" class="decorazioni">
         </div>
         <h1>Luca Monaco</h1>
-        <p>Front-End Web Developer di 18 anni da Roma, studente di ingegneria informatica all'università di RomaTre, trovate qui sotto i link ai miei progetti!<br>👇👇👇</p>
+        <p>Front-End Web Developer di 18 anni da Roma, studente di ingegneria informatica all'università di RomaTre.</p>
         <p id="date"></p>
-        <ul id="links">
+        <table id="skill">
+            <thead>
+                <th colspan="4">Skill e linguaggi</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><div id="html"></div></td>
+                    <td>HTML</td>
+                    <td><progress value="90" max="100" id="progressHTML"></progress></td>
+                    <td>90%</td>
+                </tr>
+                <tr>
+                    <td><div id="css"></div></td>
+                    <td>CSS</td>
+                    <td><progress value="70" max="100"></progress></td>
+                    <td>70%</td>
+                </tr>
+                <tr>
+                    <td><div id="js"></div></td>
+                    <td>JavaScript</td>
+                    <td><progress value="35" max="100"></progress></td>
+                    <td>35%</td>
+                </tr>
+                <tr>
+                    <td><div id="php"></div></td>
+                    <td>PHP</td>
+                    <td><progress value="10" max="100"></progress></td>
+                    <td>10%</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Progetti</h2>
+        <p>Progetti a cui ho lavorato</p>
+        <ul class="projects">
+            <li>
+                <a href="http://www.lyricsstorage.it/" target="_blank">
+                    <img src="Lyrics Storage.png" alt="Lyrics Storage">
+                    <h5>Lyrics Storage</h5>
+                    <p>Raccolta di testi di canzoni e conoscenze musicali.</p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.lyricsstorage.website/" target="_blank">
+                    <img src="Marvel Website.png" alt="Marvel Website">
+                    <h5>Marvel Website</h5>
+                    <p>Enciclopedia sul Marvel Cinematic Universe</p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.lyricsstorage.fun/E%20un%20ma.html" target="_blank">
+                    <img src="È un ma.png" alt="È un … ma …">
+                    <h5>È un … ma …</h5>
+                    <p>Gioco andato virale su TikTok nell'estate 2022</p>
+                </a>
+            </li>
+        </ul>
+        <h2>Challenge di <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a></h2>
+        <ul class="projects">
+            <li>
+                <a href="https://lumon2004.github.io/lumon2004/Product%20preview%20card%20component/" target="_blank">
+                    <img src="Product preview card component.png" alt="Product preview card component">
+                    <h5>Product preview card component</h5>
+                    <p>Anteprima della scheda di un prodotto commerciale</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://lumon2004.github.io/lumon2004/Interactive%20rating%20component/" target="_blank">
+                    <img src="Interactive rating component.png" alt="Interactive rating component">
+                    <h5>Interactive rating component</h5>
+                    <p>Sistema di rating rapido</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://lumon2004.github.io/lumon2004/Qr%20code%20component/" target="_blank">
+                    <img src="QR code card component.png" alt="QR code component">
+                    <h5>QR Code component</h5>
+                    <p>Scheda di un QR Code</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://lumon2004.github.io/lumon2004/NFT%20preview%20card%20component/" target="_blank">
+                    <img src="NFT preview card component.png" alt="NFT preview card component">
+                    <h5>NFT preview card component</h5>
+                    <p>Anteprima della scheda di un NFT</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">
+                    <img src="3 column card component.png" alt="3 column preview card component">
+                    <h5>3 column preview card component</h5>
+                    <p>Anteprima di una scheda a 3 colonne</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">
+                    <img src="Stats preview card component.png" alt="Stats preview card component">
+                    <h5>Stats preview card component</h5>
+                    <p>Anteprima di una presentazione di statistiche</p>
+                </a>
+            </li>
+        </ul>
+        <!--ul id="links">
             <li><a href="http://www.lyricsstorage.it/" target="_blank">Lyrics Storage</a></li>
             <li><a href="http://www.lyricsstorage.website/" target="_blank">Marvel Website</a></li>
             <li><a href="http://www.lyricsstorage.fun/E%20un%20ma.html">È un … ma …</a></li>
@@ -74,13 +175,13 @@
             <li><a href="https://lumon2004.github.io/lumon2004/NFT%20preview%20card%20component/" target="_blank">NFT preview card component</a></li>
             <li><a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">3 column preview card component</a></li>
             <li><a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">Stats preview card component</a></li>
-        </ul>
+        </ul-->
         <script>
             const date = new Date();
             var dateMonth = date.getMonth() + 1;
             document.getElementById("date").innerHTML= date.getDate() + "/" + dateMonth;
-            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
-            // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() == 3 && dateMonth == 11) {
+            // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
+            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() == 4 && dateMonth == 11) {
                 function Christmas() {
                     document.getElementById("header").style.backgroundColor="#BD0019";
                     document.getElementById("sideMenu").style.backgroundColor="#BD0019";
@@ -93,24 +194,58 @@
                     document.getElementById("bgImg").style.borderColor="#165B33"
                     document.getElementById("profileImg").style.borderColor="#165B33"
                     document.getElementById("main").style.backgroundColor="#146B3A";
-                    const Contatti = document.getElementsByTagName("h2");
-                    Contatti[0].style.color="#fff";
+                    document.getElementById("main").style.height="330vh"
+                    const h2 = document.getElementsByTagName("h2");
+                    h2[0].style.color="#fff";
+                    h2[1].style.color="#BD0019";
+                    h2[2].style.color="#fff";
                     const titolo = document.getElementsByTagName("h1");
                     titolo[1].style.color="#fff";
                     const testo = document.getElementsByTagName("p");
                     testo[0].style.color="#fff";
+                    testo[1].style.color="#fff";
+                    testo[3].style.color="#fff";
+                    testo[4].style.color="#fff";
+                    testo[5].style.color="#fff";
+                    testo[6].style.color="#fff";
+                    testo[7].style.color="#fff";
+                    testo[8].style.color="#fff";
+                    testo[9].style.color="#fff";
+                    testo[10].style.color="#fff";
+                    testo[11].style.color="#fff";
+                    testo[12].style.color="#fff";
                     const links = document.getElementsByTagName("a");
-                    links[8].style.color="#BD0019";
+                    /*links[8].style.color="#BD0019";
                     links[9].style.color="#BD0019";
-                    links[10].style.color="#BD0019";
+                    links[10].style.color="#BD0019";*/
                     links[11].style.color="#BD0019";
-                    links[12].style.color="#BD0019";
+                    /*links[12].style.color="#BD0019";
                     links[13].style.color="#BD0019";
                     links[14].style.color="#BD0019";
                     links[15].style.color="#BD0019";
                     links[16].style.color="#BD0019";
-                    links[17].style.color="#BD0019";
+                    links[17].style.color="#BD0019";*/
                     document.getElementById("decorazioni").style.display="block";
+                    const titoliProgetti = document.getElementsByTagName("h5");
+                    titoliProgetti[0].style.color="#fff";
+                    titoliProgetti[1].style.color="#fff";
+                    titoliProgetti[2].style.color="#fff";
+                    titoliProgetti[3].style.color="#fff";
+                    titoliProgetti[4].style.color="#fff";
+                    titoliProgetti[5].style.color="#fff";
+                    titoliProgetti[6].style.color="#fff";
+                    titoliProgetti[7].style.color="#fff";
+                    titoliProgetti[8].style.color="#fff";
+                    document.getElementsByTagName("th")[0].style.color="#BD0019";
+                    const skill = document.getElementsByTagName("td");
+                    skill[1].style.color="#fff";
+                    skill[3].style.color="#fff";
+                    skill[5].style.color="#fff";
+                    skill[7].style.color="#fff";
+                    skill[9].style.color="#fff";
+                    skill[11].style.color="#fff";
+                    skill[13].style.color="#fff";
+                    skill[15].style.color="#fff";
                 };
                 Christmas();
             }

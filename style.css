@@ -90,10 +90,15 @@ ul#sideMenu li span.material-symbols-rounded {
     margin-top: 2.5%;
     font-size: 2vw;
 }
+ul#sideMenu li h2 {
+    margin: 0;
+}
 ul#sideMenu li {
     display: flex;
     margin-left: 10%;
     width: 90%;
+}
+ul#sideMenu li:not(:first-child) {
     margin-top: 5%;
 }
 ul#sideMenu li:not(:first-child, :nth-child(2)) {
@@ -275,6 +280,106 @@ main h1, main p, ul#links, main h2 {
 }
 #decorazioni {
     display: none;
+}
+table#skill {
+    width: 78%;
+    border-radius: 10px;
+    padding: 1%;
+    margin-left: 10%;
+    z-index: 1;
+}
+table#skill thead th {
+    font-size: 2vw;
+}
+table#skill tbody tr td:first-child {
+    width: 4%;
+}
+table#skill tbody tr td:first-child div {
+    width: 0.75vw;
+    height: 1.5vh;
+    border-radius: 50%;
+    border: 5px solid;
+}
+table#skill tbody tr td:first-child div#html {
+    border-color: #e44d26;
+    background-color: #e44d26;
+}
+table#skill tbody tr td:first-child div#css {
+    border-color: #264ee4;
+    background-color: #264ee4;
+}
+table#skill tbody tr td:first-child div#js {
+    border-color: #f7df1d;
+    background-color: #f7df1d;
+}
+table#skill tbody tr td:first-child div#php {
+    border-color: #767bb3;
+    background-color: #767bb3;
+}
+table#skill tbody tr td:nth-child(2), table#skill tbody tr td:nth-child(4) {
+    font-size: 1.5vw;
+}
+table#skill tbody tr td progress {
+    border-radius: 20px;
+    height: 0.75em;
+    vertical-align: 0.25em;
+    width: 57vw;
+    margin-left: 3vw;
+}
+table#skill tbody tr td progress::-webkit-progress-bar {
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px;
+}
+table#skill tbody tr td progress::-webkit-progress-value {
+    border-radius: 20px;
+}
+table#skill tbody tr:nth-child(1) td:nth-child(3) progress::-webkit-progress-value {
+    background-color: #e44d26;
+}
+table#skill tbody tr:nth-child(2) td:nth-child(3) progress::-webkit-progress-value {
+    background-color: #264ee4;
+}
+table#skill tbody tr:nth-child(3) td:nth-child(3) progress::-webkit-progress-value {
+    background-color: #f7df1d;
+}
+table#skill tbody tr:nth-child(4) td:nth-child(3) progress::-webkit-progress-value {
+    background-color: #767bb3;
+}
+main h2 {
+    font-size: 2vw;
+}
+ul.projects {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    padding-inline-start: 0px;
+    z-index: 1;
+}
+ul.projects li {
+    width: 31%;
+}
+ul.projects li:nth-child(2), ul.projects li:nth-child(5), ul.projects li:nth-child(8) {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+ul.projects li a {
+    color: var(--text);
+    text-decoration: none;
+}
+ul.projects li a img {
+    width: 100%;
+}
+ul.projects li a h5 {
+    font-size: 2vw;
+    margin: 0%;
+    text-align: center;
+}
+ul.projects li a p {
+    font-size: 1vw;
 }
 @media screen and (max-width: 415px) {
     header ul li:nth-child(2) {
