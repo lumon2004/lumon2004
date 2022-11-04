@@ -238,6 +238,7 @@ main h1 {
     text-align: center;
     margin-top: 7.5%;
     font-size: 3.5vw;
+    height: max-content;
 }
 main p {
     width: 50%;
@@ -245,6 +246,7 @@ main p {
     margin-right: auto;
     text-align: center;
     font-size: 1.5vw;
+    height: max-content;
 }
 #date {
     display: none;
@@ -386,7 +388,8 @@ ul.projects li a p {
         margin-left: 44%;
     }
     header ul li span.material-symbols-rounded, ul#sideMenu li span.material-symbols-rounded {
-        font-size: 6vw;
+        font-size: 8vw;
+        margin-top: 10%;
     }
     header ul li#augurio {
         width: 30%;
@@ -419,11 +422,49 @@ ul.projects li a p {
     main p {
         font-size: 4vw;
         width: 80%;
+        margin-top: 0;
     }
     ul#links li {
         min-width: 65vw;
     }
     ul#links li:last-child {
         margin-bottom: 5vh;
+    }
+    table#skill {
+        margin-left: 3%;
+        padding: 2%;
+        width: 90%;
+    }
+    table#skill thead th {
+        font-size: 6vw;
+    }
+    table#skill tbody tr td:first-child div {
+        height: 1vh;
+        width: 1.5vw;
+    }
+    table#skill tbody tr td:nth-child(2), table#skill tbody tr td:nth-child(4) {
+        font-size: 4vw;
+    }
+    table#skill tbody tr td progress {
+        width: 42vw;
+        margin-top: 1vh;
+    }
+    main h2 {
+        font-size: 7vw;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+    }
+    ul.projects li {
+        width: 100%;
+        margin-bottom: 5vh;
+    }
+    ul.projects li a h5 {
+        font-size: 5vw;
+    }
+    ul.projects li a p {
+        font-size: 3vw;
+    }
+    main h2#frontendmentor {
+        font-size: 6vw;
     }
 }
