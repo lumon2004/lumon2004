@@ -180,8 +180,8 @@
             const date = new Date();
             var dateMonth = date.getMonth() + 1;
             document.getElementById("date").innerHTML= date.getDate() + "/" + dateMonth;
-            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
-            // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() == 4 && dateMonth == 11) {
+            // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
+            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() >= 1 && dateMonth == 11) {
                 function Christmas() {
                     document.getElementById("header").style.backgroundColor="#BD0019";
                     document.getElementById("sideMenu").style.backgroundColor="#BD0019";
@@ -194,7 +194,6 @@
                     document.getElementById("bgImg").style.borderColor="#165B33"
                     document.getElementById("profileImg").style.borderColor="#165B33"
                     document.getElementById("main").style.backgroundColor="#146B3A";
-                    document.getElementById("main").style.height="330vh"
                     const h2 = document.getElementsByTagName("h2");
                     h2[0].style.color="#fff";
                     h2[1].style.color="#BD0019";

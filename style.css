@@ -121,7 +121,6 @@ ul#sideMenu li a:hover {
 }
 main {
     display: inline-grid;
-    height: 250vh;
 }
 main #bgImg {
     width: 100%;
@@ -145,7 +144,7 @@ main img.decorazioni {
 main img.decorazioni:nth-child(1) {
     margin-top: 5%;
     margin-left: 12.5%;
-    transform: rotate();
+    transform: rotate(20deg);
 }
 main img.decorazioni:nth-child(2) {
     margin-top: 12.5%;
@@ -161,77 +160,72 @@ main img.decorazioni:nth-child(3) {
 main img.decorazioni:nth-child(4) {
     margin-top: 1%;
     margin-left: 65%;
-    transform: rotate();
+    transform: rotate(330deg);
 }
 main img.decorazioni:nth-child(5) {
-    margin-top: 25%;
+    margin-top: 48%;
     margin-left: 93%;
-    transform: rotate();
+    transform: rotate(25deg);
 }
 main img.decorazioni:nth-child(6) {
-    margin-top: 30%;
-    margin-left: 30%;
-    transform: rotate();
+    margin-top: 2%;
+    margin-left: 37%;
+    transform: rotate(216deg);
 }
 main img.decorazioni:nth-child(7) {
-    margin-top: 35%;
+    margin-top: 28%;
     margin-left: 65%;
     transform: rotate();
 }
 main img.decorazioni:nth-child(8) {
-    margin-top: 40%;
+    margin-top: 37.5%;
     margin-left: 15%;
     transform: rotate();
 }
 main img.decorazioni:nth-child(9) {
-    margin-top: 50%;
+    margin-top: 61%;
     margin-left: 75%;
-    transform: rotate();
+    transform: rotate(345deg);
 }
 main img.decorazioni:nth-child(10) {
-    margin-top: 55%;
+    margin-top: 78%;
     margin-left: 7.5%;
-    transform: rotate();
+    transform: rotate(225deg);
 }
 main img.decorazioni:nth-child(11) {
-    margin-top: 45%;
-    margin-left: 50%;
-    transform: rotate();
+    margin-top: 58%;
+    margin-left: 55%;
+    transform: rotate(11deg);
 }
 main img.decorazioni:nth-child(12) {
-    margin-top: 22.5%;
-    margin-left: 42.5%;
+    margin-top: 104%;
+    margin-left: 5%;
     transform: rotate();
 }
 main img.decorazioni:nth-child(13) {
-    margin-top: 65%;
+    margin-top: 97.5%;
     margin-left: 92.5%;
-    transform: rotate();
+    transform: rotate(25deg);
 }
 main img.decorazioni:nth-child(14) {
-    margin-top: 62.5%;
-    margin-left: 42.5%;
+    margin-top: 86%;
+    margin-left: 40%;
     transform: rotate();
 }
 main img.decorazioni:nth-child(15) {
     margin-top: 52.5%;
     margin-left: 27.5%;
-    transform: rotate();
+    transform: rotate(325deg);
 }
 main img.decorazioni:nth-child(16) {
-    margin-top: 40%;
+    margin-top: 36%;
     margin-left: 80%;
-    transform: rotate();
+    transform: rotate(40deg);
 }
 main img.decorazioni:nth-child(17) {
     margin-top: 12.5%;
     margin-left: 87.5%;
-    transform: rotate();
-}
-main img.decorazioni:nth-child(18) {
-    margin-top: 12.5%;
-    margin-left: 87.5%;
-    transform: rotate();
+    transform: rotate(15deg);
 }
 main h1 {
     margin: 0;
@@ -405,9 +399,6 @@ ul.projects li a p {
     ul#sideMenu li:last-child {
         margin-bottom: 20%;
     }
-    main {
-        height: 160vh;
-    }
     main #bgImg {
         border-bottom: 1vw solid;
         border-color: var(--headerbg);
@@ -429,6 +420,9 @@ ul.projects li a p {
     }
     ul#links li:last-child {
         margin-bottom: 5vh;
+    }
+    main img.decorazioni {
+        width: 7.5%;
     }
     table#skill {
         margin-left: 3%;
@@ -453,6 +447,66 @@ ul.projects li a p {
         font-size: 7vw;
         margin-top: 3vh;
         margin-bottom: 2vh;
+    }
+    main img.decorazioni:nth-child(12) {
+        margin-top: 690%;
+    }
+    main img.decorazioni:nth-child(13) {
+        margin-top: 643%;
+        margin-left: 89%;
+    }
+    main img.decorazioni:nth-child(14) {
+        margin-top: 296%;
+        margin-left: 18%;
+    }
+    main img.decorazioni:nth-child(15) {
+        margin-top: 595%;
+        margin-left: 4%;
+    }
+    main img.decorazioni:nth-child(16) {
+        margin-top: 555%;
+        margin-left: 88%;
+    }
+    main img.decorazioni:nth-child(10) {
+        margin-top: 510%;
+        margin-left: 11%;
+    }
+    main img.decorazioni:nth-child(11) {
+        margin-top: 472%;
+        margin-left: 91%;
+    }
+    main img.decorazioni:nth-child(9) {
+        margin-top: 442%;
+        margin-left: 40%;
+    }
+    main img.decorazioni:nth-child(8) {
+        margin-top: 388%;
+        margin-left: 8%;
+    }
+    main img.decorazioni:nth-child(7) {
+        margin-top: 228%;
+    }
+    main img.decorazioni:nth-child(5) {
+        margin-top: 248%;
+    }
+    main img.decorazioni:nth-child(4) {
+        margin-top: 200%;
+        margin-left: 4%;
+    }
+    main img.decorazioni:nth-child(3) {
+        margin-top: 162%;
+        margin-left: 86%;
+    }
+    main img.decorazioni:nth-child(1) {
+        margin-top: 34%;
+        margin-left: 8%;
+    }
+    main img.decorazioni:nth-child(2) {
+        display: none;
+    }
+    main img.decorazioni:nth-child(17) {
+        margin-top: 89%;
+        margin-left: 77%;
     }
     ul.projects li {
         width: 100%;
