@@ -2,35 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Article preview component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(16, 100%, 50%); }
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background-color: hsl(210, 46%, 95%);
+    }
+    div#container {
+      margin-left: 15%;
+      margin-top: 25vh;
+      width: 70%;
+      display: inline-flex;
+      border-radius: 20px;
+      background-color: #fff;
+    }
+    div#container > img {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      width: 43%;
+      height: 100%;
+    }
+    div#container div#text h1, div#container div#text p, div#container div#text div#info p {
+      margin: 0;
+    }
+    h1, p {
+      font-family: 'Manrope', sans-serif;
+      padding: 7.5%;
+    }
+    h1 {
+      font-size: 2vw;
+      color: hsl(217, 19%, 35%);
+    }
+    p {
+      font-size: 1.25vw;
+      color: hsl(214, 17%, 51%);
+    }
+    div#container div#text h1 {
+      padding-bottom: 0;
+    }
+    div#container div#text p {
+      padding-top: 2%;
+      padding-bottom: 5%;
+    }
+    div#container div#text div#credit {
+      display: inline-flex;
+      margin-left: 7.5%;
+      margin-right: 7.5%;
+      width: 85%;
+    }
+    div#container div#text div#credit img#profilePic {
+      border-radius: 50%;
+      width: 10%;
+      margin-right: 5%;
+    }
+    div#info {
+      margin-top: 1vh;
+    }
+    div#container div#text div#credit div#info p {
+      padding: 0;
+      width: max-content;
+      font-size: 1vw;
+      line-height: 1.5;
+    }
+    div#container div#text div#credit div#info p#date {
+      font-size: 0.75vw;
+    }
+    div#container div#text div#credit div#shareDiv {
+      width: 5%;
+      background-color: hsl(210, 46%, 95%);
+      border-radius: 50%;
+      height: 3vh;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: auto;
+      padding: 2.5%;
+    }
+    div#container div#text div#credit div#shareDiv img#shareButton {
+      width: 100%;
+      height: 3vh;
+    }
+    div#container div#text div#credit div#shareDiv:hover {
+      cursor: pointer;
+      background-color: hsl(217, 19%, 35%);
+    }
+    div#social {
+      position: absolute;
+      left: 69vw;
+      top: 45vh;
+      background-color: hsl(217, 19%, 35%);
+      border-radius: 10px;
+      padding: 3vh 4vw;
+      display: none;
+    }
+    div#social ul {
+      display: inline-flex;
+      padding-inline-start: 0;
+      list-style-type: none;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    div#social li {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    div#social li:not(:first-child) {
+      margin-left: 2vw;
+    }
+    div#social li:not(:first-child):hover {
+      cursor: pointer;
+    }
+    div#social p {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5vw;
+      padding: 0;
+      font-size: 0.75vw;
+    }
+    @media screen and (max-width: 415px) {
+      div#container {
+        display: block;
+        margin-left: 5%;
+        width: 90%;
+        margin-top: 5vh;
+        height: 85vh;
+      }
+      div#container > img {
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px;
+        height: 60%;
+      }
+      div#container div#text h1 {
+        padding-top: 3vh;
+        font-size: 4vw;
+      }
+      div#container div#text p {
+        font-size: 3.5vw;
+      }
+      div#container div#text div#credit div#info p {
+        font-size: 3.5vw;
+      }
+      div#container div#text div#credit div#info p#date {
+        font-size: 3vw;
+      }
+    }
   </style>
 </head>
 <body>
-
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-  
+  <div id="container">
+    <img src="drawers.jpg" alt="Drawers">
+    <div id="text">
+      <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+      <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+      <div id="credit">
+        <img src="avatar-michelle.jpg" alt="Profile pic" id="profilePic">
+        <div id="info">
+          <p style="color: hsl(217, 19%, 35%);">Michelle Appleton</p>
+          <p id="date">28 Jun 2020</p>
+        </div>
+        <div id="shareDiv" onclick="shareDiv()">
+          <img src="icon-share.svg" alt="Share button" id="shareButton">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="social">
+    <ul>
+      <li><p>Share</p></li>
+      <li><img src="icon-facebook.svg"></li>
+      <li><img src="icon-twitter.svg"></li>
+      <li><img src="icon-pinterest.svg"></li>
+    </ul>
+  </div>
+  <script>
+    function shareDiv() {
+      document.getElementById('social').style.display="block";
+    }
+  </script>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/lumon2004/" target="_blank">Luca Monaco</a>.
   </div>
 </body>
 </html>
