@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luca Monaco | Front-End Web Developer</title>
+    <title>Works | Luca Monaco</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0">
 </head>
 <body>
     <script src="app.js"></script>
-    <header id="header">
+    <header id="header" style="position: relative;">
         <ul>
             <li>
                 <span class="material-symbols-rounded" onclick="openMenu()">menu</span>
@@ -37,9 +37,7 @@
         <li><img src="https://cdn-icons-png.flaticon.com/512/2111/2111690.png" alt="StackOverflow"><a href="https://stackoverflow.com/users/19863559/luca" target="_blank">StackOverflow</a></li>
         <li><img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="email"><a href="mailto: lucamonaco04@libero.it">Indirizzo email</a></li>
     </ul>
-    <main id="main">
-        <img src="Yosemite.jpg" alt="Background Image" id="bgImg">
-        <img src="Memoji.jpeg" alt="Profile Pic" id="profileImg">
+    <main id="main" style="display: block; width: 70%; margin-left: 15%;">
         <div id="decorazioni">
             <img src="https://cdn-icons-png.flaticon.com/512/614/614114.png" alt="Palla di Natale mini" class="decorazioni">
             <img src="https://cdn-icons-png.flaticon.com/512/2331/2331399.png" alt="Ghirlanda mini" class="decorazioni">
@@ -59,126 +57,28 @@
             <img src="https://cdn-icons-png.flaticon.com/512/3726/3726234.png" alt="Mistletoe mini" class="decorazioni">
             <img src="https://cdn-icons-png.flaticon.com/512/3726/3726262.png" alt="Biscotto di Natale mini" class="decorazioni">
         </div>
-        <h1>Luca Monaco</h1>
-        <p>Front-End Web Developer di 18 anni da Roma, studente di ingegneria informatica all'università di RomaTre.</p>
         <p id="date"></p>
-        <table id="skill">
-            <thead>
-                <th colspan="4">Skill e linguaggi</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><div id="html"></div></td>
-                    <td>HTML</td>
-                    <td><progress value="90" max="100" id="progressHTML"></progress></td>
-                    <td>90%</td>
-                </tr>
-                <tr>
-                    <td><div id="css"></div></td>
-                    <td>CSS</td>
-                    <td><progress value="70" max="100"></progress></td>
-                    <td>70%</td>
-                </tr>
-                <tr>
-                    <td><div id="js"></div></td>
-                    <td>JavaScript</td>
-                    <td><progress value="35" max="100"></progress></td>
-                    <td>35%</td>
-                </tr>
-                <tr>
-                    <td><div id="php"></div></td>
-                    <td>PHP</td>
-                    <td><progress value="10" max="100"></progress></td>
-                    <td>10%</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Progetti</h2>
-        <p>Progetti a cui ho lavorato</p>
-        <ul class="projects">
-            <li>
-                <a href="http://www.lyricsstorage.it/" target="_blank">
-                    <img src="Lyrics Storage.png" alt="Lyrics Storage">
-                    <h5>Lyrics Storage</h5>
-                    <p>Raccolta di testi di canzoni e conoscenze musicali.</p>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.lyricsstorage.website/" target="_blank">
-                    <img src="Marvel Website.png" alt="Marvel Website">
-                    <h5>Marvel Website</h5>
-                    <p>Enciclopedia sul Marvel Cinematic Universe</p>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.lyricsstorage.fun/E%20un%20ma.html" target="_blank">
-                    <img src="È un ma.png" alt="È un … ma …" style="border: 1px solid #000">
-                    <h5>È un … ma …</h5>
-                    <p>Gioco andato virale su TikTok nell'estate 2022</p>
-                </a>
-            </li>
-        </ul>
-        <h2 id="frontendmentor">Challenge di <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a></h2>
-        <p style="margin-top: 0;">Le ultime challenge che ho completato</p>
-        <ul class="projects">
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">
-                    <img src="Stats preview card component.png" alt="Stats preview card component">
-                    <h5>Stats preview card component</h5>
-                    <p>Anteprima di una presentazione di statistiche</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">
-                    <img src="3 column card component.png" alt="3 column preview card component" style="border: 1px solid #000">
-                    <h5>3 column preview card component</h5>
-                    <p>Anteprima di una scheda a 3 colonne</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/NFT%20preview%20card%20component/" target="_blank">
-                    <img src="NFT preview card component.png" alt="NFT preview card component">
-                    <h5>NFT preview card component</h5>
-                    <p>Anteprima della scheda di un NFT</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Qr%20code%20component/" target="_blank">
-                    <img src="QR code card component.png" alt="QR code component">
-                    <h5>QR Code component</h5>
-                    <p>Scheda di un QR Code</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Interactive%20rating%20component/" target="_blank">
-                    <img src="Interactive rating component.png" alt="Interactive rating component">
-                    <h5>Interactive rating component</h5>
-                    <p>Sistema di rating rapido</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Product%20preview%20card%20component/" target="_blank">
-                    <img src="Product preview card component.png" alt="Product preview card component">
-                    <h5>Product preview card component</h5>
-                    <p>Anteprima della scheda di un prodotto commerciale</p>
-                </a>
-            </li>
-        </ul>
-        <a href="links.html">Altro<span class="material-symbols-rounded">arrow_forward_ios</span></a>
-        <!--ul id="links">
-            <li><a href="http://www.lyricsstorage.it/" target="_blank">Lyrics Storage</a></li>
-            <li><a href="http://www.lyricsstorage.website/" target="_blank">Marvel Website</a></li>
-            <li><a href="http://www.lyricsstorage.fun/E%20un%20ma.html">È un … ma …</a></li>
-        </ul>
-        <h2>Challenge di <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a></h2>
-        <ul id="links">
-            <li><a href="https://lumon2004.github.io/lumon2004/Product%20preview%20card%20component/" target="_blank">Product preview card component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/Interactive%20rating%20component/" target="_blank">Interactive rating component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/Qr%20code%20component/" target="_blank">QR code component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/NFT%20preview%20card%20component/" target="_blank">NFT preview card component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">3 column preview card component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">Stats preview card component</a></li>
-        </ul-->
+        <h2 style="margin-top: 2vh; border-bottom: 0.75px solid grey; margin-bottom: 0; text-align: start;">Works</h2>
+        <h1 style="margin-top: 10vh; font-size: 2.5vw; text-align: start; margin-bottom: 5vh;">My projects</h1>
+        <div class="listsContainer">
+            <ul id="links">
+                <li><a href="http://www.lyricsstorage.it/" target="_blank">Lyrics Storage</a></li>
+                <li><a href="http://www.lyricsstorage.website/" target="_blank">Marvel Website</a></li>
+                <li><a href="http://www.lyricsstorage.fun/E%20un%20ma.html">È un … ma …</a></li>
+            </ul>
+        </div>
+        <h1 style="margin-top: 5vh; margin-bottom: 5vh; font-size: 2.5vw; text-align: start;">Frontend Mentor Challenges <a href="https://www.frontendmentor.io" target="_blank"><span class="material-symbols-rounded">link</span></a></h1>
+        <div class="listsContainer">
+            <ul id="links">
+                <li><a href="https://lumon2004.github.io/lumon2004/Product%20preview%20card%20component/" target="_blank">Product preview card component</a></li>
+                <li><a href="https://lumon2004.github.io/lumon2004/Interactive%20rating%20component/" target="_blank">Interactive rating component</a></li>
+                <li><a href="https://lumon2004.github.io/lumon2004/Qr%20code%20component/" target="_blank">QR code component</a></li>
+                <li><a href="https://lumon2004.github.io/lumon2004/NFT%20preview%20card%20component/" target="_blank">NFT preview card component</a></li>
+                <li><a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">3 column preview card component</a></li>
+                <li><a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">Stats preview card component</a></li>
+            </ul>
+        </div>
+        
         <script>
             const date = new Date();
             var dateMonth = date.getMonth() + 1;

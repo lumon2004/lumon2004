@@ -252,24 +252,32 @@ main h2>a {
     color: var(--text);
     text-decoration: none;
 }
+main h1>a>span.material-symbols-rounded {
+    color: #06c;
+    font-size: 2vw;
+}
+
+div.listsContainer {
+    border-bottom: 0.75px solid grey;
+}
 ul#links {
     padding-inline-start: 0;
+    margin-bottom: 3vh;
+    columns: 3 auto;
+    width: 100%;
 }
 ul#links li {
     list-style-type: none;
-    background-color: rgb(196, 196, 196);
-    padding: 2vh 2vw;
-    border-radius: 50px;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     margin-bottom: 2vh;
-    min-width: 18vw;
-    text-align: center;
 }
 ul#links li a {
     text-decoration: none;
-    color: blue;
+    color: #06c;
+    font-size: 17px;
+}
+ul#links li a:hover {
+    text-decoration: underline;
 }
 main h1, main p, ul#links, main h2 {
     z-index: 1;
@@ -377,9 +385,9 @@ ul.projects li a h5 {
 ul.projects li a p {
     font-size: 1vw;
 }
-main a:not(main h2 a) {
+main a:not(main h2>a, main h1>a) {
     text-decoration: none;
-    color: rgb(51,102,204);
+    color: #06c;
     margin-left: auto;
     margin-right: 10%;
     font-size: 1.5vw;
