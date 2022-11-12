@@ -94,7 +94,7 @@
             </tbody>
         </table>
         <h2>Progetti</h2>
-        <p>Progetti a cui ho lavorato</p>
+        <p style="margin-top: 0%;">Progetti a cui ho lavorato</p>
         <ul class="projects">
             <li>
                 <a href="http://www.lyricsstorage.it/" target="_blank">
@@ -164,21 +164,7 @@
                 </a>
             </li>
         </ul>
-        <a href="links.html">Altro<span class="material-symbols-rounded">arrow_forward_ios</span></a>
-        <!--ul id="links">
-            <li><a href="http://www.lyricsstorage.it/" target="_blank">Lyrics Storage</a></li>
-            <li><a href="http://www.lyricsstorage.website/" target="_blank">Marvel Website</a></li>
-            <li><a href="http://www.lyricsstorage.fun/E%20un%20ma.html">È un … ma …</a></li>
-        </ul>
-        <h2>Challenge di <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a></h2>
-        <ul id="links">
-            <li><a href="https://lumon2004.github.io/lumon2004/Product%20preview%20card%20component/" target="_blank">Product preview card component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/Interactive%20rating%20component/" target="_blank">Interactive rating component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/Qr%20code%20component/" target="_blank">QR code component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/NFT%20preview%20card%20component/" target="_blank">NFT preview card component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">3 column preview card component</a></li>
-            <li><a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">Stats preview card component</a></li>
-        </ul-->
+        <a href="links.html" id="linkAltro">Altro<span class="material-symbols-rounded">arrow_forward_ios</span></a>
         <script>
             const date = new Date();
             var dateMonth = date.getMonth() + 1;
@@ -216,6 +202,7 @@
                     testo[10].style.color="#fff";
                     testo[11].style.color="#fff";
                     testo[12].style.color="#fff";
+                    testo[13].style.color="#fff";
                     const links = document.getElementsByTagName("a");
                     /*links[8].style.color="#BD0019";
                     links[9].style.color="#BD0019";
@@ -248,6 +235,7 @@
                     skill[11].style.color="#fff";
                     skill[13].style.color="#fff";
                     skill[15].style.color="#fff";
+                    document.getElementById("linkAltro").style.color="#BD0019"
                 };
                 Christmas();
             }

@@ -126,6 +126,9 @@ main #bgImg {
     width: 100%;
     border-bottom: 0.25vw solid;
     border-color: var(--headerbg);
+    object-fit: cover;
+    object-position: 100% 15%;
+    height: 50%;
 }
 main #profileImg {
     width: 25%;
@@ -134,7 +137,7 @@ main #profileImg {
     border-color: var(--headerbg);
     position: absolute;
     margin-left: 36.5vw;
-    margin-top: 37.5%;
+    margin-top: 15%;
     z-index: 1;
 }
 main img.decorazioni {
@@ -142,95 +145,95 @@ main img.decorazioni {
     position: absolute;
 }
 main img.decorazioni:nth-child(1) {
-    margin-top: 5%;
+    margin-top: -18%;
     margin-left: 12.5%;
     transform: rotate(20deg);
 }
 main img.decorazioni:nth-child(2) {
-    margin-top: 12.5%;
+    margin-top: -10.5%;
     margin-left: 87.5%;
     transform: rotate();
     display: none;
 }
 main img.decorazioni:nth-child(3) {
-    margin-top: 17.5%;
+    margin-top: -5.5%;
     margin-left: 5%;
     transform: rotate();
 }
 main img.decorazioni:nth-child(4) {
-    margin-top: 1%;
+    margin-top: -22%;
     margin-left: 65%;
     transform: rotate(330deg);
 }
 main img.decorazioni:nth-child(5) {
-    margin-top: 48%;
+    margin-top: 25%;
     margin-left: 93%;
     transform: rotate(25deg);
 }
 main img.decorazioni:nth-child(6) {
-    margin-top: 2%;
+    margin-top: -21%; /* stava al 2% => -23% per tutti */
     margin-left: 37%;
     transform: rotate(216deg);
 }
 main img.decorazioni:nth-child(7) {
-    margin-top: 28%;
+    margin-top: 5%;
     margin-left: 65%;
     transform: rotate();
 }
 main img.decorazioni:nth-child(8) {
-    margin-top: 37.5%;
+    margin-top: 14.5%;
     margin-left: 15%;
     transform: rotate();
 }
 main img.decorazioni:nth-child(9) {
-    margin-top: 61%;
+    margin-top: 38%;
     margin-left: 75%;
     transform: rotate(345deg);
 }
 main img.decorazioni:nth-child(10) {
-    margin-top: 78%;
+    margin-top: 55%;
     margin-left: 7.5%;
     transform: rotate(225deg);
 }
 main img.decorazioni:nth-child(11) {
-    margin-top: 58%;
+    margin-top: 35%;
     margin-left: 55%;
     transform: rotate(11deg);
 }
 main img.decorazioni:nth-child(12) {
-    margin-top: 104%;
+    margin-top: 81%;
     margin-left: 5%;
     transform: rotate();
 }
 main img.decorazioni:nth-child(13) {
-    margin-top: 97.5%;
+    margin-top: 74.5%;
     margin-left: 92.5%;
     transform: rotate(25deg);
 }
 main img.decorazioni:nth-child(14) {
-    margin-top: 86%;
+    margin-top: 63%;
     margin-left: 40%;
     transform: rotate();
 }
 main img.decorazioni:nth-child(15) {
-    margin-top: 52.5%;
+    margin-top: 29.5%;
     margin-left: 27.5%;
     transform: rotate(325deg);
 }
 main img.decorazioni:nth-child(16) {
-    margin-top: 36%;
+    margin-top: 13%;
     margin-left: 80%;
     transform: rotate(40deg);
 }
 main img.decorazioni:nth-child(17) {
-    margin-top: 12.5%;
+    margin-top: -10.5%;
     margin-left: 87.5%;
     transform: rotate(15deg);
 }
 main h1 {
     margin: 0;
     text-align: center;
-    margin-top: 7.5%;
+    margin-top: -14%;
     font-size: 3.5vw;
     height: max-content;
 }
@@ -241,6 +244,7 @@ main p {
     text-align: center;
     font-size: 1.5vw;
     height: max-content;
+    margin-top: -8%;
 }
 #date {
     display: none;
@@ -384,6 +388,7 @@ ul.projects li a h5 {
 }
 ul.projects li a p {
     font-size: 1vw;
+    margin-top: 0%;
 }
 main a:not(main h2>a, main h1>a) {
     text-decoration: none;
@@ -533,6 +538,9 @@ main a span.material-symbols-rounded {
         width: 100%;
         margin-bottom: 5vh;
     }
+    ul.projects li:last-child {
+        margin-bottom: 0;
+    }
     ul.projects li a h5 {
         font-size: 5vw;
     }
@@ -541,5 +549,11 @@ main a span.material-symbols-rounded {
     }
     main h2#frontendmentor {
         font-size: 6vw;
+    }
+    main a:not(main h2>a, main h1>a) {
+        font-size: 5vw;
+    }
+    main a span.material-symbols-rounded {
+        font-size: 3.5vw;
     }
 }

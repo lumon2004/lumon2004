@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0">
+    <link rel="stylesheet" href="links.css">
 </head>
 <body>
     <script src="app.js"></script>
-    <header id="header" style="position: relative;">
+    <header id="header">
         <ul>
             <li>
                 <span class="material-symbols-rounded" onclick="openMenu()">menu</span>
@@ -37,29 +38,9 @@
         <li><img src="https://cdn-icons-png.flaticon.com/512/2111/2111690.png" alt="StackOverflow"><a href="https://stackoverflow.com/users/19863559/luca" target="_blank">StackOverflow</a></li>
         <li><img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="email"><a href="mailto: lucamonaco04@libero.it">Indirizzo email</a></li>
     </ul>
-    <main id="main" style="display: block; width: 70%; margin-left: 15%;">
-        <div id="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/614/614114.png" alt="Palla di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331399.png" alt="Ghirlanda mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/892/892848.png" alt="Mistletoe mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726287.png" alt="Palla di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726186.png" alt="Candela e mistletoe mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726283.png" alt="Babbo Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726203.png" alt="Palla di vetro con la neve mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726207.png" alt="Sacco con i regali di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726279.png" alt="Albero di Natale con i regali mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726264.png" alt="Regali di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726190.png" alt="Slitta di Babbo Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726242.png" alt="Luci di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726277.png" alt="Camino mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726169.png" alt="Calzino di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726215.png" alt="Campane di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726234.png" alt="Mistletoe mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726262.png" alt="Biscotto di Natale mini" class="decorazioni">
-        </div>
-        <p id="date"></p>
-        <h2 style="margin-top: 2vh; border-bottom: 0.75px solid grey; margin-bottom: 0; text-align: start;">Works</h2>
-        <h1 style="margin-top: 10vh; font-size: 2.5vw; text-align: start; margin-bottom: 5vh;">My projects</h1>
+    <main id="main">
+        <h2>Works</h2>
+        <h1 id="projectsTitle">My projects</h1>
         <div class="listsContainer">
             <ul id="links">
                 <li><a href="http://www.lyricsstorage.it/" target="_blank">Lyrics Storage</a></li>
@@ -67,7 +48,7 @@
                 <li><a href="http://www.lyricsstorage.fun/E%20un%20ma.html">È un … ma …</a></li>
             </ul>
         </div>
-        <h1 style="margin-top: 5vh; margin-bottom: 5vh; font-size: 2.5vw; text-align: start;">Frontend Mentor Challenges <a href="https://www.frontendmentor.io" target="_blank"><span class="material-symbols-rounded">link</span></a></h1>
+        <h1 id="challengeTitle">Frontend Mentor Challenges <a href="https://www.frontendmentor.io" target="_blank"><span class="material-symbols-rounded">link</span></a></h1>
         <div class="listsContainer">
             <ul id="links">
                 <li><a href="https://lumon2004.github.io/lumon2004/Product%20preview%20card%20component/" target="_blank">Product preview card component</a></li>
@@ -78,80 +59,6 @@
                 <li><a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">Stats preview card component</a></li>
             </ul>
         </div>
-        
-        <script>
-            const date = new Date();
-            var dateMonth = date.getMonth() + 1;
-            document.getElementById("date").innerHTML= date.getDate() + "/" + dateMonth;
-            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
-            // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() >= 1 && dateMonth == 11) {
-                function Christmas() {
-                    document.getElementById("header").style.backgroundColor="#BD0019";
-                    document.getElementById("sideMenu").style.backgroundColor="#BD0019";
-                    document.getElementById("logo").style.color="#fff";
-                    document.getElementById("augurio").style.display="inline-flex";
-                    const icons = document.getElementsByClassName("material-symbols-rounded");
-                    icons[0].style.color="#fff";
-                    icons[1].style.color="#fff";
-                    document.getElementById("bgImg").src="Palla%20di%20Natale.jpg";
-                    document.getElementById("bgImg").style.borderColor="#165B33"
-                    document.getElementById("profileImg").style.borderColor="#165B33"
-                    document.getElementById("main").style.backgroundColor="#146B3A";
-                    const h2 = document.getElementsByTagName("h2");
-                    h2[0].style.color="#fff";
-                    h2[1].style.color="rgb(240,140,97)";
-                    h2[2].style.color="#fff";
-                    const titolo = document.getElementsByTagName("h1");
-                    titolo[1].style.color="#fff";
-                    const testo = document.getElementsByTagName("p");
-                    testo[0].style.color="#fff";
-                    testo[1].style.color="#fff";
-                    testo[3].style.color="#fff";
-                    testo[4].style.color="#fff";
-                    testo[5].style.color="#fff";
-                    testo[6].style.color="#fff";
-                    testo[7].style.color="#fff";
-                    testo[8].style.color="#fff";
-                    testo[9].style.color="#fff";
-                    testo[10].style.color="#fff";
-                    testo[11].style.color="#fff";
-                    testo[12].style.color="#fff";
-                    const links = document.getElementsByTagName("a");
-                    /*links[8].style.color="#BD0019";
-                    links[9].style.color="#BD0019";
-                    links[10].style.color="#BD0019";*/
-                    links[11].style.color="#BD0019";
-                    /*links[12].style.color="#BD0019";
-                    links[13].style.color="#BD0019";
-                    links[14].style.color="#BD0019";
-                    links[15].style.color="#BD0019";
-                    links[16].style.color="#BD0019";
-                    links[17].style.color="#BD0019";*/
-                    document.getElementById("decorazioni").style.display="block";
-                    const titoliProgetti = document.getElementsByTagName("h5");
-                    titoliProgetti[0].style.color="#fff";
-                    titoliProgetti[1].style.color="#fff";
-                    titoliProgetti[2].style.color="#fff";
-                    titoliProgetti[3].style.color="#fff";
-                    titoliProgetti[4].style.color="#fff";
-                    titoliProgetti[5].style.color="#fff";
-                    titoliProgetti[6].style.color="#fff";
-                    titoliProgetti[7].style.color="#fff";
-                    titoliProgetti[8].style.color="#fff";
-                    document.getElementsByTagName("th")[0].style.color="rgb(240,140,97)";
-                    const skill = document.getElementsByTagName("td");
-                    skill[1].style.color="#fff";
-                    skill[3].style.color="#fff";
-                    skill[5].style.color="#fff";
-                    skill[7].style.color="#fff";
-                    skill[9].style.color="#fff";
-                    skill[11].style.color="#fff";
-                    skill[13].style.color="#fff";
-                    skill[15].style.color="#fff";
-                };
-                Christmas();
-            }
-        </script>
     </main>
 </body>
 </html>
