@@ -427,14 +427,17 @@ main a span.material-symbols-rounded {
     }
     main #bgImg {
         border-bottom: 1vw solid;
-        border-color: var(--headerbg);
+        height: 100%;
+        object-fit: fill;
+        object-position: 100% 100%;
     }
     main #profileImg {
         border: 1vw solid;
-        border-color: var(--headerbg);
+        margin-top: 37.5%;
     }
     main h1 {
         font-size: 10vw;
+        margin-top: 10%;
     }
     main p {
         font-size: 4vw;
