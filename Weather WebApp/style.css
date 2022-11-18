@@ -30,7 +30,7 @@ header > span#weatherIcon {
     margin-right: .25vw;
     font-size: 2.5vw;
 }
-header > p.language {
+header > p#languages {
     margin-left: auto;
     margin-right: .5%;
     cursor: pointer;
@@ -43,4 +43,27 @@ header > span#worldIcon {
 main {
     margin-top: 44px;
     position: absolute;
+    width: 100%;
+}
+main > div#weather {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding: 2%;
+}
+main > div#weather > h1 {
+    text-align: center;
+    font-size: 3vw;
+}
+main > div#weather > p#weatherConditions {
+    text-align: center;
+    font-size: 1.5vw;
+}
+main > div#weather > p#temperatureValue {
+    font-size: 8vw;
+    text-align: center;
 }

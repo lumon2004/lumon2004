@@ -1,4 +1,4 @@
-var position = document.getElementById("location");
+/*var position = document.getElementById("location");
 function getLocation () {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition)
@@ -8,4 +8,4 @@ function getLocation () {
 }
 function showPosition(position) {
     position.innerHTML="Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
-}
+}*/

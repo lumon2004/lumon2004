@@ -11,15 +11,24 @@
 <body>
     <header>
         <span class="material-symbols-rounded" id="weatherIcon">nest_farsight_weather</span>
-        <p>Meteo</p>
-        <p>Weather</p>
-        <p onclick="italiano()" class="language">IT</p>
-        <p onclick="english()" class="language">EN</p>
+        <p id="titleHeader">
+            <span class="italiano">Meteo</span>
+            <span class="english">Weather</span>
+        </p>
+        <p id="languages">
+            <span onclick="italiano()" class="language english">IT</span>
+            <span onclick="english()" class="language italiano">EN</span>
+        </p>
         <span class="material-symbols-rounded" id="worldIcon">language</span>
     </header>
     <main>
         <div id="weather">
-            <h1 id="location">Roma</h1>
+            <h1 id="location">
+                <span class="italiano">Roma</span>
+                <span class="english">Rome</span>
+            </h1>
+            <p id="weatherConditions"></p>
+            <p id="temperatureValue"></p>
         </div>
     </main>
     <script src="language.js"></script>
