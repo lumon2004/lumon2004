@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: rgb(0, 174, 255);
+    color: #fff;
+}
+header {
+    height: 44px;
+    width: 95%;
+    background-color: rgba(255, 255, 255, .3); 
+    position: fixed;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    display: inline-flex;
+}
+header > p {
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 2vw;
+    font-weight: 500;
+    height: min-content;
+}
+header > span#weatherIcon {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: .25vw;
+    font-size: 2.5vw;
+}
+header > p.language {
+    margin-left: auto;
+    margin-right: .5%;
+    cursor: pointer;
+}
+header > span#worldIcon {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 2.5vw;
+}
+main {
+    margin-top: 44px;
+    position: absolute;
+}

@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,1,0">
 </head>
 <body>
     <header>
-        <h1>Weather</h1>
+        <span class="material-symbols-rounded" id="weatherIcon">nest_farsight_weather</span>
+        <p>Meteo</p>
+        <p>Weather</p>
+        <p onclick="italiano()" class="language">IT</p>
+        <p onclick="english()" class="language">EN</p>
+        <span class="material-symbols-rounded" id="worldIcon">language</span>
     </header>
     <main>
-
+        <div id="weather">
+            <h1 id="location">Roma</h1>
+        </div>
     </main>
+    <script src="language.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
