@@ -15,40 +15,295 @@
       }
     </style>
     <style>
-      
+      @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+      :root {
+        --violet: hsl(300, 43%, 22%);
+        --softPink: hsl(333, 80%, 67%);
+        --darkGrayishMagenta: hsl(303, 10%, 53%);
+        --lightGrayishMagenta: hsl(300, 24%, 96%);
+      }
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        width: 100%;
+        font-family: 'League Spartan', sans-serif;
+      }
+      div#container {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 10vh;
+      }
+      div#container > img#bgPatternTopDesktop {
+        position: absolute;
+        top: 0px;
+      }
+      div#container > img#bgPatternBottomDesktop {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+      }
+      div#superiorPanel {
+        width: 100%;
+        display: inline-flex;
+        margin-bottom: 5vh;
+      }
+      div#superiorPanel > div#superiorLeftPanel, div#superiorPanel > div#superiorRightPanel {
+        width: 50%;
+      }
+      div#superiorPanel > div#superiorLeftPanel > h1 {
+        font-size: 5vw;
+        color: var(--violet);
+        margin: 0;
+      }
+      div#superiorPanel > div#superiorLeftPanel > p {
+        font-size: 1.5vw;
+        color: var(--darkGrayishMagenta);
+      }
+      div#superiorPanel > div#superiorRightPanel > div.ratingPanels {
+        background-color: var(--lightGrayishMagenta);
+        border-radius: 10px;
+        display: flex;
+        width: 60%;
+        height: 7vh;
+        margin-bottom: 2vh;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      div#superiorPanel > div#superiorRightPanel > div.ratingPanels:nth-child(2) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      div#superiorPanel > div#superiorRightPanel > div.ratingPanels:nth-child(3) {
+        margin-left: auto;
+      }
+      div#superiorPanel > div#superiorRightPanel > div.ratingPanels > p, div#superiorPanel > div#superiorRightPanel > div.ratingPanels > svg {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      div#superiorPanel > div#superiorRightPanel > div.ratingPanels > p {
+        margin-left: auto;
+        font-size: 1.10vw;
+        font-weight: 600;
+        color: var(--violet);
+      }
+      div#superiorPanel > div#superiorRightPanel > div.ratingPanels > svg {
+        margin-right: 2%;
+      }
+      div#inferiorPanel {
+        width: 100%;
+        display: inline-flex;
+
+      }
+      div#inferiorPanel > div.reviewPanel {
+        width: 24%;
+        padding: 3%;
+        background-color: var(--violet);
+        border-radius: 10px;
+        color: var(--lightGrayishMagenta);
+        height: 20vh;
+      }
+      div#inferiorPanel > div.reviewPanel:nth-child(2) {
+        margin-top: 5vh;
+      }
+      div#inferiorPanel > div.reviewPanel:nth-child(3) {
+        margin-top: 10vh;
+      }
+      div#inferiorPanel > div.reviewPanel:not(:last-child) {
+        margin-right: 3.3%;
+      }
+      div#inferiorPanel > div.reviewPanel > div.info {
+        display: inline-flex;
+        width: 100%;
+      }
+      div#inferiorPanel > div.reviewPanel > div.info > img {
+        border-radius: 50%;
+      }
+      div#inferiorPanel > div.reviewPanel > div.info > div.name {
+        margin-left: 10%;
+        height: min-content;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      div#inferiorPanel > div.reviewPanel > div.info > div.name > p:first-child {
+        font-size: 1vw;
+        font-weight: 500;
+        margin-bottom: 1vh;
+      }
+      div#inferiorPanel > div.reviewPanel > div.info > div.name > p:last-child {
+        font-size: 1vw;
+        font-weight: 400;
+        color: var(--softPink);
+        margin-top: 5%;
+      }
+      div#inferiorPanel > div.reviewPanel > p {
+        font-size: 1.10vw;
+        line-height: 1.25;
+      }
+      @media screen and (max-width: 415px) {
+        div#container {
+          margin-top: 5vh;
+          margin-bottom: 5vh;
+        }
+        div#container > img#bgPatternTopDesktop, div#container > img#bgPatternBottomDesktop {
+          display: none;
+        }
+        div#superiorPanel {
+          display: block;
+        }
+        div#superiorPanel > div#superiorLeftPanel, div#superiorPanel > div#superiorRightPanel {
+          width: 100%;
+        }
+        div#superiorPanel > div#superiorLeftPanel > h1, div#superiorPanel > div#superiorLeftPanel > p {
+          text-align: center;
+        }
+        div#superiorPanel > div#superiorLeftPanel > h1 {
+          font-size: 10vw;
+        }
+        div#superiorPanel > div#superiorLeftPanel > p {
+          font-size: 5vw;
+        }
+        div#superiorPanel > div#superiorRightPanel > div.ratingPanels {
+          width: 90%;
+          display: block;
+        }
+        div#superiorPanel > div#superiorRightPanel > div.ratingPanels > svg {
+          margin-top: 1vh;
+          margin-bottom: 1vh;
+        }
+        div#superiorPanel > div#superiorRightPanel > div.ratingPanels > svg:first-child {
+          margin-left: 29.5%;
+        }
+        div#superiorPanel > div#superiorRightPanel > div.ratingPanels > p {
+          font-size: 3vw;
+          text-align: center;
+        }
+        div#inferiorPanel {
+          display: block;
+        }
+        div#inferiorPanel > div.reviewPanel {
+          margin-left: 0;
+          width: 85%;
+          padding: 7.5%;
+          height: 30vh;
+        }
+        div#inferiorPanel > div.reviewPanel > div.info > div.name > p:first-child {
+          font-size: 5vw;
+          margin-top: 0;
+        }
+        div#inferiorPanel > div.reviewPanel > div.info > div.name > p:last-child {
+          font-size: 4vw;
+          margin: 0;
+        }
+        div#inferiorPanel > div.reviewPanel > p {
+          font-size: 4.25vw;
+        }
+        div#inferiorPanel > div.reviewPanel:nth-child(3) {
+          margin-top: 5vh;
+        }
+      }
     </style>
   </head>
   <body>
-    10,000+ of our users love our products.
-
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
-
+    <div id="container">
+      <img src="bg-pattern-top-desktop.svg" id="bgPatternTopDesktop">
+      <img src="bg-pattern-bottom-desktop.svg" id="bgPatternBottomDesktop">
+      <div id="superiorPanel">
+        <div id="superiorLeftPanel">
+          <h1>10,000+ of our users love our products.</h1>
+          <p>We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.</p>
+        </div>
+        <div id="superiorRightPanel">
+          <div class="ratingPanels">
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <p>Rated 5 Stars in Reviews</p>
+          </div>
+          <div class="ratingPanels">
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <p>Rated 5 Stars in Report Guru</p>
+          </div>
+          <div class="ratingPanels">
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/>
+            </svg>
+            <p>Rated 5 Stars in BestTech</p>
+          </div>
+        </div>
+      </div>
+      <div id="inferiorPanel">
+        <div class="reviewPanel">
+          <div class="info">
+            <img alt="Colton Smith" src="image-colton.jpg">
+            <div class="name">
+              <p>Colton Smith</p>
+              <p>Verified Buyer</p>
+            </div>
+          </div>
+          <p>" We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent! "</p>
+        </div>
+        <div class="reviewPanel">
+          <div class="info">
+            <img alt="Irene Roberts" src="image-irene.jpg">
+            <div class="name">
+              <p>Irene Roberts </p>
+              <p>Verified Buyer</p>
+            </div>
+          </div>
+          <p>" Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery. "</p>
+        </div>
+        <div class="reviewPanel">
+          <div class="info">
+            <img alt="Anne Wallace" src="image-anne.jpg">
+            <div class="name">
+              <p>Anne Wallace</p>
+              <p>Verified Buyer</p>
+            </div>
+          </div>
+          <p>" Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone! "</p>
+        </div>
+      </div>
+    </div>
     <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/lumon2004/">Luca Monaco</a>.
     </div>
   </body>
 </html>
