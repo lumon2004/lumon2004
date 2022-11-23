@@ -170,8 +170,8 @@
             const date = new Date();
             var dateMonth = date.getMonth() + 1;
             document.getElementById("date").innerHTML= date.getDate() + "/" + dateMonth;
-            // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
-            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() >= 1 && dateMonth == 11) {
+            if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
+            // if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() >= 1 && dateMonth == 11) {
                 function Christmas() {
                     document.getElementById("header").style.backgroundColor="#BD0019";
                     document.getElementById("sideMenu").style.backgroundColor="#BD0019";
