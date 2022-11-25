@@ -73,7 +73,7 @@ header ul li#augurio p {
     font-size: 0.85vw;
 }
 header#header > ul > li#language {
-    margin: auto 1% auto auto;
+    margin: auto 1% auto 0%;
 }
 span.material-symbols-rounded {
     cursor: pointer;
