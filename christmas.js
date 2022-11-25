@@ -11,6 +11,7 @@ const date = new Date();
             const icons = document.getElementsByClassName("material-symbols-rounded");
             icons[0].style.color="#fff";
             icons[1].style.color="#fff";
+            icons[2].style.color="#fff";
             document.getElementById("bgImg").src="Palla%20di%20Natale.jpg";
             document.getElementById("bgImg").style.borderColor="#165B33"
             document.getElementById("profileImg").style.borderColor="#165B33"
@@ -59,7 +60,6 @@ const date = new Date();
             titoliProgetti[6].style.color="#fff";
             titoliProgetti[7].style.color="#fff";
             titoliProgetti[8].style.color="#fff";
-            document.getElementsByTagName("th")[0].style.color="rgb(166, 212, 255)";
             const skill = document.getElementsByTagName("td");
             skill[1].style.color="#fff";
             skill[3].style.color="#fff";
@@ -70,6 +70,7 @@ const date = new Date();
             skill[13].style.color="#fff";
             skill[15].style.color="#fff";
             document.getElementById("linkAltro").style.color="#BD0019";
+            document.getElementById("language").style.marginLeft="0%";
         };
         Christmas();
     }
