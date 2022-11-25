@@ -45,6 +45,7 @@ header ul li:first-child {
 header ul li span.material-symbols-rounded {
     font-size: 2vw;
     color: var(--bg);
+    font-weight: 401;
 }
 header ul li:nth-child(2) {
     position: absolute;
@@ -71,6 +72,12 @@ header ul li#augurio p {
     margin-bottom: auto;
     font-size: 0.85vw;
 }
+header#header > ul > li#language {
+    margin: auto 1% auto auto;
+}
+span.material-symbols-rounded {
+    cursor: pointer;
+}
 ul#sideMenu {
     background-color: var(--headerbg);
     color: var(--bg);
@@ -89,6 +96,7 @@ ul#sideMenu li span.material-symbols-rounded {
     margin-left: 85%;
     margin-top: 2.5%;
     font-size: 2vw;
+    font-weight: 401;
 }
 ul#sideMenu li h2 {
     margin: 0;

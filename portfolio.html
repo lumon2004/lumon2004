@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luca Monaco | Front-End Web Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <script src="app.js"></script>
+    <script src="portfolio.js"></script>
     <header id="header">
         <ul>
             <li>
@@ -21,7 +23,11 @@
             </li>
             <li id="augurio">
                 <img src="https://cdn-icons-png.flaticon.com/512/3726/3726221.png" alt="Albero di Natale mini" class="decorazioni">
-                <p>Merry Xmas and Happy New Year!</p>
+                <p lang="it">Buon Natale e felice anno nuovo!</p>
+                <p lang="en">Merry Xmas and Happy New Year!</p>
+            </li>
+            <li id="language">
+                <span class="material-symbols-rounded" onclick="switchLanguage()">translate</span>
             </li>
         </ul>
     </header>
@@ -35,7 +41,10 @@
         <li><img src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_small.svg" alt="FreeCodeCamp"><a href="https://www.freecodecamp.org/lucamonaco" target="_blank">FreeCodeCamp</a></li>
         <li><img src="https://cdn-icons-png.flaticon.com/512/2111/2111341.png" alt="CodePen"><a href="https://codepen.io/luca-monaco" target="_blank">CodePen</a></li>
         <li><img src="https://cdn-icons-png.flaticon.com/512/2111/2111690.png" alt="StackOverflow"><a href="https://stackoverflow.com/users/19863559/luca" target="_blank">StackOverflow</a></li>
-        <li><img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="email"><a href="mailto: lucamonaco04@libero.it">Indirizzo email</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="email">
+            <a href="mailto: lucamonaco04@libero.it" lang="it">Indirizzo email</a>
+            <a href="mailto: lucamonaco04@libero.it" lang="en">Email address</a>
+        </li>
     </ul>
     <main id="main">
         <img src="Yosemite.jpg" alt="Background Image" id="bgImg">
@@ -60,12 +69,12 @@
             <img src="https://cdn-icons-png.flaticon.com/512/3726/3726262.png" alt="Biscotto di Natale mini" class="decorazioni">
         </div>
         <h1>Luca Monaco</h1>
-        <p>Front-End Web Developer di 18 anni da Roma, studente di ingegneria informatica all'università di RomaTre.</p>
-        <p id="date"></p>
+        <p lang="it">Front-End Web Developer di 18 anni da Roma, studente di ingegneria informatica all'università di RomaTre.</p>
+        <p lang="en">18-year-old Front-End Web Developer from Rome, computer engineering student at the University of Roma Tre.</p>
+        <p id="date" lang="none" style="display: none"></p>
+        <h2 lang="it">Skill e linguaggi</h2>
+        <h2 lang="en">Skills and languages</h2>
         <table id="skill">
-            <thead>
-                <th colspan="4">Skill e linguaggi</th>
-            </thead>
             <tbody>
                 <tr>
                     <td><div id="html"></div></td>
@@ -93,78 +102,92 @@
                 </tr>
             </tbody>
         </table>
-        <h2>Progetti</h2>
-        <p style="margin-top: 0%;">Progetti a cui ho lavorato</p>
+        <h2 lang="it">Progetti</h2>
+        <h2 lang="en">Projects</h2>
+        <p style="margin-top: 0%;" lang="it">Progetti a cui ho lavorato</p>
+        <p style="margin-top: 0%;" lang="en">Projects I worked to</p>
         <ul class="projects">
             <li>
                 <a href="http://www.lyricsstorage.it/" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Lyrics Storage.png" alt="Lyrics Storage">
+                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Lyrics Storage.png" alt="Lyrics Storage" lang="it">
                     <h5>Lyrics Storage</h5>
-                    <p>Raccolta di testi di canzoni e conoscenze musicali.</p>
+                    <p lang="it">Raccolta di testi di canzoni e conoscenze musicali</p>
+                    <p lang="en">Collection of song lyrics and musical knowledge</p>
                 </a>
             </li>
             <li>
                 <a href="http://www.lyricsstorage.website/" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Marvel Website.png" alt="Marvel Website">
+                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Marvel Website.png" alt="Marvel Website" lang="it">
                     <h5>Marvel Website</h5>
-                    <p>Enciclopedia sul Marvel Cinematic Universe</p>
+                    <p lang="it">Enciclopedia sul Marvel Cinematic Universe</p>
+                    <p lang="en">Marvel Cinematic Universe Encyclopedia</p>
                 </a>
             </li>
             <li>
                 <a href="http://www.lyricsstorage.fun/E%20un%20ma.html" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/È un ma.png" alt="È un … ma …" style="border: 1px solid #000">
+                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/È un ma.png" alt="È un … ma …" style="border: 1px solid #000" lang="it">
                     <h5>È un … ma …</h5>
-                    <p>Gioco andato virale su TikTok nell'estate 2022</p>
+                    <p lang="it">Gioco andato virale su TikTok nell'estate 2022</p>
+                    <p lang="en">Game went viral on TikTok in summer 2022</p>
                 </a>
             </li>
         </ul>
-        <h2 id="frontendmentor">Challenge di <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a></h2>
-        <p style="margin-top: 0;">Le ultime challenge che ho completato</p>
+        <h2 id="frontendmentor" lang="it">Challenge di <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a></h2>
+        <h2 id="frontendmentor" lang="en">Challenges by <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a></h2>
+        <p style="margin-top: 0;" lang="it">Le ultime challenge che ho completato</p>
+        <p style="margin-top: 0;" lang="en">Last challenges I completed</p>
         <ul class="projects">
             <li>
                 <a href="https://lumon2004.github.io/lumon2004/Social%20proof%20section/" target="_blank">
                     <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Social proof section.png" alt="Social proof section">
                     <h5>Social proof section</h5>
-                    <p>Pagina di ratings e reviews di un'azienda</p>
+                    <p lang="it">Pagina di valutazioni e recensioni di un'azienda</p>
+                    <p lang="en">A company's ratings and reviews page</p>
                 </a>
             </li>
             <li>
                 <a href="https://lumon2004.github.io/lumon2004/Article%20preview%20component/" target="_blank">
                     <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Article preview component.png" alt="Article preview component">
                     <h5>Article preview component</h5>
-                    <p>Anteprima di un articolo</p>
+                    <p lang="it">Anteprima di un articolo</p>
+                    <p lang="en">Preview of an article</p>
                 </a>
             </li>
             <li>
                 <a href="https://lumon2004.github.io/lumon2004/Stats%20preview%20card%20component/" target="_blank">
                     <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Stats preview card component.png" alt="Stats preview card component">
                     <h5>Stats preview card component</h5>
-                    <p>Anteprima di una presentazione di statistiche</p>
+                    <p lang="it">Anteprima di una presentazione di statistiche</p>
+                    <p lang="en">Preview of a stats presentation</p>
                 </a>
             </li>
             <li>
                 <a href="https://lumon2004.github.io/lumon2004/3%20column%20preview%20card%20component/" target="_blank">
                     <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/3 column card component.png" alt="3 column preview card component" style="border: 1px solid #000">
                     <h5>3 column preview card component</h5>
-                    <p>Anteprima di una scheda a 3 colonne</p>
+                    <p lang="it">Anteprima di una scheda a 3 colonne</p>
+                    <p lang="en">Preview of a 3 column card</p>
                 </a>
             </li>
             <li>
                 <a href="https://lumon2004.github.io/lumon2004/NFT%20preview%20card%20component/" target="_blank">
                     <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/NFT preview card component.png" alt="NFT preview card component">
                     <h5>NFT preview card component</h5>
-                    <p>Anteprima della scheda di un NFT</p>
+                    <p lang="it">Anteprima della scheda di un NFT</p>
+                    <p lang="en">Preview of the card of an NFT</p>
                 </a>
             </li>
             <li>
                 <a href="https://lumon2004.github.io/lumon2004/Qr%20code%20component/" target="_blank">
                     <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/QR code card component.png" alt="QR code component">
                     <h5>QR Code component</h5>
-                    <p>Scheda di un QR Code</p>
+                    <p lang="it">Scheda di un QR Code</p>
+                    <p lang="en">Card of a QR Code</p>
                 </a>
             </li>
         </ul>
-        <a href="links.html" id="linkAltro">Altro<span class="material-symbols-rounded">arrow_forward_ios</span></a>
+        <a href="links.html" id="linkAltro" lang="it">Altro<span class="material-symbols-rounded">arrow_forward_ios</span></a>
+        <a href="links.html" id="linkAltro" lang="en">Other<span class="material-symbols-rounded">arrow_forward_ios</span></a>
     </main>
         <script>
             const date = new Date();
