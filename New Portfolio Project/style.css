@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Questrial&family=Noto+Sans+JP&family=Bungee+Shade&family=Megrim&family=Righteous&display=swap');
+:root {
+    --color-light-blue: #6bc5f8;
+    --color-gray: #c4c4c4;
+    --color-purple: #8000ff;
+    --color-light-purple: #cf59e6;
+}
+body {
+    overflow: hidden;
+    background-color: rgb(16, 16, 25);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+}
+header {
+    position: fixed;
+    background-color: rgb(31, 31, 41);
+    height: 7.5%;
+    width: 46%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 3vh 25% 3vh 25%;
+    border-radius: 35px;
+    border: 2px solid rgb(42, 43, 54);
+    display: inline-flex;
+    backdrop-filter: blur(104px);
+    -webkit-backdrop-filter: blur(104px);
+    z-index: 2;
+}
+header > div#menuScritta, header > div#closeScritta {
+    display: inline-flex;
+    margin-left: auto;
+}
+header > div#closeScritta {
+    display: none;
+}
+header > h6 {
+    font-family: 'Bungee Shade', cursive;
+    /*font-family: 'Megrim', cursive;
+    font-family: 'Righteous', cursive;*/
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 2;
+    background-color: inherit;
+    width: auto;
+    margin-left: -4%;
+    text-align: end;
+    padding-left: 5%;
+    font-size: 1.25vw;
+    border-radius: 20px;
+}
+header p:not(header > p) {
+    text-transform: uppercase;
+    color: rgb(132, 251, 220);
+    margin: auto 2% auto auto;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1vw;
+}
+header > p {
+    font-family: 'Noto Sans JP', sans-serif;
+    animation: slideinFromLeft 15s cubic-bezier(1,0,0,1) infinite;
+    margin-left: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    font-size: .75vw;
+}
+@keyframes slideinFromLeft {
+    0% {
+        -webkit-transform: translateX(0);
+        transform:translateX(0);
+        opacity: .5;
+    }
+
+    20% {
+        -webkit-transform: translate(-110%);
+        transform:translate(-110%);
+        opacity: 0;
+    }
+    
+    50%, to {
+        -webkit-transform: translate(0);
+        transform:translate(0);
+        opacity: .5;
+    }
+}
+header img {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 5%;
+    transition: .2s ease;
+}
+header img:hover {
+    width: 4%;
+}
+navmenu {
+    margin-top: -100%;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(16, 16, 25);
+    z-index: 1;
+    transition: 1s ease;
+}
+navmenu > div#navmenuContent {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    display: flex;
+}
+navmenu > div#navmenuContent > div#languagesPanel {
+    margin-right: 15%;
+    height: 35.5vh;
+}
+navmenu > div#navmenuContent > div#languagesPanel > h2 {
+    letter-spacing: 0.0625vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr > td:first-child, navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr > td:nth-child(3) {
+    font-family: 'Noto Sans JP', sans-serif;
+    opacity: .5;
+}
+navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr > td:nth-child(2) > progress {
+    border-radius: 20px;
+    height: 0.75em;
+    vertical-align: 0.0625em;
+    width: 20vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr > td:nth-child(2) > progress::-webkit-progress-bar {
+    background-color: rgb(233,233,233);
+    border-radius: 20px;
+}
+navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr > td:nth-child(2) > progress::-webkit-progress-value {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr:first-child > td:nth-child(2) > progress::-webkit-progress-value {
+    background-color: #e44d26;
+}
+navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr:nth-child(2) > td:nth-child(2) > progress::-webkit-progress-value {
+    background-color: #264ee4;
+}
+navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr:nth-child(3) > td:nth-child(2) > progress::-webkit-progress-value {
+    background-color: #f7df1d;
+}
+navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr:nth-child(4) > td:nth-child(2) > progress::-webkit-progress-value {
+    background-color: #767bb3;
+}
+navmenu > div#navmenuContent > div#ideaPanel {
+    height: 35.5vh;
+}
+navmenu > div#navmenuContent > div#ideaPanel > h5, navmenu > div#navmenuContent > div#ideaPanel > h2 {
+    text-align: center;
+}
+navmenu > div#navmenuContent > div#ideaPanel > h5 {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    letter-spacing: 0.0625vw;
+    margin-block-end: 0.65em;
+    margin-block-start: 0.65em;
+}
+navmenu > div#navmenuContent > div#ideaPanel > h2 {
+    margin: 0;
+    font-size: 5vw;
+    margin-top: 4vh;
+}
+navmenu > div#navmenuContent > div#ideaPanel > h2 > span {
+    display: none;
+}
+navmenu > div#navmenuContent > div#ideaPanel > ul {
+    display: inline-flex;
+    list-style-type: none;
+    padding-inline-start: 0px;
+    width: 80%;
+    margin-left: 20%;
+}
+navmenu > div#navmenuContent > div#ideaPanel > ul > li {
+    margin-right: 1vw;
+}
+navmenu > div#navmenuContent > div#ideaPanel > ul > li > a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+navmenu > h3 {
+    font-size: 2.5vw;
+    text-align: center;
+    margin: 0;
+    margin-top: 5vh;
+    cursor: pointer;
+}
+navmenu > div#credits {
+    bottom: 2%;
+    position: absolute;
+    width: 60%;
+    margin-left: 20%;
+    height: 2.5vh;
+    padding: 2vh;
+    border-radius: 35px;
+    background-color: transparent;
+    text-align: center;
+    color: rgb(132, 251, 220);
+    border: 1.5px solid;
+    border-color: rgb(132, 251, 220);
+    font-size: 1.25vw;
+}
+navmenu > div#credits > a {
+    text-decoration: none;
+    color: inherit;
+}
+main {
+    width: 100%;
+    margin-top: 8.5%;
+    height: 90%;
+    position: absolute;
+    display: inline-flex;
+}
+social > ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    width: 2.5%;
+    position: fixed;
+    left: 1%;
+    bottom: 1%;
+    margin: 0;
+}
+social > ul > li:not(:last-child) {
+    margin-bottom: 2vh;
+}
+social > ul > li.line {
+    width: 0px;
+    height: 10vw;
+    position: relative;
+    top: 1.5vh;
+    border: 1.5px solid;
+    border-color: rgb(132, 251, 220);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s ease;
+}
+social > ul > li > a > img {
+    width: 100%;
+    transition: .3s ease;
+}
+social > ul > li > a > img:hover {
+    width: 120%;
+}
+section {
+    margin-left: 3%;
+    /*margin-right: 20%;*/
+    height: 93.5%;
+    width: 92%;
+}
+section > div#nome {
+    display: inline-flex;
+    width: 75%;
+    margin-left: 12.5%;
+}
+section > div#nome > h1 {
+    background: -webkit-linear-gradient(135deg,var(--color-light-blue),var(--color-light-purple),var(--color-light-blue),var(--color-light-purple));
+    background: linear-gradient(-45deg,var(--color-light-blue),var(--color-light-purple),var(--color-light-blue),var(--color-light-purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    font-size: 8vw;
+    -webkit-animation: gradient 3s ease infinite;
+    animation: gradient 3s ease infinite;
+    margin: 0;
+    width: 50%;
+    text-align: end;
+    transition: .5s ease-in;
+    margin-top: auto;
+}
+section > div#nome > div#sentence {
+    margin-left: 2%;
+    border-left: 2px solid rgb(132, 251, 220);
+    margin-top: 2.5%;
+    height: 100%;
+    padding-left: 2%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+section > div#nome > div#sentence > p {
+    margin: 0;
+    color: #fff;
+    font-family: 'Questrial', sans-serif;
+    margin-left: 3%;
+    margin-top: 1%;
+    font-size: 2.5vw;
+    letter-spacing: 0.15vw;
+    width: 10%;
+    line-height: 1;
+    margin-top: auto;
+    transition: .5s ease;
+}
+section > ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-top: 5vh;
+}
+section > ul > li:first-child {
+    text-transform: uppercase;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: rgba(143, 143, 143, 0.44);
+    transition: .5s ease;
+    font-size: 2vw;
+    margin-top: 25vh;
+}
+section > ul#viewProjects > li:first-child:hover {
+    font-size: 2.5vw;
+}
+section > ul > li > div.line {
+    height: 0;
+    width: 8vw;
+    border: 1px solid;
+    border-color: rgba(143, 143, 143, 0.44);
+    transition: .5s ease;
+    margin-top: .5vh;
+}
+mail {
+    position: fixed;
+    width: 27.5%;
+    height: min-content;
+    transform: rotate(90deg);
+    right: -12.5%;
+    bottom: 15%;
+}
+mail > ul {
+    padding-inline-start: 0px;
+    list-style-type: none;
+    font-family: 'Roboto Mono', monospace;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: inline-flex;
+}
+mail > ul > li:first-child {
+    position: relative;
+    right: 10%;
+}
+mail > ul > li:first-child > a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1vw;
+}
+mail > ul > li:last-child > div.line {
+    height: Opx;
+    width: 10vw;
+    border: 1.5px solid rgb(132, 251, 220);
+    border-radius: 10px;
+    margin-top: 5.5%;
+}
+projmenu {
+    overflow: auto;
+    height: 100vh;
+    width: 70%;
+    padding: 5vh 15%;
+    background-color: rgb(16, 16, 25);
+    margin-top: 100vh;
+    position: absolute;
+    z-index: 3;
+    transition: 1s ease;
+}
+projmenu > p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-size: 1.5vw;
+}
+projmenu > p#greetings {
+    margin-top: 15vh;
+}
+projmenu > p#underP {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.15vw;
+    margin-bottom: 20vh;
+    margin-top: 1vh;
+}
+projmenu > h2 {
+    font-size: 4vw;
+    margin: 0;
+}
+projmenu > h3 {
+    font-size: 3.5vw;
+    margin: 0;
+    margin-top: 25vh;
+}
+projmenu > h2 > span, projmenu > h3 > span {
+    width: max-content;
+    background-image: linear-gradient(90deg,#b0f3f1,#ffcfdf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+projmenu > p#uniqueP {
+    margin-top: 1vh;
+    font-size: 1.25vw;
+    margin-bottom: 5vh;
+}
+projmenu > p#team {
+    font-size: 2.5vw;
+}
+projmenu > p#team a {
+    text-decoration: none;
+    color: inherit;
+}
+projmenu > ul {
+    margin-bottom: 20vh;
+    list-style-type: none;
+    padding-inline-start: 0px;
+    display: flex;
+}
+projmenu > ul > li {
+    margin-right: 3vw;
+}
+projmenu > ul a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: .5s ease;
+}
+projmenu > ul a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+projmenu > ul span {
+    margin-right: .75vw;
+}
+projmenu > div#projectPanel {
+    width: 143%;
+    margin-left: -21.5%;
+    margin-right: -21.5%;
+}
+projmenu > div#projectPanel > div.projects {
+    width: 44%;
+    height: auto;
+    padding: 3%;
+    background-image: linear-gradient(rgba(35,37,49,.5), rgba(15,15,24,.5));
+    border-radius: 30px;
+    border: 1px solid rgb(42, 43, 54);
+    margin-left: 25%;
+}
+projmenu > div#projectPanel > div.projects {
+    display: flex;
+    z-index: 4;
+    margin-bottom: 7.5vh;
+}
+projmenu > div#projectPanel > div.projects > div > img {
+    width: 100%;
+    mix-blend-mode: overlay;
+    opacity: 80%;
+    height: 100%;
+}
+projmenu > div#projectPanel > div.projects > div {
+    width: max-content;
+    transition: .5s ease;
+}
+projmenu > div#projectPanel > div.projects > div.LyricsStorage {
+    background-color: rgb(31,0,45);
+}
+projmenu > div#projectPanel > div.projects > div.LyricsStorage:hover {
+    background-color: transparent;
+}
+projmenu > div#projectPanel > div.projects > div.Marvel {
+    background-color: rgb(207,48,40);
+}
+projmenu > div#projectPanel > div.projects > div.Marvel:hover {
+    background-color: transparent;
+}
+projmenu > div#projectPanel > div.projects > div.infoProject {
+    margin-left: 5%;
+}
+projmenu > div#projectPanel > div.projects > div.infoProject > h3 {
+    margin: 0;
+    font-size: 3vw;
+    transition: .5s ease;
+}
+projmenu > div#projectPanel > div.projects > div.infoProject > h3.LyricsStorage:hover  {
+    color: rgb(90,0,131);
+}
+projmenu > div#projectPanel > div.projects > div.infoProject > h3.Marvel:hover  {
+    color: rgb(207,48,40);
+}
+projmenu > div#projectPanel > div.projects > div.infoProject > h4 {
+    margin: 0;
+}
+projmenu > div#projectPanel > div.projects > div.infoProject > h4 > a {
+    margin: 0;
+    text-transform: uppercase;
+    margin-top: 5vh;
+    color: rgba(255, 255, 255, 0.4);
+    transition: .5s ease;
+    text-decoration: none;
+}
+projmenu > div#projectPanel > div.projects > div.infoProject > h4 > a:hover {
+    color: rgba(255, 255, 255, .8);
+}
+projmenu > div#projectPanel > div.projects > div.infoProject > div.line {
+    margin-top: 1vh;
+    height: 0px;
+    width: 8vw;
+    border: 1.5px solid red;
+    border-radius: 10px;
+}
+projmenu > div#projectPanel > a {
+    font-size: 1.5vw;
+    margin-left: 85%;
+    color: rgba(255, 255, 255, 0.4);
+}
+projmenu > div#projectPanel > a > span {
+    top: .25vw;
+    position: relative;
+}
+projmenu > span.material-symbols-rounded {
+    position: fixed;
+    font-size: 4vw;
+    margin-left: 75%;
+    cursor: pointer;
+}
+@media screen and (max-width: 415px) {
+    navmenu {
+        margin-top: -105vh;
+    }
+    header {
+        height: 5.5%;
+        width: 54%;
+        margin: 3vh 20%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    header > div#menuScritta, header > div#closeScritta {
+        width: 10%;
+        position: relative;
+        left: -15%;
+    }
+    header img {
+        width: 100%;
+    }
+    header img:hover {
+        width: 100%;
+    }
+    header > h6 {
+        font-size: 3vw;
+        padding-right: 5%;
+    }
+    header > p {
+        font-size: 2vw;
+        width: 100%;
+    }
+    @keyframes slideinFromLeft {
+        0% {
+            -webkit-transform: translateX(0);
+            transform:translateX(0);
+            opacity: .5;
+        }
+    
+        20% {
+            -webkit-transform: translate(-35%);
+            transform:translate(-35%);
+            opacity: 0;
+        }
+        
+        50%, to {
+            -webkit-transform: translate(0);
+            transform:translate(0);
+            opacity: .5;
+        }
+    }
+    header p:not(header > p) {
+        font-size: 3vw;
+    }
+    main {
+        margin-top: 21.5%;
+    }
+    social > ul {
+        width: 80%;
+        left: 10%;
+        display: inline-flex;
+        bottom: unset;
+    }
+    social > ul > li > a > img {
+        width: 30%;
+        margin-left: 35%;
+    }
+    social > ul > li > a > img:hover {
+        width: 30%;
+    }
+    social > ul > li.line {
+        height: 0px;
+        width: 100%;
+        position: absolute;
+        top: 5vh;
+    }
+    mail {
+        transform: rotate(0deg);
+        position: absolute;
+        width: 100%;
+        right: unset;
+        bottom: 5%;
+        display: none;
+    }
+    mail > ul {
+        width: 90%;
+        margin-left: 10%;
+        animation-name: slideinEmail;
+        animation-duration: 3s;
+    }
+    @keyframes slideinEmail {
+        from {
+            margin-left: 100%;
+        }
+        to {
+            margin-left: 10%;
+        }
+    }
+    mail > ul > li:first-child {
+        position: unset;
+        right: unset;
+    }
+    mail > ul > li:first-child > a {
+        font-size: 4.25vw;
+    }
+    mail > ul > li:last-child {
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: none;
+    }
+    mail > ul > li:last-child > div.line {
+        margin-top: unset;
+        width: 35vw;
+
+    }
+    section {
+        margin-top: 18vh;
+    }
+    section > div#nome {
+        display: block;
+    }
+    section > div#nome > h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 11vw;
+        margin-top: 0vh;
+    }
+    section > div#nome > div#sentence {
+        margin-left: 0;
+        margin-top: 25%;
+        border-left: 0px;
+        border-top: 0px solid rgb(132, 251, 220);
+        animation-name: slideinSentence;
+        animation-duration: 8s;
+    }
+    @keyframes slideinSentence {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    section > div#nome > div#sentence > p {
+        font-size: 5.5vw;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 1vh;
+        width: 100%;
+    }
+    section > div#nome > div#sentence > p:hover {
+        letter-spacing: 0.15vw;
+    }
+    section > ul > li:first-child {
+        margin-top: 15vh;
+        font-size: 4vw;
+    }
+    section > ul#viewProjects > li:first-child:hover {
+        font-size: 4vw;
+    }
+    section > ul > li > div.line {
+        width: 20vw;
+    }
+    navmenu > div#credits {
+        width: 85%;
+        margin-left: 5.5%;
+        height: auto;
+        padding: 2vh 1vh;
+        font-size: 2.5vw;
+    }
+    navmenu > div#navmenuContent {
+        display: block;
+    }
+    navmenu > div#navmenuContent > div#languagesPanel {
+        margin-right: unset;
+        height: auto;
+        margin-bottom: 7.5vh;
+    }
+    navmenu > div#navmenuContent > div#languagesPanel > table {
+        width: 100%;
+    }
+    navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr > td:nth-child(2) > progress {
+        width: 45vw;
+        height: .35rem;
+    }
+    navmenu > div#navmenuContent > div#ideaPanel > h5 {
+        font-size: 6vw;
+    }
+    navmenu > div#navmenuContent > div#ideaPanel > h2 > span {
+        display: block;
+        font-size: 20vw;
+        margin-top: 2vh;
+    }
+    navmenu > div#navmenuContent > div#ideaPanel > ul {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 5vh;
+    }
+    navmenu > div#navmenuContent > div#ideaPanel > ul > li {
+        display: inline-flex;
+    }
+    navmenu > div#navmenuContent > div#ideaPanel > ul > li:not(:last-child) {
+        margin-right: 15%;
+    }
+    navmenu > div#navmenuContent > div#ideaPanel > ul > li > a > abbr {
+        display: none;
+    }
+    navmenu > h3 {
+        display: none;
+    }
+    projmenu {
+        /*margin-top: -13vh;  DA ELIMINARE */
+        padding: 5vh 7.5%;
+        width: 85%;
+    }
+    projmenu > span.material-symbols-rounded {
+        margin-left: 82.5%;
+        font-size: 8vw;
+    }
+    projmenu > p#greetings {
+        margin-top: 7vh;
+        font-size: 4vw;
+        margin-bottom: 0vh;
+    }
+    projmenu > p#underP {
+        font-size: 3vw;
+        margin-bottom: 10vh;
+    }
+    projmenu > h2, projmenu > h3 {
+        font-size: 9vw;
+    }
+    projmenu > h3 {
+        margin-top: 10vh;
+    }
+    projmenu > p#uniqueP, projmenu > p, projmenu > p#team {
+        font-size: 4vw;
+        margin-bottom: 7.5vh;
+        margin-top: 1vh;
+    }
+    projmenu > p#team {
+        margin-top: 1vh;
+    }
+    projmenu > div#projectPanel {
+        width: 100%;
+        margin-left: unset;
+        margin-right: unset;
+    }
+    projmenu > div#projectPanel > div.projects {
+        width: 80%;
+        margin-left: 7.5%;
+        display: block;
+        margin-bottom: 5vh;
+    }
+    projmenu > div#projectPanel > div.projects > div {
+        width: 100%;
+        border-radius: 20px;
+    }
+    projmenu > div#projectPanel > div.projects > div.LyricsStorage, projmenu > div#projectPanel > div.projects > div.Marvel {
+        background-color: transparent;
+    }
+    projmenu > div#projectPanel > div.projects > div > img {
+        border-radius: 20px;
+    }
+    projmenu > div#projectPanel > div.projects > div.infoProject {
+        border-radius: 0px;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        width: 90%;
+    }
+    projmenu > div#projectPanel > div.projects > div.infoProject > h3 {
+        font-size: 7vw;
+    }
+    projmenu > div#projectPanel > div.projects > div.infoProject > h4 {
+        font-size: 3vw;
+        margin-top: 1vh;
+    }
+    projmenu > div#projectPanel > a {
+        font-size: 4vw;
+        margin-left: 62%;
+    }
+    projmenu > div#projectPanel > a > span {
+        top: 1vw;
+    }
+    projmenu > ul {
+        margin-bottom: 10vh;
+    }
+    projmenu > ul a {
+        font-weight: 500;
+    }
+    projmenu > ul abbr {
+        display: none;
+    }
+}
