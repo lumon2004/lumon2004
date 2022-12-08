@@ -730,8 +730,11 @@ projmenu > span.material-symbols-rounded {
     navmenu > div#navmenuContent > div#ideaPanel > ul > li {
         display: inline-flex;
     }
+    navmenu > div#navmenuContent > div#ideaPanel > ul > li:first-child {
+        margin-left: 5%;
+    }
     navmenu > div#navmenuContent > div#ideaPanel > ul > li:not(:last-child) {
-        margin-right: 15%;
+        margin-right: 10%;
     }
     navmenu > div#navmenuContent > div#ideaPanel > ul > li > a > abbr {
         display: none;
