@@ -533,8 +533,8 @@ projmenu > span.material-symbols-rounded {
     }
     header {
         height: 5.5%;
-        width: 54%;
-        margin: 3vh 20%;
+        width: 78%;
+        margin: 3vh 8%;
         padding-left: 3%;
         padding-right: 3%;
     }
@@ -552,6 +552,8 @@ projmenu > span.material-symbols-rounded {
     header > h6 {
         font-size: 3vw;
         padding-right: 5%;
+        margin-left: -4%;
+        padding-left: 10%;
     }
     header > p {
         font-size: 2vw;
