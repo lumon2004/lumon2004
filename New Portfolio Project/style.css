@@ -532,7 +532,7 @@ projmenu > span.material-symbols-rounded {
         margin-top: -105vh;
     }
     header {
-        height: 5.5%;
+        height: 8%;
         width: 78%;
         margin: 3vh 8%;
         padding-left: 3%;
@@ -589,6 +589,7 @@ projmenu > span.material-symbols-rounded {
         left: 10%;
         display: inline-flex;
         bottom: unset;
+        margin-top: 2vh;
     }
     social > ul > li > a > img {
         width: 30%;
