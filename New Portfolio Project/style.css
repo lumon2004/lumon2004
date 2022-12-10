@@ -64,8 +64,8 @@ header > p {
     margin-left: 2%;
     margin-top: auto;
     margin-bottom: auto;
-    text-transform: uppercase;
     font-size: .75vw;
+    width: 10%;
 }
 @keyframes slideinFromLeft {
     0% {
