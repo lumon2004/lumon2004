@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Questrial&family=Noto+Sans+JP&family=Bungee+Shade&family=Megrim&family=Righteous&display=swap');
 :root {
+    --backgroundColor: rgb(16,16,25);
+    --green-bars: rgb(132, 251, 220);
     --color-light-blue: #6bc5f8;
     --color-gray: #c4c4c4;
     --color-purple: #8000ff;
@@ -53,7 +55,7 @@ header > h6 {
 }
 header p:not(header > p) {
     text-transform: uppercase;
-    color: rgb(132, 251, 220);
+    color: var(--green-bars);
     margin: auto 2% auto auto;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 1vw;
@@ -86,21 +88,22 @@ header > p {
         opacity: .5;
     }
 }
-header img {
+header span.material-symbols-rounded {
     margin-top: auto;
     margin-bottom: auto;
-    width: 5%;
+    font-size: 2.5vw;
     transition: .2s ease;
+    color: var(--green-bars);
 }
-header img:hover {
-    width: 4%;
+header span.material-symbols-rounded:hover {
+    font-size: 3.25vw;
 }
 navmenu {
     margin-top: -100%;
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgb(16, 16, 25);
+    background-color: inherit;
     z-index: 1;
     transition: 1s ease;
 }
@@ -221,6 +224,7 @@ main {
     height: 90%;
     position: absolute;
     display: inline-flex;
+    background-color: inherit;
 }
 social > ul {
     list-style-type: none;
@@ -240,7 +244,7 @@ social > ul > li.line {
     position: relative;
     top: 1.5vh;
     border: 1.5px solid;
-    border-color: rgb(132, 251, 220);
+    border-color: var(--green-bars);
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -282,7 +286,8 @@ section > div#nome > h1 {
 }
 section > div#nome > div#sentence {
     margin-left: 2%;
-    border-left: 2px solid rgb(132, 251, 220);
+    border-left: 2px solid;
+    border-color: var(--green-bars);
     margin-top: 2.5%;
     height: 100%;
     padding-left: 2%;
@@ -356,7 +361,7 @@ mail > ul > li:first-child > a {
 mail > ul > li:last-child > div.line {
     height: Opx;
     width: 10vw;
-    border: 1.5px solid rgb(132, 251, 220);
+    border: 1.5px solid var(--green-bars);
     border-radius: 10px;
     margin-top: 5.5%;
 }
@@ -365,7 +370,7 @@ projmenu {
     height: 100vh;
     width: 70%;
     padding: 5vh 15%;
-    background-color: rgb(16, 16, 25);
+    background-color: inherit;
     margin-top: 100vh;
     position: absolute;
     z-index: 3;
@@ -526,6 +531,9 @@ projmenu > span.material-symbols-rounded {
     font-size: 4vw;
     margin-left: 75%;
     cursor: pointer;
+}
+p#date {
+    display: none;
 }
 @media screen and (max-width: 415px) {
     navmenu {
