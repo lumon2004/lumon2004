@@ -1,0 +1,71 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    margin: 70px 0 0 0;
+}
+header {
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+}
+header h1 {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    padding-top: 7.5px;
+}
+body h1, h3 {
+    text-align: center;
+}
+body h1:not(header h1) {
+    font-size: 4vw;
+}
+body h3 {
+    margin: auto 5%;
+    font-size: 2.5vw;
+}
+form {
+    border: 4px none #000;
+    margin: 3% 10%;
+    padding: 2.5%;
+    display: grid;
+    border-radius: 10px;
+    background-color: rgba(255, 182, 193, 0.378);
+}
+form label {
+    text-align: center;
+    font-size: 4vw;
+    margin: 1.5% auto;
+    width: 80%;
+}
+form label:hover {
+    cursor: pointer;
+}
+form input {
+    width: 80%;
+    height: 70px;
+    padding-left: 2%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 1.5% auto;
+    font-size: 2vw;
+}
+form input:last-child {
+    margin-left: 30%;
+    width: 40%;
+    font-size: 2.5vw;
+    background-color: rgb(0, 184, 0);
+    color: #fff;
+    border: none;
+}
+form select {
+    font-size: 2vw;
+    width: 30%;
+    margin-left: 35%;
+}
+form input:last-child:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

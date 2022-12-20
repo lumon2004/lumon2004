@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accedi</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <script src="login.js"></script>
+    <header>
+        <h1>Fitness</h1>
+    </header>
+    <h1>Registrati!</h1>
+    <h3>Registrandoti crei il tuo nuovo profilo su cui potrai configurare le tue schede, le tue diete e il tuo calendario!</h3>
+    <form method="POST" action="login.php">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Inserisci nome">
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="cognome" placeholder="Inserisci cognome">
+        <label for="genere">Genere</label>
+        <select id="genere" name="genere">
+          <option value="default">Seleziona genere</option>
+          <option value="maschio">Maschio</option>
+          <option value="femmina">Femmina</option>
+          <option value="unset">Preferisco non specificarlo</option>
+        </select>
+        <label for="weight">Peso corporeo</label>
+        <input type="text" id="weight" name="peso" placeholder="Inserisci peso in kg">
+        <label for="height">Altezza</label>
+        <input type="text" id="height" name="altezza" placeholder="Inserisci la tua altezza in cm">
+        <input type="submit" value="Invia dati">
+    </form>
+</body>
+</html>
