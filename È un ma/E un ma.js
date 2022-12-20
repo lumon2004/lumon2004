@@ -1,0 +1,170 @@
+/*
+    1. DA SISTEMARE CON LE CONDIZIONI AFFINCHÉ ABBIA UN SENSO ✅
+    2. AGGIUNGERE NUOVE SENTENCES ✅
+    3. RENDERE IL BUTTON CLICKABLE AND WORKING ALL'INFINITO
+    4. CAMBIARE IL DESIGN
+    5. AGGIUNGERE LA GRAFICA DEL RANDOM PICKING
+*/
+
+// codice per ottenere random data
+let randomNumbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+let randomNumber = randomNumbers[Math.floor(Math.random()*randomNumbers.length)];
+function getRandomNumber() {
+	document.getElementById("randomNumberFilter").innerHTML = randomNumber;
+    return randomNumber;
+}
+let randomSentencesBAD = [
+    "fa un lavoro pericoloso",
+    "rimane bloccato/a in una porta girevole",
+    "si comporta come un/a bambino/a quando non ottiene ciò che vuole",
+    "ti chiede di dividere il conto al primo appuntamento",
+    "dice ad altri ragazzi/altre ragazze che sono hot",
+    "ti chiama mommy/daddy",
+    "ha tradito in passato",
+    "è povero/a",
+    "è un contadino/una contadina",
+    "è un'eremita",
+    "parla costantemente male di altre persone",
+    "non risponde nelle discussioni",
+    "non risponde mai al telefono",
+    "non ha i social",
+    "si masturba sugli amici/sulle amiche",
+    "vuole una relazione aperta",
+    "non usa il deodorante",
+    "segue molte modelle sui social",
+    "è più basso/a di te",
+    "non ha ambizioni",
+    "segue ragazzi/e che non ricambiano il follow",
+    "non ha senso dell'umorismo",
+    "si lava solo una volta a settimana",
+    "si rifiuta di postarti sui social",
+    "nasconde la vostra relazione",
+    "non ti presenta alla sua famiglia",
+    "non parla di te ai suoi amici/alle sue amiche",
+    "comincia ogni chat con \"Che fai?\"",
+    "fuma come un tossico",
+    "si droga",
+    "si ubriaca ogni sera",
+    "si ubriaca con un solo drink",
+    "è tirchio/a",
+    "è egocentrico/a",
+    "ti mette da parte",
+    "ti tratta come ruota di scorta",
+    "è sottone/a",
+    "ha fantasie erotiche estreme",
+    "ce l'ha piccolo",
+    "pensa al calcio 24/7",
+    "gioca sempre alla play",
+    "è irresponsabile",
+    "è infantile",
+    "ha un fisico ridicolo",
+    "è scemo/a",
+    "è immaturo/a",
+    "è irrispettoso/a verso i suoi genitori",
+    "ha un caratteraccio",
+    "la sua casa è un casino",
+    "è troppo amichevole con altri/e ragazzi/e",
+    "il suo migliore amico/la sua migliore amica è il suo/la sua ex",
+    "risponde una volte ogni 2-3 giorni lavorativi",
+    "parla spesso con il/la suo/a ex",
+    "è uguale a tua madre/tuo padre",
+    "è sempre in ritardo",
+    "è una testa calda",
+    "è nazista",
+    "si ingelosice facilmente",
+    "porta sempre le infradito",
+    "è capo ultrà",
+    "è boro/a",
+    "è pariolino/a",
+    "ha tanti tatuaggi",
+    "non ti piacciono i tatuaggi che ha",
+    "non è igienico",
+    "ha un atteggiamento dispotico",
+    "vuole farlo senza protezioni",
+    "vuole essere dominatore/dominatrice",
+    "vuole essere schiavo/a",
+    "ti scrive solo dopo le 23",
+    "si sveglia sempre alle 14",
+    "va sempre in discoteca senza di te",
+    "scrive \"k\" al posto di \"che\"",
+    "scrive \"cmq\" al posto di \"comunque\"",
+    "scrive \"pk\" al posto di \"perché\"",
+    "scrive sempre abbreviato",
+    "manda sempre vocali chilometrici",
+    "non fa altro che andare in palestra",
+    "è cocco/a di papà",
+    "è un trapper emergente",
+    "è terrorizzato da ogni piccolo animale",
+    "non ha rispetto per le cose altrui",
+    "fa TikTok cringe",
+    "segue i consigli di Andrew Tate",
+    "abbaia come IShowSpeed"
+];
+let randomSentencesGOOD = [
+    "è ricco/a",
+    "ha il fisico di un dio/una dea",
+    "ha stile",
+    "ti chiama mommy/daddy",
+    "è sottone/a",
+    "ha fantasie erotiche estreme",
+    "è più basso/a di te",
+    "ha un sorriso bellissimo",
+    "ha un cane",
+    "ha un gatto",
+    "odia le stesse cose che odi tu",
+    "ha le tue stesse passioni",
+    "piace alla tua famiglia",
+    "dà buoni consigli",
+    "ti fa regali senza chiedertelo",
+    "offre sempre quando uscite",
+    "sa cucinare",
+    "è uguale a tua madre/tuo padre",
+    "gli/le importa dei tuoi interessi",
+    "ti sta sempre accanto",
+    "si veste bene",
+    "ha buoni gusti musicali",
+    "sa ballare",
+    "sa cantare",
+    "ti scatta delle foto straordinarie",
+    "è gentile con gli animali",
+    "è leale",
+    "è ossessionato/a di te",
+    "è intelligente",
+    "siete sulla stessa lunghezza d'onda",
+    "ha la tua stessa età e ti comprende",
+    "non ti giudica mai",
+    "rispetta i tuoi confini",
+    "ha un buon senso dell'orientamento",
+    "capisce la tua ironia e ti dà corda",
+    "sa ascoltare",
+    "è divertente",
+    "si sa organizzare",
+    "è protettivo/a con te",
+    "sa tenere testa",
+    "sa tenere discorsi seri",
+    "ti regala la macchina dei tuoi sogni",
+    "ha occhi solo per te",
+    "si ricorda tutto di te",
+    "è sempre in anticipo",
+    "si ingelosisce facilmente",
+    "non è sui social",
+    "ha tanti tatuaggi",
+    "è una persona tranquilla",
+    "ti piacciono i suoi tatuaggi",
+    "vuole farlo senza protezioni",
+    "vuole essere dominatore/dominatrice",
+    "vuole essere schiavo/a",
+]
+let randomSentenceBAD = randomSentencesBAD[Math.floor(Math.random()*randomSentencesBAD.length)];
+let randomSentenceGOOD = randomSentencesGOOD[Math.floor(Math.random()*randomSentencesGOOD.length)];
+function getRandomSentence() {
+    if (randomNumber > 6.5) {
+        document.getElementById("randomSentenceFilter").innerHTML = randomSentenceBAD;
+    } else if (randomNumber < 6.5) {
+        document.getElementById("randomSentenceFilter").innerHTML = randomSentenceGOOD;
+    }
+}
+function getVariables() {
+    getRandomNumber();
+    getRandomSentence();
+};
