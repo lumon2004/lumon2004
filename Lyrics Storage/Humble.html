@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Humble - LS</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+            body {
+                font-family: 'Poppins', sans-serif;
+                /*font-size: 10px;*/
+                margin: 0%;
+            }
+            header {
+                background-color: rgb(29,29,31);
+                width: 100%;
+                height: 44px;
+                /*margin: -8px;*/
+                position: fixed;
+                padding: 0px;
+                display: flex;
+                z-index: 9999;
+                color: #fff;
+                top: 0%;
+                margin-bottom: 15px;
+            }
+            ul {
+                list-style-type: none;
+            }
+            .buttons {
+                line-height: 50%;
+            }
+            .icone-top-img {
+                width: 20px;
+                height: 7px;
+                /*border-bottom: 1px #fff solid;
+                border-top: 1px #fff solid;*/
+                margin: 0%;
+                margin-top: 0px;
+                position: absolute;
+                top: 1.5px;
+            }
+            main {
+                margin-top: 44px;
+                position: relative;
+                background-image: linear-gradient(to bottom, rgb(188, 145, 66), rgb(0,0,0) 12%);
+                color: #000;
+                /*background-color: #fff;*/
+            }
+            .search-button-piece1 {
+                width: 10px;
+                height: 2px;
+                border-top: 2px solid #fff;
+                transform: rotate(320deg);
+                display: flex;
+                position: relative;
+                margin-top: 10px;
+                left: 2px;
+                /*bottom: 2px;*/
+            }
+            .search-button-piece2 {
+                border: 2px solid #fff;
+                border-radius: 50%;
+                display: flex;
+                width: 10px;
+                height: 10px;
+                position: relative;
+                bottom: 3px;
+                right: 2px;
+            }
+            .button-left-top {
+                transition: rotate(45deg);
+                transition-timing-function: linear;
+            }
+            .button-left-bottom {
+                transition: rotate(45deg);
+                transition-timing-function: linear;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
+            }
+            a:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            .container-images {
+                position: relative;
+                width: 15%;
+                border: 5px solid black;
+                margin: 2% 4% 2% 5%;
+            }
+            .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: rgba(0,0,0,0);
+            }
+            .container-images:hover .overlay {
+                opacity: 1;
+            }
+            .overlay-image {
+                width: 100%;
+            }
+            h1 {
+                font-size: 2vw;
+                line-height: 210%;
+                margin: 0%; 
+                box-sizing: content-box;
+                margin-top: 35%;
+                color: white;
+            }
+            .description {
+                line-height: 1.1;
+                margin: 0%;
+                background-color: #000;
+                border-radius: 8px;
+                padding: 2% 1% 2% 2%;
+                width: 100%;
+                font-size: 0.9vw;
+                margin-top: 0%;
+                color: #fff;
+            }
+            .embedVideo {
+                margin: 0.9% 0% 0.9% 22.5%;
+                width: 100%;
+                display: inline-block;
+            }
+            .lyrics {
+                margin: 1% 5% 2% 2%;
+                width: 65%;
+                border: 1px solid grey;
+                border-radius: 10px;
+                background-color: inherit;
+                color: #fff;
+                padding: 1% 0% 1% 2%;
+                line-height: 1.2;
+                display: inline-flex;
+                font-size: 1.5vw;
+            }
+            .partial {
+                width: 25%;
+                display: flex;
+                float: right;
+            }
+            .about {
+                margin-right: 4.5%;
+                display: inline;
+                position: absolute;
+                margin-top: 78%;
+                margin-left: 0.5%;
+                border: 1px solid black;
+                border-radius: 10px;
+                color: #fff;
+                background-image: linear-gradient(to bottom, rgb(188,145,66), rgb(0,0,0));
+
+            }
+            .about-1 {
+                border-bottom: 1px solid black;
+                width: 100%;
+            }
+            .about-2 {
+                padding: 0.0001% 5% 0.0001% 5%;
+                font-size: 1vw;
+            }
+            .about-1-1 {
+                padding-left: 5%;
+                display: inline-flex;
+                font-size: 2.5vw;
+            }
+            .about-1-2 {
+                float: right;
+                display: inline;
+                padding-right: 2%;
+                padding-top: 7%;
+                font-size: 0.75vw;
+                position: relative;
+                margin-top: 25%;
+            }
+            .video {
+                width: 100%;
+                aspect-ratio: 400 / 250;
+                position: relative;
+                right: 25%;
+            }
+            .tracklist {
+                display: inline-block;
+                position: absolute;
+                margin-left: 0.65%;
+                margin-top: 22%;
+                border: 2px solid #000;
+                border-radius: 10px;
+                width: 19.4%;
+                background-color: rgb(80, 0, 0);
+                color: #fff;
+                margin-right: 0.5%;
+            }
+            .tracklist-1 {
+                border-bottom: 2px solid #000;
+                display: flex;
+            }
+            .tracklist-1-1 {
+                display: inline-flex;
+                margin: 5%;
+                margin-left: 8.5%;
+            }
+            .tracklist-1-2 {
+                padding-top: 7%;
+                position: relative;
+                margin-left: 2.5%;
+            } 
+            .tracklist-2-1 li {
+                border: 0px solid #fff;
+                border-radius: 6px;
+                line-height: 1.5;
+                margin: 1% 5% 0% 1%;
+                padding: 2%;
+                background-color: rgba(255, 255, 255, 0.5);
+                color: #fff;
+                font-size: 1vw;
+            }
+            .tracklist-2-1 li:hover {
+                transition: 0.15s;
+                background-color: rgb(255,0,0);
+                /*color: #000;*/
+                border: 0px;
+            }
+            .tracklist-2-1 li:not(:hover) {
+                transition: 0.1s
+            }
+            h4 {
+                margin: 0;
+                font-size: 1vw;
+                line-height: 1.25;
+            }
+        </style>
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <header>
+            <ul style="display: inline-flex; padding-left: 1.111934766493699%;">
+                <li class="buttons" style="position: absolute; left: 1%; margin-left: 0,3706449221645663%" onclick="class {'button-left-top'; 'button-left-bottom'}">
+                    <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Red_flag.svg/1280px-Red_flag.svg.png" class="icone-top-img">-->
+                    <div class="icone-top-img" style="border-bottom: 1px #fff solid;"></div>
+                    <div class="icone-top-img" style="border-top: 1px #fff solid;"></div>
+                </li>
+                <li class="buttons" style="left: 49.5%; position: absolute;">
+                    <img src="https://www.sinonimi-contrari.it/includes/images/sharers/sinonimi-di-qualcosa.png" class="icone-top-img">
+                </li>
+                <li class="buttons" style="position: absolute; right: 1%; margin-right: 0,3706449221645663%;">
+                    <!--<img src="https://www.sinonimi-contrari.it/includes/images/sharers/sinonimi-di-qualcosa.png" class="icone-top-img">-->
+                    <div style="display: flex;">
+                        <div class="search-button-piece1"></div>
+                        <div class="search-button-piece2"></div>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div>
+                <div style="width: 100%; display: inline-flex;">
+                    <div class="container-images">
+                        <img src="https://t2.genius.com/unsafe/655x655/https%3A%2F%2Fimages.genius.com%2F483306c535608c27f9e3781b854dc91d.1000x1000x1.png" class="image">
+                        <div class="overlay">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb2183ea958d3777d4c485138a" class="overlay-image">
+                        </div>
+                    </div>
+                    <div>
+                        <h1>HUMBLE.</h1>
+                        <ul class="description">
+                            <li><a>DAMN.</a></li>
+                            <li><a>Kendrick Lamar</a></li>
+                            <li>30 marzo 2017</li>
+                            <li>2:57</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="lyrics">
+                    <p>
+                        <b>[Intro]</b><br>
+                        Nobody pray for me<br>
+                        It's been that day for me<br>
+                        Waaaaay (yeah, yah!)<br><br>
+                        <b>[Verse 1]</b><br>
+                        Ayy, I remember syrup sandwiches and crime allowances<br>
+                        Finesse a nigga with some counterfeits, but now I'm countin' this<br>
+                        Parmesan where my accountant lives; in fact, I'm downin' this<br>
+                        D'USSÉ with my boo bae tastes like Kool-Aid for the analysts<br><br>
+                        Girl, I can buy yo' ass the world with my paystub<br>
+                        Ooh, that pussy good, won't you sit it on my taste buds?<br>
+                        I get way too petty once you let me do the extras<br>
+                        Pull up on your block, then break it down: we playin' Tetris<br><br>
+                        A.M. to the P.M., P.M. to the A.M., funk<br>
+                        Piss out your per diem, you just gotta hate 'em, funk<br>
+                        If I quit your BM, I still ride Mercedes, funk<br>
+                        If I quit this season, I still be the greatest, funk<br><br>
+                        My left stroke just went viral<br>
+                        Right stroke put lil' baby in a spiral<br>
+                        Soprano C, we like to keep it on a high note<br>
+                        It's levels to it, you and I know<br><br>
+                        <b>[Chorus]</b><br>
+                        Bitch, be humble (hol' up, bitch)<br>
+                        Sit down (hol' up, lil', hol' up, lil' bitch)<br>
+                        Be humble (hol' up, bitch)<br>
+                        Sit down (hol' up, sit down, lil', sit down, lil' bitch)<br><br>
+                        Be humble (hol' up, hol' up)<br>
+                        Bitch, sit down (hol' up, hol' up, lil' bitch)<br>
+                        Be humble (lil' bitch, hol' up, bitch)<br>
+                        Sit down (hol' up, hol' up, hol' up, hol' up)<br><br>
+                        Be humble (hol' up, hol' up)<br>
+                        Sit down (hol' up, hol' up, lil', hol' up, lil' bitch)<br>
+                        Be humble (hol' up, bitch)<br>
+                        Sit down (hol' up, sit down, lil', sit down, lil' bitch)<br><br>
+                        Be humble (hol' up, hol' up)<br>
+                        Bitch, sit down (hol' up, hol' up, lil' bitch)<br>
+                        Be humble (lil' bitch, hol' up, bitch)<br>
+                        Sit down (hol' up, hol' up, hol' up, hol' up)<br><br>
+                        <b>[Verse 2]</b><br>
+                        Who dat nigga thinkin' that he frontin' on Man-Man?<br>
+                        Get the fuck off my stage, I'm the Sandman (Sandman)<br>
+                        Get the fuck off my dick, that ain't right<br>
+                        I make a play fucking up your whole life<br><br>
+                        I'm so fuckin' sick and tired of the Photoshop<br>
+                        Show me somethin' natural like afro on Richard Pryor<br>
+                        Show me somethin' natural like ass with some stretch marks<br>
+                        Still will take you down right on your mama's couch in Polo socks<br><br>
+                        Ayy, this shit way too crazy, ayy, you do not amaze me, ayy<br>
+                        I blew cool from AC, ayy, Obama just paged me, ayy<br>
+                        I don't fabricate it, ayy, most of y'all be fakin', ayy<br>
+                        I stay modest 'bout it, ayy, she elaborate it, ayy<br><br>
+                        This that Grey Poupon, that Evian, that TED Talk, ayy<br>
+                        Watch my soul speak, you let the meds talk, ayy<br>
+                        If I kill a nigga, it won't be the alcohol, ayy<br>
+                        I'm the realest nigga after all<br><br>
+                        <b>[Chorus]</b><br>
+                        Bitch, be humble (hol' up, bitch)<br>
+                        Sit down (hol' up, lil', hol' up, lil' bitch)<br>
+                        Be humble (hol' up, bitch)<br>
+                        Sit down (hol' up, sit down, lil', sit down, lil' bitch)<br><br>
+                        Be humble (hol' up, hol' up)<br>
+                        Bitch, sit down (hol' up, hol' up, lil' bitch)<br>
+                        Be humble (lil' bitch, hol' up, bitch)<br>
+                        Sit down (hol' up, hol' up, hol' up, hol' up)<br><br>
+                        Be humble (hol' up, hol' up)<br>
+                        Sit down (hol' up, hol' up, lil', hol' up, lil' bitch)<br>
+                        Be humble (hol' up, bitch)<br>
+                        Sit down (hol' up, sit down, lil', sit down, lil' bitch)<br><br>
+                        Be humble (hol' up, hol' up, hol' up, hol' up)<br>
+                        Bitch, sit down (hol' up, hol' up, lil' bitch)<br>
+                        Be humble (lil' bitch, hol' up, bitch)<br>
+                        Sit down (hol' up, hol' up, hol' up, hol' up)
+                    </p>
+                </div>
+                <div class="partial">
+                    <div class="embedVideo">
+                        <iframe class="video" src="https://www.youtube-nocookie.com/embed/tvTRZJ-4EyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="tracklist">
+                        <div class="tracklist-1">
+                            <div class="tracklist-1-1">
+                                <img style="aspect-ratio: 1 / 1; width: 100%;" src="https://i.scdn.co/image/ab67616d000048518b52c6b9bc4e43d873869699">
+                            </div>
+                            <div class="tracklist-1-2">
+                                <h4><a>DAMN.</a></h4>
+                            </div>
+                        </div>
+                        <div class="tracklist-2">
+                            <ol class="tracklist-2-1" style="padding-inline-start: 10%;">
+                                <li><a>BLOOD.</a></li>
+                                <li><a>DNA.</a></li>
+                                <li><a>YAH.</a></li>
+                                <li><a>ELEMENT.</a></li>
+                                <li><a>FEEL.</a></li>
+                                <li><a>LOYALTY.</a></li>
+                                <li><a>PRIDE.</a></li>
+                                <li><a href="Humble.html">HUMBLE.</a></li>
+                                <li><a href=".html">LUST.</a></li>
+                                <li><a>LOVE.</a></li>
+                                <li><a>XXX</a></li>
+                                <li><a>FEAR.</a></li>
+                                <li><a>GOD.</a></li>
+                                <li><a>DUCKWORTH.</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <div class="about-1">
+                            <h2 class="about-1-1"><b><em>ABOUT</em></b></h2>
+                            <p class="about-1-2">by Genius</p>
+                        </div>
+                        <div class="about-2">
+                            <p>
+                                On <b>HUMBLE.</b> Kendrick Lamar challenges his competition. It was released a week after the first promotional single, <em>The Heart Part 4</em>, with a music video directed by Dave Meyers and The Little Homies. It features religious imagery mixed with urban life, such as Kendrick in priest’s robes and a moving re-enactment of Leonardo Da Vinci’s painting The Last Supper—juxtaposing this with the concept of humility in the chorus.<br>
+                                <br>
+                                On a religious note, the song could also be a reference to the verse James 4:7.<br>
+                                <br>
+                                "So humble yourselves before God. Resist the devil, and he will flee from you."<br>
+                                <br>
+                                —Thus linking to April 7th, the date Kendrick told the industry to have their shit together.<br>
+                                <br>
+                                <a>Mike WiLL Made-It</a> produced the beat. It features a deep piano riff and a banging 808 bass line. This style of production is a departure from the sound of Kendrick’s previous jazz-influenced project, <em><a>To Pimp a Butterfly</a></em>. It seems to reference the character Deebo’s theme song from the popular comedy movie Friday (1995). Kendrick is also shown riding through the neighborhood on a bicycle in the music video, similar to Deebo in Friday.<br>
+                                
+                                The song debuted at No. 2 on the Billboard Hot 100 on April 22, 2017, making it not only the highest charting song for Kendrick, but also one of the highest debuting hip-hop singles since <em><a>Love the Way You Lie</a></em> by Eminem. The song later hit No. 1 on the chart on June 5, 2017, making it Lamar’s first No. 1 song and second No. 1 song overall on the charts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

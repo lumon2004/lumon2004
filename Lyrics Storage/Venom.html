@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Venom - LS</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+            body {
+                font-family: 'Poppins', sans-serif;
+                /*font-size: 10px;*/
+                margin: 0%;
+            }
+            header {
+                background-color: rgb(29,29,31);
+                width: 100%;
+                height: 44px;
+                /*margin: -8px;*/
+                position: fixed;
+                padding: 0px;
+                display: flex;
+                z-index: 9999;
+                color: #fff;
+                top: 0%;
+                margin-bottom: 15px;
+            }
+            ul {
+                list-style-type: none;
+            }
+            .buttons {
+                line-height: 50%;
+            }
+            .icone-top-img {
+                width: 20px;
+                height: 7px;
+                /*border-bottom: 1px #fff solid;
+                border-top: 1px #fff solid;*/
+                margin: 0%;
+                margin-top: 0px;
+                position: absolute;
+                top: 1.5px;
+            }
+            main {
+                margin-top: 44px;
+                position: relative;
+                /*background-image: linear-gradient(to bottom, rgb(144, 3, 252), rgb(0,0,0));*/
+                color: #fff;
+                background-color: #000;
+            }
+            .search-button-piece1 {
+                width: 10px;
+                height: 2px;
+                border-top: 2px solid #fff;
+                transform: rotate(320deg);
+                display: flex;
+                position: relative;
+                margin-top: 10px;
+                left: 2px;
+                /*bottom: 2px;*/
+            }
+            .search-button-piece2 {
+                border: 2px solid #fff;
+                border-radius: 50%;
+                display: flex;
+                width: 10px;
+                height: 10px;
+                position: relative;
+                bottom: 3px;
+                right: 2px;
+            }
+            .button-left-top {
+                transition: rotate(45deg);
+                transition-timing-function: linear;
+            }
+            .button-left-bottom {
+                transition: rotate(45deg);
+                transition-timing-function: linear;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            a:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            .container-images {
+                position: relative;
+                width: 15%;
+                border: 5px solid white;
+                margin: 2% 4% 2% 5%;
+            }
+            .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: rgba(0,0,0,0);
+            }
+            .container-images:hover .overlay {
+                opacity: 1;
+            }
+            .overlay-image {
+                width: 100%;
+            }
+            h1 {
+                font-size: 2vw;
+                line-height: 210%;
+                margin: 0%; 
+                box-sizing: content-box;
+                margin-top: 12%;
+            }
+            .description {
+                line-height: 1.1;
+                margin: 0%;
+                background-color: #fff;
+                color: #000;
+                border-radius: 8px;
+                padding: 1% 0% 1% 1%;
+                width: 100%;
+                font-size: 0.9vw;
+                margin-top: 0%;
+            }
+            .embedVideo {
+                margin: 0.9% 0% 0.9% 22.5%;
+                width: 100%;
+                display: inline-block;
+            }
+            .lyrics {
+                margin: 1% 5% 2% 2%;
+                width: 65%;
+                border: 1px solid grey;
+                border-radius: 10px;
+                background-color: inherit;
+                color: inherit;
+                padding: 1% 0% 1% 2%;
+                line-height: 1.2;
+                display: inline-flex;
+                font-size: 1.5vw;
+            }
+            .partial {
+                width: 25%;
+                display: flex;
+                float: right;
+            }
+            .about {
+                margin-right: 4.5%;
+                display: inline;
+                position: absolute;
+                margin-top: 78%;
+                margin-left: 0.5%;
+                border: 1px solid black;
+                border-radius: 10px;
+                color: #fff;
+                background-image: linear-gradient(to bottom, rgb(255,0,0), rgb(0,0,0));
+            }
+            .about-1 {
+                border-bottom: 1px solid black;
+                width: 100%;
+            }
+            .about-2 {
+                padding: 0.0001% 5% 0.0001% 5%;
+                font-size: 1vw;
+            }
+            .about-1-1 {
+                padding-left: 5%;
+                display: inline-flex;
+                font-size: 2.5vw;
+            }
+            .about-1-2 {
+                float: right;
+                display: inline;
+                padding-right: 2%;
+                padding-top: 7%;
+                font-size: 0.75vw;
+                position: relative;
+                margin-top: 25%;
+            }
+            .video {
+                width: 100%;
+                aspect-ratio: 400 / 250;
+                position: relative;
+                right: 25%;
+            }
+            .tracklist {
+                display: inline-block;
+                position: absolute;
+                margin-left: 0.65%;
+                margin-top: 22%;
+                border: 2px solid #fff;
+                border-radius: 10px;
+                width: 19.4%;
+                background-color: #000;
+                color: #fff;
+                margin-right: 0.5%;
+            }
+            .tracklist-1 {
+                border-bottom: 2px solid #fff;
+                display: flex;
+            }
+            .tracklist-1-1 {
+                display: inline-flex;
+                margin: 5%;
+                margin-left: 8.5%;
+            }
+            .tracklist-1-2 {
+                padding-top: 7%;
+                position: relative;
+                margin-left: 2.5%;
+            } 
+            .tracklist-2-1 li {
+                border: 0px solid #fff;
+                border-radius: 6px;
+                line-height: 1.5;
+                margin: 1% 5% 0% 1%;
+                padding: 2%;
+                background-color: #000;
+                color: #fff;
+                font-size: 1vw;
+            }
+            .tracklist-2-1 li:hover {
+                transition: 0.15s;
+                background-color: red;
+                color: #000;
+                border: 0px;
+            }
+            .tracklist-2-1 li:not(:hover) {
+                transition: 0.1s
+            }
+            h4 {
+                margin: 0;
+                font-size: 1vw;
+                line-height: 1.25;
+            }
+        </style>
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <header>
+            <ul style="display: inline-flex; padding-left: 1.111934766493699%;">
+                <li class="buttons" style="position: absolute; left: 1%; margin-left: 0,3706449221645663%" onclick="class {'button-left-top'; 'button-left-bottom'}">
+                    <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Red_flag.svg/1280px-Red_flag.svg.png" class="icone-top-img">-->
+                    <div class="icone-top-img" style="border-bottom: 1px #fff solid;"></div>
+                    <div class="icone-top-img" style="border-top: 1px #fff solid;"></div>
+                </li>
+                <li class="buttons" style="left: 50%; position: absolute;">
+                    <img src="https://www.sinonimi-contrari.it/includes/images/sharers/sinonimi-di-qualcosa.png" class="icone-top-img">
+                </li>
+                <li class="buttons" style="position: absolute; right: 1%; margin-right: 0,3706449221645663%;">
+                    <!--<img src="https://www.sinonimi-contrari.it/includes/images/sharers/sinonimi-di-qualcosa.png" class="icone-top-img">-->
+                    <div style="display: flex;">
+                        <div class="search-button-piece1"></div>
+                        <div class="search-button-piece2"></div>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div>
+                <div style="width: 100%; display: inline-flex;">
+                    <div class="container-images">
+                        <img src="https://t2.genius.com/unsafe/522x522/https%3A%2F%2Fimages.genius.com%2F27121d03d1bdef3ea15517e2ad016218.1000x1000x1.png" class="image">
+                        <div class="overlay">
+                            <img src="https://i.scdn.co/image/ab6761610000f178a00b11c129b27a88fc72f36b" class="overlay-image">
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Venom - Music From The Motion Picture</h1>
+                        <ul class="description">
+                            <li><a>Kamikaze</a></li>
+                            <li><a>Eminem</a></li>
+                            <li>4:29</li>
+                            <li>31 agosto 2018</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="lyrics">
+                    <p>
+                        <b>[Intro]</b><br>
+                        I got a song filled with shit for the strong-willed<br>
+                        When the world gives you a raw deal<br>
+                        Sets you off 'til you scream, "Piss off! Screw you!"<br>
+                        When it talks to you like you don't belong<br>
+                        Or tells you you're in the wrong field<br>
+                        When something's in your mitochondrial<br>
+                        'Cause it latched on to you, like—<br><br>
+                        <b>[Verse 1]</b><br>
+                        Knock knock, let the devil in<br>
+                        Manevolent as I've ever been, head is spinnin'<br>
+                        This medicine's screamin', "L-L-L-Let us in!"<br>
+                        L-L-L-Like a salad bowl, Edgar Allan Poe<br>
+                        Bedridden, shoulda been dead a long time ago<br>
+                        Liquid Tylenol, gelatins, think my skeleton's meltin'<br>
+                        Wicked, I get all high when I think I've smelled the scent<br>
+                        Of elephant manure—hell, I meant Kahlúa<br>
+                        Screw it, to hell with it, I went through hell with accelerants<br>
+                        And blew up my-my-myself again<br>
+                        Volkswagen, tailspin, bucket matches my pale skin<br>
+                        Mayo and went from Hellmann's and being rail thin<br>
+                        Filet-o-Fish, Scribble Jam, Rap Olympics '97 Freaknik<br>
+                        How can I be down? Me and Bizarre in Florida<br>
+                        Proof's room slept on the floor of 'da motel then<br>
+                        Dr. Dre said, "Hell yeah!"<br>
+                        And I got his stamp like a postcard, word to Mel-Man<br>
+                        And I know they're gonna hate<br>
+                        But I don't care, I barely can wait<br>
+                        To hit 'em with the snare and the bass<br>
+                        Square in the face, this fuckin' world better prepare to get laced<br>
+                        Because they're gonna taste my—<br><br>
+                        <b>[Chorus]</b><br>
+                        Venom, (I got that) adrenaline momentum<br>
+                        And I'm not knowin' when I'm<br>
+                        Ever gonna slow up and I'm<br>
+                        Ready to snap any moment I'm<br>
+                        Thinkin' it's time to go get 'em<br>
+                        They ain't gonna know what hit 'em<br>
+                        (W-W-When they get bit with the—)<br>
+                        Venom, (I got that) adrenaline momentum<br>
+                        And I'm not knowin' when I'm<br>
+                        Ever gonna slow up and I'm<br>
+                        Ready to snap any moment I'm<br>
+                        Thinkin' it's time to go get 'em<br>
+                        They ain't gonna know what hit 'em<br>
+                        (W-W-When they get bit with the—)<br><br>
+                        <b>[Verse 2]</b><br>
+                        I said knock knock, let the devil in<br>
+                        Shotgun p-p-pellets in the felt pen<br>
+                        Cocked, fuck around and catch a hot one<br>
+                        It-it's evident I'm not done<br>
+                        V-Venomous, the thoughts spun<br>
+                        Like a web and you just caught in 'em<br>
+                        Held against your will like a hubcap or mud flap<br>
+                        Beat strangler attack<br>
+                        So this ain't gonna feel like a love tap<br>
+                        Eat painkiller pills, fuck up the track<br>
+                        Like, what's her name's at the wheel? Danica Patrick<br>
+                        Threw the car into reverse at the Indy, a nut crashin'<br>
+                        Into ya, the back of it just mangled steel<br>
+                        My Mustang and the Jeep Wrangler grill<br>
+                        With the front smashed, much as my rear fender, assassin<br>
+                        Slim be a combination of an actual kamikaze and Gandhi (Gandhi)<br>
+                        Translation, I will probably kill us both<br>
+                        When I end up backin' into ya<br>
+                        You ain't gonna be able to tell what the fuck's happenin' to ya<br>
+                        When you're bit with the—<br><br>
+                        <b>[Chorus]</b><br>
+                        Venom, adrenaline momentum<br>
+                        And I'm not knowin' when I'm<br>
+                        Ever gonna slow up and I'm<br>
+                        Ready to snap any moment I'm<br>
+                        Thinkin' it's time to go get 'em<br>
+                        They ain't gonna know what hit 'em<br>
+                        (W-W-When they get bit with the—)<br>
+                        Venom, (I got that) adrenaline momentum<br>
+                        And I'm not knowin' when I'm<br>
+                        Ever gonna slow up and I'm<br>
+                        Ready to snap any moment I'm<br>
+                        Thinkin' it's time to go get 'em<br>
+                        They ain't gonna know what hit 'em<br>
+                        (W-W-When they get bit with the—)<br><br>
+                        <b>[Verse 3]</b><br>
+                        I said knock knock, let the devil in<br>
+                        Alien, E-E-Elliott phone home<br>
+                        Ain't no telling when this chokehold<br>
+                        On this game will end, I'm loco<br>
+                        Became a Symbiote, so<br>
+                        My fangs are in your throat, ho<br>
+                        You're snake-bitten with my—venom<br>
+                        With the ballpoint pen I'm<br>
+                        Gun cocked, bump stock, double-aught, buckshot<br>
+                        Tire thumper, a garrote, tie a couple knots<br>
+                        Fired up and caught fire, juggernaut<br>
+                        Punk rock, bitch, it's goin' down like Yung Joc<br>
+                        'Cause the Doc put me on like sunblock<br>
+                        Why the fuck not, you only get one shot<br>
+                        Ate shit 'til I can't taste it<br>
+                        Chased it with straight liquor<br>
+                        Then paint thinner, then drank 'til I faint<br>
+                        And awake with a headache<br>
+                        And I take anything in rectangular shape<br>
+                        Then I wait to face the demons I'm bonded to<br>
+                        'Cause they're chasin' me but I'm part of you<br>
+                        So escapin' me is impossible<br>
+                        I latch onto you like a—parasite<br>
+                        And I probably ruined your parents' life<br>
+                        And your childhood too<br>
+                        'Cause if I'm the music that y'all grew up on<br>
+                        I'm responsible for you retarded fools<br>
+                        I'm the super villain Dad and Mom was losin' their marbles to<br>
+                        You marvel that? Eddie Brock is you<br>
+                        And I'm the suit, so call me—<br><br>
+                        <b>[Chorus]</b><br>
+                        Venom, (I got that) adrenaline momentum<br>
+                        And I'm not knowin' when I'm<br>
+                        Ever gonna slow up and I'm<br>
+                        Ready to snap any moment I'm<br>
+                        Thinkin' it's time to go get 'em<br>
+                        They ain't gonna know what hit 'em<br>
+                        (W-W-When they get bit with the—)<br>
+                        Venom, (I got that) adrenaline momentum<br>
+                        And I'm not knowin' when I'm<br>
+                        Ever gonna slow up and I'm<br>
+                        Ready to snap any moment I'm<br>
+                        Thinkin' it's time to go get 'em<br>
+                        They ain't gonna know what hit 'em<br>
+                        (W-W-When they get bit with the—)
+                    </p>
+                </div>
+                <div class="partial">
+                    <div class="embedVideo">
+                        <iframe class="video" src="https://www.youtube-nocookie.com/embed/8CdcCD5V-d8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="tracklist">
+                        <div class="tracklist-1">
+                            <div class="tracklist-1-1">
+                                <img style="aspect-ratio: 1 / 1; width: 100%;" src="https://i.scdn.co/image/ab67616d00004851e4073def0c03a91e3fceaf73">
+                            </div>
+                            <div class="tracklist-1-2">
+                                <h4><a>Kamikaze</a></h4>
+                            </div>
+                        </div>
+                        <div class="tracklist-2">
+                            <ol class="tracklist-2-1" style="padding-inline-start: 10%;">
+                                <li><a>The Ringer</a></li>
+                                <li><a>Greater</a></li>
+                                <li><a>Lucky You</a></li>
+                                <li><a>Paul (feat. Skit)</a></li>
+                                <li><a>Normal</a></li>
+                                <li><a>Em Calls Paul (Skit) [2018]</a></li>
+                                <li><a>Stepping Stone</a></li>
+                                <li><a>Not Alike</a></li>
+                                <li><a>Kamikaze</a></li>
+                                <li><a>Fall</a></li>
+                                <li><a>Nice Guy</a></li>
+                                <li><a>Good Guy</a></li>
+                                <li><a>Venom</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <div class="about-1">
+                            <h2 class="about-1-1"><b><em>ABOUT</em></b></h2>
+                            <p class="about-1-2">by Genius</p>
+                        </div>
+                        <div class="about-2">
+                            <p>
+                                <b>Venom</b> is the main theme of the soundtrack for the 2018 Columbia Pictures movie <a href="https://www.justwatch.com/it/film/venom" style="text-decoration: underline;">Venom</a> based on the Marvel Comics character of the same name.<br><br>
+
+                                The movie’s main character is a sentient alien Symbiote with liquid-like form, who requires a host to survive. The Symbiote bestows its powers upon the host, and the new dual-life form usually refers to itself as “Venom.”<br><br>
+
+                                The music video for <b><a href="***  Fall.html  ***">Fall</a></b>> includes several references to the Marvel character. Em is being chased by a liquid shadow, who ends up possessing him, and his eyes become entirely black. All of this, one can also see happening to Eddie Brock when he gets possessed and becomes Venom in the movie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

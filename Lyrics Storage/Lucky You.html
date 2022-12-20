@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Lucky You - LS</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+            body {
+                font-family: 'Poppins', sans-serif;
+                /*font-size: 10px;*/
+                margin: 0%;
+            }
+            header {
+                background-color: rgb(29,29,31);
+                width: 100%;
+                height: 44px;
+                /*margin: -8px;*/
+                position: fixed;
+                padding: 0px;
+                display: flex;
+                z-index: 9999;
+                color: #fff;
+                top: 0%;
+                margin-bottom: 15px;
+            }
+            ul {
+                list-style-type: none;
+            }
+            .buttons {
+                line-height: 50%;
+                position: absolute;
+                line-break: loose;
+            }
+            .header {
+                display: inline-flex;
+                padding-inline-start: 0%;
+                padding-left: 0%;
+            }
+            .icone-top-img {
+                width: 20px;
+                height: 7px;
+                /*border-bottom: 1px #fff solid;
+                border-top: 1px #fff solid;*/
+                margin: 0%;
+                margin-top: 0px;
+                position: absolute;
+                top: 1.5px;
+            }
+            main {
+                margin-top: 44px;
+                position: relative;
+                background-image: linear-gradient(to bottom, rgb(208, 156, 56), rgb(228,220,196) 12% 88%, rgb(208,156,56));
+                color: #000;
+                /*background-color: #fff;*/
+            }
+            .search-button-piece1 {
+                width: 10px;
+                height: 2px;
+                border-top: 2px solid #fff;
+                transform: rotate(320deg);
+                display: flex;
+                position: relative;
+                margin-top: 10px;
+                left: 2px;
+                /*bottom: 2px;*/
+            }
+            .search-button-piece2 {
+                border: 2px solid #fff;
+                border-radius: 50%;
+                display: flex;
+                width: 10px;
+                height: 10px;
+                position: relative;
+                bottom: 3px;
+                right: 2px;
+            }
+            .button-left-top {
+                transition: rotate(45deg);
+                transition-timing-function: linear;
+            }
+            .button-left-bottom {
+                transition: rotate(45deg);
+                transition-timing-function: linear;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
+            }
+            a:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            .container-images {
+                position: relative;
+                width: 15%;
+                border: 5px solid black;
+                margin: 2% 4% 2% 5%;
+            }
+            .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: rgba(0,0,0,0);
+            }
+            .container-images:hover .overlay {
+                opacity: 1;
+            }
+            .overlay-image {
+                width: 100%;
+            }
+            h1 {
+                font-size: 3vw;
+                line-height: 210%;
+                margin: 0%; 
+                box-sizing: content-box;
+                margin-top: 15%;
+                color: white;
+            }
+            .description {
+                line-height: 1.1;
+                margin: 0%;
+                background-color: #000;
+                border-radius: 8px;
+                padding: 2% 1% 2% 2%;
+                width: 100%;
+                font-size: 1.5vw;
+                margin-top: 0%;
+                color: #fff;
+            }
+            .embedVideo {
+                margin: 0.9% 0% 0.9% 22.5%;
+                width: 100%;
+                display: inline-block;
+            }
+            .lyrics {
+                margin: 1% 5% 2% 2%;
+                width: 65%;
+                border: 1px solid grey;
+                border-radius: 10px;
+                background-color: inherit;
+                color: #000;
+                padding: 1% 0% 1% 2%;
+                line-height: 1.2;
+                display: inline-flex;
+                font-size: 1.5vw;
+            }
+            .partial {
+                width: 25%;
+                display: flex;
+                float: right;
+            }
+            .about {
+                margin-right: 4.5%;
+                display: inline;
+                position: absolute;
+                margin-top: 78%;
+                margin-left: 0.5%;
+                border: 1px solid black;
+                border-radius: 10px;
+                color: #fff;
+                background-image: linear-gradient(to bottom, rgb(188,145,66), rgb(0,0,0));
+                width: 20%;
+            }
+            .about-1 {
+                border-bottom: 1px solid black;
+                width: 100%;
+            }
+            .about-2 {
+                padding: 0.0001% 5% 0.0001% 5%;
+                font-size: 1vw;
+            }
+            .about-1-1 {
+                padding-left: 5%;
+                display: inline-flex;
+                font-size: 2.5vw;
+            }
+            .about-1-2 {
+                float: right;
+                display: inline;
+                padding-right: 2%;
+                padding-top: 7%;
+                font-size: 0.75vw;
+                position: relative;
+                margin-top: 25%;
+            }
+            .video {
+                width: 100%;
+                aspect-ratio: 400 / 250;
+                position: relative;
+                right: 25%;
+            }
+            .tracklist {
+                display: inline-block;
+                position: absolute;
+                margin-left: 0.65%;
+                margin-top: 22%;
+                border: 2px solid #000;
+                border-radius: 10px;
+                width: 19.4%;
+                background-color: rgb(163, 112, 0);
+                color: #fff;
+                margin-right: 0.5%;
+                height: min-content;
+            }
+            .tracklist-1 {
+                border-bottom: 2px solid #000;
+                display: flex;
+            }
+            .tracklist-1-1 {
+                display: inline-flex;
+                margin: 5%;
+                margin-left: 8.5%;
+            }
+            .tracklist-1-2 {
+                padding-top: 7%;
+                position: relative;
+                margin-left: 2.5%;
+            } 
+            .tracklist-2 {
+                display: block;
+            }
+            .tracklist-2-1 {
+                padding-inline-start: 10%;
+            }
+            .tracklist-2-1 li {
+                border: 0px solid #fff;
+                border-radius: 6px;
+                line-height: 1.5;
+                margin: 1% 5% 0% 1%;
+                padding: 2%;
+                background-color: rgba(255, 255, 255, 0.5);
+                color: #000;
+                font-size: 1vw;
+            }
+            .tracklist-2-1 li:hover {
+                transition: 0.15s;
+                background-color: rgb(206, 158, 0);
+                /*color: #000;*/
+                border: 0px;
+            }
+            .tracklist-2-1 li:not(:hover) {
+                transition: 0.1s
+            }
+            h4 {
+                margin: 0;
+                font-size: 1vw;
+                line-height: 1.25;
+            }
+            .logo-button {
+                left: 20%;
+            }
+            .second-button {
+                left: 30%;
+            }
+            .third-button {
+                left: 38%;
+            }
+            .fourth-button {
+                left: 50%;
+            }
+            .fifth-button {
+                left: 60%;
+            }
+            .sixth-button {
+                left: 70%;
+            }
+            .search-button {
+                left: 82%;
+            }
+            .lyrics p {
+                font-size: 2vw;
+            }
+            .partial2 {
+                width: 100%;
+                position: absolute;
+            }
+            @media screen and (max-width: 800px) {
+                .respons-buttons {
+                    display: none;
+                }
+                .respons-search-button {
+                    left: 90%;
+                }
+                .respons-center-button {
+                    left: 49.5%;
+                }
+                .search-button {
+                    left: 95%;
+                }
+                .lyrics {
+                    width: 93.5%;
+                }
+                .lyrics p {
+                    font-size: 3vw;
+                }
+                h1 {
+                    font-size: 4vw;
+                    margin-top: 0%;
+                }
+                .description li {
+                    font-size: 2vw;
+                }
+                .partial {
+                    float: none;
+                    position: relative;
+                    width: 100%;
+                }
+                .embedVideo {
+                    margin-left: 27%;
+                    margin-top: 5%;
+                    width: 90%;
+                    position: absolute;
+                }
+                .tracklist {
+                    width: 89.5%;
+                    position: relative;
+                    margin-left: 4.5%;
+                    margin-top: 70%;
+                }
+                .about {
+                    position: relative;
+                    width: 100%;
+                }
+                h4 {
+                    font-size: 3vw;
+                    line-height: 2.5;
+                }
+                .respons-tracklist {
+                     display: inline-grid;
+                     width: 23.5%;
+                }
+                .respons-tracklist li {
+                    display: inline-block;
+                    font-size: 2vw;
+                }
+                .tracklist-2-1 {
+                    padding-inline-start: 2.5%;
+                }
+                .partial2 {
+                    display: block;
+                }
+            }
+            @media screen and (min-width: 800px) {
+                .respons-left-button {
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 1200px) {
+                .billboard-button {
+                    display: none;
+                }
+                .Hot100 {
+                    margin-left: 30%;
+                    display: contents;
+                }
+            }
+        </style>
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <header>
+            <ul class="header">
+                <li class="buttons respons-left-button" style="left: 1%; margin-left: 0.3706449221645663%">
+                    <div class="icone-top-img" style="border-bottom: 2px #fff solid;"></div>
+                    <div class="icone-top-img" style="border-top: 2px #fff solid;"></div>
+                </li>
+                <li class="buttons respons-center-button logo-button">
+                    <img src="https://www.sinonimi-contrari.it/includes/images/sharers/sinonimi-di-qualcosa.png" class="icone-top-img">
+                </li>
+                <li class="buttons respons-buttons second-button"><a href="https://www.lyricsstorage.it/Artisti/LS.artisti.html">Artisti</a></li>
+                <li class="buttons respons-buttons third-button"><a href="https://www.billboard.com/charts/hot-100/" target="_blank"><span class="Hot100">Hot 100</span><span class="billboard-button"> Billboard</span></a></li>
+                <li class="buttons respons-buttons fourth-button"><a href="https://www.grammy.com" target="_blank">Grammys</a></li>
+                <li class="buttons respons-buttons fifth-button"><a>Generi</a></li>
+                <li class="buttons respons-buttons sixth-button"><a>Contatti</a></li>
+                <li class="buttons search-button">
+                    <div style="display: flex;">
+                        <div class="search-button-piece1"></div>
+                        <div class="search-button-piece2"></div>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div>
+                <div style="width: 100%; display: inline-flex;">
+                    <div class="container-images">
+                        <img src="https://t2.genius.com/unsafe/566x566/https%3A%2F%2Fimages.genius.com%2F4a9ce06a1f463b0c24c98c1870d4566f.1000x1000x1.png" class="image">
+                        <div class="overlay">
+                            <img src="https://i.scdn.co/image/ab6761610000f178a00b11c129b27a88fc72f36b" class="overlay-image">
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Lucky You</h1>
+                        <ul class="description">
+                            <li><a>Kamikaze</a></li>
+                            <li><a>Eminem</a>, <a>Joyner Lucas</a></li>
+                            <li>31 agosto 2018</li>
+                            <li>4:04</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="lyrics">
+                    <p>
+                        <b>[Intro: Joyner Lucas]</b><br>
+                        Whoa, Joyner, Joyner, yeah, yeah, yeah<br><br>
+                        <b>[Pre-Chorus: Joyner Lucas]</b><br>
+                        Yeah, I done did a lot of things in my day, I admit it<br>
+                        I don't take back what I say, if I said it then I meant it<br>
+                        All my life I want a Grammy but I'll prolly never get it<br>
+                        I ain't never had no trophy or no motherfuckin' ribbon<br>
+                        Fuck the system, I'm that nigga, bend the law, cut the rules<br>
+                        I'm about to risk it all, I ain't got too much to lose<br>
+                        Y'all been eatin' long enough, it's my turn to cut the food<br>
+                        Pass the plate! Where my drink? This my day, lucky you<br>
+                        Fuck you too, woah!<br><br>
+                        <b>[Chorus: Joyner Lucas]</b><br>
+                        Y'all gotta move, y'all gotta move, y'all gotta move<br>
+                        Give me some room, give me some room, give me the juice<br>
+                        Hop out the coupe, hop out the coupe, hop out and shoot<br>
+                        Y'all gotta move, y'all gotta move, give me the juice<br><br>
+                        <b>[Verse 1: Joyner Lucas]</b><br>
+                        Back on my bullshit, my back to the wall<br>
+                        Turn my back on you all and you're finished<br>
+                        Back to these bullets, it's back to the job<br>
+                        Pull my MAC out and all of you runnin'<br>
+                        Back on my hood shit, it's back to the pushin'<br>
+                        These packs and I'm actually pumpin'<br>
+                        Can't fuck with you rappers, you practically suckin'<br>
+                        You mighta went platinum, but that don't mean nothin'<br>
+                        I'm actually buzzin' this time<br>
+                        Straight out the kitchen, I told them the oven is mine<br>
+                        I do not fuck with you guys<br>
+                        If I don't kill you, just know you gon' suffer this time<br>
+                        I ain't no gangster, but I got some bangers<br>
+                        Some chains and some blades and a couple of knives<br>
+                        Choppers and jammies, a partridge, a pear tree<br>
+                        My twelve days of Christmas was nothin' but lies<br>
+                        I, run at you hard like a sumo (sumo)<br>
+                        They say I talk like a chulo (chulo)<br>
+                        I live in Mars, I'm not Bruno<br>
+                        Bitch I'm a dog, call me Cujo<br>
+                        You play your cards, I reverse on you all<br>
+                        And I might just draw four like a Uno<br>
+                        Cállate boca mejor maricón little puto, and all of you culo<br>
+                        They debated the level, I've been to ghetto to ghetto<br>
+                        Looking for something I prolly could never find now<br>
+                        Shit get real up until the beef die down<br>
+                        In truth a nigga just really want me tied down<br>
+                        I've been alone, and I never needed nobody<br>
+                        Just only me and my shotty, I'll tell these niggas to lie down<br>
+                        Keep all the money, I never wanted the lifestyle<br>
+                        I just pray to God that my son'll be alright now<br>
+                        I said ain't no love for the other side<br>
+                        Or anyone who ever want smoke<br>
+                        When I die I'm goin' out as the underdog who never lost hope<br>
+                        You in the wrong cab down the wrong path<br>
+                        Nigga wrong way, wrong road<br>
+                        Snakes in the grass, tryna slither fast<br>
+                        I just bought a fuckin' lawn mower<br><br>
+                        <b>[Pre-Verse: Eminem]</b><br>
+                        I done said a lotta things in my day, I admit it<br>
+                        This is payback in a way, I regret it that I did it<br>
+                        I done won a couple Grammys, but I sold my soul to get 'em<br>
+                        Wasn't in it for the trophies, just the fuckin' recognition<br>
+                        Fuck's the difference?<br>
+                        I'm that cracker, bend the law, fuck the rules<br>
+                        Man I used to risk it all, now I got too much to lose<br>
+                        I been eatin' long enough, man my stomach should be full<br>
+                        I just ate, lick the plate, my buffet, lucky me<br>
+                        Fuck you think? (Woo!)<br><br>
+                        <b>[Verse 2: Eminem]</b><br>
+                        I got a couple of mansions<br>
+                        Still I don't have any manners<br>
+                        You got a couple of ghost writers<br>
+                        But to these kids it don't actually matter<br>
+                        They're askin' me "What the fuck happened to hip-hop?"<br>
+                        I said "I don't have any answers"<br>
+                        'Cause I took an L when I dropped my last album<br>
+                        It hurt me like hell but I'm back on these rappers<br>
+                        And actually coming from humble beginnings<br>
+                        I'm somewhat uncomfortable winning<br>
+                        I wish I could say "What a wonderful feeling!"<br>
+                        We're on the upswing like we're punchin' the ceiling<br>
+                        But nothin' is feeling like anyone has any fuckin' ability<br>
+                        To even stick to a subject, it's killin' me, the inability to pin humility<br>
+                        Hatata batata, why don't we make a bunch of fuckin'<br>
+                        Songs about nothin' and mumble!<br>
+                        And fuck it, I'm goin' for the jugular<br>
+                        Shit is a circus, you clowns that are comin' up<br>
+                        Don't give an ounce of a motherfuck<br>
+                        About the ones that were here before you that made rap, let's recap<br>
+                        Way back, MC's that wreak havoc on tape decks<br>
+                        ADATs, where the G Raps and Kanes at?<br>
+                        We need 3 Stacks ASAP, and bring Masta Ace back<br>
+                        Because half of these rappers have brain damage<br>
+                        All the lean rappin', face tats, syruped out like tree sap<br>
+                        I don't hate trap, and I don't wanna seem mad<br>
+                        But in fact, where the old me at? The same cat that would take that<br>
+                        Feedback and aim back, I need that<br>
+                        But I think it's inevitable<br>
+                        They know what button to press or what lever to pull<br>
+                        To get me the snap though (lil' bitch)<br>
+                        And if I pay it attention I'm probably makin' it bigger<br>
+                        But you've been takin' the dicks<br>
+                        In the fuckin' back, ho (get it?)<br>
+                        On the brink, any minute<br>
+                        Got me thinkin' of finishin' everything<br>
+                        With acetaminophen and reapin' the benefits<br>
+                        I'm asleep at the wheel again<br>
+                        As I peak into thinkin' about an evil intent<br>
+                        Of another beat, I'ma kill again<br>
+                        'Cause even if I gotta end up eatin' a pill again<br>
+                        Even ketamine or methamphetamine<br>
+                        With the minithin, it better be at least 70 to 300 milligram<br>
+                        And I might as well 'cause I'ma end up bein' a villain again<br>
+                        Levels to this shit I got an elevator<br>
+                        You could never say to me I'm not a fuckin' record breaker<br>
+                        I sound like a broken record every time I break a record<br>
+                        Nobody could ever take away the legacy I made, I never cater<br>
+                        Motherfucker now I got a right to be this way<br>
+                        I got spite inside my DNA<br>
+                        But I wrote 'til the wheels fall off, I'm workin' tirelessly, ayy<br>
+                        It's the moment y'all been waitin' for<br>
+                        Like California wishin' rain would pour<br>
+                        And that drought y'all have been prayin' for<br>
+                        My downfall from the 8 Mile to the Southpaw<br>
+                        Still the same Marshall that outlaw<br>
+                        That they say as a writer might've fell off<br>
+                        I'm back on that bull like the cowboy<br><br>
+                        <b>[Chorus: Joyner Lucas & Eminem]</b><br>
+                        So y'all gotta move (yeah), y'all gotta move (yeah), y'all gotta move<br>
+                        Give me some room, give me some room, give me the juice<br>
+                        Hop out the coupe, hop out the coupe, how 'bout I shoot?<br>
+                        Y'all gotta move, y'all gotta move, give me the juice
+                    </p>
+                </div>
+                <div class="partial">
+                    <div class="embedVideo">
+                        <iframe class="video" src="https://www.youtube-nocookie.com/embed/1arz9Q9qBas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="partial2">
+                        <div class="tracklist">
+                            <div class="tracklist-1">
+                                <div class="tracklist-1-1">
+                                    <img style="aspect-ratio: 1 / 1; width: 100%;" src="https://i.scdn.co/image/ab67616d00004851e4073def0c03a91e3fceaf73">
+                                </div>
+                                <div class="tracklist-1-2">
+                                    <h4><a>Kamikaze</a></h4>
+                                </div>
+                            </div>
+                            <div class="tracklist-2">
+                                <ol class="tracklist-2-1">
+                                    <div class="respons-tracklist">
+                                        <li><a>The Ringer</a></li>
+                                        <li><a>Greatest</a></li>
+                                        <li><a>Lucky You</a></li>
+                                        <li><a>Paul (Skit)</a></li>
+                                    </div>
+                                    <div class="respons-tracklist">
+                                        <li><a>Normal</a></li>
+                                        <li><a>Em Calls Paul (Skit)</a></li>
+                                        <li><a>Stepping Stone</a></li>
+                                        <li><a href="">Not Alike</a></li>
+                                    </div>
+                                    <div class="respons-tracklist">
+                                        <li><a href="">Kamikaze</a></li>
+                                        <li><a>Fall</a></li>
+                                        <li><a>Nice Guy</a></li>
+                                        <li><a>Good Guy</a></li>
+                                    </div>
+                                    <div class="respons-tracklist">
+                                        <li><a>Venom</a></li>
+                                    </div>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="about">
+                            <div class="about-1">
+                                <h2 class="about-1-1"><b><em>ABOUT</em></b></h2>
+                                <p class="about-1-2">by Genius</p>
+                            </div>
+                            <div class="about-2">
+                                <p>
+                                    <em>Lucky You</em> marks the first collaboration between Eminem and Joyner Lucas, whom people have pointed out, shares many characteristics with Em in terms of rhyme and flow.
+                                    <br>
+                                    Their verses are polar opposites, a thematic structure often employed by Joyner in his songs to show opposing perspectives of the same topic.
+                                    <br>
+                                    Here, Joyner comments on how he hasn’t received any awards, although he is steadily gaining recognition.
+                                    <br>
+                                    Em’s verse, on the other hand, is about how he’s at the top in terms of awards and status but is being overlooked in the current rap scene. This is a recurring theme throughout this album as well as other 2018 releases, such as the remix of <em>Chloraseptic</em>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

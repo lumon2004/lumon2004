@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="google-site-verification" content="bbYvbdKGRvkUa4E9kfjM5tJu_qle77WqCr4HmYkXBJQ">
+        <title>Lyrics Storage</title>
+        <link rel="stylesheet" href="http://www.lyricsstorage.it/LS.homepage.css">
+        <link rel="shortcut icon" href="http://lyricsstorage.it/LS%20logo.png">
+        <script src="LS.homepage.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <ul id="buttonsUl" style="display: block">
+                <li class="buttons respons-left-button icone-top-img openNavBtn" id="openNavBtn"></li>
+                <li class="buttons logo-button">
+                    <p class="respons-center-button"><a href="http://www.lyricsstorage.it" href="top">Lyrics Storage</a></p>
+                </li>
+                <li class="buttons respons-buttons second-button"><a href="http://www.lyricsstorage.it/Artisti/LS.artisti.html">Artisti</a></li>
+                <li class="buttons respons-buttons third-button"><a href="https://www.billboard.com/charts/hot-100/" target="_blank"><span class="Hot100">Hot 100</span><span class="billboard-button"> Billboard</span></a></li>
+                <li class="buttons respons-buttons fourth-button"><a href="https://www.grammy.com" target="_blank">Grammys</a></li>
+                <li class="buttons respons-buttons fifth-button"><a href="https://www.audinoeditore.it/download.php?id=VTJGc2RHVmtYMSszS3hQN1haeDFxcUQ4bVdzTDZJSWRMSEpqazdiNE9WWT0=">Generi</a></li>
+                <li class="buttons respons-buttons sixth-button"><a href="http://www.lyricsstorage.it/Contatti.html">Contatti</a></li>
+                <li class="buttons search-button" id="searchButton" style="opacity: .8;">
+                    <button onclick="searchBar()">
+                        <div class="search-button-piece1"></div>
+                        <div class="search-button-piece2"></div>
+                    </button>    
+                </li>
+            </ul>
+            <div class="searchContainer" id="searchContainer" style="display: none;">
+                <div class="search-bar">
+                    <form action="">
+                        <input type="text" placeholder="Cerca una canzone, un album o un artista">
+                    </form>
+                    <div class="closeSearchBar" id="closeSearchBar">
+                        <div class="closeSearchBar-1"></div>
+                        <div class="closeSearchBar-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="navMenu" id="navMenu" style="display: none;">
+                <div class="navMenuTop">
+                    <a href="http://www.lyricsstorage.it"><img src="http://www.lyricsstorage.it/LS%20logo.png"></a>
+                    <h1><a href="http://www.lyricsstorage.it">Lyrics Storage</a></h1>
+                    <div class="closeNavMenuButton" id="closeNavMenuButton">
+                        <div class="closeNavMenuButton-1"></div>
+                        <div class="closeNavMenuButton-2"></div>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="http://www.lyricsstorage.it/Artisti/LS.artisti.html">Artisti</a></li>
+                    <li><a href="https://www.billboard.com/charts/hot-100/" target="_blank">Hot 100 Billboard</a></li>
+                    <li><a href="https://www.grammy.com" target="_blank">Grammys</a></li>
+                    <li><a href="https://www.audinoeditore.it/download.php?id=VTJGc2RHVmtYMSszS3hQN1haeDFxcUQ4bVdzTDZJSWRMSEpqazdiNE9WWT0=">Generi musicali</a></li>
+                    <li><a href="http://www.lyricsstorage.it/Contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+            <script>
+                // Search Bar 
+                document.getElementById("searchButton").addEventListener("click", openSearchBar);
+                function openSearchBar () {
+                    document.getElementById("searchContainer").style.display="block";
+                    document.getElementById("searchButton").style.opacity=0;
+                };
+                document.getElementById("closeSearchBar").addEventListener("click", closeSearchBar);
+                function closeSearchBar () {
+                    document.getElementById("searchContainer").style.display="none";
+                    document.getElementById("searchButton").style.opacity=.8;
+                };
+                // Nav Menu
+                document.getElementById("openNavBtn").addEventListener("click", openNavMenu);
+                function openNavMenu () {
+                    document.getElementById("navMenu").style.display="block";
+                }
+                document.getElementById("closeNavMenuButton").addEventListener("click", closeNavMenu);
+                function closeNavMenu () {
+                    document.getElementById("navMenu").style.display="none";
+                }
+            </script>
+        </header>
+        <main>
+            <h1 class="artisti-title">MIGLIORI ARTISTI</h1>
+            <div class="artisti-container">
+                <div class="mobile-divs">
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/The Weeknd/TheWeeknd.html">
+                            <div class="bopper-down1">
+                                <img class="foto-bopper" src="https://i.scdn.co/image/ab6761610000f17894fbdb362091111a47db337d">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">The Weeknd</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Travis Scott/TravisScott.html">
+                            <div class="bopper-down1">
+                                <img class="foto-bopper" src="https://i.scdn.co/image/ab6761610000f178e707b87e3f65997f6c09bfff">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">Travis Scott</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Drake/Drake.html">
+                            <div class="bopper-down1">
+                                <img class="foto-bopper" src="https://i.scdn.co/image/ab6761610000f1789e46a78c5cd2f7a8e7669980">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">Drake</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-divs">
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Eminem/Eminem.html">
+                            <div class="bopper-down1">
+                                <img class="foto-bopper" src="https://i.scdn.co/image/ab6761610000f178a00b11c129b27a88fc72f36b">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">Eminem</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Kanye West/KanyeWest.html">
+                            <div class="bopper-down1">
+                                <img class="foto-bopper" src="https://www.freshnessmag.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTM2NjQ5MzY4Mjk0OTI1OTE5/kanye-west-world-aids-day-times-square-00.jpg">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">Kanye West</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Post Malone/PostMalone.html">
+                            <div class="bopper-down1">
+                                <img class="foto-bopper" src="https://i.scdn.co/image/ab6761610000f178e07d6b0f2fcc2f2ba6bdc3ce">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">Post Malone</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--<h1 class="playlist-title">PLAYLIST</h1>
+            <div class="playlist-container">
+                <div class="mobile-divs">
+                    <div class="playlist">
+                        <div class="bopper-down1">
+                            <img class="foto-bopper" src="https://i.scdn.co/image/ab67706c0000bebb18af9623a498eef2fd2a30dd">
+                        </div>
+                        <div class="bopper-down3">
+                            <h4 class="titoletti-playlist titoletti-playlist-1">LM</h4>
+                        </div>
+                    </div>
+                    <div class="playlist ">
+                        <div class="bopper-down1">
+                            <img class="foto-bopper" src="https://i.scdn.co/image/ab67706c0000bebb682cf1265ae92a29d258c52d">
+                        </div>
+                        <div class="bopper-down3">
+                            <h4 class="titoletti-playlist titoletti-playlist-1">PS5</h4>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="bopper-down1">
+                            <img class="foto-bopper" src="https://i.scdn.co/image/ab67706c0000bebbd03b4e9ea8fced6415bbd1ee">
+                        </div>
+                        <div class="bopper-down3">
+                            <h4 class="titoletti-playlist titoletti-playlist-2">Solo The Weeknd</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-divs">
+                    <div class="playlist">
+                        <div class="bopper-down1">
+                            <img class="foto-bopper" src="https://www.leomagazineofficial.it/wp-content/uploads/2020/08/nero.jpg">
+                        </div>
+                        <div class="bopper-down3">
+                            <h4 class="titoletti-playlist titoletti-playlist-2">Michael Jackson</h4>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="bopper-down1">
+                            <img class="foto-bopper" src="https://i.scdn.co/image/ab67706c0000da84ccd264f506ff9bb0ce9c9ef8">
+                        </div>
+                        <div class="bopper-down3">
+                            <h4 class="titoletti-playlist titoletti-playlist-3">Baywatch soundtrack</h4>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div class="bopper-down1">
+                            <img src="https://i.scdn.co/image/ab67706c0000bebb06c0ff5c196ce43fed8cedc5" class="foto-bopper">
+                        </div>
+                        <div class="bopper-down3">
+                            <h4 class="titoletti-playlist titoletti-playlist-3">After Hours til Dawn</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <h1 class="artisti-title" id="top-artisti-title">TOP ARTISTI ITALIANI</h1>
+            <div class="artisti-container">
+                <div class="mobile-divs">
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Sfera Ebbasta/Sfera.html">
+                            <div class="bopper-down1">
+                                <img src="https://i.scdn.co/image/ab6761610000f178e5e18232c680cd969031c394" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti sferaEbbasta">Sfera Ebbasta</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Blanco/Blanco.html">
+                            <div class="bopper-down1">
+                                <img src="https://i.scdn.co/image/ab6761610000f178b8a1d9e9a65f9e92e8ec9fc1" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">BLANCO</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Rkomi/Rkomi.html">
+                            <div class="bopper-down1">
+                                <img src="https://i.scdn.co/image/ab6761610000f178155bee4a468d78427ae0df75" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">Rkomi</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-divs">
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/ThaSupreme/ThaSupreme.html">
+                            <div class="bopper-down1">
+                                <img src="https://i.scdn.co/image/ab6761610000f17871f5f4c80be4cd14bc466ef5" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti thaSupreme">Tha Supreme</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Maneskin/Maneskin.html">
+                            <div class="bopper-down1">
+                                <img src="https://i.scdn.co/image/ab6761610000f178b760340fd14e8ea7e6775253" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti maneskin">Måneskin</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="artisti">
+                        <a href="http://www.lyricsstorage.it/Artisti/Marracash/Marracash.html">
+                            <div class="bopper-down1">
+                                <img src="https://i.scdn.co/image/ab6761610000f1786de4419d90a5d68c308a4f31" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti maneskin">Marracash</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h1 class="playlist-title">ULTIMI RILASCI</h1>
+            <div class="playlist-container">
+                <div class="mobile-divs">
+                    <div class="playlist">
+                        <a href="http://www.lyricsstorage.it/Artisti/Kanye West/Album/Donda2.html">
+                            <div class="bopper-down1">
+                                <img src="https://e.snmc.io/i/600/s/84dcd6a0bb0a74a222d31df8c9d2d1f1/9741155/kanye-west-donda-2-Cover-Art.jpg" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">DONDA 2</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="playlist">
+                        <a href="http://www.lyricsstorage.it/Artisti/Gunna/Album/DS4Ever.html">
+                            <div class="bopper-down1">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Drip_Season_4_Mixtape_Cover.png" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">DS4Ever</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="playlist">
+                        <a href="http://www.lyricsstorage.it/Artisti/TheWeeknd/Album/DawnFM.html">
+                            <div class="bopper-down1">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/The_Weeknd_-_Dawn_FM.png" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">103.5 Dawn FM</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile-divs">
+                    <div class="playlist">
+                        <a href="http://www.lyricsstorage.it/Album/7220.html">
+                            <div class="bopper-down1">
+                                <img src="https://i.scdn.co/image/ab67616d00001e029984d05ec46e029f7b942aca" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">7220</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="playlist">
+                        <a href="http://www.lyricsstorage.it/Album/64BarsRedBull.html">
+                            <div class="bopper-down1">
+                                <img src="https://www.newsic.it/wp-content/uploads/2021/05/RED-BULL-64-BARS-THE-ALBUM-AAVV-ALBUM-2021.jpg" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-artisti">64Bars</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="playlist">
+                        <a href="http://www.lyricsstorage.it/Album/Caos.html">
+                            <div class="bopper-down1">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02b39f1cccb454cd361da50fdb" alt="" class="foto-bopper">
+                            </div>
+                            <div class="bopper-down3">
+                                <h4 class="titoletti-playlist caos">Caos</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grammysTitle">
+                <a href="https://www.grammy.com/" target="_blank">
+                    <h1 class="artisti-title">GRAMMYS 2021</h1>
+                    <p>63<sup>a</sup> edizione</p>
+                </a>
+            </div>
+            <div class="grammysContainer">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="http://www.lyricsstorage.it/Artisti/Billie Eilish/Singolo/EverythingIWanted.html">
+                                    <img style="background-image: url(https://compass-media.vogue.it/photos/5ed8cead821bf05909d6dbcb/16:9/w_1999,h_1124,c_limit/001-Billie-Eilish-vogue-260520-credit-Kenneth-Cappello.jpg)">
+                                    <p class="titolettiGrammysJr">Registrazione dell'anno</p>
+                                    <h3 class="titolettiGrammysSr" style="bottom: 10px;"><em>Everything I Wanted</em> - Billie Eilish</h3>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="http://www.lyricsstorage.it/Artisti/H.E.R./Singolo/ICan'tBreathe.html">
+                                    <img style="background-image: url(https://naras.a.bigcontent.io/v1/static/her-2021-oscars-gettyimages-1314398574.jpeg);">
+                                    <p class="titolettiGrammysJr">Canzone dell'anno</p>
+                                    <h3 class="titolettiGrammysSr" style="bottom: 10px;"><em>I Can't Breathe</em> - H.E.R.</h3>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://www.lyricsstorage.it/Artisti/Taylor Swift/Singolo/Folklore.html">
+                                    <img style="background-image: url(https://media.pitchfork.com/photos/6024ae90a042b4596eee980f/16:9/w_3360,h_1890,c_limit/taylor-swift.jpg);">
+                                    <p class="titolettiGrammysJr">Album dell'anno</p>
+                                    <h3 class="titolettiGrammysSr" style="margin-top: 41%;"><em>Folklore</em> - Taylor Swift</h3>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="http://www.lyricsstorage.it/Artisti/MeganTheeStallion.html">
+                                    <img style="background-image: url(https://assets.vogue.com/photos/5e1f12a86efd7d00095bbca9/16:9/w_2580,c_limit/Depop_Editorial_MTS\(Raily\)05.jpg);">
+                                    <p class="titolettiGrammysJr">Miglior artista esordiente</p>
+                                    <h3 class="titolettiGrammysSr" style="margin-top: 41%;">Megan Thee Stallion</h3>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+            </table>
+            </div>
+            <div class="billboard">
+                <div style="display: flex; width: 100%; justify-content: center;">
+                    <a href="https://www.billboard.com/charts/hot-100/" target="_blank">
+                        <p class="hot-billboard-macro-title"><b>HOT 20 BILLBOARD</b></p>
+                    </a>
+                </div>
+                <center>
+                    <table class="hot-billboard-table">
+                        <thead>
+                            <tr>
+                                <th class="respons-table-titles">RANK</th>
+                                <th class="respons-table">COPERTINA</th>
+                                <th class="respons-table-titles">CANZONE</th>
+                                <th class="respons-table-titles">ALBUM</th>
+                                <th class="respons-table-titles">ARTISTA</th>
+                                <th class="respons-table">DURATA</th>
+                                <th class="respons-table">ANNO DI RILASCIO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="column1-billboard-table">1.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Glass Animals/Album/Dreamland/HeatWaves.html"><img src="https://i.scdn.co/image/ab67616d00001e029e495fb707973f3390850eea" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Glass Animals/Album/Dreamland/HeatWaves.html">Heat Waves</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Glass Animals/Album/Dreamland.html">Dreamland</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Glass Animals/GlassAnimals.html">Glass Animals</a></td>
+                                <td class="respons-table">3:58</td>
+                                <td class="respons-table">2020</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">2.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Carolina Gaitan/Album/Encanto (Original Motion Picture Soundtrack)/WeDon'tTalkAboutBruno.html"><img src="https://i.scdn.co/image/ab67616d00001e02e1ac646ed6f25125e2a77229" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Carolina Gaitan/Album/Encanto (Original Motion Picture Soundtrack)/WeDon'tTalkAboutBruno.html">We Don't Talk About Bruno</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Carolina Gaitan/Album/Encanto(Original Motion Picture Soundtrack).html">Encanto (Original Motion Picture Soundtrack)</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/CarolinaGaitan.html">Carolina Gaitan</a></td>
+                                <td class="respons-table">3:36</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">3.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Kodak Black/Singolo/SuperGremlin.html"><img src="https://i.scdn.co/image/ab67616d00001e020801f4318b937ac0c912c7fe" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Kodak Black/Singolo/SuperGremlin.html">Super Gremlin</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Kodak Black/Singolo/SuperGremlin.html">Super Gremlin</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Kodak Black/KodakBlack.html">Kodak Black</a></td>
+                                <td class="respons-table">3:59</td>
+                                <td class="respons-table">2022</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">4.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/GAYLE/Singolo/abcdefu.html"><img src="https://i.scdn.co/image/ab67616d00001e022842f743ebd32235bceb43d3" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/GAYLE/Singolo/abcdefu.html">abcdefu</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/GAYLE/Singolo/abcdefu.html">abcdefu</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/GAYLE/Gayle.html">GAYLE</a></td>
+                                <td class="respons-table">2:48</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">5.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Justin Bieber/Singolo/STAY.html"><img src="https://i.scdn.co/image/ab67616d0000485141e31d6ea1d493dd77933ee5" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Justin Bieber/Singolo/STAY.html">STAY</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Justin Bieber/Singolo/STAY.html">STAY</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/The Kid LAROI/TheKidLaroi.html">The Kid LAROI</a> <a>&</a> <a href="http://www.lyricsstorage.it/Artisti/Justin Bieber/JustinBieber.html">Justin Bieber</a></td>
+                                <td class="respons-table">2:21</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">6.</td>
+                                <td class="respons-table">
+                                    <a href="http://www.lyricsstorage.it/Artisti/Adele/Album/30/EasyOnMe.html">
+                                        <img src="https://i.scdn.co/image/ab67616d0000485150dba34377a595e35f81b0e4" class="img-table">
+                                    </a>
+                                </td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Adele/Album/30/EasyOnMe.html">Easy on Me</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Adele/Album/30.html">30</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Adele/Adele.html">Adele</a></td>
+                                <td class="respons-table">3:44</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">7.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Justin Bieber/Album/Justice/Ghost.html"><img src="https://i.scdn.co/image/ab67616d00001e02e6f407c7f3a0ec98845e4431" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Justin Bieber/Album/Justice/Ghost.html">Ghost</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Justin Bieber/Album/Justice.html">Justice</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Justin Bieber/JustinBieber.html">Justin Bieber</a></td>
+                                <td class="respons-table">2:33</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">8.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Ed Sheeran/Album/Shivers/BadHabits.html"><img src="https://i.scdn.co/image/ab67616d00004851ef24c3fdbf856340d55cfeb2" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Ed Sheeran/Album/Shivers/BadHabits.html">Bad Habits</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Ed Sheeran/Album/Shivers.html">Shivers</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Ed Sheeran/EdSheeran.html">Ed Sheeran</a></td>
+                                <td class="respons-table">3:50</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">9.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Ed Sheeran/Album/Shivers/Shivers.html"><img src="https://i.scdn.co/image/ab67616d00004851ef24c3fdbf856340d55cfeb2" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Ed Sheeran/Album/Shivers/Shivers.html">Shivers</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Ed Sheeran/Album/Shivers.html">Shivers</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Ed Sheeran/EdSheeran.html">Ed Sheeran</a></td>
+                                <td class="respons-table">3:27</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">10.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Lil Nas X/Album/MONTERO/THATSWHATIWANT.html"><img src="https://i.scdn.co/image/ab67616d00001e02be82673b5f79d9658ec0a9fd" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Lil Nas X/Album/MONTERO/THATSWHATIWANT.html">THAT'S WHAT I WANT</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Lil Nas X/Album/MONTERO.html">MONTERO</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Lil Nas X/LilNasX.html">Lil Nas X</a></td>
+                                <td class="respons-table">3:23</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">11.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Dua Lipa/Singolo/ColdHeart.html"><img src="https://i.scdn.co/image/ab67616d000048519f5cce8304c42d3a5463fd23" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Dua Lipa/Singolo/ColdHeart.html">Cold Heart - PNAU Remix</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Dua Lipa/Singolo/ColdHeart.html">Cold Heart (PNAU Remix)</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Dua Lipa/DuaLipa.html">Dua Lipa,</a> <a href="http://www.lyricsstorage.it/Artisti/Elton John/EltonJohn.html">Elton John,</a> <a href="http://www.lyricsstorage.it/Artisti/PNAU/PNAU.html">PNAU</a></td>
+                                <td class="respons-table">3:22</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">12.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Imagine Dragons/Singolo/Enemy.html"><img src="https://i.scdn.co/image/ab67616d00001e02aa597e50829169e6994eb403" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Imagine Dragons/Singolo/Enemy.html">Enemy (with JID)</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Imagine Dragons/Singolo/Enemy.html">Enemy (with JID)</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Imagine Dragons/ImagineDragons.html">Imagine Dragons,</a> <a href="http://www.lyricsstorage.it/Artisti/JID/JID.html">JID,</a> <a href="http://www.lyricsstorage.it/Artisti/Arcane/Arcane.html">Arcane,</a> <a href="https://www.leagueoflegends.com/en-us/" target="_blank">League of Legends</a></td>
+                                <td class="respons-table">2:53</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">13.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Doja Cat/Album/Planet Her/NeedToKnow.html"><img src="https://i.scdn.co/image/ab67616d00001e024df3245f26298a1579ecc321" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Doja Cat/Album/Planet Her/NeedToKnow.html">Need to Know</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Doja Cat/Album/PlanetHer.html">Planet Her</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Doja Cat/DojaCat.html">Doja Cat</a></td>
+                                <td class="respons-table">2:30</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">14.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Latto/Singolo/BigEnergy.html"><img src="https://i.scdn.co/image/ab67616d00001e029c6ee9288ba1e9a08ab0b99e" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Latto/Singolo/BigEnergy.html">Big Energy</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Latto/Singolo/BigEnergy.html">Big Energy</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Latto/Latto.html">Latto</a></td>
+                                <td class="respons-table">2:53</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">15.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Doja Cat/Album/Planet Her/Woman.html"><img src="https://i.scdn.co/image/ab67616d00001e024df3245f26298a1579ecc321" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Doja Cat/Album/Planet Her/Woman.html">Woman</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Doja Cat/Album/PlanetHer.html">Planet Her</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Doja Cat/DojaCat.html">Doja Cat</a></td>
+                                <td class="respons-table">2:52</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">16.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Dua Lipa/Album/Future Nostalgia/Levitating.html"><img src="https://i.scdn.co/image/ab67616d00001e02bd26ede1ae69327010d49946" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Dua Lipa/Album/Future Nostalgia/Levitating.html">Levitating</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Dua Lipa/Album/FutureNostalgia.html">Future Nostalgia</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Dua Lipa/DuaLipa.html">Dua Lipa</a></td>
+                                <td class="respons-table">3:23</td>
+                                <td class="respons-table">2020</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">17.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/The Weeknd/Singolo/SaveYourTears(ArianaGrandeRemix).html"><img src="https://i.scdn.co/image/ab67616d00001e02c6af5ffa661a365b77df6ef6" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/The Weeknd/Singolo/SaveYourTears(ArianaGrandeRemix).html">Save Your Tears (with Ariana Grande) (Remix)</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/The Weeknd/Singolo/SaveYourTears(ArianaGrandeRemix).html">Save Your Tears (with Ariana Grande) (Remix)</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/The Weeknd/TheWeeknd.html">The Weeknd,</a> <a href="http://www.lyricsstorage.it/Artisti/Ariana Grande/ArianaGrande.html">Ariana Grande</a></td>
+                                <td class="respons-table">3:11</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">18.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Gunna/Album/DS4Ever/PushinP.html"><img src="https://i.scdn.co/image/ab67616d00001e0214d91ebdd6d7e2931322cc1a" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Gunna/Album/DS4Ever/PushinP.html">Pushin P</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Gunna/Album/DS4Ever.html">DS4Ever</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Gunna/Gunna.html">Gunna,</a> <a href="http://www.lyricsstorage.it/Artisti/Future/Future.html">Future,</a> <a href="http://www.lyricsstorage.it/Artisti/Young Thug/YoungThug.html">Young Thug</a></td>
+                                <td class="respons-table">2:16</td>
+                                <td class="respons-table">2022</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">19.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Lil Nas X/Singolo/INDUSTRYBABY.html"><img src="https://i.scdn.co/image/ab67616d00001e02ba26678947112dff3c3158bf" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Lil Nas X/Singolo/INDUSTRYBABY.html">INDUSTRY BABY (feat. Jack Harlow)</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Lil Nas X/Singolo/INDUSTRYBABY.html">INDUSTRY BABY (feat. Jack Harlow)</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Lil Nas X/LilNasX.html">Lil Nas X,</a> <a href="http://www.lyricsstorage.it/Artisti/Jack Harlow/JackHarlow.html">Jack Harlow</a></td>
+                                <td class="respons-table">3:32</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                            <tr>
+                                <td class="column1-billboard-table">20.</td>
+                                <td class="respons-table"><a href="http://www.lyricsstorage.it/Artisti/Jessica Darrow/Album/Encanto (Original Motion Picture Soundtrack)/SurfacePressure.html"><img src="https://i.scdn.co/image/ab67616d00001e02e1ac646ed6f25125e2a77229" class="img-table"></a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Jessica Darrow/Album/Encanto (Original Motion Picture Soundtrack)/SurfacePressure.html">Surface Pressure</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Jessica Darrow/Album/Encanto (Original Motion Picture Soundtrack).html">Encanto (Original Motion Picture Soundtrack)</a></td>
+                                <td><a href="http://www.lyricsstorage.it/Artisti/Jessica Darrow/JessicaDarrow.html">Jessica Darrow</a></td>
+                                <td class="respons-table">3:22</td>
+                                <td class="respons-table">2021</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center> 
+            </div>
+        </main>
+        <footer>
+            <p>Lyrics Storage è un sito per leggere i testi delle canzoni. Canzoni, artisti, album, classifiche, ma non garantisce la totalità dei contenuti:<br>il sito sarà in costante costruzione.</p>
+            <p>Costruito interamente da <a href="mailto:lucamonaco04@libero.it" style="text-decoration: underline;"><b>Luca Monaco</b></a>.<br>Logo a opera di <b><a href="mailto:martinafaella2002@gmail.com" style="text-decoration: underline;">Martina Faella</a></b>.</p>
+            <p><span>&copy</span> Copyright 
+                <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> 
+            <span id="LyricsStorage"><a href="#top">Lyrics Storage</a></span>. Tutti i diritti non sono riservati.</p>
+            <p><a href="http://www.lyricsstorage.it/Beccato!.html">Sitemap</a></p>
+            <a href="#top"><img src="http://lyricsstorage.it/LS%20logo.png"></a>
+        </footer>
+   </body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Rap God - LS</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+            body {
+                font-family: 'Poppins', sans-serif;
+                /*font-size: 10px;*/
+                margin: 0%;
+            }
+            header {
+                background-color: rgb(29,29,31);
+                width: 100%;
+                height: 44px;
+                /*margin: -8px;*/
+                position: fixed;
+                padding: 0px;
+                display: flex;
+                z-index: 9999;
+                color: #fff;
+                top: 0%;
+                margin-bottom: 15px;
+            }
+            ul {
+                list-style-type: none;
+            }
+            .buttons {
+                line-height: 50%;
+            }
+            .icone-top-img {
+                width: 20px;
+                height: 7px;
+                /*border-bottom: 1px #fff solid;
+                border-top: 1px #fff solid;*/
+                margin: 0%;
+                margin-top: 0px;
+                position: absolute;
+                top: 1.5px;
+            }
+            main {
+                margin-top: 44px;
+                position: relative;
+                /*background-image: linear-gradient(to bottom, rgb(144, 3, 252), rgb(0,0,0));*/
+                color: #000;
+                background-color: #fff;
+            }
+            .search-button-piece1 {
+                width: 10px;
+                height: 2px;
+                border-top: 2px solid #fff;
+                transform: rotate(320deg);
+                display: flex;
+                position: relative;
+                margin-top: 10px;
+                left: 2px;
+                /*bottom: 2px;*/
+            }
+            .search-button-piece2 {
+                border: 2px solid #fff;
+                border-radius: 50%;
+                display: flex;
+                width: 10px;
+                height: 10px;
+                position: relative;
+                bottom: 3px;
+                right: 2px;
+            }
+            .button-left-top {
+                transition: rotate(45deg);
+                transition-timing-function: linear;
+            }
+            .button-left-bottom {
+                transition: rotate(45deg);
+                transition-timing-function: linear;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            a:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            .container-images {
+                position: relative;
+                width: 15%;
+                border: 5px solid black;
+                margin: 2% 4% 2% 5%;
+            }
+            .image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: rgba(0,0,0,0);
+            }
+            .container-images:hover .overlay {
+                opacity: 1;
+            }
+            .overlay-image {
+                width: 100%;
+            }
+            h1 {
+                font-size: 2vw;
+                line-height: 210%;
+                margin: 0%; 
+                box-sizing: content-box;
+                margin-top: 35%;
+                color: red;
+            }
+            .description {
+                line-height: 1.1;
+                margin: 0%;
+                background-color: #000;
+                border-radius: 8px;
+                padding: 2% 1% 2% 2%;
+                width: 100%;
+                font-size: 0.9vw;
+                margin-top: 0%;
+                color: #fff;
+            }
+            .embedVideo {
+                margin: 0.9% 0% 0.9% 22.5%;
+                width: 100%;
+                display: inline-block;
+            }
+            .lyrics {
+                margin: 1% 5% 2% 2%;
+                width: 65%;
+                border: 1px solid grey;
+                border-radius: 10px;
+                background-color: inherit;
+                color: #000;
+                padding: 1% 0% 1% 2%;
+                line-height: 1.2;
+                display: inline-flex;
+                font-size: 1.5vw;
+            }
+            .partial {
+                width: 25%;
+                display: flex;
+                float: right;
+            }
+            .about {
+                margin-right: 4.5%;
+                display: inline;
+                position: absolute;
+                margin-top: 78%;
+                margin-left: 0.5%;
+                border: 1px solid black;
+                border-radius: 10px;
+                color: #fff;
+                background-image: linear-gradient(to bottom, rgb(255,0,0), rgb(0,0,0));
+
+            }
+            .about-1 {
+                border-bottom: 1px solid black;
+                width: 100%;
+            }
+            .about-2 {
+                padding: 0.0001% 5% 0.0001% 5%;
+                font-size: 1vw;
+            }
+            .about-1-1 {
+                padding-left: 5%;
+                display: inline-flex;
+                font-size: 2.5vw;
+            }
+            .about-1-2 {
+                float: right;
+                display: inline;
+                padding-right: 2%;
+                padding-top: 7%;
+                font-size: 0.75vw;
+                position: relative;
+                margin-top: 25%;
+            }
+            .video {
+                width: 100%;
+                aspect-ratio: 400 / 250;
+                position: relative;
+                right: 25%;
+            }
+            .tracklist {
+                display: inline-block;
+                position: absolute;
+                margin-left: 0.65%;
+                margin-top: 22%;
+                border: 2px solid #000;
+                border-radius: 10px;
+                width: 19.4%;
+                background-color: rgb(85, 83, 83);
+                color: #fff;
+                margin-right: 0.5%;
+            }
+            .tracklist-1 {
+                border-bottom: 2px solid #000;
+                display: flex;
+            }
+            .tracklist-1-1 {
+                display: inline-flex;
+                margin: 5%;
+                margin-left: 8.5%;
+            }
+            .tracklist-1-2 {
+                padding-top: 7%;
+                position: relative;
+                margin-left: 2.5%;
+            } 
+            .tracklist-2-1 li {
+                border: 0px solid #fff;
+                border-radius: 6px;
+                line-height: 1.5;
+                margin: 1% 5% 0% 1%;
+                padding: 2%;
+                background-color: rgba(255, 255, 255, 0.5);
+                color: #fff;
+                font-size: 1vw;
+            }
+            .tracklist-2-1 li:hover {
+                transition: 0.15s;
+                background-color: rgb(162,157,157);
+                color: #000;
+                border: 0px;
+            }
+            .tracklist-2-1 li:not(:hover) {
+                transition: 0.1s
+            }
+            h4 {
+                margin: 0;
+                font-size: 1vw;
+                line-height: 1.25;
+            }
+        </style>
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <header>
+            <ul style="display: inline-flex; padding-left: 1.111934766493699%;">
+                <li class="buttons" style="position: absolute; left: 1%; margin-left: 0,3706449221645663%" onclick="class {'button-left-top'; 'button-left-bottom'}">
+                    <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Red_flag.svg/1280px-Red_flag.svg.png" class="icone-top-img">-->
+                    <div class="icone-top-img" style="border-bottom: 1px #fff solid;"></div>
+                    <div class="icone-top-img" style="border-top: 1px #fff solid;"></div>
+                </li>
+                <li class="buttons" style="left: 50%; position: absolute;">
+                    <img src="https://www.sinonimi-contrari.it/includes/images/sharers/sinonimi-di-qualcosa.png" class="icone-top-img">
+                </li>
+                <li class="buttons" style="position: absolute; right: 1%; margin-right: 0,3706449221645663%;">
+                    <!--<img src="https://www.sinonimi-contrari.it/includes/images/sharers/sinonimi-di-qualcosa.png" class="icone-top-img">-->
+                    <div style="display: flex;">
+                        <div class="search-button-piece1"></div>
+                        <div class="search-button-piece2"></div>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div>
+                <div style="width: 100%; display: inline-flex;">
+                    <div class="container-images">
+                        <img src="https://t2.genius.com/unsafe/542x542/https%3A%2F%2Fimages.genius.com%2F058e2359838c93395c36119b48a2eff6.1000x1000x1.png" class="image">
+                        <div class="overlay">
+                            <img src="https://i.scdn.co/image/ab6761610000f178a00b11c129b27a88fc72f36b" class="overlay-image">
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Rap God</h1>
+                        <ul class="description">
+                            <li><a>The Marshall Mathers LP2 (Deluxe)</a></li>
+                            <li><a>Eminem</a></li>
+                            <li>14 ottobre 2013</li>
+                            <li>6:07</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="lyrics">
+                    <p>
+                        <b>[Intro]</b><br>
+                        Look, I was gonna go easy on you<br>
+                        Not to hurt your feelings<br>
+                        But I'm only going to get this one chance<br>
+                        Something's wrong, I can feel it<br>
+                        (Six minutes)<br><br>
+                        Just a feeling I've got<br>
+                        Like something's about to happen<br>
+                        But I don't know what<br>
+                        If that means what I think it means<br><br>
+                        We're in trouble, big trouble<br>
+                        And if he is as bananas as you say<br>
+                        I'm not taking any chances<br>
+                        You are just what the doc ordered<br><br>
+                        <b>[Chorus]</b><br>
+                        I'm beginnin' to feel like a Rap God, Rap God<br>
+                        All my people from the front to the back nod, back nod<br>
+                        Now, who thinks their arms are long enough<br>
+                        To slap box, slap box?<br>
+                        They said I rap like a robot, so call me Rap-bot<br><br>
+                        <b>[Verse 1]</b><br>
+                        But for me to rap like a computer<br>
+                        It must be in my genes<br>
+                        I got a laptop in my back pocket<br>
+                        My pen'll go off when I half-cock it<br>
+                        Got a fat knot from that rap profit<br><br>
+                        Made a livin' and a killin' off it<br>
+                        Ever since Bill Clinton was still in office<br>
+                        With Monica Lewinsky feelin' on his nutsack<br>
+                        I'm an MC still as honest<br>
+                        But as rude and as indecent as all hell<br>
+                        Syllables, skill-a-holic (Kill 'em all with)<br><br>
+                        This flippity dippity-hippity hip-hop<br>
+                        You don't really wanna get into a pissin' match<br>
+                        With this rappity brat, packin' a MAC<br>
+                        In the back of the Ac'<br>
+                        Backpack rap crap, yap-yap, yackety-yack<br><br>
+                        And at the exact same time<br>
+                        I attempt these lyrical acrobat stunts<br>
+                        While I'm practicin' that<br>
+                        I'll still be able to break a motherfuckin' table<br>
+                        Over the back of a couple of faggots and crack it in half<br><br>
+                        Only realized it was ironic<br>
+                        I was signed to Aftermath after the fact<br>
+                        How could I not blow?<br>
+                        All I do is drop F-bombs<br>
+                        Feel my wrath of attack<br>
+                        Rappers are havin' a rough time period<br>
+                        Here's a maxi pad<br>
+                        It's actually disastrously bad for the wack<br>
+                        While I'm masterfully constructing this masterpiece as<br><br>
+                        <b>[Chorus]</b><br>
+                        'Cause I'm beginnin' to feel like a Rap God, Rap God<br>
+                        All my people from the front to the back nod, back nod<br>
+                        Now, who thinks their arms are long enough to slap box, slap box?<br>
+                        Let me show you maintainin' this shit ain't that hard, that hard<br>
+                        Everybody wants the key and the secret<br>
+                        To rap immortality like I have got<br><br>
+                        <b>[Verse 2]</b><br>
+                        Well, to be truthful the blueprint's<br>
+                        Simply rage and youthful exuberance<br>
+                        Everybody loves to root for a nuisance<br>
+                        Hit the Earth like an asteroid<br><br>
+                        Did nothing but shoot for the Moon since (Pew!)<br>
+                        MCs get taken to school with this music<br>
+                        'Cause I use it as a vehicle to "bus the rhyme"<br>
+                        Now I lead a new school full of students<br>
+                        Me? I'm a product of Rakim<br><br>
+                        Lakim Shabazz, 2Pac, N.W.A, Cube, hey Doc, Ren<br>
+                        Yella, Eazy, thank you, they got Slim<br>
+                        Inspired enough to one day grow up<br>
+                        Blow up and be in a position<br>
+                        To meet Run-D.M.C., induct them<br><br>
+                        Into the motherfuckin' Rock and Roll Hall of Fame<br>
+                        Even though I'll walk in the church<br>
+                        And burst in a ball of flames<br>
+                        Only Hall of Fame I'll be inducted in<br>
+                        Is the alcohol of fame<br>
+                        On the wall of shame<br><br>
+                        You fags think it's all a game<br>
+                        'Til I walk a flock of flames<br>
+                        Off a plank and, tell me what in the fuck are you thinkin'?<br>
+                        Little gay-lookin' boy<br>
+                        So gay I can barely say it with a straight face<br>
+                        Lookin' boy (Ha-ha!)<br><br>
+                        You're witnessin' a massacre<br>
+                        Like you're watching a church gathering take place, lookin' boy<br>
+                        "Oy vey, that boy's gay!"—that's all they say, lookin' boy<br>
+                        You get a thumbs up, pat on the back<br>
+                        And a "way to go" from your label every day, lookin' boy<br><br>
+                        Hey, lookin' boy! What you say, lookin' boy?<br>
+                        I get a "hell yeah" from Dre, lookin' boy<br>
+                        I'ma work for everything I have<br>
+                        Never asked nobody for shit<br>
+                        Get outta my face, lookin' boy!<br>
+                        Basically, boy, you're never gonna be capable<br>
+                        Of keepin' up with the same pace, lookin' boy, 'cause—<br><br>
+                        <b>[Chorus]</b><br>
+                        I'm beginnin' to feel like a Rap God, Rap God<br>
+                        All my people from the front to the back nod, back nod<br>
+                        The way I'm racin' around the track<br>
+                        Call me NASCAR, NASCAR<br>
+                        Dale Earnhardt of the trailer park, the White Trash God<br>
+                        Kneel before General Zod<br>
+                        This planet's Krypton—no, Asgard, Asgard<br><br>
+                        <b>[Verse 3]</b><br>
+                        So you'll be Thor, I'll be Odin<br>
+                        You rodent, I'm omnipotent<br>
+                        Let off, then I'm reloadin'<br>
+                        Immediately with these bombs, I'm totin'<br>
+                        And I should not be woken<br><br>
+                        I'm the walkin' dead, but I'm just a talkin' head<br>
+                        A zombie floatin'<br>
+                        But I got your mom deep-throatin'<br>
+                        I'm out my Ramen Noodle<br>
+                        We have nothin' in common, poodle<br><br>
+                        I'm a Doberman, pinch yourself in the arm<br>
+                        And pay homage, pupil<br>
+                        It's me, my honesty's brutal<br>
+                        But it's honestly futile if I don't<br>
+                        Utilize what I do though<br>
+                        For good at least once in a while<br><br>
+                        So I wanna make sure somewhere in this<br>
+                        Chicken scratch I scribble and doodle enough rhymes<br>
+                        To maybe try to help get some people through tough times<br>
+                        But I gotta keep a few punchlines<br>
+                        Just in case, 'cause even you unsigned<br><br>
+                        Rappers are hungry lookin' at me like it's lunchtime<br>
+                        I know there was a time where once I<br>
+                        Was king of the underground<br>
+                        But I still rap like I'm on my Pharoah Monch grind<br>
+                        So I crunch rhymes, but sometimes when you combine<br><br>
+                        Appeal with the skin color of mine<br>
+                        You get too big and here they come tryin'<br>
+                        To censor you like that one line<br>
+                        I said on "I'm Back" from The Mathers LP 1 when I<br>
+                        Tried to say I'll take seven kids from Columbine<br><br>
+                        Put 'em all in a line, add an AK-47, a revolver and a 9<br>
+                        See if I get away with it now<br>
+                        That I ain't as big as I was, but I'm<br>
+                        Morphin' into an immortal, comin' through the portal<br>
+                        You're stuck in a time warp from 2004 though<br><br>
+                        And I don't know what the fuck that you rhyme for<br>
+                        You're pointless as Rapunzel with fuckin' cornrows<br>
+                        You write normal? Fuck being normal!<br>
+                        And I just bought a new raygun from the future<br>
+                        Just to come and shoot ya, like when Fabolous made Ray J mad<br>
+                        'Cause Fab said he looked like a fag at Mayweather's pad<br><br>
+                        Singin' to a man while he played piano<br>
+                        Man, oh man, that was a 24-7 special on the cable channel<br>
+                        So Ray J went straight to the radio station<br>
+                        The very next day, "Hey Fab, I'ma kill you!"<br><br>
+                        Lyrics comin' at you at supersonic speed (J.J. Fad)<br>
+                        Uh, summa-lumma, dooma-lumma, you assumin' I'm a human<br>
+                        What I gotta do to get it through to you I'm superhuman?<br>
+                        Innovative and I'm made of rubber<br>
+                        So that anything you say is ricochetin' off of me<br>
+                        And it'll glue to you and<br><br>
+                        I'm devastating, more than ever demonstrating<br>
+                        How to give a motherfuckin' audience<br>
+                        A feeling like it's levitating<br>
+                        Never fading, and I know the haters are forever waiting<br>
+                        For the day that they can say I fell off, they'll be celebrating<br><br>
+                        'Cause I know the way to get 'em motivated<br>
+                        I make elevating music, you make elevator music<br>
+                        "Oh, he's too mainstream."<br>
+                        Well, that's what they do when they get jealous<br>
+                        They confuse it<br>
+                        "It's not hip-hop, it's pop, "—'cause I found a hella way to fuse it<br><br>
+                        With rock, shock rap with Doc<br>
+                        Throw on "Lose Yourself" and make 'em lose it<br>
+                        "I don't know how to make songs like that<br>
+                        I don't know what words to use."<br>
+                        Let me know when it occurs to you<br><br>
+                        While I'm rippin' any one of these<br>
+                        S that versus you<br>
+                        It's curtains, I'm inadvertently hurtin' you<br>
+                        How many verses I gotta murder to<br>
+                        Prove that if you were half as nice<br>
+                        Your songs you could sacrifice virgins too?<br><br>
+                        Ugh, school flunky, pill junkie<br>
+                        But look at the accolades these skills brung me<br>
+                        Full of myself, but still hungry<br>
+                        I bully myself 'cause I make me do<br>
+                        What I put my mind to<br><br>
+                        And I'm a million leagues above you<br>
+                        Ill when I speak in tongues<br>
+                        But it's still tongue-in-cheek fuck you<br>
+                        I'm drunk, so, Satan, take the fucking wheel<br>
+                        I'ma sleep in the front seat<br>
+                        Bumpin' Heavy D and the Boyz<br>
+                        Still "Chunky but Funky"<br><br>
+                        But in my head there's something<br>
+                        I can feel tugging and struggling<br>
+                        Angels fight with devils<br>
+                        And here's what they want from me<br>
+                        They're askin' me to eliminate some of the women hate<br>
+                        But if you take into consideration the bitter hatred<br>
+                        I have, then you may be a little patient<br>
+                        And more sympathetic to the situation<br>
+                        And understand the discrimination<br><br>
+                        But fuck it, life's handin' you lemons?<br>
+                        Make lemonade then!<br>
+                        But if I can't batter the women<br>
+                        How the fuck am I supposed to bake them a cake then?<br>
+                        Don't mistake him for Satan; it's a fatal mistake<br>
+                        If you think I need to be overseas and take a vacation<br>
+                        To trip a broad, and make her fall on her face and<br>
+                        Don't be a retard — Be a king? Think not<br>
+                        Why be a king when you can be a God?
+                    </p>
+                </div>
+                <div class="partial">
+                    <div class="embedVideo">
+                        <iframe class="video" src="https://www.youtube-nocookie.com/embed/XbGs_qK2PQA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="tracklist">
+                        <div class="tracklist-1">
+                            <div class="tracklist-1-1">
+                                <img style="aspect-ratio: 1 / 1; width: 100%;" src="https://i.scdn.co/image/ab67616d00004851cb66bcc14c6f857c127d5969">
+                            </div>
+                            <div class="tracklist-1-2">
+                                <h4><a>Marshall Mathers LP2 (Deluxe)</a></h4>
+                            </div>
+                        </div>
+                        <div class="tracklist-2">
+                            <ol class="tracklist-2-1" style="padding-inline-start: 10%;">
+                                <li><a>Bad Guy</a></li>
+                                <li><a>Parking Lot - Skit</a></li>
+                                <li><a>Rhyme Or Reason</a></li>
+                                <li><a>So Much Better</a></li>
+                                <li><a>Survival</a></li>
+                                <li><a>Legacy</a></li>
+                                <li><a>Asshole</a></li>
+                                <li><a>Berzerk</a></li>
+                                <li><a href="Rap God.html">Rap God</a></li>
+                                <li><a>Brainless</a></li>
+                                <li><a>Stronger Than I Was</a></li>
+                                <li><a>The Monster</a></li>
+                                <li><a>So Far...</a></li>
+                                <li><a>Love Game</a></li>
+                                <li><a>Headlights</a></li>
+                                <li><a>Evil Twin - Skit</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <div class="about-1">
+                            <h2 class="about-1-1"><b><em>ABOUT</em></b></h2>
+                            <p class="about-1-2">by Genius</p>
+                        </div>
+                        <div class="about-2">
+                            <p>
+                                <b>Rap God</b> is Eminem’s braggadocious ode to himself and his career. Over its six-minute run-time, he references comic books, throws back to his old songs, and raps crazily fast.<br>In a Q&A with MSN Music Em was asked whether he felt like a Rap God or an underdog, to which he responded with:<br>
+                                "<em>I think everything switches back and forth from hour to hour, day by day with me. That whole ‘Rap God’ record pretty much from top to bottom is tongue in cheek. So I mean, do I want to feel like that? Maybe sometimes. Again, it goes back to everybody who competitive raps and does this for just purely the sport of it wants to be the best. Again, that’s why Kendrick’s verse worked so well because he only said what every rapper’s already thinking, If you don’t want to be the best, then why are you rapping?</em>"<br>This song landed Eminem a spot in The Guinness Book of World Records: Most words in a hit single:<br>The single ‘Rap God’ from Eminem packed a mouth-filling 1,560 words into its 6 min 4 sec runtime.<br>However, in 2015 Harry Shotta broke Eminem’s world record of most words in a track. Eminem’s “Rap God” has 1560 words, while Harry Shotta’s “Animal” has 1771.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,201 @@
+html {
+    overflow-x: hidden;
+}
+#firstBlock {
+    background-color: #000;
+    height: 750px;
+}
+main h1 {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    top: 10%;
+    margin-left: 27.5%;
+    font-size: 8vw;
+    transition-duration: .5s;
+}
+.imgFirstBlock {
+    position: relative;
+    text-align: center;
+    display: flex;
+    perspective: 1000px;
+}
+#curtainLeft {
+    transform: rotateY(35deg);
+    width: 20%;
+    margin-top: 10%;
+    position: relative;
+    box-shadow: 0px 0px 10px 4px rgb(57, 57, 57);
+    margin-left: 14%;
+}
+#curtainCenter {
+    text-align: center;
+    margin-top: 5%;
+    box-shadow: 0px 0px 10px 4px rgb(57, 57, 57);
+    position: absolute;
+    margin-left: 25%;
+    width: 50%;
+}
+#curtainRight {
+    transform: rotateY(145deg);
+    width: 20%;
+    position: relative;
+    margin-left: auto;
+    margin-right: 14%;
+    margin-top: 10%;
+    box-shadow: 0px 0px 10px 4px rgb(57, 57, 57);
+}
+#secondBlock {
+    display: flex;
+    float: left;
+    background-color: rgb(255, 255, 255);
+}
+#bio {
+    margin-left: 15%;
+    width: 30%;
+    margin-bottom: 3.5%;
+}
+#bio h2 {
+    font-size: 3vw;
+    color:rgba(0, 29, 91, 1)
+}
+#bio p {
+    font-size: 1.5vw;
+    color: rgba(0, 29, 91, 0.7);
+}
+#bioImg {
+    width: 25%;
+    height: 70%;
+    margin-left: 20%;
+    margin-top: 2.5%;
+    position: relative;
+    border-radius: 10px;
+    display: inline-block;
+    aspect-ratio: 960/1200;
+}
+#thirdBlock {
+    padding: 5%;
+    background-color: rgba(17, 17, 17, .95);
+}
+#thirdBlock table {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+    padding: 2.5%;
+    position: relative;
+    margin-top: 42.5%;
+}
+#thirdBlock table tbody tr th {
+    background-color: #fff;
+    color: #000;
+    font-size: 2vw;
+    width: 50%;
+    text-align: right;
+}
+#thirdBlock table tbody tr td {
+    font-size: 2vw;
+}
+#thirdBlock table tbody tr td img {
+    width: 10%;
+    margin-right: 2%;
+}
+#thirdBlock table tbody tr td a img {
+    width: 40%;
+    border: 1px solid rgba(0, 29, 91, .4);
+    padding: 2.5%;
+}
+#fourthBlock {
+    background-color: rgba(68, 121, 255, 0.3);
+    padding: 2.5%;
+}
+#fourthBlock h3 {
+    text-transform: uppercase;
+    margin: 0;
+    color: rgb(55, 55, 255);
+    margin-left: 1%;
+    font-size: 1.5vw;
+}
+#fourthBlock h2 {
+    text-transform: uppercase;
+    font-size: 3vw;
+    margin-left: 5%;
+    margin-bottom: 2.5%;
+    position: relative;
+}
+#albumContainer {
+    display: block;
+    width: 100%
+}
+#albumContainerRow {
+    display: flex;
+    margin: 5% auto;
+}
+.album {
+    text-align: center;
+    display: contents;
+}
+.album a {
+    width: 25%;
+}
+.album img {
+    width: 90%;
+    position: relative;
+}
+.album h6 {
+    text-align: center;
+    font-size: 1.5vw;
+}
+@media screen and (max-width: 415px) {
+    #firstBlock {
+        height: 200px;
+    }
+    main h1 {
+        animation: opacNameArtist 1s ease-in;
+        font-size: 12vw;
+        margin-left: 16%;
+    }
+    @keyframes opacNameArtist {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    #bio {
+        margin-left: 5%;
+        width: 60%;
+    }
+    #bio h2 {
+        font-size: 6vw;
+    }
+    #bio p {
+        font-size: 3vw;
+    }
+    #bioImg {
+        position: absolute;
+        margin-left: 70%;
+        margin-top: 7.5%;
+        width: 55%;
+        height: auto;
+        transform: rotateY(180deg);
+    }
+    #thirdBlock table {
+        margin-top: 95%;
+    }
+    #fourthBlock h3 {
+        font-size: 3vw;
+    }
+    #fourthBlock h2 {
+        font-size: 5vw;
+    }
+    .album h6 {
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         max-width: 90px;
+         font-size: 2.5vw;
+    }
+}
+@media screen and (min-width: 415px) {
+    main h1 {
+        opacity: 0;
+    }
+}

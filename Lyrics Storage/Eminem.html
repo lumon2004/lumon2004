@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="google-site-verification" content="bbYvbdKGRvkUa4E9kfjM5tJu_qle77WqCr4HmYkXBJQ">
+        <title>Eminem - Lyrics Storage</title>
+        <link rel="stylesheet" href="http://www.lyricsstorage.it/LS.homepage.css">
+        <link rel="shortcut icon" href="http://lyricsstorage.it/LS%20logo.png">
+        <script src="LS.homepage.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://www.lyricsstorage.it/Artisti/artists.css">
+        <style>
+            #bioImg {
+                width: 20%;
+                margin-top: 5%;
+            }
+            main h1 {
+                text-align: center;
+                margin-left: 0%;
+            }
+            #thirdBlock table tbody tr td a img {
+                padding: 0;
+                border: 0;
+            }
+            @media screen and (max-width: 415px) {
+                #bioImg {
+                    position: absolute;
+                    transform: rotateY(180deg);
+                    width: 50%;
+                    margin-top: 5%;
+                }
+            }
+            @media screen and (min-width: 415px) {
+                main h1 {
+                    top: 5%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <ul id="buttonsUl" style="display: block">
+                <li class="buttons respons-left-button icone-top-img openNavBtn" id="openNavBtn"></li>
+                <li class="buttons logo-button">
+                    <p class="respons-center-button"><a href="http://www.lyricsstorage.it" href="top">Lyrics Storage</a></p>
+                </li>
+                <li class="buttons respons-buttons second-button"><a href="http://www.lyricsstorage.it/Artisti/LS.artisti.html">Artisti</a></li>
+                <li class="buttons respons-buttons third-button"><a href="https://www.billboard.com/charts/hot-100/" target="_blank"><span class="Hot100">Hot 100</span><span class="billboard-button"> Billboard</span></a></li>
+                <li class="buttons respons-buttons fourth-button"><a href="https://www.grammy.com" target="_blank">Grammys</a></li>
+                <li class="buttons respons-buttons fifth-button"><a href="https://www.audinoeditore.it/download.php?id=VTJGc2RHVmtYMSszS3hQN1haeDFxcUQ4bVdzTDZJSWRMSEpqazdiNE9WWT0=">Generi</a></li>
+                <li class="buttons respons-buttons sixth-button"><a href="http://www.lyricsstorage.it/Contatti.html">Contatti</a></li>
+                <li class="buttons search-button" id="searchButton" style="opacity: .8;">
+                    <button onclick="searchBar()">
+                        <div class="search-button-piece1"></div>
+                        <div class="search-button-piece2"></div>
+                    </button>    
+                </li>
+            </ul>
+            <div class="searchContainer" id="searchContainer" style="display: none;">
+                <div class="search-bar">
+                    <form action="">
+                        <input type="text" placeholder="Cerca una canzone, un album o un artista">
+                    </form>
+                    <div class="closeSearchBar" id="closeSearchBar">
+                        <div class="closeSearchBar-1"></div>
+                        <div class="closeSearchBar-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="navMenu" id="navMenu" style="display: none;">
+                <div class="navMenuTop">
+                    <a href="http://www.lyricsstorage.it"><img src="http://www.lyricsstorage.it/LS%20logo.png"></a>
+                    <h1><a href="http://www.lyricsstorage.it">Lyrics Storage</a></h1>
+                    <div class="closeNavMenuButton" id="closeNavMenuButton">
+                        <div class="closeNavMenuButton-1"></div>
+                        <div class="closeNavMenuButton-2"></div>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="http://www.lyricsstorage.it/Artisti/LS.artisti.html">Artisti</a></li>
+                    <li><a href="https://www.billboard.com/charts/hot-100/" target="_blank">Hot 100 Billboard</a></li>
+                    <li><a href="https://www.grammy.com" target="_blank">Grammys</a></li>
+                    <li><a href="https://www.audinoeditore.it/download.php?id=VTJGc2RHVmtYMSszS3hQN1haeDFxcUQ4bVdzTDZJSWRMSEpqazdiNE9WWT0=">Generi musicali</a></li>
+                    <li><a href="http://www.lyricsstorage.it/Contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+            <script>
+                // Search Bar 
+                document.getElementById("searchButton").addEventListener("click", openSearchBar);
+                function openSearchBar () {
+                    document.getElementById("searchContainer").style.display="block";
+                    document.getElementById("searchButton").style.opacity=0;
+                };
+                document.getElementById("closeSearchBar").addEventListener("click", closeSearchBar);
+                function closeSearchBar () {
+                    document.getElementById("searchContainer").style.display="none";
+                    document.getElementById("searchButton").style.opacity=.8;
+                };
+                // Nav Menu
+                document.getElementById("openNavBtn").addEventListener("click", openNavMenu);
+                function openNavMenu () {
+                    document.getElementById("navMenu").style.display="block";
+                }
+                document.getElementById("closeNavMenuButton").addEventListener("click", closeNavMenu);
+                function closeNavMenu () {
+                    document.getElementById("navMenu").style.display="none";
+                }
+            </script>
+        </header>
+        <main>
+            <div id="firstBlock">
+                <div class="imgFirstBlock">
+                    <img src="https://wallpaperaccess.com/full/1219872.jpg" id="curtainLeft" style="margin-top: 12.5%;">
+                    <img src="https://wallpaper.dog/large/20403448.jpg" id="curtainCenter">
+                    <img src="https://sm.mashable.com/mashable_me/fun/e/eminem-and/eminem-and-kanye-west-top-spotifys-all-time-workout-songs-li_ay3q.jpg" id="curtainRight" style="margin-top: 12.5%;">
+                </div>
+                <h1 id="artistNameOpac">Eminem</h1>
+                <script>
+                    $(window).scroll(
+                        function() {
+                            var scrollTop = $(this).scrollTop();
+                            $('#artistNameOpac').css({
+                                opacity: function() {
+                                    var elementHeight = $(this).height();
+                                    return 1 - (elementHeight - scrollTop) / elementHeight;
+                                }
+                        });
+                    });
+                </script>
+            </div>
+            <div id="secondBlock">
+                <div id="bio">
+                    <h2 id="bioOpac" style="color: rgba(35,64,168,1);">Chi è Marshall Bruce Mathers III</h2>
+                    <p style="color: rgba(35,64,168,.7);">È nato il 17 ottobre 1972 a <a href='https://maps.google.com/?q=St. Joseph+Missouri+Stati Uniti'><a href='https://maps.apple.com/maps?q=St. Joseph+Missouri+Stati Uniti'>St. Joseph</a></a>, in Missouri, e cresciuto a <a href='https://maps.google.com/?q=Detroit+Michigan+Stati Uniti'><a href='https://maps.apple.com/maps?q=Detroit+Michigan+Stati Uniti'>Detroit</a></a>. Ha origini britanniche, tedesche, svizzere, polacche e lussemburghesi, nasce da due musicisti rock piuttosto poveri costretti a trasferirsi da una parte all'altra degli Stati Uniti in condomini e roulotte.<br> Ad appena 6 mesi la madre lo portò via dal padre, accusato di molestie, smentite poi dallo stesso in una lettera a diretta a Marshall. <br> Attraversò un'adolescenza difficile: litigò spesso con la madre per via dei problemi con la droga di quest'ultima. Ebbe diversi problemi anche con la scuola: venne bocciato tre volte per le numerose assenze e subì atti di bullismo.</p>
+                </div>
+                <img src="https://wallpaperaccess.com/full/1163583.jpg" id="bioImg" style="aspect-ratio: 720/1280;">
+            </div>
+            <div id="thirdBlock">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Nazionalità</th>
+                            <td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAA8CAMAAABreNUXAAAAYFBMVEX/AAD/////YWH/1dX/4+P/29v/t7f/nJz/oaH/6ur/QED/amr/+/v/UlL/xMT/MDD/v7//iIj/Rkb/8vL/k5P/WFj/Ojr/ISH/XV3/j4//zs7/S0v/fHz/ra3/hIT/mJgGM4zzAAAB1ElEQVRYhe2Ya5eCIBCGBwUU07yVlWn7///l4uUUKou1Z8A9bfNBD/Dio+AMAwAm88jvzTM+2Wwf7n/mHrbh+uBvwk0g2YLLZDvbgHuU7Uf3XL8XGGYYnRuI7pr0gn6GReCGC5JTj4q6K3854e4BUl6NioqnAHsn3HIhK51wyWmmOmlV+NzzTHV2xL3MVBdH3Gymyuxz6+5CZyp6b7HF5UNEnqm6KgbcApf7cX+XQaoLVteJ6CprxBi6SOxniNxQPr3htA9S8g3yiSiXtO5eU97INwoRuUKpO5VyuFXjpFQ9WmDOb6FURv3S+zBGIqVUoP5XoVpbpRNRWqmlEJUr1rWjCVTuZChNFiH7b/BkjwCXK5IneySY40x3L/TZUTRu/BI3tuVHRsP1o3set2aPZQlpPRLpuhxSQbC5y/RmRY63/uYr6mm+g7juc6N4lu5g5hvMoKXEHpeUP8XpaJG7I+eTR61QsyFF5upD1842d7k5Gmy5RcLltkND5R2yBprs4I3JRmuZG0GRt6wcPn24sTYvlPXeCjdWvEWAEhVpbPd7FaMLl31vLjMeX73fOeFef55incsXW0833FYTLFxwA9Ce01nn3uC2Cdfn2/zPK/bh/gXuN3HVFNmwXyiAAAAAAElFTkSuQmCC">Canada</td>
+                        </tr>
+                        <tr>
+                            <th>Genere</th>
+                            <td>Hip Hop, Contemporary R&B, Pop, Pop rap, Dancehall reggae, Trap</td>
+                        </tr>
+                        <tr>
+                            <th>Periodo di attività musicale</th>
+                            <td>2006 - in attività</td>
+                        </tr>
+                        <tr>
+                            <th>Etichetta</th>
+                            <td>OVO Sound, Republic, Young Money, Cash Money</td>
+                        </tr>
+                        <tr>
+                            <th>Album pubblicati</th>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <th>Sito ufficiale</th>
+                            <td><a href="https://www.drakerelated.com" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0454/5616/2972/files/front_900x.jpg?v=1630628468"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="fourthBlock" style="background-color: rgba(35,64,168,.7);">
+                <h3 style="color: rgba(35,64,168,1);">Discografia</h3>
+                <h2>Album</h2>
+                <div id="albumContainer">
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02cd945b4e3de57edd28481a3f">
+                                <h6>Certified Lover Boy</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02bba7cfaf7c59ff0898acba1f">
+                                <h6>Dark Lane Demo Tapes</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e029c1e02d4becb7c5bbca01e2a">
+                                <h6>Care Package</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02f907de96b9a4fbc04accc0d5">
+                                <h6>Scorpion</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e024f0fd9dad63977146e685700">
+                                <h6>More Life</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e029416ed64daf84936d89e671c">
+                                <h6>Views</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02d6adfbd3f091d6f2b9af6507">
+                                <h6>What A Time To Be Alive</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e022090f4f6cc406e6d3c306733">
+                                <h6>If You're Reading This It's Too Late</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02adfb5909ec66db5fbb4d06c8">
+                                <h6>Nothing Was The Same (Deluxe)</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02a90d170c61fb7d063d47161d">
+                                <h6>Nothing Was The Same</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02c7ea04a9b455e3f68ef82550">
+                                <h6>Take Care (Deluxe)</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e0272babba16ea5e3afe690b4f1">
+                                <h6>Thank Me Later (Int'l Version)</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e0254ef13c30a024a7f1ba79efd">
+                                <h6>So Far Gone</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <h2>Singoli ed EP</h2>
+                <div id="albumContainer">
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02da2e107c18f265a861bba576">
+                                <h6>Over The Top (feat. Drake)</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e0243a149ab4009e7969544af07">
+                                <h6>Seeing Green</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e028b20e4631fa15d3953528bbc">
+                                <h6>Scary Hours 2</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e028c3f557692927b13e3feb9ea">
+                                <h6>B.B. King Freestyle</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02866d72ac0a4dc315fc8b3820">
+                                <h6>You're Mines Still (feat. Drake)</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e0252c75ed37313b889447011ef">
+                                <h6>Laugh Now Cry Later (feat. Lil Durk)</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02f0e3a46cde68ac2682b1940d">
+                                <h6>TWIST & TURN (feat. Drake & PARTYNEXTDOOR)</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e0295716719bcb760795a0c15bf">
+                                <h6>Only You Freestyle</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02efaecb4b9cbae7c120d14617">
+                                <h6>POPSTAR (feat. Drake)</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e027db0d21fc5696a3fcedfb933">
+                                <h6>GREECE (feat. Drake)</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e026443676b54522a86f6323e65">
+                                <h6>Toosie Slide</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e028a01c7b77a34378a62f46402">
+                                <h6>Life Is Good (feat. Drake)</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e029a49f55d97e798ce88a35323">
+                                <h6>Ela É do Tipo (feat. Drake) [Remix]</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e0289ee107c820d0a02021c8cbf">
+                                <h6>Behind Barz (feat. Drake)</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e023f3b653b0a7b9e889a712c3d">
+                                <h6>The Best In The World Pack</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e0255cad990bc1ce5808367fa0e">
+                                <h6>Look Alive (feat. Drake)</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e027a9ca2b596e77061a6aab9ae">
+                                <h6>Diplomatic Immunity</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02abf8d5beaed0be5438198d50">
+                                <h6>Signs</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e028222051128ef2edccf1e83d8">
+                                <h6>No Frauds</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e0258599e61e8a0487443d31bb6">
+                                <h6>Two Birds, One Stone</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e0258599e61e8a0487443d31bb6">
+                                <h6>Sneakin'</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02dcb7f77fa3d2dd9c121e760e">
+                                <h6>Pop Style</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02b2c1fada97bb5f3524d3c6e9">
+                                <h6>Summer Sixteen</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02c1c3c30049659824bdac476b">
+                                <h6>Right Hand</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02c715e818caad22344a89504c">
+                                <h6>Charged Up</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e023dc98872a3cf00117e4623e5">
+                                <h6>Back To Back</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e022b83df1b3ca78269f49fa89f">
+                                <h6>0 To 100 / The Catch Up</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02193f6ad901b5a1e72c4c084b">
+                                <h6>Started From the Bottom (Explicit Version)</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="albumContainerRow">
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02950eb267e96cd35da58b1d1c">
+                                <h6>I'm Goin In</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02950eb267e96cd35da58b1d1c">
+                                <h6>Fear</h6>
+                            </a>
+                        </div>
+                        <div class="album">
+                            <a href="">
+                                <img src="https://i.scdn.co/image/ab67616d00001e02defc2c430d59058d1f3267ca">
+                                <h6>Best I Ever Had</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Lyrics Storage è un sito per leggere i testi delle canzoni. Canzoni, artisti, album, classifiche, ma non garantisce la totalità dei contenuti:<br>il sito sarà in costante costruzione.</p>
+            <p>Costruito interamente da <a href="mailto:lucamonaco04@libero.it" style="text-decoration: underline;"><b>Luca Monaco</b></a>.<br>Logo a opera di <b><a href="mailto:martinafaella2002@gmail.com" style="text-decoration: underline;">Martina Faella</a></b>.</p>
+            <p><span>&copy</span> Copyright 
+                <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> 
+            <span id="LyricsStorage"><a href="#top">Lyrics Storage</a></span>. Tutti i diritti non sono riservati.</p>
+            <p><a href="http://www.lyricsstorage.it/Beccato!.html">Sitemap</a></p>
+            <a href="#top"><img src="http://lyricsstorage.it/LS%20logo.png"></a>
+        </footer>
+   </body>
+</html>
