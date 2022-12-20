@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    overflow-x: hidden;
+    background-color: rgba(29, 25, 40, 0.947);
+    margin: 0;
+    color: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', cursive;
+}
+p {
+    font-family: 'Noto Sans', sans-serif; /*Times New Roman*/
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+div.index a:hover {
+    text-decoration: underline;
+}
+header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    background-color: rgb(18, 15, 26);
+    margin-top: 0%;
+    z-index: 99;
+}
+header ul {
+    list-style-type: none;
+    display: flex;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+    height: inherit;
+}
+header img {
+    height: 7.5vh;
+}
+header p {
+    margin: 0;
+    font-size: 2vw;
+}
+header ul#topMenu li:nth-child(1) {
+    margin-top: 1.5vh;
+    margin-left: 1%;
+}
+header ul#topMenu li:nth-child(2), header li:nth-child(3) {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5%;
+}
+header ul#topMenu li:nth-child(2) {
+    margin-left: auto;
+}
+header ul#topMenu li:nth-child(4) {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2.5%;
+}
+header ul#topMenu li:not(:nth-child(1)) {
+    opacity: .6;
+}
+header ul#topMenu li:not(:nth-child(1)):hover {
+    opacity: 1;
+    text-decoration: none;
+}
+ul#sideMenu {
+    background-color:rgb(33, 33, 33);
+    height: 100%;
+    width: 0%;
+    z-index: 100;
+    position: fixed;
+    margin: 0;
+    overflow-x: hidden;
+    transition: .5s;
+    list-style-type: none;
+    margin-left: 100%;
+}
+ul#sideMenu li:nth-child(1) {
+    margin-left: 65%;
+    margin-top: 10%;
+}
+ul#sideMenu li p a {
+    font-size: 1.5vw;
+    opacity: .6;
+}
+ul#sideMenu li p a:hover {
+    opacity: 1;
+}
+/*header > ul > li > p > a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}*/
+footer {
+    background-color: darkgrey;
+    width: 100%;
+    margin-top: 100%;
+    position: absolute;
+    display: none;
+}
+main {
+    margin-top: 16vh;
+    position: absolute;
+    width: 100%; /* diventa 70% con JavaScript all'apertura del sideMenu*/
+    transition: margin-right .5s;
+    margin-right: 0%; /* si aggiunge questo con JavaScript all'apertura del sideMenu */
+}
+main h1, main h2, main h3, main h4, main h5, main h6 {
+    margin: 0;
+    margin-top: 1vh;
+}
+main h1 {
+    font-size: 4vw;
+    text-align: center;
+}
+main h2 {
+    margin-left: 5%;
+    font-size: 3.25vw;
+}
+main h3 {
+    margin-left: 7%;
+    font-size: 2.5vw;
+}
+main p {
+    margin-left: 5%;
+    width: 90%;
+    font-size: 1.25vw;
+}
+main iframe {
+    margin-left: 20%;
+    width: 60%;
+    height: 60vh;
+}
+.index {
+    width: 100%;
+    background-color: lightgray;
+    position: fixed;
+    z-index: 99;
+    color: #000;
+    font-size: 1.33vw;
+    height: 6vh;
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    margin-top: 10vh;
+}
+div.index > h3 {
+    margin-left: 5%;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 2.5vw;
+}
+div.index ol li {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.index ol {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#MCU {
+    position: absolute;
+    top: 80%
+}
+.thumbnail {
+    width: 90%;
+    aspect-ratio: 800/450;
+    border-radius: 10px;
+    transition: 1s ease;
+}
+div#releases {
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+}
+div#releases > div {
+    width: 33.3%;
+}
+div#releases > div img {
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+}
+span.material-symbols-rounded {
+    font-size: 3vw;
+    cursor: pointer;
+}
+@media screen and (min-width: 500px) {
+    .thumbnail:hover {
+        width: 95%;
+        border: 3px solid #fff;
+    }
+    ul.phases {
+        list-style-type: none; 
+        display: flex; 
+        padding-inline-start: 0; 
+        margin-left: 5%;
+        width: 90%;
+        display: none;
+    }
+    ul.phases > li {
+        width: 61.73%;
+    }
+    table.phases {
+        margin-left: 5%;
+        width: 90%;
+    }
+    table.phases td {
+        width: 20%;
+    }
+    #largeWidthTable {
+        display: block;
+    }
+    #thinWidthTable {
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    header {
+        height: 10vh;
+    }
+    header img {
+        height: 7.5vh;
+    }
+    header p {
+        font-size: 4vw;
+    }
+    header li:nth-child(1) {
+        margin-top: 1.25vh;
+    }
+    /*header li:nth-child(2), header li:nth-child(3) {
+        margin-top: 3vh;
+    }*/
+    span.material-symbols-rounded {
+        font-size: 7vw;
+    }
+    ul#sideMenu > li:nth-child(1) {
+        margin-left: 75%;
+    }
+    ul#sideMenu span.material-symbols-rounded {
+        font-size: 10vw;
+    }
+    ul#sideMenu li p a {
+        font-size: 5vw;
+        opacity: 1;
+    }
+    div.index h3 {
+        font-size: 4vw;
+    }
+    div.index ol li {
+        font-size: 2.5vw;
+    }
+    main h1 {
+        font-size: 10vw;
+    }
+    main p {
+        font-size: 4vw;
+    }
+    main iframe {
+        margin-left: 5%;
+        width: 90%;
+        height: 30vh;
+    }
+    #MCU {
+        background-image: linear-gradient(to bottom, #000 85%, transparent);
+        width: 90%;
+        margin: 0%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 10%;
+    }
+    #largeWidthTable {
+        display: none;
+    }
+    #thinWidthTable {
+        display: block;
+        margin-left: 3%;
+        width: 97%;
+    }
+    table.phases {
+        margin-top: 70%;
+    }
+    table.phases h3 {
+        font-size: 6vw;
+        width: 170%;
+        float: right;
+        margin-top: 2vh;
+    }
+    #thinWidthTable td {
+        width: 42%;
+        float: left;
+        margin-left: 7%;
+    }
+}
