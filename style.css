@@ -365,7 +365,7 @@ table#skill tbody tr:nth-child(4) td:nth-child(3) progress::-webkit-progress-val
     background-color: #767bb3;
 }
 table#skill tbody tr:nth-child(5) td:nth-child(3) progress::-webkit-progress-value {
-    background-color: #cc763f;
+    background-color: #cc763f; /*porcaccio di dio*/
 }
 main h2 {
     font-size: 2vw;
