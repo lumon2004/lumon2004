@@ -155,6 +155,9 @@ navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr:nth-child
 navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr:nth-child(4) > td:nth-child(2) > progress::-webkit-progress-value {
     background-color: #767bb3;
 }
+navmenu > div#navmenuContent > div#languagesPanel > table > tbody > tr:nth-child(5) > td:nth-child(2) > progress::-webkit-progress-value {
+    background-color: #cc763f;
+}
 navmenu > div#navmenuContent > div#ideaPanel {
     height: 35.5vh;
 }
