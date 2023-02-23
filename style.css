@@ -268,7 +268,6 @@ main h1>a>span.material-symbols-rounded {
     color: #06c;
     font-size: 2vw;
 }
-
 div.listsContainer {
     border-bottom: 0.75px solid grey;
 }
@@ -332,6 +331,10 @@ table#skill tbody tr td:first-child div#php {
     border-color: #767bb3;
     background-color: #767bb3;
 }
+table#skill tbody tr td:first-child div#sql {
+    border-color: #cc763f;
+    background-color: #cc763f;
+}
 table#skill tbody tr td:nth-child(2), table#skill tbody tr td:nth-child(4) {
     font-size: 1.5vw;
 }
@@ -360,6 +363,9 @@ table#skill tbody tr:nth-child(3) td:nth-child(3) progress::-webkit-progress-val
 }
 table#skill tbody tr:nth-child(4) td:nth-child(3) progress::-webkit-progress-value {
     background-color: #767bb3;
+}
+table#skill tbody tr:nth-child(5) td:nth-child(3) progress::-webkit-progress-value {
+    background-color: #cc763f;
 }
 main h2 {
     font-size: 2vw;
