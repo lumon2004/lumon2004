@@ -1,18 +1,3 @@
-// per links
-function openMenu() {
-    if (document.body.offsetWidth >= 415) {
-        document.getElementById("sideMenu").style.width="20%";
-        document.getElementById("sideMenu").style.marginRight="80%";
-    } else if (document.body.offsetWidth <= 414) {
-        document.getElementById("sideMenu").style.width="100%";
-        document.getElementById("sideMenu").style.marginRight="0%";
-    }
-};
-function closeMenu() {
-    document.getElementById("sideMenu").style.width="0%";
-    document.getElementById("sideMenu").style.marginRight="100%";
-};
-// per il portfolio
 function openNavMenu() {
     document.getElementsByTagName('navmenu')[0].style.marginTop="0%";
     document.getElementById('menuScritta').style.display="none";
