@@ -1,76 +1,45 @@
 const date = new Date();
 var dateMonth = date.getMonth() + 1;
-document.getElementById("date").innerHTML= date.getDate() + "/" + dateMonth;
+document.getElementById("date").innerHTML = date.getDate() + "/" + dateMonth;
 if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1) {
-// if (date.getDate() >= 8 && dateMonth == 12 || date.getDate() <= 6 && dateMonth == 1 || date.getDate() >= 1 && dateMonth == 11) {
+    /*
+        red = #BD0019;
+        green = #146B3A;
+        darkGreen = #165B33;
+        yellow = F8B229;
+        orange: #EA4630;
+        alternativeRed = #BB2528;
+    */
     function Christmas() {
-        document.getElementById("header").style.backgroundColor="#BD0019";
-        document.getElementById("sideMenu").style.backgroundColor="#BD0019";
-        document.getElementById("logo").style.color="#fff";
-        document.getElementById("augurio").style.display="inline-flex";
-        const icons = document.getElementsByClassName("material-symbols-rounded");
-        icons[0].style.color="#fff";
-        icons[1].style.color="#fff";
-        icons[2].style.color="#fff";
-        document.getElementById("bgImg").src="Palla%20di%20Natale.jpg";
-        document.getElementById("bgImg").style.borderColor="#165B33"
-        document.getElementById("profileImg").style.borderColor="#165B33"
-        document.getElementById("main").style.backgroundColor="#146B3A";
-        const h2 = document.getElementsByTagName("h2");
-        h2[0].style.color="#fff";
-        h2[1].style.color="rgb(166, 212, 255)";
-        h2[2].style.color="rgb(166, 212, 255)";
-        h2[3].style.color="rgb(166, 212, 255)";
-        const titolo = document.getElementsByTagName("h1");
-        titolo[1].style.color="#fff";
-        const testo = document.getElementsByTagName("p");
-        testo[0].style.color="#fff";
-        testo[1].style.color="#fff";
-        testo[3].style.color="#fff";
-        testo[4].style.color="#fff";
-        testo[5].style.color="#fff";
-        testo[6].style.color="#fff";
-        testo[7].style.color="#fff";
-        testo[8].style.color="#fff";
-        testo[9].style.color="#fff";
-        testo[10].style.color="#fff";
-        testo[11].style.color="#fff";
-        testo[12].style.color="#fff";
-        testo[13].style.color="#fff";
-        const links = document.getElementsByTagName("a");
-        /*links[8].style.color="#BD0019";
-        links[9].style.color="#BD0019";
-        links[10].style.color="#BD0019";*/
-        links[11].style.color="#BD0019";
-        links[12].style.color="#BD0019";
-        links[19].style.color="#BD0019";
-        /*links[13].style.color="#BD0019";
-        links[14].style.color="#BD0019";
-        links[15].style.color="#BD0019";
-        links[16].style.color="#BD0019";
-        links[17].style.color="#BD0019";*/
-        document.getElementById("decorazioni").style.display="block";
-        const titoliProgetti = document.getElementsByTagName("h5");
-        titoliProgetti[0].style.color="#fff";
-        titoliProgetti[1].style.color="#fff";
-        titoliProgetti[2].style.color="#fff";
-        titoliProgetti[3].style.color="#fff";
-        titoliProgetti[4].style.color="#fff";
-        titoliProgetti[5].style.color="#fff";
-        titoliProgetti[6].style.color="#fff";
-        titoliProgetti[7].style.color="#fff";
-        titoliProgetti[8].style.color="#fff";
-        const skill = document.getElementsByTagName("td");
-        skill[1].style.color="#fff";
-        skill[3].style.color="#fff";
-        skill[5].style.color="#fff";
-        skill[7].style.color="#fff";
-        skill[9].style.color="#fff";
-        skill[11].style.color="#fff";
-        skill[13].style.color="#fff";
-        skill[15].style.color="#fff";
-        document.getElementById("linkAltro").style.color="#BD0019";
-        document.getElementById("language").style.marginLeft="0%";
+        // sfondo
+        document.getElementsByTagName("body")[0].style.backgroundColor="#146B3A";
+        // colore icona menu
+        document.getElementsByClassName("material-symbols-rounded")[0].style.color="#BD0019";
+        document.getElementsByClassName("material-symbols-rounded")[1].style.color="#BD0019";
+        // colore scritta menu
+        document.getElementsByClassName("menu")[0].style.color="#BD0019";
+        document.getElementsByClassName("menu")[1].style.color="#BD0019";
+        // colore linee verdi
+        document.getElementsByClassName("line")[0].style.borderColor="#BD0019";
+        document.getElementsByClassName("line")[2].style.borderColor="#BD0019";
+        document.getElementById("sentence").style.borderColor="#BD0019";
+        // colore sfondo header
+        document.getElementsByTagName("header")[0].style.backgroundColor="#165B33";
+        // colore nome
+        document.getElementsByTagName("h1")[0].style.background="linear-gradient(-45deg, #F8B229, #EA4630, #F8B229, #EA4630)";
+        document.getElementsByTagName("h1")[0].style.backgroundClip="text";
+        document.getElementsByTagName("h1")[0].style.backgroundSize="400% 400%";
+        // colore credits
+        document.getElementById("credits").style.color="#EA4630"
+        document.getElementById("credits").style.borderColor="#EA4630";
+        // scritte multi color projmenu
+        const scritteMultiColor = document.getElementsByTagName("span");
+        scritteMultiColor[9].style.backgroundImage="linear-gradient(90deg,#B80000,#7D0000)";
+        scritteMultiColor[12].style.backgroundImage="linear-gradient(90deg,#B80000,#7D0000)";
+        scritteMultiColor[13].style.backgroundImage="linear-gradient(90deg,#B80000,#7D0000)";
+        // colore viewProjects
+        document.getElementsByTagName("li")[9].style.color="rgb(166, 212, 255)";
+        document.getElementById("projectLine").style.borderColor="rgb(166, 212, 255)";
     };
     Christmas();
 }

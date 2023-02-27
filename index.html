@@ -7,180 +7,149 @@
     <title>Luca Monaco | Front-End Web Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="code.png">
 </head>
 <body>
-    <script src="app.js"></script>
-    <header id="header">
-        <ul>
-            <li>
-                <span class="material-symbols-rounded" onclick="openMenu()">menu</span>
-            </li>
-            <li>
-                <h1 id="logo">LM</h1>
-            </li>
-            <li id="augurio">
-                <img src="https://cdn-icons-png.flaticon.com/512/3726/3726221.png" alt="Albero di Natale mini" class="decorazioni">
-                <p>Buon Natale e felice anno nuovo!</p>
-            </li>
-            <li id="language">
-                <a href="index (en).html"><span class="material-symbols-rounded">translate</span></a>
-            </li>
-        </ul>
-    </header>
-    <ul id="sideMenu">
-        <li><span class="material-symbols-rounded" onclick="closeMenu()">close</span></li>
-        <li><h2>Contatti:</h2></li>
-        <li><img src="https://cdn-icons-png.flaticon.com/512/4926/4926624.png" alt="GitHub"><a href="https://github.com/lumon2004" target="_blank">GitHub</a></li>
-        <li><img src="https://cdn-icons-png.flaticon.com/512/3128/3128219.png" alt="LinkedIn"><a href="https://www.linkedin.com/in/lucamonacoo/" target="_blank">LinkedIn</a></li>
-        <li><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram"><a href="https://www.instagram.com/lucamonacoo/" target="_blank">Instagram</a></li>
-        <li><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter"><a href="https://www.twitter.com/lucamonacoo" target="_blank">Twitter</a></li>
-        <li><img src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_small.svg" alt="FreeCodeCamp"><a href="https://www.freecodecamp.org/lucamonaco" target="_blank">FreeCodeCamp</a></li>
-        <li><img src="https://cdn-icons-png.flaticon.com/512/2111/2111341.png" alt="CodePen"><a href="https://codepen.io/luca-monaco" target="_blank">CodePen</a></li>
-        <li><img src="https://cdn-icons-png.flaticon.com/512/2111/2111690.png" alt="StackOverflow"><a href="https://stackoverflow.com/users/19863559/luca" target="_blank">StackOverflow</a></li>
-        <li><img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="email">
-            <a href="mailto: lucamonaco04@libero.it">Indirizzo email</a>
-        </li>
-    </ul>
-    <main id="main">
-        <img src="Yosemite.jpg" alt="Background Image" id="bgImg">
-        <img src="Memoji.jpeg" alt="Profile Pic" id="profileImg">
-        <div id="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/614/614114.png" alt="Palla di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331399.png" alt="Ghirlanda mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/892/892848.png" alt="Mistletoe mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726287.png" alt="Palla di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726186.png" alt="Candela e mistletoe mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726283.png" alt="Babbo Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726203.png" alt="Palla di vetro con la neve mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726207.png" alt="Sacco con i regali di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726279.png" alt="Albero di Natale con i regali mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726264.png" alt="Regali di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726190.png" alt="Slitta di Babbo Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726242.png" alt="Luci di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726277.png" alt="Camino mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726169.png" alt="Calzino di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726215.png" alt="Campane di Natale mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726234.png" alt="Mistletoe mini" class="decorazioni">
-            <img src="https://cdn-icons-png.flaticon.com/512/3726/3726262.png" alt="Biscotto di Natale mini" class="decorazioni">
+    <div>
+        <header>
+            <h6>Lu<br>ca</h6>
+            <p>Front-End Web Developer</p>
+            <div onclick="openNavMenu()" id="menuScritta">
+                <p class="menu">menu</p>
+                <span class="material-symbols-rounded">menu</span>
+            </div>
+            <div onclick="closeNavMenu()" id="closeScritta">
+                <p class="menu">close</p>
+                <span class="material-symbols-rounded">menu</span>
+            </div>
+        </header>
+    </div>
+    <navmenu>
+        <div id="navmenuContent">
+            <div id="languagesPanel">
+                <h2>Skills and languages</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td><progress value="90" max="100"></progress></td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td><progress value="70" max="100"></progress></td>
+                            <td>70%</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td><progress value="35" max="100"></progress></td>
+                            <td>35%</td>
+                        </tr>
+                        <tr>
+                            <td>PHP</td>
+                            <td><progress value="10" max="100"></progress></td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>SQL</td>
+                            <td><progress value="80" max="100"></progress></td>
+                            <td>80%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="ideaPanel">
+                <h5>Have an idea?</h5>
+                <h2>Tell me about it<br><span>👨🏻‍💻</span></h2>
+                <ul>
+                    <li><a href="https://www.github.com/lumon2004" target="_blank"><span>&#128126</span> g<abbr>it</abbr>h<abbr>ub</abbr></a></li>
+                    <li><a href="https://www.linkedin.com/in/lucamonacoo" target="_blank"><span>&#128188</span> l<abbr>inke</abbr>d<abbr>in</abbr></a></li>
+                    <li><a href="https://www.instagram.com/lucamonacoo" target="_blank"><span>&#128248</span> in<abbr>stagram</abbr></a></li>
+                    <li><a href="https://www.twitter.com/lucamonacoo" target="_blank"><span>&#128038</span> tw<abbr>itter</abbr></a></li>
+                </ul>
+            </div>
         </div>
-        <h1>Luca Monaco</h1>
-        <p>Front-End Web Developer di <span id="age"></span> anni da Roma, studente di ingegneria informatica all'università di RomaTre.</p>
-        <script src="age.js"></script>
-        <p id="date" style="display: none"></p>
-        <h2>Skill e linguaggi</h2>
-        <table id="skill">
-            <tbody>
-                <tr>
-                    <td><div id="html"></div></td>
-                    <td>HTML</td>
-                    <td><progress value="90" max="100" id="progressHTML"></progress></td>
-                    <td>90%</td>
-                </tr>
-                <tr>
-                    <td><div id="css"></div></td>
-                    <td>CSS</td>
-                    <td><progress value="70" max="100"></progress></td>
-                    <td>70%</td>
-                </tr>
-                <tr>
-                    <td><div id="js"></div></td>
-                    <td>JavaScript</td>
-                    <td><progress value="35" max="100"></progress></td>
-                    <td>35%</td>
-                </tr>
-                <tr>
-                    <td><div id="php"></div></td>
-                    <td>PHP</td>
-                    <td><progress value="10" max="100"></progress></td>
-                    <td>10%</td>
-                </tr>
-                <tr>
-                    <td><div id="sql"></div></td>
-                    <td>SQL</td>
-                    <td><progress value="80" max="100"></progress></td>
-                    <td>80%</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Progetti</h2>
-        <p style="margin-top: 0%;">Progetti a cui ho lavorato</p>
-        <ul class="projects">
-            <li>
-                <!--a href="http://www.lyricsstorage.it/" target="_blank"-->
-                <a href="https://lumon2004.github.io/lumon2004/Lyrics%20Storage/Homepage/home.html" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Lyrics Storage.png" alt="Lyrics Storage" lang="it">
-                    <h5>Lyrics Storage</h5>
-                    <p>Raccolta di testi di canzoni e conoscenze musicali</p>
-                </a>
-            </li>
-            <li>
-                <!--a href="http://www.lyricsstorage.website/" target="_blank"-->
-                <a href="https://lumon2004.github.io/lumon2004/Marvel%20Website/Homepage/home.html" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Marvel Website.png" alt="Marvel Website" lang="it">
-                    <h5>Marvel Website</h5>
-                    <p>Enciclopedia sul Marvel Cinematic Universe</p>
-                </a>
-            </li>
-            <li>
-                <!--a href="http://www.lyricsstorage.fun/E%20un%20ma.html" target="_blank"-->
-                <a href="https://lumon2004.github.io/lumon2004/È%20un%20ma/E%20un%20ma.html" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/È un ma.png" alt="È un … ma …" style="border: 1px solid #000" lang="it">
-                    <h5>È un … ma …</h5>
-                    <p>Gioco andato virale su TikTok nell'estate 2022</p>
-                </a>
-            </li>
-        </ul>
-        <h2 id="frontendmentor">Challenge di <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a></h2>
-        <p style="margin-top: 0;">Le ultime challenge che ho completato</p>
-        <ul class="projects">
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Frontend%20Mentor%20Challenges/Social%20proof%20section/" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Social proof section.png" alt="Social proof section">
-                    <h5>Social proof section</h5>
-                    <p>Pagina di valutazioni e recensioni di un'azienda</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Frontend%20Mentor%20Challenges/Article%20preview%20component/" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Article preview component.png" alt="Article preview component">
-                    <h5>Article preview component</h5>
-                    <p>Anteprima di un articolo</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Frontend%20Mentor%20Challenges/Stats%20preview%20card%20component/" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Stats preview card component.png" alt="Stats preview card component">
-                    <h5>Stats preview card component</h5>
-                    <p>Anteprima di una presentazione di statistiche</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Frontend%20Mentor%20Challenges/3%20column%20preview%20card%20component/" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/3 column card component.png" alt="3 column preview card component" style="border: 1px solid #000">
-                    <h5>3 column preview card component</h5>
-                    <p>Anteprima di una scheda a 3 colonne</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Frontend%20Mentor%20Challenges/NFT%20preview%20card%20component/" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/NFT preview card component.png" alt="NFT preview card component">
-                    <h5>NFT preview card component</h5>
-                    <p>Anteprima della scheda di un NFT</p>
-                </a>
-            </li>
-            <li>
-                <a href="https://lumon2004.github.io/lumon2004/Frontend%20Mentor%20Challenges/Qr%20code%20component/" target="_blank">
-                    <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/QR code card component.png" alt="QR code component">
-                    <h5>QR Code component</h5>
-                    <p>Scheda di un QR Code</p>
-                </a>
-            </li>
-        </ul>
-        <a href="links.html" id="linkAltro">Altro<span class="material-symbols-rounded">arrow_forward_ios</span></a>
+        <h3 onclick="bringsToProjects()">Click on me to have a look at my projects!</h3>
+        <div id="credits">
+            Icons made by <a href="https://www.flaticon.com/authors/pictogramer">pictogramer</a>, <a href="https://www.flaticon.com/authors/smashicons">Smashicons</a>, <a href="https://www.flaticon.com/authors/freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/pixel-perfect">Pixel perfect</a>, <a href="https://www.flaticon.com/authors/seyfdesigner">SeyfDesigner</a> from <a href="https://www.flaticon.com/">Flaticon</a>
+        </div>
+    </navmenu>
+    <main>
+        <social>
+            <ul>
+                <li><a href="https://www.github.com/lumon2004" target="_blank"><img src="github.png" alt="GitHub"></a></li>
+                <li><a href="https://www.linkedin.com/in/lucamonacoo" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="https://www.instagram.com/lucamonacoo" target="_blank"><img src="instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.twitter.com/lucamonacoo" target="_blank"><img src="twitter.png" alt="Twitter"></a></li>
+                <li class="line"></li>
+            </ul>
+        </social>
+        <section>
+            <div id="nome">
+                <h1>Luca Monaco</h1>
+                <div id="sentence">
+                    <p>I build things for the web</p>
+                </div>
+            </div>
+            <ul id="viewProjects" onclick="openProjectsMenu()">
+                <li>view projects</li>
+                <li><div class="line" id="projectLine"></li>
+            </ul>
+        </section>
+        <mail>
+            <ul>
+                <li>
+                    <a href="mailto: lucamonaco04@libero.it">lucamonaco04@libero.it</a>
+                </li>
+                <li>
+                    <div class="line"></div>
+                </li>
+            </ul>
+        </mail>
+        <projmenu>
+            <span class="material-symbols-rounded" onclick="closeProjectsMenu()">keyboard_double_arrow_up</span>
+            <p id="greetings">Hello stranger! <span>👋🏻</span><br>My name is Luca and I'm a <span id="age"></span>-year-old Front-End Web Developer from <b>Rome</b> 🇮🇹.</p>
+            <script src="https://lumon2004.github.io/lumon2004/age.js"></script>
+            <p id="underP">Actually I study as a computer engineer</p>
+            <h2><span>Yes, I work hard</span> <small>&#128187</small></h2>
+            <p id="uniqueP">And every projects is unique! Here are a couple of mines<span>&#128071</span></p>
+            <div id="projectPanel">
+                <div class="projects">
+                    <div class="LyricsStorage">
+                        <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Lyrics%20Storage.png">
+                    </div>
+                    <div class="infoProject">
+                        <h3 class="LyricsStorage">Lyrics Storage</h3>
+                        <h4><a href="https://www.lyricsstorage.it/">visit the website</a></h4>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="Marvel">
+                        <img src="https://lumon2004.github.io/lumon2004/Projects%20screenshot/Marvel%20Website.png">
+                    </div>
+                    <div class="infoProject">
+                        <h3 class="Marvel">Marvel Website</h3>
+                        <h4><a href="https://www.lyricsstorage.website/">visit the website</a></h4>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <a href="https://lumon2004.github.io/lumon2004/links.html">Other<span class="material-symbols-rounded">arrow_forward_ios</span></a>
+            </div>
+            <h3><span>Sold yet?</span> <small>💸</small></h3>
+            <p id="team">Thanks for stopping by, I’m currently looking to join a new team of creative designers and developers. If you think we might be a good fit for one another, send me an <b><a href="mailto: lucamonaco04@libero.it">email</a></b> 📧</p>
+            <h3><span>Don't be a stranger!</span><small>👋🏻</small></h3>
+            <p>Connect with me online!</p>
+            <ul>
+                <li><a href="https://www.github.com/lumon2004" target="_blank"><span>&#128126</span> g<abbr>it</abbr>h<abbr>ub</abbr></a></li>
+                <li><a href="https://www.linkedin.com/in/lucamonacoo" target="_blank"><span>&#128188</span> l<abbr>inke</abbr>d<abbr>in</abbr></a></li>
+                <li><a href="https://www.instagram.com/lucamonacoo" target="_blank"><span>&#128248</span> in<abbr>stagram</abbr></a></li>
+                <li><a href="https://www.twitter.com/lucamonacoo" target="_blank"><span>&#128038</span> tw<abbr>itter</abbr></a></li>
+            </ul>
+        </projmenu>
     </main>
+    <script src="app.js"></script>
+    <p id="date"></p>
     <script src="christmas.js"></script>
 </body>
 </html>
