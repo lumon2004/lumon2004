@@ -183,8 +183,8 @@ navmenu > div#navmenuContent > div#ideaPanel > ul {
     display: inline-flex;
     list-style-type: none;
     padding-inline-start: 0px;
-    width: 80%;
-    margin-left: 20%;
+    width: 90%;
+    margin-left: 10%;
 }
 navmenu > div#navmenuContent > div#ideaPanel > ul > li {
     margin-right: 1vw;
@@ -194,6 +194,7 @@ navmenu > div#navmenuContent > div#ideaPanel > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: -1px;
+    font-size: 1.025vw;
 }
 navmenu > h3 {
     font-size: 2.5vw;
@@ -569,6 +570,12 @@ p#date {
     header > p {
         font-size: 2vw;
         width: 100%;
+    }
+    header span.material-symbols-rounded {
+        font-size: 7vw;
+    }
+    header span.material-symbols-rounded:hover {
+        font-size: 7vw;
     }
     @keyframes slideinFromLeft {
         0% {
