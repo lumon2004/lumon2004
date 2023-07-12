@@ -1,0 +1,56 @@
+:root {
+    --text: #000;
+    --bg: #fff;
+    --headerbg: rgb(44,44,44);
+    --headertext: #fff;
+    --headerspan: #fff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #fff;
+        --bg: #000;
+        --headerbg: rgba(251, 251, 253, .8);
+        --headertext: rgb(44, 44, 44);
+        --headerspan: rgb(44,44,44);
+    }
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+    /* font-family: system-ui, -apple-system, sans-serif; */
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/*@keyframes colorMovement {
+    0% {
+      background-position: 0% 50%;
+      color: #00ffff;
+    }
+    33.33% {
+      background-position: 33.33% 50%;
+      color: #000000;
+    }
+    66.67% {
+      background-position: 66.67% 50%;
+      color: #ff0000;
+    }
+    100% {
+      background-position: 100% 50%;
+      color: #00ff00;
+    }
+  }
+  
+  body {
+    background: linear-gradient(to right, #00ffff, #000000, #ff0000, #00ff00);
+    background-size: 400% 100%;
+    animation: colorMovement 12s infinite linear;
+  }
+  
+  h1 {
+    background: -webkit-linear-gradient(left, #00ffff, #000000, #ff0000, #00ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 100%;
+    animation: colorMovement 12s infinite linear;
+  } */
