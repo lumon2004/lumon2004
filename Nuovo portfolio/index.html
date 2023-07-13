@@ -5,24 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luca Monaco | Dev</title>
     <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" href="code.png">
 </head>
 <body>
     <header>
         <ul>
-            <li>Hamburger</li>
-            <li><a href="#">Logo</a></li>
+            <li>
+                <a href="#">LM</a>
+            </li>
+            <li>
+                <p>Progetti</p>
+            </li>
+            <div class="underHeader">
+                <div class="left">
+                    <p>Sviluppo Web</p>
+                    <ul>
+                        <li><h2><a>Lyrics Storage</a></h2></li>
+                        <li><h2><a>Marvel Cinematic Universe</a></h2></li>
+                    </ul>
+                    <p style="margin-top: 2.5vh;">Programmazione in C</p>
+                    <ul>
+                        <li><h2><a>Risolutore equazioni</a></h2></li>
+                        <li><h2><a>Gestore anagrafe</a></h2></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <p>Altro</p>
+                    <ul>
+                       <li><h2><a>Tutti i miei progetti</a></h2></li> 
+                    </ul>
+                </div>
+            </div>
+            <li>
+                <p>Repository</p>
+            </li>
+            <li>
+                <p>Contatti</p>
+            </li>
+            <li>
+                <p>Servizi</p>
+            </li>
         </ul>
     </header>
-    <div>
-        
-    </div>
     <main>
 
     </main>
     <footer>
-
+        <p>Sviluppato con passione da Luca Monaco<br>© <span id="year"></span> - Tutti i diritti sono riservati</p>
     </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 </html>

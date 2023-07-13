@@ -1,56 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
 :root {
     --text: #000;
     --bg: #fff;
-    --headerbg: rgb(44,44,44);
+    --headerbg: rgba(251, 251, 253, .8);
     --headertext: #fff;
     --headerspan: #fff;
+    --footerbg: grey;
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --text: #fff;
         --bg: #000;
-        --headerbg: rgba(251, 251, 253, .8);
+        --headerbg: rgba(208, 208, 208, .8);
         --headertext: rgb(44, 44, 44);
         --headerspan: rgb(44,44,44);
+        --footerbg: rgb(107,107,107);
     }
 }
-body {
+
+* {
     margin: 0;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body {
     overflow-x: hidden;
-    /* font-family: system-ui, -apple-system, sans-serif; */
+    font-family: system-ui, -apple-system, sans-serif;
     background-color: var(--bg);
     color: var(--text);
 }
 
-/*@keyframes colorMovement {
-    0% {
-      background-position: 0% 50%;
-      color: #00ffff;
-    }
-    33.33% {
-      background-position: 33.33% 50%;
-      color: #000000;
-    }
-    66.67% {
-      background-position: 66.67% 50%;
-      color: #ff0000;
-    }
-    100% {
-      background-position: 100% 50%;
-      color: #00ff00;
-    }
-  }
-  
-  body {
-    background: linear-gradient(to right, #00ffff, #000000, #ff0000, #00ff00);
-    background-size: 400% 100%;
-    animation: colorMovement 12s infinite linear;
-  }
-  
-  h1 {
-    background: -webkit-linear-gradient(left, #00ffff, #000000, #ff0000, #00ff00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400% 100%;
-    animation: colorMovement 12s infinite linear;
-  } */
+header {
+    background-color: var(--headerbg);
+    color: var(--headertext);
+}
+
+header ul {
+    padding-inline-start: 0;
+    list-style-type: none;
+    display: flex;
+    padding: .75% 5%;
+}
+
+header ul li {
+    height: fit-content;
+    margin: auto;
+    cursor: pointer;
+}
+
+header > ul > li:first-child {
+    margin-right: auto;
+    margin-left: 1vw;
+}
+
+header > ul > li:first-child > a {
+    text-decoration: none;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 2vw;
+    color: var(--headertext);
+}
+
+header > ul > li:last-child {
+  margin-right: 1vw;
+}
+
+div.underHeader {
+  position: fixed;
+  width: 95%;
+  height: max-content;
+  margin-top: 3.2%;
+  background-color: var(--headerbg);
+  padding: 2.5%;
+  display: flex;
+}
+
+div.underHeader div.left {
+  width: 40%;
+}
+
+div.underHeader div.right {
+  width: auto;
+}
+
+header ul div.underHeader {
+  margin-left: -5%;
+}
+
+div.underHeader ul {
+  display: block;
+}
+
+div.underHeader ul li a {
+  font-size: 2vw;
+}
+
+header > ul > li:hover + div.underHeader {
+  display: flex;
+}
+
+div.underHeader:hover {
+  display: flex;
+}
+
+footer {
+    background-color: var(--footerbg);
+    padding: 2%;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+  width: max-content;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
