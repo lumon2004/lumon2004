@@ -3,8 +3,9 @@
 :root {
     --text: #000;
     --bg: #fff;
-    --headerbg: rgba(251, 251, 253, .8);
-    --headertext: #fff;
+    --headerbg: rgba(251, 251, 253, .95);
+    --headertext: #525252;
+    --headerminitext: rgb(154, 154, 154);
     --headerspan: #fff;
     --footerbg: grey;
 }
@@ -12,10 +13,10 @@
     :root {
         --text: #fff;
         --bg: #000;
-        --headerbg: rgba(208, 208, 208, .8);
+        --headerbg: rgba(208, 208, 208, .95);
         --headertext: rgb(44, 44, 44);
+        --headerminitext: rgb(76, 76, 76);
         --headerspan: rgb(44,44,44);
-        --footerbg: rgb(107,107,107);
     }
 }
 
@@ -38,22 +39,39 @@ body {
     color: var(--text);
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
     background-color: var(--headerbg);
     color: var(--headertext);
+    height: auto;
+    padding-top: 1.5%
+}
+
+header a {
+  color: var(--headertext);
 }
 
 header ul {
     padding-inline-start: 0;
     list-style-type: none;
     display: flex;
-    padding: .75% 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 1%;
+}
+
+header > ul {
+  height: 2.5rem;
 }
 
 header ul li {
-    height: fit-content;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
+    transition-timing-function: 3s;
 }
 
 header > ul > li:first-child {
@@ -62,9 +80,9 @@ header > ul > li:first-child {
 }
 
 header > ul > li:first-child > a {
-    text-decoration: none;
+    /*text-decoration: none;*/
     font-family: 'Zen Tokyo Zoo', cursive;
-    font-size: 2vw;
+    /*font-size: 2vw;*/
     color: var(--headertext);
 }
 
@@ -79,7 +97,8 @@ div.underHeader {
   margin-top: 3.2%;
   background-color: var(--headerbg);
   padding: 2.5%;
-  display: flex;
+  display: none;
+  z-index: 2;
 }
 
 div.underHeader div.left {
@@ -94,29 +113,85 @@ header ul div.underHeader {
   margin-left: -5%;
 }
 
+div.underHeader > div  * {
+  width: max-content;
+  margin: 0;
+}
+
+div.underHeader p {
+  color: var(--headerminitext);
+  font-weight: 200;
+  font-size: 1.25vw;
+  margin-bottom: 2%;
+}
+
 div.underHeader ul {
   display: block;
+  padding-inline-start: 0;
+  width: max-content;
+}
+
+div.underHeader ul li {
+  margin-bottom: 3%;
 }
 
 div.underHeader ul li a {
   font-size: 2vw;
+  color: var(--headertext);
 }
 
-header > ul > li:hover + div.underHeader {
+header > ul > li:hover + div.underHeader, div.underHeader:hover {
   display: flex;
 }
 
-div.underHeader:hover {
+div#notifica {
+  position: relative;
+  margin-top: -1%;
+  width: 100%;
+  background-color: var(--headertext);
+  color: var(--headerspan);
   display: flex;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  z-index: 1;
+}
+
+header > ul > li:hover + div#notifica {
+  display: none;
+}
+
+div#notifica p {
+  margin-left: auto;
+  margin-right: 2%;
+  line-height: 2;
+}
+
+div#notifica button {
+  border: 0px;
+  background-color: transparent;
+  padding: 0;
+  color: var(--headerspan);
+  font-size: 100%;
+}
+
+div#notifica > .material-symbols-rounded {
+  margin-right: auto;
+  height: max-content;
+  margin-top: .25%;
+}
+
+div#notifica button:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 footer {
-    background-color: var(--footerbg);
+    background-color: rgb(245, 245, 247);
     padding: 2%;
     position: absolute;
     top: auto;
     bottom: 0;
-    width: 100%;
+    width: 96%;
 }
 
 footer p {
@@ -124,4 +199,5 @@ footer p {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  color: rgb(110, 110, 115);
 }
