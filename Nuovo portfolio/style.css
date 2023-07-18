@@ -3,7 +3,7 @@
 :root {
     --text: #000;
     --bg: #fff;
-    --headerbg: rgba(251, 251, 253, .95);
+    --headerbg: rgb(251, 251, 253);
     --headertext: #525252;
     --headerminitext: rgb(154, 154, 154);
     --headerspan: #fff;
@@ -13,7 +13,7 @@
     :root {
         --text: #fff;
         --bg: #000;
-        --headerbg: rgba(208, 208, 208, .95);
+        --headerbg: rgb(208, 208, 208);
         --headertext: rgb(44, 44, 44);
         --headerminitext: rgb(76, 76, 76);
         --headerspan: rgb(44,44,44);
@@ -94,7 +94,7 @@ div.underHeader {
   position: fixed;
   width: 95%;
   height: max-content;
-  margin-top: 3.2%;
+  margin-top: 3.35%;
   background-color: var(--headerbg);
   padding: 2.5%;
   display: none;
@@ -149,15 +149,11 @@ div#notifica {
   margin-top: -1%;
   width: 100%;
   background-color: var(--headertext);
-  color: var(--headerspan);
+  color: var(--headerbg);
   display: flex;
   padding-top: .5%;
   padding-bottom: .5%;
   z-index: 1;
-}
-
-header > ul > li:hover + div#notifica {
-  display: none;
 }
 
 div#notifica p {
@@ -170,25 +166,69 @@ div#notifica button {
   border: 0px;
   background-color: transparent;
   padding: 0;
-  color: var(--headerspan);
+  color: var(--headerbg);
   font-size: 100%;
+  text-decoration: underline;
 }
 
 div#notifica > .material-symbols-rounded {
   margin-right: auto;
   height: max-content;
-  margin-top: .25%;
+  margin-top: .3%;
 }
 
 div#notifica button:hover {
-  text-decoration: underline;
   cursor: pointer;
+}
+
+main {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main > div.section {
+  display: flex;
+  margin-top: 5%;
+  width: 100%;
+}
+
+main > div.section > div:nth-child(1) {
+  rotate: 90deg;
+  height: max-content;
+}
+
+main > div.section h1.category {
+  border-left: 3px solid var(--text);
+  padding-left: 2%;
+  margin-left: 35%;
+}
+
+main > div.section p {
+  font-size: 2vw;
+}
+
+main > div.section > div > div.projects {
+  width: 100%;
+  position: relative;
+}
+
+main > div.section > div > div.projects > div {
+  width: 100%;
+}
+
+main > div.section img:nth-child(1) {
+  width: 20%;
+}
+
+main > div.section img:nth-child(2) {
+  width: 100%;
 }
 
 footer {
     background-color: rgb(245, 245, 247);
     padding: 2%;
-    position: absolute;
+    position: relative;
     top: auto;
     bottom: 0;
     width: 96%;
