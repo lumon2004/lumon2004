@@ -41,13 +41,17 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--text);
 }
 
 header {
     background-color: var(--headerbg);
     color: var(--headertext);
     height: auto;
-    padding-top: 1.5%
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    margin-top: -6%;
 }
 
 header a {
@@ -65,13 +69,17 @@ header ul {
 
 header > ul {
   height: 2.5rem;
+  padding-top: 2%;
 }
 
 header ul li {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
-    transition-timing-function: 3s;
+}
+
+header > ul > li {
+  padding-top: 1%;
 }
 
 header > ul > li:first-child {
@@ -94,7 +102,8 @@ div.underHeader {
   position: fixed;
   width: 95%;
   height: max-content;
-  margin-top: 3.35%;
+  /*margin-top: 3.35%;*/
+  margin-top: 3.2%;
   background-color: var(--headerbg);
   padding: 2.5%;
   display: none;
@@ -143,101 +152,39 @@ div.underHeader ul li a {
 header > ul > li:hover + div.underHeader, div.underHeader:hover {
   display: flex;
 }
-
 div#notifica {
-  position: relative;
-  margin-top: -1%;
-  width: 100%;
-  background-color: var(--headertext);
-  color: var(--headerbg);
-  display: flex;
-  padding-top: .5%;
-  padding-bottom: .5%;
-  z-index: 1;
+    position: relative;
+    width: 100%;
+    background-color: var(--headertext);
+    color: var(--headerbg);
+    display: flex;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    z-index: 1;
+    margin-top: 5%;
 }
-
+  
 div#notifica p {
-  margin-left: auto;
-  margin-right: 2%;
-  line-height: 2;
+margin-left: auto;
+margin-right: 2%;
+line-height: 2;
 }
 
 div#notifica button {
-  border: 0px;
-  background-color: transparent;
-  padding: 0;
-  color: var(--headerbg);
-  font-size: 100%;
-  text-decoration: underline;
+border: 0px;
+background-color: transparent;
+padding: 0;
+color: var(--headerbg);
+font-size: 100%;
+text-decoration: underline;
 }
 
 div#notifica > .material-symbols-rounded {
-  margin-right: auto;
-  height: max-content;
-  margin-top: .3%;
+margin-right: auto;
+height: max-content;
+margin-top: .3%;
 }
 
 div#notifica button:hover {
-  cursor: pointer;
-}
-
-main {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main > div.section {
-  display: flex;
-  margin-top: 5%;
-  width: 100%;
-}
-
-main > div.section > div:nth-child(1) {
-  rotate: 90deg;
-  height: max-content;
-}
-
-main > div.section h1.category {
-  border-left: 3px solid var(--text);
-  padding-left: 2%;
-  margin-left: 35%;
-}
-
-main > div.section p {
-  font-size: 2vw;
-}
-
-main > div.section > div > div.projects {
-  width: 100%;
-  position: relative;
-}
-
-main > div.section > div > div.projects > div {
-  width: 100%;
-}
-
-main > div.section img:nth-child(1) {
-  width: 20%;
-}
-
-main > div.section img:nth-child(2) {
-  width: 100%;
-}
-
-footer {
-    background-color: rgb(245, 245, 247);
-    padding: 2%;
-    position: relative;
-    top: auto;
-    bottom: 0;
-    width: 96%;
-}
-
-footer p {
-  width: max-content;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  color: rgb(110, 110, 115);
+cursor: pointer;
 }
