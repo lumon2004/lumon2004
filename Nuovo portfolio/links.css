@@ -23,12 +23,19 @@ main > div.listsContainer > ul {
 
 main > div.listsContainer > ul > li {
     margin-top: 1%;
+    columns: 2;
+}
+
+main > div.listsContainer > ul > li {
+    margin-top: 3%;
 }
 
 main > div.listsContainer > ul > li > a {
     color: #06c;
     font-size: 2vw;
     font-weight: 200;
+    font-size: 1.75vw;
+    font-weight: 300;
 }
 
 main > div.listsContainer > ul > li > a:hover {
