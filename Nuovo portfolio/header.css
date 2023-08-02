@@ -54,7 +54,7 @@ header {
     margin-top: -6%;
 }
 
-header a {
+header a:not(div.mobileMenu a) {
   color: var(--headertext);
 }
 
@@ -96,6 +96,10 @@ header > ul > li:first-child > a {
 
 header > ul > li:last-child {
   margin-right: 1vw;
+}
+
+header > ul > li:last-of-type {
+  display: none;
 }
 
 div.underHeader {
@@ -152,6 +156,11 @@ div.underHeader ul li a {
 header > ul > li:hover + div.underHeader, div.underHeader:hover {
   display: flex;
 }
+
+header > ul > div.mobileMenu {
+  display: none;
+}
+
 div#notifica {
     position: relative;
     width: 100%;
@@ -187,4 +196,58 @@ margin-top: .3%;
 
 div#notifica button:hover {
 cursor: pointer;
+}
+
+@media screen and (max-width: 415px) {
+  header > ul > li:not(:first-child, :last-of-type) {
+    display: none;
+  }
+
+  header > ul > li:first-child > a {
+    font-size: 6vw;
+  }
+
+  header > ul > li:last-of-type {
+    display: block;
+    margin-right: 1vw;
+    padding-top: 2%;
+  }
+
+  header > ul > li:hover + div.underHeader, div.underHeader:hover {
+    display: none;
+  }
+
+  header > ul > div.mobileMenu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-left: -5%;
+    margin-top: -1%;
+    height: 100vh;
+    background-color: var(--headerbg);
+    color: var(--text);
+  }
+
+  header > ul > div.mobileMenu > ul {
+    display: block;
+    padding: 5% 5%;
+  }
+
+  header > ul > div.mobileMenu > ul > li {
+    display: flex;
+    margin: 0% 0% 5% 5%;
+  }
+
+  header > ul > div.mobileMenu > ul > li:first-child > span.material-symbols-rounded {
+    font-size: 8vw;
+    margin-left: auto;
+  }
+
+  header > ul > div.mobileMenu > ul > li > p {
+    margin-right: auto;
+    font-size: 7vw;
+    font-weight: 500;
+  }
+
+  
 }
