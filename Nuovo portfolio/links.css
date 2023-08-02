@@ -1,51 +1,36 @@
-main#main {
-    display: block;
+main {
     width: 70%;
     margin-left: 15%;
-    margin-top: 44px;
-    position: absolute;
+    margin-top: 2.5%;
+    margin-bottom: 5%;
 }
-main#main h2 {
-    margin-top: 2vh;
-    border-bottom: 0.75px solid grey;
-    margin-bottom: 0;
-    text-align: start;
+
+main h2 {
+    border-top: 1px solid var(--text);
+    margin-top: 3%;
 }
-main#main h1#projectsTitle {
-    margin-top: 5vh;
-    font-size: 2.5vw;
-    margin-bottom: 5vh;
-    text-align: start;
+
+h1 {
+    font-weight: 600;
+    margin-top: 2.5%;
+    margin-bottom: 1.5%;
 }
-main#main h1#challengeTitle {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    font-size: 2.5vw;
-    text-align: start;
+
+main > div.listsContainer > ul {
+    list-style-type: none;
+    padding-inline-start: 0;
 }
-@media screen and (max-width: 415px) {
-    header#header {
-        position: fixed;
-    }
-    main#main {
-        margin-left: 0;
-        width: 90%;
-        padding: 5%;
-        padding-top: 8vh;
-        margin-top: 0;
-    }
-    main#main h2 {
-        margin-top: 0;
-        font-size: 5vw;
-    }
-    main#main h1#projectsTitle, main#main h1#challengeTitle {
-        margin-top: 3vh;
-        font-size: 8vw;
-    }
-    main h1>a>span.material-symbols-rounded {
-        font-size: 5vw;
-    }
-    ul#links {
-        columns: 1;
-    }
+
+main > div.listsContainer > ul > li {
+    margin-top: 1%;
+}
+
+main > div.listsContainer > ul > li > a {
+    color: #06c;
+    font-size: 2vw;
+    font-weight: 200;
+}
+
+main > div.listsContainer > ul > li > a:hover {
+    text-decoration: underline;
 }

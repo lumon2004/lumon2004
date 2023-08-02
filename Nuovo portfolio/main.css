@@ -1,0 +1,115 @@
+main {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+main b {
+color: rgb(108, 0, 209);
+}
+
+main > div.section {
+display: flex;
+margin-top: 5%;
+width: 100%;
+}
+
+main > div.section > div:nth-child(1) {
+rotate: 90deg;
+height: max-content;
+}
+
+main > div.section h1.category {
+border-left: 3px solid var(--text);
+padding-left: 10%;
+margin-left: 35%;
+font-size: 3vw;
+transition: 1s;
+}
+
+main > div.section h1.category:hover {
+color: rgb(255, 115, 0);
+border-color: rgb(255, 115, 0);
+}
+
+main > div.section h1#adjTitle {
+position: relative;
+top: 15px;
+width: 180%;
+}
+
+main > div.section > div > h2 {
+font-size: 2vw;
+margin-bottom: 1%;
+}
+
+main > div.section p {
+font-size: 2vw;
+margin-left: 2%;
+}
+
+main > div.section > div > div.projects {
+width: 100%;
+position: relative;
+display: flex;
+margin-bottom: 1%;
+}
+
+main > div.section > div > div.projects > a {
+padding: 7.5% 7.5% 2.5% 7.5%;
+border-radius: 20px;
+transition: 1s;
+}
+
+main > div.section > div > div.projects > a#LS {
+width: 30%;
+margin-right: 5%;
+background-image: linear-gradient(160deg, rgb(108, 0, 209) 32.77%, var(--text));
+height: 2%;
+}
+
+main > div.section > div > div.projects > a#Marvel {
+width: 55%;
+background-image: linear-gradient(119deg, rgb(192, 215, 231) 23.11%, #bceff6 39.92%, #edd8e8 54.62%, #8699c7);
+}
+
+main > div.section img {
+width: 100%;
+}
+
+main > div.section > div > div.projects > a > h5 {
+text-align: center;
+font-size: 2vw;
+}
+
+main > div.section > div > div.projects > a#LS > h5 {
+color: var(--bg);
+}
+
+main > div.section > div > div.projects > a#Marvel > h5 {
+color: #000;
+}
+
+main > div.section > div > div.projects > a#Marvel > img {
+margin-top: 15%;
+}
+
+main > div.section > div > div.projects > a > div > span.material-symbols-rounded {
+color: var(--bg);
+position: relative;
+margin-left: 100%;
+margin-top: 12.5%;
+font-size: 2.5vw;
+}
+
+main > div.section > div > div.projects > a#C {
+padding: 2.5%;
+background-color: var(--text);
+color: var(--bg);
+width: max-content;
+}
+
+main > div.section > div > div.projects > a#C:hover {
+background-color: rgb(98, 153, 255);
+}

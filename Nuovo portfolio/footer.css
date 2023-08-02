@@ -1,0 +1,16 @@
+footer {
+    background-color: rgb(245, 245, 247);
+    padding: 2%;
+    position: relative;
+    top: auto;
+    bottom: 0;
+    width: 96%;
+}
+
+footer p {
+  width: max-content;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(110, 110, 115);
+}
