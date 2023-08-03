@@ -39,6 +39,10 @@ top: 15px;
 width: 180%;
 }
 
+main > div.section:nth-child(2) > div:nth-child(2) {
+    margin-left: -2%;
+}
+
 main > div.section > div > h2 {
 font-size: 2vw;
 margin-bottom: 1%;
@@ -112,4 +116,63 @@ width: max-content;
 
 main > div.section > div > div.projects > a#C:hover {
 background-color: rgb(98, 153, 255);
+}
+
+@media screen and (max-width: 415px) {
+    main {
+        width: 90%;
+    }
+
+    main > div.section {
+        display: block;
+    }
+
+    main > div.section > div:nth-child(1) {
+        rotate: 0deg;
+        height: auto;
+    }
+
+    main > div.section h1.category {
+        font-size: 7vw;
+        margin-left: 0%;
+        padding-left: 5%;
+        transition: 0s;
+    }
+
+    main > div.section p {
+        font-size: 5vw;
+        margin-top: 5%;
+    }
+
+    main > div.section h1#adjTitle {
+        position: unset;
+        top: unset;
+        width: auto;
+    }
+
+    main > div.section:nth-child(2) > div:nth-child(2) {
+        margin-left: 0%;
+    }
+
+    main > div.section > div > h2 {
+        font-size: 5vw;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+
+    main > div.section > div > div.projects {
+        display: block;
+        position: unset;
+    }
+
+    main > div.section > div > div.projects > a {
+        border-radius: 20px;
+        transition: 0s;
+        padding: 0;
+    }
+    
+    main > div.section > div > div.projects > a#LS {
+        width: auto;
+        height: auto;
+    }
 }

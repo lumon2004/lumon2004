@@ -199,6 +199,10 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 415px) {
+  header {
+    margin-top: -12.5%;
+  }
+
   header > ul > li:not(:first-child, :last-of-type) {
     display: none;
   }
@@ -218,7 +222,6 @@ cursor: pointer;
   }
 
   header > ul > div.mobileMenu {
-    display: block;
     position: absolute;
     width: 100%;
     margin-left: -5%;
@@ -243,11 +246,55 @@ cursor: pointer;
     margin-left: auto;
   }
 
-  header > ul > div.mobileMenu > ul > li > p {
+  header > ul > div.mobileMenu > ul > li p {
     margin-right: auto;
     font-size: 7vw;
-    font-weight: 500;
+    font-weight: 550;
   }
 
+  header > ul > div.mobileMenu > ul > div.sideMenu > ul {
+    display: block;
+    margin-top: -15%;
+  }
+
+  header > ul > div.mobileMenu > ul > div.sideMenu > ul > li {
+    margin-bottom: 2.5%;
+  }
+
+  header > ul > div.mobileMenu > ul > div.sideMenu > ul > li:first-child > span.material-symbols-rounded {
+    margin-top: -15%;
+    margin-bottom: 15%;
+    font-size: 6vw;
+  }
+
+  header > ul > div.mobileMenu > ul > div.sideMenu > ul > li > p {
+    color: var(--headertext);
+    font-size: 4.5vw;
+  }
+
+  header > ul > div.mobileMenu > ul > div.sideMenu > ul > li > h2 {
+    color: var(--text);
+    font-size: 8vw;
+  }
+
+  div#notifica {
+    margin-top: 12.5%;
+    padding: 2.5%;
+    width: 95%;
+    display: block;
+    text-align: center;
+  }
+
+  div#notifica p {
+    line-height: initial;
+  }
+
+  div#notifica > div {
+    margin-top: 1.5%;
+  }
   
+  div#notifica > div > .material-symbols-rounded {
+    /*margin-top: 1%;*/
+    font-size: 3vw;
+  }
 }
