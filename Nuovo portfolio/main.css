@@ -82,33 +82,21 @@ main > div.section img {
     width: 100%;
 }
 
-main > div.section > div > div.projects > a > h5 {
+main > div.section > div > div.projects > a > div > h5 {
     text-align: center;
     font-size: 2vw;
 }
 
-main > div.section > div > div.projects > a#LS > h5 {
+main > div.section > div > div.projects > a#LS > div > h5 {
     color: var(--bg);
 }
 
-main > div.section > div > div.projects > a#Marvel > h5 {
+main > div.section > div > div.projects > a#Marvel > div > h5 {
     color: #000;
 }
 
 main > div.section > div > div.projects > a#Marvel > img {
     margin-top: 15%;
-}
-
-main > div.section > div > div.projects > a#Marvel > div > span.material-symbols-rounded {
-    margin-top: 21%;
-}
-
-main > div.section > div > div.projects > a > div > span.material-symbols-rounded {
-    color: var(--bg);
-    position: relative;
-    margin-left: 100%;
-    margin-top: 12.5%;
-    font-size: 2.5vw;
 }
 
 main > div.section > div > div.projects > h3 {
@@ -188,7 +176,7 @@ main > div.section > div > div.projects > h3 > a#C {
         width: 100%;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        margin-top: -1%;
+        margin-top: -1.5%;
     }
     
     main > div.section > div > div.projects > a#LS {
@@ -213,14 +201,7 @@ main > div.section > div > div.projects > h3 > a#C {
         font-size: 6vw;
         padding-top: 5%;
         padding-bottom: 5%;
-        margin-left: 7.5%;
-        width: 70%;
-    }
-
-    main > div.section > div > div.projects > a#LS > div > span.material-symbols-rounded {
-        margin-left: 7.5%;
-        font-size: 7.5vw;
-        margin-top: 5%;
+        width: 100%;
     }
 
     main > div.section > div > div.projects > a#Marvel {
@@ -243,19 +224,12 @@ main > div.section > div > div.projects > h3 > a#C {
         width: 90%;
     }
 
-    main > div.section > div > div.projects > a#Marvel h5 {
+    main > div.section:nth-child(2) > div > div.projects > a#Marvel > div > h5 {
         color: var(--bg);
         font-size: 6vw;
         padding-top: 5%;
         padding-bottom: 5%;
-        margin-left: 7.5%;
-        width: 70%;
-    }
-
-    main > div.section > div > div.projects > a#Marvel > div > span.material-symbols-rounded {
-        margin-left: 7.5%;
-        font-size: 7.5vw;
-        margin-top: 5%;
+        width: 100%;
     }
 
     main > div.section > div > div.projects:last-of-type {
@@ -265,6 +239,18 @@ main > div.section > div > div.projects > h3 > a#C {
 
     main > div.section > div > div.projects > h3 {
         font-size: 4vw;
-        border-radius: 12.5px;
-    }   
+        border-radius: 0px;
+        background-color: transparent;
+    }
+    
+    main > div.section > div > div.projects > h3 > a#C {
+        color: var(--text);
+        font-weight: 500;
+        text-decoration: underline;
+        color: #2997ff;
+    }
+    
+    main > div.section > div > div.projects > h3:hover {
+        background-color: transparent;
+    }
 }

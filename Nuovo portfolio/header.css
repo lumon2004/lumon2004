@@ -80,6 +80,7 @@ header ul li {
 
 header > ul > li {
   padding-top: 1%;
+  height: 5vh;
 }
 
 header > ul > li:first-child {
@@ -184,8 +185,9 @@ div#notifica > div {
   display: flex;
 }
 
-div#notifica > div > p {
+div#notifica > div > a {
 border: 0px;
+margin-top: 5%;
 background-color: transparent;
 padding: 0;
 color: var(--headerbg);
@@ -257,6 +259,10 @@ cursor: pointer;
     font-weight: 550;
   }
 
+  header > ul > div.mobileMenu > ul > li p, header > ul > div.mobileMenu > ul > li span.material-symbols-rounded, header > ul > div.mobileMenu > ul > div.sideMenu > ul > li > h2 > a, header > ul > div.mobileMenu > ul > div.sideMenu > ul > li:first-child > span.material-symbols-rounded {
+    color: var(--headertext);
+  }
+
   header > ul > div.mobileMenu > ul > div.sideMenu > ul {
     display: block;
     margin-top: -15%;
@@ -298,8 +304,10 @@ cursor: pointer;
     margin-top: 1.5%;
   }
 
-  div#notifica > div > p {
+  div#notifica > div > a {
     margin-right: 1%;
+    margin-top: 0%;
+    margin-left: auto;
   }
   
   div#notifica > div > .material-symbols-rounded {
