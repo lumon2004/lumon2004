@@ -6,37 +6,37 @@ main {
 }
 
 main b {
-color: rgb(108, 0, 209);
+    color: rgb(108, 0, 209);
 }
 
 main > div.section {
-display: flex;
-margin-top: 5%;
-width: 100%;
+    display: flex;
+    margin-top: 5%;
+    width: 100%;
 }
 
 main > div.section > div:nth-child(1) {
-rotate: 90deg;
-height: max-content;
+    rotate: 90deg;
+    height: max-content;
 }
 
 main > div.section h1.category {
-border-left: 3px solid var(--text);
-padding-left: 10%;
-margin-left: 35%;
-font-size: 3vw;
-transition: 1s;
+    border-left: 3px solid var(--text);
+    padding-left: 10%;
+    margin-left: 35%;
+    font-size: 3vw;
+    transition: 1s;
 }
 
 main > div.section h1.category:hover {
-color: rgb(255, 115, 0);
-border-color: rgb(255, 115, 0);
+    color: rgb(255, 115, 0);
+    border-color: rgb(255, 115, 0);
 }
 
 main > div.section h1#adjTitle {
-position: relative;
-top: 15px;
-width: 180%;
+    position: relative;
+    top: 15px;
+    width: 180%;
 }
 
 main > div.section:nth-child(2) > div:nth-child(2) {
@@ -44,78 +44,87 @@ main > div.section:nth-child(2) > div:nth-child(2) {
 }
 
 main > div.section > div > h2 {
-font-size: 2vw;
-margin-bottom: 1%;
+    font-size: 2vw;
+    margin-bottom: 1%;
 }
 
 main > div.section p {
-font-size: 2vw;
-margin-left: 2%;
+    font-size: 2vw;
+    margin-left: 2%;
 }
 
 main > div.section > div > div.projects {
-width: 100%;
-position: relative;
-display: flex;
-margin-bottom: 1%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-bottom: 1%;
 }
 
 main > div.section > div > div.projects > a {
-padding: 7.5% 7.5% 2.5% 7.5%;
-border-radius: 20px;
-transition: 1s;
+    padding: 7.5% 7.5% 2.5% 7.5%;
+    border-radius: 20px;
+    transition: 1s;
 }
 
 main > div.section > div > div.projects > a#LS {
-width: 30%;
-margin-right: 5%;
-background-image: linear-gradient(160deg, rgb(108, 0, 209) 32.77%, var(--text));
-height: 2%;
+    width: 30%;
+    margin-right: 5%;
+    background-image: linear-gradient(160deg, rgb(108, 0, 209) 32.77%, var(--text));
+    height: 2%;
 }
 
 main > div.section > div > div.projects > a#Marvel {
-width: 55%;
-background-image: linear-gradient(119deg, rgb(192, 215, 231) 23.11%, #bceff6 39.92%, #edd8e8 54.62%, #8699c7);
+    width: 55%;
+    background-image: linear-gradient(119deg, rgb(192, 215, 231) 23.11%, #bceff6 39.92%, #edd8e8 54.62%, #8699c7);
 }
 
 main > div.section img {
-width: 100%;
+    width: 100%;
 }
 
 main > div.section > div > div.projects > a > h5 {
-text-align: center;
-font-size: 2vw;
+    text-align: center;
+    font-size: 2vw;
 }
 
 main > div.section > div > div.projects > a#LS > h5 {
-color: var(--bg);
+    color: var(--bg);
 }
 
 main > div.section > div > div.projects > a#Marvel > h5 {
-color: #000;
+    color: #000;
 }
 
 main > div.section > div > div.projects > a#Marvel > img {
-margin-top: 15%;
+    margin-top: 15%;
+}
+
+main > div.section > div > div.projects > a#Marvel > div > span.material-symbols-rounded {
+    margin-top: 21%;
 }
 
 main > div.section > div > div.projects > a > div > span.material-symbols-rounded {
-color: var(--bg);
-position: relative;
-margin-left: 100%;
-margin-top: 12.5%;
-font-size: 2.5vw;
+    color: var(--bg);
+    position: relative;
+    margin-left: 100%;
+    margin-top: 12.5%;
+    font-size: 2.5vw;
 }
 
-main > div.section > div > div.projects > a#C {
-padding: 2.5%;
-background-color: var(--text);
-color: var(--bg);
-width: max-content;
+main > div.section > div > div.projects > h3 {
+    padding: 2.5%;
+    background-color: var(--text);
+    border-radius: 20px;
+    width: max-content;
+    transition: .5s;
 }
 
-main > div.section > div > div.projects > a#C:hover {
-background-color: rgb(98, 153, 255);
+main > div.section > div > div.projects > h3:hover {
+    background-color: #2997ff;
+}
+
+main > div.section > div > div.projects > h3 > a#C {
+    color: var(--bg);
 }
 
 @media screen and (max-width: 415px) {
@@ -163,6 +172,9 @@ background-color: rgb(98, 153, 255);
     main > div.section > div > div.projects {
         display: block;
         position: unset;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     main > div.section > div > div.projects > a {
@@ -170,9 +182,89 @@ background-color: rgb(98, 153, 255);
         transition: 0s;
         padding: 0;
     }
+
+    main > div.section > div > div.projects > a > div {
+        display: flex;
+        width: 100%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-top: -1%;
+    }
     
     main > div.section > div > div.projects > a#LS {
         width: auto;
         height: auto;
+        margin-right: 0;
+        background-image: unset;
     }
+    
+    main > div.section > div > div.projects > a#LS > div {
+        background-color: var(--text);
+    }
+    
+    main > div.section > div > div.projects > a#LS img {
+        background-image: linear-gradient(160deg, rgb(108, 0, 209) 32.77%, var(--text) 76.05%);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    main > div.section > div > div.projects > a#LS h5 {
+        color: var(--bg);
+        font-size: 6vw;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-left: 7.5%;
+        width: 70%;
+    }
+
+    main > div.section > div > div.projects > a#LS > div > span.material-symbols-rounded {
+        margin-left: 7.5%;
+        font-size: 7.5vw;
+        margin-top: 5%;
+    }
+
+    main > div.section > div > div.projects > a#Marvel {
+        width: auto;
+        height: auto;
+        margin-right: 0;
+        background-image: unset;
+    }
+
+    main > div.section > div > div.projects > a#Marvel > div {
+        background-image: linear-gradient(48deg, rgb(192, 215, 231) 23.11%, #bceff6 39.92%, #edd8e8 54.62%, #8699c7);
+        padding: 2.5% 0%;
+    }
+
+    main > div.section > div > div.projects > a#Marvel img {
+        background-image: linear-gradient(119deg, rgb(192, 215, 231) 23.11%, #bceff6 39.92%, #edd8e8 54.62%, #8699c7);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 7.5% 5%;
+        width: 90%;
+    }
+
+    main > div.section > div > div.projects > a#Marvel h5 {
+        color: var(--bg);
+        font-size: 6vw;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-left: 7.5%;
+        width: 70%;
+    }
+
+    main > div.section > div > div.projects > a#Marvel > div > span.material-symbols-rounded {
+        margin-left: 7.5%;
+        font-size: 7.5vw;
+        margin-top: 5%;
+    }
+
+    main > div.section > div > div.projects:last-of-type {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    main > div.section > div > div.projects > h3 {
+        font-size: 4vw;
+        border-radius: 12.5px;
+    }   
 }

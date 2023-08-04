@@ -179,7 +179,12 @@ margin-right: 2%;
 line-height: 2;
 }
 
-div#notifica button {
+div#notifica > div {
+  margin-right: auto;
+  display: flex;
+}
+
+div#notifica > div > p {
 border: 0px;
 background-color: transparent;
 padding: 0;
@@ -188,13 +193,13 @@ font-size: 100%;
 text-decoration: underline;
 }
 
-div#notifica > .material-symbols-rounded {
+div#notifica > div > .material-symbols-rounded {
 margin-right: auto;
 height: max-content;
-margin-top: .3%;
+margin-top: 3%;
 }
 
-div#notifica button:hover {
+div#notifica > div > p:hover {
 cursor: pointer;
 }
 
@@ -292,9 +297,13 @@ cursor: pointer;
   div#notifica > div {
     margin-top: 1.5%;
   }
+
+  div#notifica > div > p {
+    margin-right: 1%;
+  }
   
   div#notifica > div > .material-symbols-rounded {
-    /*margin-top: 1%;*/
-    font-size: 3vw;
+    margin-top: .5%;
+    font-size: 3.5vw;
   }
 }

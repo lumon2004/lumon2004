@@ -14,3 +14,9 @@ footer p {
   margin-right: auto;
   color: rgb(110, 110, 115);
 }
+
+@media screen and (max-width: 415px) {
+  footer {
+    padding: 5%;
+  }
+}
