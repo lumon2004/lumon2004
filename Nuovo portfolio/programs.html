@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luca Monaco | Dev</title>
+    <link href="header.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+    <link href="programs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="code.png">
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="https://lumon2004.github.io/lumon2004/">LM</a>
+            </li>
+            <li>
+                <p>Works</p>
+            </li>
+            <div class="underHeader">
+                <div class="left">
+                    <p>Web Development</p>
+                    <ul>
+                        <li><h2><a href="https://lumon2004.github.io/lumon2004/Lyrics%20Storage/Homepage/home.html" target="_blank">Lyrics Storage</a></h2></li>
+                        <li><h2><a href="https://lumon2004.github.io/lumon2004/Marvel%20Website/Homepage/home.html" target="_blank">Marvel Cinematic Universe</a></h2></li>
+                        <li><h2><a href="https://lumon2004.github.io/lumon2004/Frontend%20Mentor%20Challenges.html" target="_blank">Frontend Mentor Challenges</a></h2></li>
+                    </ul>
+                    <p style="margin-top: 2.5vh;">Programming in C</p>
+                    <ul>
+                        <li><h2><a href="https://lumon2004.github.io/lumon2004/C/Gestore%20polinomi.c" target="_blank">Equation solver</a></h2></li>
+                        <li><h2><a href="" target="_blank">Registry manager</a></h2></li>
+                        <li><h2><a href="" target="_blank">Exam manager</a></h2></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <p>Other</p>
+                    <ul>
+                        <li><h2><a href="https://lumon2004.github.io/lumon2004/links.html">All of my works</a></h2></li>
+                    </ul>
+                </div>
+            </div>
+            <li>
+                <p><a href="https://github.com/lumon2004/lumon2004">Repository</a></p>
+            </li>
+            <li>
+                <p>Services</p>
+            </li>
+            <div class="underHeader">
+                <div class="left">
+                    <p>Programming and development</p>
+                    <ul>
+                        <li><h2><a>Websites</a></h2></li>
+                        <li><h2><a>Programming in C</a></h2></li>
+                        <li><h2><a>Database management</a></h2></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <p>Advice</p>
+                    <ul>
+                        <li><h2><a>Websites development</a></h2></li>
+                        <li><h2><a>Programming in C</a></h2></li>
+                    </ul>
+                </div>
+            </div>
+            <li>
+                <p>Contacts</p>
+            </li>
+            <div class="underHeader">
+                <div class="left">
+                    <p>Social media</p>
+                    <ul>
+                        <li><h2><a href="https://instagram.com/lucamonacoo" target="_blank">Instagram</a></h2></li>
+                        <li><h2><a href="https://twitter.com/lucamonacoo" target="_blank">X</a></h2></li>
+                        <li><h2><a href="https://github.com/lumon2004">GitHub</a></h2></li>
+                        <li style="margin-top: 15%"><h2><a href="mailto: lucamonaco04@libero.it">Mail</a></h2></li>
+                    </ul>
+                </div>
+            </div>
+            <li>
+                <span class="material-symbols-rounded" onclick="openMobileMenu()">menu</span>
+            </li>
+            <div class="mobileMenu" style="display: none;">
+                <ul>
+                    <li>
+                        <span class="material-symbols-rounded" onclick="closeMobileMenu()">close</span>
+                    </li>
+                    <li onclick="openSideMenu(0, 22)">
+                        <p>Works</p>
+                        <span class="material-symbols-rounded">arrow_forward_ios</span>
+                    </li>
+                    <div class="sideMenu" style="display: none">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-rounded" onclick="closeSideMenu(0, 22)" style="margin-top: 2.5%;">arrow_back_ios</span>
+                            </li>
+                            <li>
+                                <p>Web Development</p>
+                            </li>
+                            <li><h2><a href="https://lumon2004.github.io/lumon2004/Lyrics%20Storage/Homepage/home.html">Lyrics Storage</a></h2></li>
+                            <li><h2><a href="https://lumon2004.github.io/lumon2004/Marvel%20Website/Homepage/home.html" target="_blank">Marvel Cinematic Universe</a></h2></li>
+                            <li><h2><a href="" target="_blank">Frontend Mentor Challenges</a></h2></li>
+                            <li>
+                                <p style="margin-top: 2.5vh;">Programming in C</p>
+                            </li>
+                            <li><h2><a href="https://lumon2004.github.io/lumon2004/C/Gestore%20polinomi.c" target="_blank">Equation solver</a></h2></li>
+                            <li><h2><a href="" target="_blank">Registry manager</a></h2></li>
+                            <li><h2><a href="" target="_blank">Exam manager</a></h2></li>
+                            <li>
+                                <p>Other</p>
+                            </li>
+                            <li><h2><a href="https://lumon2004.github.io/lumon2004/links.html">All of my works</a></h2></li>
+                        </ul>
+                    </div>
+                    <li>
+                        <a href="https://github.com/lumon2004/lumon2004" style="display: flex; width: 100%">
+                            <p>Repository</p>
+                            <span class="material-symbols-rounded">arrow_forward_ios</span>
+                        </a>
+                    </li>
+                    <li onclick="openSideMenu(1, 35)">
+                        <p>Services</p>
+                        <span class="material-symbols-rounded">arrow_forward_ios</span>
+                    </li>
+                    <div class="sideMenu" style="display: none">
+                        <ul style="margin-top: 0%;">
+                            <li>
+                                <span class="material-symbols-rounded" onclick="closeSideMenu(1, 35)">arrow_back_ios</span>
+                            </li>
+                            <li>
+                                <p>Programming and development</p>
+                            </li>
+                            <li><h2><a>Websites</a></h2></li>
+                            <li><h2><a>Programming in C</a></h2></li>
+                            <li><h2><a>Database management</a></h2></li>
+                            <li>
+                                <p>Advice</p>
+                            </li>
+                            <li><h2><a>Websites development</a></h2></li>
+                            <li><h2><a>Programming in C</a></h2></li>
+                        </ul>
+                    </div>
+                    <li onclick="openSideMenu(2, 44)">
+                        <p>Contacts</p>
+                        <span class="material-symbols-rounded">arrow_forward_ios</span>
+                    </li>
+                    <div class="sideMenu" style="display: none">
+                        <ul style="margin-top: 0%;">
+                            <li>
+                                <span class="material-symbols-rounded" onclick="closeSideMenu(2, 44)">arrow_back_ios</span>
+                            </li>
+                            <li>
+                                <p>Social media</p>
+                            </li>
+                            <li><h2><a href="https://instagram.com/lucamonacoo" target="_blank">Instagram</a></h2></li>
+                            <li><h2><a href="https://twitter.com/lucamonacoo" target="_blank">X</a></h2></li>
+                            <li><h2><a href="https://github.com/lumon2004">GitHub</a></h2></li>
+                            <li style="margin-top: 15%"><h2><a href="mailto: lucamonaco04@libero.it">Mail</a></h2></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </ul>
+    </header>
+    <div id="notifica">
+        <p>This webpage is still in beta-testing. For any tips or bugs reporting</p>
+        <div>
+            <a href="mailto: lucamonaco04@libero.it">Feedback</a>
+            <span class="material-symbols-rounded">arrow_forward_ios</span>
+        </div>
+    </div>
+    <main>
+        <div id="left">
+            <ul>
+                <li onclick="openAbout()">About</li>
+                <li onclick="openDownloads()">Downloads</li>
+                <li onclick="openDocumentation()">Documentation</li>
+            </ul>
+        </div>
+        <div id="right">
+            <div id="about" style="display: block;">
+                <p>During my Computer Engineering course at university I did learn programming in C.<br>
+                    <span onclick="explainC()" id="openCloseExpl">What's C?</span>
+                    <div id="explC" style="display: none;">
+                        <p>The C language, created in 1972 at Bell Laboratories, is currently the most used programming language in university introductory computer science courses, thanks to its diffusion in the professional field, the close link with the UNIX world and the ease with which it allows switching to other languages such as C++, Java and Perl. <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">Other</a><br></p>
+                    </div>
+                <br>Given that I studied it for a whole semester, I dedicated myself as never before in learning it, and this dedication brought me to program and pull out some interesting programs you can try right now! These are:
+                <ul>
+                    <li><b>Equation solver</b>: you give it as input some values which will be the degree of your equation, coefficients of your variable and finally it will ask you the value of the x just to give you back the value of the whole function!</li>
+                    <li><b>Registry manager</b>: this program is designed for anyone who manages a personal registry where you can enter people's data, delete, modify and sort them, just like a database!</li>
+                    <li><b>Exam manager</b>: this exam manager performs the university registry function. In fact, with this program you will be able to manage the exams you have passed, how many credits you have accumulated and you will even be able to check your average mark and your presumed degree mark.</li>
+                    <li><b>Calculator</b>: My calculator was designed to provide accurate and reliable calculations at all times, offers a wide range of mathematical and scientific functions, is designed to last over time offering you reliable support for years!</li>
+                    <li><b>Guess the number</b>: this is actually a classic old game that came out in the 70's when the very first computers were born and the nerds and pioneers along with them. It's as easy as in the title, you just have to guess the number your computer has chosen!</li>
+                    <li><b>Points on the Cartesian Plane manager</b>: this powerful tool allows you to arrange and manipulate points in the plane intuitively and efficiently. With a wide range of features, you can easily add, remove and edit points, calculate distances and so much more. Whether you're working on graphing projects, geometric calculations, or data analysis, our program simplifies the process, allowing you to focus on your creativity and desired results!</li>
+                    <li><b>Restaurant menu manager</b>: with our solution, you can easily organize your menu, adding or changing dishes with just a few simple steps. Thanks to its intuitive interface, you will be able to clearly and orderly view all the options available to your customers. We make restaurant menu management a simple and effective experience.</li>
+                </ul>
+                <br>
+                When you download one of these programs to your computer via the appropriate item on the left column, you must first select the correct download!<br>In fact, depending on the operating system you have, you will have to download one file or another!<br>If you are using a Mac, i.e. an Apple computer, then you have macOS as your operating system, and therefore you will have to click on the button with the apple symbol next to it; if you are using a computer equipped with Windows as an operating system, and therefore all those computers produced by Microsoft, Lenovo, HP, Acer or more, just click on the download with the Windows logo nearby.
+            </p>
+            </div>
+            <div id="downloads" style="display: none;">
+                <p>Hi Downloads!</p>
+            </div>
+            <div id="doc" style="display: none;">
+                <p>Hi Documentation!</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Developed with passion by Luca Monaco<br>© <span id="year"></span> - All Rights Reserved</p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script src="app.js"></script>
+    <script src="programs.js"></script>
+</body>
+</html>

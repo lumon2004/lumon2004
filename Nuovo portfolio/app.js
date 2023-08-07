@@ -67,13 +67,3 @@ function closeSideMenu(i, j) {
         }
     }
 }
-
-/* APRI E CHIUDI DESCRIZIONE PROGETTI */
-
-function openProjDesc() {
-    
-}
-
-function closeProjDesc() {
-
-}

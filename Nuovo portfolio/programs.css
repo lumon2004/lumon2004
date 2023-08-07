@@ -1,0 +1,54 @@
+:root {
+    --mainBg: #d5e4f3;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --mainBg: #000;
+    }
+}
+
+main {
+    display: flex;
+    background-color: var(--mainBg);
+    color: var(--text);
+}
+
+main > div {
+    padding: 5% 10%;
+}
+
+main > div#left {
+    width: 10%;
+    position: fixed;
+}
+
+main > div#left > ul {
+    padding-inline-start: 0;
+}
+
+main > div#left > ul > li {
+    list-style-type: none;
+    font-size: 1.5vw;
+    font-weight: 600;
+    transition: .5s;
+}
+
+main > div#left > ul > li:not(:last-of-type) {
+    margin-bottom: 15%;
+}
+
+main > div#left > ul > li:hover {
+    cursor: pointer;
+    color: #2997ff;
+}
+
+main > div#right {
+    width: 50%;
+    margin-left: 30%;
+}
+
+main > div#right > div#about > p > span, main > div#right > div#about a {
+    color: #2997ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
