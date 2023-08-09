@@ -52,3 +52,34 @@ main > div#right > div#about > p > span, main > div#right > div#about a {
     cursor: pointer;
     text-decoration: underline;
 }
+
+main > div#right > div#downloads > div {
+    display: flex;
+}
+
+main > div#right > div#downloads > div > div#Mac, main > div#right > div#downloads > div > div#Windows {
+    display: flex;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+main > div#right > div#downloads > div > div#Mac {
+    width: 30%;
+    margin-right: 5%;
+}
+
+main > div#right > div#downloads > div > div#Windows {
+    width: 30%;
+}
+
+main > div#right > div#downloads > div > div > img {
+    width: 20%;
+    margin-right: 5%;
+}
+
+main > div#right > div#downloads > div > div > h6 {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1.25vw;
+}
