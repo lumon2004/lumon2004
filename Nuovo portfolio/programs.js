@@ -27,3 +27,16 @@ function explainC() {
         document.getElementById('openCloseExpl').innerHTML = 'What\'s C?';
     }
 }
+
+function introductionCommandLineInterface() {
+    var expandIcon = document.getElementsByClassName('expand')[0];
+    var introductionC = document.getElementById('introductionC');
+
+    if (expandIcon.style.transform == 'rotate(0deg)') {
+        expandIcon.style.transform = 'rotate(90deg)';
+        introductionC.style.display = 'block';
+    } else {
+        expandIcon.style.transform = 'rotate(0deg)';
+        introductionC.style.display = 'none';
+    }
+}

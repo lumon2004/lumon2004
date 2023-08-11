@@ -29,9 +29,9 @@
                     </ul>
                     <p style="margin-top: 2.5vh;">Programming in C</p>
                     <ul>
-                        <li><h2><a href="https://lumon2004.github.io/lumon2004/C/Gestore%20polinomi.c" target="_blank">Equation solver</a></h2></li>
+                        <li><h2><a href="https://lumon2004.github.io/lumon2004/Programs/programs.html" target="_blank">Equation solver</a></h2></li>
                         <li><h2><a href="" target="_blank">Registry manager</a></h2></li>
-                        <li><h2><a href="" target="_blank">Exam manager</a></h2></li>
+                        <li><h2><a href="" target="_blank">Calculator</a></h2></li>
                     </ul>
                 </div>
                 <div class="right">
@@ -179,7 +179,8 @@
             </ul>
         </div>
         <div id="right">
-            <div id="about" style="display: block;">
+            <div id="about" style="display: none;">
+                <h1>About</h1>
                 <p>During my Computer Engineering course at university I did learn programming in C.<br>
                     <span onclick="explainC()" id="openCloseExpl">What's C?</span>
                     <div id="explC" style="display: none;">
@@ -189,17 +190,16 @@
                 <ul>
                     <li><b>Equation solver</b>: you give it as input some values which will be the degree of your equation, coefficients of your variable and finally it will ask you the value of the x just to give you back the value of the whole function!</li>
                     <li><b>Registry manager</b>: this program is designed for anyone who manages a personal registry where you can enter people's data, delete, modify and sort them, just like a database!</li>
-                    <li><b>Exam manager</b>: this exam manager performs the university registry function. In fact, with this program you will be able to manage the exams you have passed, how many credits you have accumulated and you will even be able to check your average mark and your presumed degree mark.</li>
                     <li><b>Calculator</b>: My calculator was designed to provide accurate and reliable calculations at all times, offers a wide range of mathematical and scientific functions, is designed to last over time offering you reliable support for years!</li>
                     <li><b>Guess the number</b>: this is actually a classic old game that came out in the 70's when the very first computers were born and the nerds and pioneers along with them. It's as easy as in the title, you just have to guess the number your computer has chosen!</li>
                     <li><b>Points on the Cartesian Plane manager</b>: this powerful tool allows you to arrange and manipulate points in the plane intuitively and efficiently. With a wide range of features, you can easily add, remove and edit points, calculate distances and so much more. Whether you're working on graphing projects, geometric calculations, or data analysis, my program simplifies the process, allowing you to focus on your creativity and desired results!</li>
                     <li><b>Restaurant menu manager</b>: with my solution, you can easily organize your menu, adding or changing dishes with just a few simple steps. Thanks to its intuitive interface, you will be able to clearly and orderly view all the options available to your customers. I make restaurant menu management a simple and effective experience.</li>
                 </ul>
                 <br>
-                When you download one of these programs to your computer via the appropriate item on the left column, you must first select the correct download!<br>In fact, depending on the operating system you have, you will have to download one file or another!<br>If you are using a Mac, i.e. an Apple computer, then you have macOS as your operating system, and therefore you will have to click on the button with the apple symbol next to it; if you are using a computer equipped with Windows as an operating system, and therefore all those computers produced by Microsoft, Lenovo, HP, Acer or more, just click on the download with the Windows logo nearby.
-            </p>
+                When you download one of these programs to your computer via the appropriate item on the left column, you must first select the correct download!<br>In fact, depending on the operating system you have, you will have to download one file or another!<br>If you are using a Mac, i.e. an Apple computer, then you have macOS as your operating system, and therefore you will have to click on the button with the apple symbol next to it; if you are using a computer equipped with Windows as an operating system, and therefore all those computers produced by Microsoft, Lenovo, HP, Acer or more, just click on the download with the Windows logo nearby.</p>
             </div>
             <div id="downloads" style="display: none;">
+                <h1>Downloads</h1>
                 <h2>Equation solver</h2>
                 <p>You give it as input some values which will be the degree of your equation, coefficients of your variable and finally it will ask you the value of the x just to give you back the value of the whole function!</p>
                 <div>
@@ -222,18 +222,6 @@
                     <div id="Windows">
                         <img src="windows.png">
                         <h6><a href="" download="Registry manager">Download for Windows</a></h6>
-                    </div>
-                </div>
-                <h2>Exam manager</h2>
-                <p>This exam manager performs the university registry function. In fact, with this program you will be able to manage the exams you have passed, how many credits you have accumulated and you will even be able to check your average mark and your presumed degree mark.</p>
-                <div>
-                    <div id="Mac">
-                        <img src="apple.png">
-                        <h6><a href="" download="Exam manager">Download for Mac</a></h6>
-                    </div>
-                    <div id="Windows">
-                        <img src="windows.png">
-                        <h6><a href="" download="Exam manager">Download for Windows</a></h6>
                     </div>
                 </div>
                 <h2>Calculator</h2>
@@ -285,8 +273,53 @@
                     </div>
                 </div>
             </div>
-            <div id="doc" style="display: none;">
-                <p>Hi Documentation!</p>
+            <div id="doc" style="display: block;">
+                <h1>Documentation</h1>
+                <div style="display: flex; cursor: pointer;" onclick="introductionCommandLineInterface()">
+                    <h2>Introduction to the command line interface</h2>
+                    <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                </div>
+                <div id="introductionC">
+                    <p>C is a programming language that does not have a graphical interface: it is said to be a programming language with a command line interface. To use it, therefore, it is necessary to have a terminal: on Mac this is called Terminal, and it is an application that you will find in the Launchpad; on Windows instead there is both the Command Prompt and Microsoft PowerShell.</p>
+                    <div>
+                        <figure>
+                            <img src="https://www.bleepstatic.com/images/news/tutorials/windows-11/administrator-command-prompt/access-denied.jpg">
+                            <figcaption>Command Prompt on Windows 10</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://help.apple.com/assets/63D8162D4F5E9E311D0CFA28/63D816334F5E9E311D0CFA30/en_US/7f288e73064fb1012bfa617b6b707e2c.png">
+                            <figcaption>3 Terminal's windows opened on macOS</figcaption>
+                        </figure>
+                    </div>
+                    <p style="margin-top: 5%;">While in a graphical interface you can click on images, text, icons and so on, in a command line interface your mouse becomes useless and your keyboard comes into play: you can only enter values, whether textual or numerical.</p>
+                </div>
+                <h2 style="margin-top: 5%;">Instructions</h3>
+                <ul>
+                    <li>
+                        <h4>Equation solver</h4>
+                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                        <h4>Registry manager</h4>
+                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                        <h4>Calculator</h4>
+                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                        <h4>Guess the number</h4>
+                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                        <h4>Points on the Cartesian Plane manager</h4>
+                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                    </li>
+                    <li>
+                        <h4>Restaurant menu manager</h4>
+                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </main>

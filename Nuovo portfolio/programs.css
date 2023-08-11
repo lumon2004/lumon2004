@@ -47,14 +47,25 @@ main > div#right {
     margin-left: 30%;
 }
 
+main > div#right h1 {
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+}
+
 main > div#right > div#about > p > span, main > div#right > div#about a {
     color: #2997ff;
     cursor: pointer;
     text-decoration: underline;
 }
 
+main > div#right > div#downloads > h2:not(:first-of-type) {
+    margin-top: 5%;
+}
+
 main > div#right > div#downloads > div {
     display: flex;
+    margin-top: 2%;
 }
 
 main > div#right > div#downloads > div > div#Mac, main > div#right > div#downloads > div > div#Windows {
@@ -82,4 +93,44 @@ main > div#right > div#downloads > div > div > h6 {
     margin-top: auto;
     margin-bottom: auto;
     font-size: 1.25vw;
+}
+
+main > div#right > div#doc h2 {
+    font-size: 2.5vw;
+}
+
+main > div#right > div#doc > div:first-of-type > span.expand {
+    rotate: 0deg;
+    font-size: 2.5vw;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+main > div#right > div#doc > div#introductionC {
+    display: none;
+}
+
+main > div#right > div#doc figure > img {
+    width: 100%;
+    margin-top: 5%;
+}
+
+main > div#right > div#doc > ul {
+    padding-inline-start: 0;
+}
+
+main > div#right > div#doc > ul > li {
+    list-style-type: none;
+    display: flex;
+    margin-top: 2%;
+}
+
+main > div#right > div#doc > ul > li > h4 {
+    font-size: 1.5vw;
+}
+
+main > div#right > div#doc > ul > li > span.expand {
+    rotate: 0deg;
+    font-size: 1.5vw;
+    margin-left: auto;
 }
