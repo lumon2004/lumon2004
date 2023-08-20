@@ -296,39 +296,75 @@
                 <h2 style="margin-top: 5%;">Instructions</h3>
                 <ul>
                     <li>
-                        <h4>Equation solver</h4>
-                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        <div onclick="instructions(1)">
+                            <h4>Equation solver</h4>
+                            <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        </div>
+                        <div class="instructions">
+                            <p>When you run the "Equation Solver" program, it will ask you the equation's degree and you have to press a number on your keyboard and press "enter". At this point it will ask you the coefficient of your biggest term, and as you give it the coefficients following always the same way, it will go on asking you for the terms of the lower degree, until it reaches the known term (written as x^0). At this point he will print the equation for you, so that you can check that it is correct, and then you will have to enter the value of the x. This way, you'll have given the program every piece of data it needs and it will return the value of your equation.<br>
+                            Here is a simple example:<br></p>
+                                <div class="example">
+                                    <p>
+                                        <span>First step</span><br>
+                                        What's your equation's degree? <b>2</b><br>
+                                        <span>Second step</span><br>
+                                        Coefficient of x^2: <b>4</b><br>
+                                        Coefficient of x^1: <b>3</b><br>
+                                        Coefficient of x^0: <b>2</b><br>
+                                        <span>Third step</span><br>
+                                        f(x) = +4.0x^2 +3.0x + 2.0<br>
+                                        <span>Fourth step</span><br>
+                                        What's the x-value? <b>5</b><br>
+                                        <span>Last step</span><br>
+                                        f(5.0) = 117.0
+                                    </p>
+                                </div>
+                        </div>
                     </li>
                     <li>
+                        <div onclick="instructions(2)">
                         <h4>Registry manager</h4>
                         <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        </div>
                     </li>
                     <li>
+                        <div onclick="instructions(3)">
                         <h4>Calculator</h4>
                         <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        </div>
                     </li>
                     <li>
-                        <h4>Guess the number</h4>
-                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        <div onclick="instructions(4)">
+                            <h4>Guess the number</h4>
+                            <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        </div>
                     </li>
                     <li>
-                        <h4>Points on the Cartesian Plane manager</h4>
-                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        <div onclick="instructions(5)">
+                            <h4>Points on the Cartesian Plane manager</h4>
+                            <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        </div>
                     </li>
                     <li>
-                        <h4>Restaurant menu manager</h4>
-                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        <div onclick="instructions(6)">
+                            <h4>Restaurant menu manager</h4>
+                            <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        </div>
                     </li>
                 </ul>
+                <h2 style="margin-top: 5%; margin-bottom: 1.5%;">What if I have any problem with these?</h2>
+                <p>In case you run into some kind of problem, such as entering a wrong data, all you can do is re-run the program.<br>There are two ways to do this, and they depend on how you start the program. If you just downloaded it, it will probably be in your Downloads folder.<br></p>
+                <ol>
+                    <li>So, if you start the program by simply double clicking on the file you just downloaded, then to close and reopen it you must first close the Terminal (Mac) or Command Prompt (Windows) window and then reopen it by double clicking on the file.</li>
+                    <li>If, on the other hand, you are more experienced and already have experience with the command line interface, you will already know that to move through the files on your computer from your Terminal (Mac) or Command Prompt (Windows) you will use the "cd" command . Once you have found your file, it will stay in that path until you change it manually again using the "cd" command, so to stop the current run, press control+C (Mac) or Ctrl+C (Windows), then re -run the program with the command "./ProgramName" (Mac) or simply "ProgramName" (Windows)</li>
+                </ol>
             </div>
         </div>
     </main>
     <footer>
         <p>Developed with passion by Luca Monaco<br>© <span id="year"></span> - All Rights Reserved</p>
     </footer>
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
+    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
     <script src="app.js"></script>
     <script src="programs.js"></script>
 </body>

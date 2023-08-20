@@ -121,16 +121,36 @@ main > div#right > div#doc > ul {
 
 main > div#right > div#doc > ul > li {
     list-style-type: none;
-    display: flex;
     margin-top: 2%;
 }
 
-main > div#right > div#doc > ul > li > h4 {
+main > div#right > div#doc > ul > li > div:first-of-type {
+    display: flex;
+}
+
+main > div#right > div#doc > ul > li h4 {
     font-size: 1.5vw;
 }
 
-main > div#right > div#doc > ul > li > span.expand {
+main > div#right > div#doc > ul > li span.expand {
     rotate: 0deg;
     font-size: 1.5vw;
     margin-left: auto;
+}
+
+main > div#right > div#doc > ul > li > div.instructions {
+    display: block;
+    margin-top: 2%;
+}
+
+div.example {
+    font-family: monospace;
+    margin: 1.5%;
+    padding: 1%;
+    border: 1px solid var(--text);
+}
+
+div.example > p > span {
+    background-color: rgb(189, 189, 189);
+    color: #000;
 }

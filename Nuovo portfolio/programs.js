@@ -40,3 +40,16 @@ function introductionCommandLineInterface() {
         introductionC.style.display = 'none';
     }
 }
+
+function instructions(i) {
+    var expandIcon = document.getElementsByClassName('expand')[i];
+    var instructionPanel = document.getElementsByClassName('instructions')[i-1];
+
+    if (expandIcon.style.transform == 'rotate(0deg)') {
+        expandIcon.style.transform = 'rotate(90deg)';
+        instructionPanel.style.display = 'block';
+    } else {
+        expandIcon.style.transform = 'rotate(0deg)';
+        instructionPanel.style.display = 'none';
+    }
+}
