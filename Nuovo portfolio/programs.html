@@ -192,7 +192,6 @@
                     <li><b>Registry manager</b>: this program is designed for anyone who manages a personal registry where you can enter people's data, delete, modify and sort them, just like a database!</li>
                     <li><b>Calculator</b>: My calculator was designed to provide accurate and reliable calculations at all times, offers a wide range of mathematical and scientific functions, is designed to last over time offering you reliable support for years!</li>
                     <li><b>Guess the number</b>: this is actually a classic old game that came out in the 70's when the very first computers were born and the nerds and pioneers along with them. It's as easy as in the title, you just have to guess the number your computer has chosen!</li>
-                    <li><b>Points on the Cartesian Plane manager</b>: this powerful tool allows you to arrange and manipulate points in the plane intuitively and efficiently. With a wide range of features, you can easily add, remove and edit points, calculate distances and so much more. Whether you're working on graphing projects, geometric calculations, or data analysis, my program simplifies the process, allowing you to focus on your creativity and desired results!</li>
                     <li><b>Restaurant menu manager</b>: with my solution, you can easily organize your menu, adding or changing dishes with just a few simple steps. Thanks to its intuitive interface, you will be able to clearly and orderly view all the options available to your customers. I make restaurant menu management a simple and effective experience.</li>
                 </ul>
                 <br>
@@ -248,18 +247,6 @@
                         <h6><a href="" download="Guess the number">Download for Windows</a></h6>
                     </div>
                 </div>
-                <h2>Points on the Cartesian Plane manager</h2>
-                <p>This powerful tool allows you to arrange and manipulate points in the plane intuitively and efficiently. With a wide range of features, you can easily add, remove and edit points, calculate distances and so much more. Whether you're working on graphing projects, geometric calculations, or data analysis, my program simplifies the process, allowing you to focus on your creativity and desired results!</p>
-                <div>
-                    <div id="Mac">
-                        <img src="apple.png">
-                        <h6><a href="" download="Points manager">Download for Mac</a></h6>
-                    </div>
-                    <div id="Windows">
-                        <img src="windows.png">
-                        <h6><a href="" download="Points manager">Download for Windows</a></h6>
-                    </div>
-                </div>
                 <h2>Restaurant menu manager</h2>
                 <p>With my solution, you can easily organize your menu, adding or changing dishes with just a few simple steps. Thanks to its intuitive interface, you will be able to clearly and orderly view all the options available to your customers. I make restaurant menu management a simple and effective experience.</p>
                 <div>
@@ -293,7 +280,13 @@
                     </div>
                     <p style="margin-top: 5%;">While in a graphical interface you can click on images, text, icons and so on, in a command line interface your mouse becomes useless and your keyboard comes into play: you can only enter values, whether textual or numerical.</p>
                 </div>
-                <h2 style="margin-top: 5%;">Instructions</h3>
+                <h2 style="margin-top: 5%;">Instructions</h2>
+                <h3>How to open these files</h3>
+                <p>Once you downloaded one or more of these files, you've probably saved it in your downloads folder.<br>So now there are two ways to open your file and run the program:</p>
+                <ol>
+                    <li><b>For the experienced user</b><br>Open your terminal and navigate through your files with the <span>cd</span> command. Once you found your file, run it: if you're on Mac, type <span>./ProgramName</span>; if you're on Windows instead, just type <span>ProgramName</span>.<br>Obviously, when I type "ProgramName" it's meant as a variable, so if you downloaded the equation solver program, you'll type <span>./Equation\ solver</span> on Mac and <span>Equation solver</span> on Windows.</li>
+                    <li><b>For the less experienced user</b><br>Open your file manager on your computer, find your downloads folder, then double-click on the file.</li>
+                </ol>
                 <ul>
                     <li>
                         <div onclick="instructions(1)">
@@ -323,8 +316,21 @@
                     </li>
                     <li>
                         <div onclick="instructions(2)">
-                        <h4>Registry manager</h4>
-                        <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                            <h4>Registry manager</h4>
+                            <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        </div>
+                        <div class="instructions">
+                            <p>As you run “Registry manager”, the first thing you read will be a message which communicates to you if the program was able to recover any kind of data from another file or not.<br>Then, it presents you a list of operations you can execute. You’re gonna choice one of them by typing on your keyboard the number of the operation you wanna execute. You can:<br></p>
+                            <ol>
+                                <li>Print list of people</li>
+                                <li>Add to queue a new person</li>
+                                <li>Delete the first person</li>
+                                <li>Sort list alphabetically</li>
+                                <li>Sort list by age (descending)</li>
+                                <li>Edit someone's data</li>
+                                <li>Terminate the execution of the program</li>
+                            </ol>
+                            <p>This program is very simple and intuitive and it doesn’t need any big documentation.</p>
                         </div>
                     </li>
                     <li>
@@ -332,23 +338,35 @@
                         <h4>Calculator</h4>
                         <span class="material-symbols-rounded expand">arrow_forward_ios</span>
                         </div>
+                        <div class="instructions">
+                            <p>When you run “Calculator”, it is going to present himself to you and he will explain himself: it will give you a list of operations you can execute and all you have to do is choose one of them. This calculator gives you the possibility to work with the most simple operations in math, but also with something more complicated such as the sin, cosin, logarithms and factorial functions!<br>When you choose one of the 15 operations it can do, it is going to request you the value of one or at maximum two numbers, it depends on the function.</p>
+                        </div>
                     </li>
                     <li>
                         <div onclick="instructions(4)">
                             <h4>Guess the number</h4>
                             <span class="material-symbols-rounded expand">arrow_forward_ios</span>
                         </div>
-                    </li>
-                    <li>
-                        <div onclick="instructions(5)">
-                            <h4>Points on the Cartesian Plane manager</h4>
-                            <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        <div class="instructions">
+                            <p>Even though this program (or maybe I should call it game) is extremely simple, everything needs a documentation.<br>So, “Guess the number” is a little simple game between computer and user: the first one pick randomly a number between 1 and a maximum number given by the user himself. After that, all the game consists in the user guessing the number randomly picked by the computer. Obviously, the user is going to have a guess just by typing on his keyboard any number.</p>
                         </div>
                     </li>
                     <li>
-                        <div onclick="instructions(6)">
+                        <div onclick="instructions(5)">
                             <h4>Restaurant menu manager</h4>
                             <span class="material-symbols-rounded expand">arrow_forward_ios</span>
+                        </div>
+                        <div class="instructions">
+                            <p>“Restaurant menu manager” is a very simple program which, as the title says, helps to manage a restaurant menu. With these program in facts you can add products and specify their price, sort the menu alphabetically and by ascending price. Of course, if you type wrong anything, you can edit and correct it! The functions you can execute are:<br></p>
+                            <ol>
+                                <li>Print the whole menu</li>
+                                <li>Add to queue a new plate</li>
+                                <li>Delete the first plate in menu</li>
+                                <li>Sort menu alphabetically</li>
+                                <li>Sort menu by price (descending)</li>
+                                <li>Edit some plate data</li>
+                                <li>Terminate the execution of the program</li>
+                            </ol>
                         </div>
                     </li>
                 </ul>
@@ -356,7 +374,7 @@
                 <p>In case you run into some kind of problem, such as entering a wrong data, all you can do is re-run the program.<br>There are two ways to do this, and they depend on how you start the program. If you just downloaded it, it will probably be in your Downloads folder.<br></p>
                 <ol>
                     <li>So, if you start the program by simply double clicking on the file you just downloaded, then to close and reopen it you must first close the Terminal (Mac) or Command Prompt (Windows) window and then reopen it by double clicking on the file.</li>
-                    <li>If, on the other hand, you are more experienced and already have experience with the command line interface, you will already know that to move through the files on your computer from your Terminal (Mac) or Command Prompt (Windows) you will use the "cd" command . Once you have found your file, it will stay in that path until you change it manually again using the "cd" command, so to stop the current run, press control+C (Mac) or Ctrl+C (Windows), then re -run the program with the command "./ProgramName" (Mac) or simply "ProgramName" (Windows)</li>
+                    <li>If, on the other hand, you are more experienced and already have experience with the command line interface, you will already know that to move through the files on your computer from your Terminal (Mac) or Command Prompt (Windows) you will use the <span>cd</span> command . Once you have found your file, it will stay in that path until you change it manually again using the <span>cd</span> command, so to stop the current run, press <span>control+C</span> (Mac) or <span>Ctrl+C</span> (Windows), then re -run the program with the command <span>./ProgramName</span> (Mac) or simply <span>ProgramName</span> (Windows)</li>
                 </ol>
             </div>
         </div>
