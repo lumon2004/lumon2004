@@ -64,35 +64,26 @@ main > div#right > div#downloads > h2:not(:first-of-type) {
 }
 
 main > div#right > div#downloads > div {
-    display: flex;
     margin-top: 2%;
 }
 
-main > div#right > div#downloads > div > div#Mac, main > div#right > div#downloads > div > div#Windows {
-    display: flex;
-    border: 2px solid #000;
+main > div#right > div#downloads > div.downloadBtn > p {
+    background-color: rgb(0, 113, 227);
+    color: #fff;
+    width: min-content;
+    padding: 1% 2%;
     border-radius: 20px;
-    padding: 2%;
+    cursor: pointer;
 }
 
-main > div#right > div#downloads > div > div#Mac {
-    width: 30%;
-    margin-right: 5%;
+main > div#right > div#downloads > div.downloadBtn > div.downloadOptions {
+    display: none;
+    margin-top: 2.5%;
+    padding-left: 2%;
 }
 
-main > div#right > div#downloads > div > div#Windows {
-    width: 30%;
-}
-
-main > div#right > div#downloads > div > div > img {
-    width: 20%;
-    margin-right: 5%;
-}
-
-main > div#right > div#downloads > div > div > h6 {
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: 1.25vw;
+main > div#right > div#downloads > div.downloadBtn > div.downloadOptions > a {
+    margin-right: auto;
 }
 
 main > div#right > div#doc h2 {

@@ -53,3 +53,13 @@ function instructions(i) {
         instructionPanel.style.display = 'none';
     }
 }
+
+function downloadOptions(i) {
+    var downloadOptions = document.getElementsByClassName('downloadOptions')[i-1];
+
+    if (downloadOptions.style.display == 'none') {
+        downloadOptions.style.display = 'flex';
+    } else {
+        downloadOptions.style.display = 'none';
+    }
+}
