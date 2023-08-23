@@ -1,5 +1,5 @@
 # Welcome to my GitHub profile!
-Hi, I'm Luca Monaco, I'm a 18 year-old student, I'm from Rome and I'm a Front-End Web Developer.
+Hi, I'm Luca Monaco, I'm a 19 year-old student, I'm from Rome and I'm a Front-End Web Developer and Computer Engineering student.
 
 ## Take a look at my [repository](https://github.com/lumon2004/lumon2004)
 
