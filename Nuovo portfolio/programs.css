@@ -82,6 +82,15 @@ main > div#right > div#downloads > div.downloadBtn > div.downloadOptions {
     padding-left: 2%;
 }
 
+main > div#right > div#downloads > div.downloadBtn > div.downloadOptions > div#WindowsDownload {
+    margin-right: auto;
+    text-align: center;
+}
+
+main > div#right > div#downloads > div.downloadBtn > div.downloadOptions > div#WindowsDownload > p {
+    font-size: 1vw;
+}
+
 main > div#right > div#downloads > div.downloadBtn > div.downloadOptions > a {
     margin-right: auto;
 }
