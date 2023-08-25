@@ -1,5 +1,5 @@
 :root {
-    --mainBg: #d5e4f3;
+    --mainBg: /*#d5e4f3*/ #fff;
 }
 @media (prefers-color-scheme: dark) {
     :root {
