@@ -163,3 +163,54 @@ main > div#right > div#doc > ol > li > span {
     padding: .25%;
     font-weight: 800;
 }
+
+@media screen and (max-width: 415px) {
+    main {
+        display: block;
+    }
+
+    main > div#left {
+        width: 90%;
+        padding: 5%;
+        margin-top: -15%;
+        background-color: var(--bg);
+    }
+
+    main > div#left > ul {
+        display: flex;
+    }
+
+    main > div#left > ul > li {
+        font-size: 3.5vw;
+        margin-bottom: 2%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    main > div#left > ul > li:not(:last-of-type) {
+        margin-bottom: 2%;
+    }
+
+    main > div#right {
+        margin-top: 15%;
+        width: 90%;
+        padding: 5%;
+        margin-left: 0%;
+    }
+
+    main > div#right h1 {
+        font-size: 4vw;
+    }
+
+    main > div#right h2 {
+        font-size: 8vw;
+    }
+
+    main > div#right p {
+        font-size: 5vw;
+    }
+
+    main > div#right > div#downloads > div.downloadBtn > p {
+        padding: 1.5% 4%;
+    }
+}
