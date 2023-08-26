@@ -58,7 +58,11 @@ function downloadOptions(i) {
     var downloadOptions = document.getElementsByClassName('downloadOptions')[i-1];
 
     if (downloadOptions.style.display == 'none') {
-        downloadOptions.style.display = 'flex';
+        if (window.innerWidth <= 415) {
+            downloadOptions.style.display = 'grid';
+        } else {
+            downloadOptions.style.display = 'flex';
+        }
     } else {
         downloadOptions.style.display = 'none';
     }

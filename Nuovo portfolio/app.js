@@ -1,11 +1,15 @@
 /* APRI E CHIUDI HEADER MENU */
 
 function openMobileMenu() {
-    document.getElementsByClassName('mobileMenu')[0].style.display="block";
+    document.getElementsByClassName('mobileMenu')[0].style.width = '100%';
+    document.getElementsByClassName('mobileMenu')[0].style.maxHeight = '100vh';
+    document.getElementsByClassName('mobileMenu')[0].style.transitionDuration = '1.5s';
 }
 
 function closeMobileMenu() {
-    document.getElementsByClassName('mobileMenu')[0].style.display="none";
+    document.getElementsByClassName('mobileMenu')[0].style.width = '0';
+    document.getElementsByClassName('mobileMenu')[0].style.maxHeight = '0vh';
+    document.getElementsByClassName('mobileMenu')[0].style.transitionDuration = '.5s';
 }
 
 /* APRI E CHIUDI MENU LATERALE INTERNO HEADER MENU */

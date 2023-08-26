@@ -81,7 +81,7 @@
             <li>
                 <span class="material-symbols-rounded" onclick="openMobileMenu()">menu</span>
             </li>
-            <div class="mobileMenu" style="display: none;">
+            <div class="mobileMenu">
                 <ul>
                     <li>
                         <span class="material-symbols-rounded" onclick="closeMobileMenu()">close</span>
@@ -171,14 +171,14 @@
         </div>
     </div>
     <main>
-        <div id="left">
+        <div id="left" class="scroll">
             <ul>
                 <li onclick="openAbout()">About</li>
                 <li onclick="openDownloads()">Downloads</li>
                 <li onclick="openDocumentation()">Documentation</li>
             </ul>
         </div>
-        <div id="right">
+        <div id="right" class="scroll">
             <div id="about" style="display: none;">
                 <h1>About</h1>
                 <p>During my Computer Engineering course at university I did learn programming in C.<br>
@@ -375,5 +375,31 @@
     <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
     <script src="app.js"></script>
     <script src="programs.js"></script>
+    <script>
+        if (window.innerWidth <= 415) {
+            let scrolling = false;
+            window.addEventListener("scroll", function() {
+                var index = document.getElementsByClassName("scroll")[0]; // left
+                var content = document.getElementsByClassName("scroll")[1]; // right
+
+                if (!scrolling) {
+                    scrolling = true;
+                    if (window.scrollY > 77.5) {
+                        index.style.position = "fixed";
+                        index.style.marginTop = "-34.5%";
+                        content.style.marginTop = "15%";
+                    } else {
+                        index.style.position = "sticky";
+                        index.style.marginTop = "0%";
+                        content.style.marginTop = "0%";
+                    }
+                    setTimeout(function() {
+                        scrolling = false;
+                    }, 100);
+                }
+            });
+        }
+        
+    </script>
 </body>
 </html>

@@ -172,8 +172,9 @@ main > div#right > div#doc > ol > li > span {
     main > div#left {
         width: 90%;
         padding: 5%;
-        margin-top: -15%;
+        /*margin-top: -15%;*/
         background-color: var(--bg);
+        position: sticky;
     }
 
     main > div#left > ul {
@@ -192,7 +193,7 @@ main > div#right > div#doc > ol > li > span {
     }
 
     main > div#right {
-        margin-top: 15%;
+        /*margin-top: 15%;*/
         width: 90%;
         padding: 5%;
         margin-left: 0%;
@@ -212,5 +213,25 @@ main > div#right > div#doc > ol > li > span {
 
     main > div#right > div#downloads > div.downloadBtn > p {
         padding: 1.5% 4%;
+    }
+    
+    main > div#right > div#downloads > div.downloadBtn > div.downloadOptions {
+        display: none;
+    }
+
+    main > div#right > div#downloads > div.downloadBtn > div.downloadOptions a {
+        font-size: 6vw;
+    }
+
+    main > div#right > div#downloads > div.downloadBtn > div.downloadOptions > div#WindowsDownload {
+        display: flex;
+        width: 100%;
+    }
+
+    main > div#right > div#downloads > div.downloadBtn > div.downloadOptions > div#WindowsDownload > p {
+        font-size: 4vw;
+        margin-top: auto;
+        margin-bottom: 1%;
+        margin-left: 5%;
     }
 }

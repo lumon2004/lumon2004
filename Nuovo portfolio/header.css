@@ -159,7 +159,10 @@ header > ul > li:hover + div.underHeader, div.underHeader:hover {
 }
 
 header > ul > div.mobileMenu {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease;
+  width: 0;
 }
 
 div#notifica {
@@ -267,8 +270,9 @@ cursor: pointer;
     display: block;
     margin-top: -15%;
   }
-
+  
   header > ul > div.mobileMenu > ul > div.sideMenu > ul > li {
+    /*opacity: 0;*/
     margin-bottom: 2.5%;
   }
 
