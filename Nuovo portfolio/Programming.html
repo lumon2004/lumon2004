@@ -23,6 +23,17 @@
         main > ul > li::before {
             content: "- ";
         }
+
+        @media screen and (max-width: 415px) {
+            main > ul {
+                columns: 1;
+                padding-inline-start: 5%;
+            }
+
+            main > ul > li {
+                font-size: 5vw;
+            }
+        }
     </style>
 </head>
 <body>

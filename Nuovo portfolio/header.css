@@ -110,13 +110,22 @@ div.underHeader {
   /*margin-top: 3.35%;*/
   margin-top: 3.2%;
   background-color: var(--headerbg);
-  padding: 2.5%;
-  display: none;
+  padding: 0 2.5% 0 2.5%;
+  display: flex;
+  max-height: 0;
   z-index: 2;
+  transition: max-height .5s ease;
+}
+
+div.underHeader div.left, div.underHeader div.right {
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 div.underHeader div.left {
   width: 40%;
+  margin-bottom: 3%;
+  margin-top: 2%;
 }
 
 div.underHeader div.right {
@@ -155,7 +164,12 @@ div.underHeader ul li a {
 }
 
 header > ul > li:hover + div.underHeader, div.underHeader:hover {
-  display: flex;
+  /*display: flex;*/
+  max-height: 50vh;
+}
+
+header > ul > li:hover + div.underHeader > div.left, header > ul > li:hover + div.underHeader > div.right,  div.underHeader:hover {
+  opacity: 1;
 }
 
 header > ul > div.mobileMenu {
@@ -225,6 +239,10 @@ cursor: pointer;
     display: block;
     margin-right: 1vw;
     padding-top: 2%;
+  }
+
+  div.underHeader {
+    display: none;
   }
 
   header > ul > li:hover + div.underHeader, div.underHeader:hover {
