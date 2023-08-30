@@ -179,7 +179,7 @@
             </ul>
         </div>
         <div id="right" class="scroll">
-            <div id="about" style="display: none;">
+            <div id="about" style="display: block;">
                 <h1>About</h1>
                 <p>During my Computer Engineering course at university I did learn programming in C.<br>
                     <span onclick="explainC()" id="openCloseExpl">What's C?</span>
@@ -197,7 +197,7 @@
                 <br>
                 When you download one of these programs to your computer via the appropriate item on the left column, you must first select the correct download!<br>In fact, depending on the operating system you have, you will have to download one file or another!<br>If you are using a Mac, i.e. an Apple computer, then you have macOS as your operating system, and therefore you will have to click on the button with the apple symbol next to it; if you are using a computer equipped with Windows as an operating system, and therefore all those computers produced by Microsoft, Lenovo, HP, Acer or more, just click on the download with the Windows logo nearby.</p>
             </div>
-            <div id="downloads" style="display: block;">
+            <div id="downloads" style="display: none;">
                 <h1>Downloads</h1>
                 <h2>Equation solver</h2>
                 <p>You give it as input some values which will be the degree of your equation, coefficients of your variable and finally it will ask you the value of the x just to give you back the value of the whole function!</p>
@@ -386,7 +386,7 @@
                     scrolling = true;
                     if (window.scrollY > 77.5) {
                         index.style.position = "fixed";
-                        index.style.marginTop = "-34.5%";
+                        index.style.marginTop = "-35%";
                         content.style.marginTop = "15%";
                     } else {
                         index.style.position = "sticky";
