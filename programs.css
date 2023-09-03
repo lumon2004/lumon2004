@@ -59,6 +59,10 @@ main > div#right > div#about > p > span, main > div#right > div#about a {
     text-decoration: underline;
 }
 
+main > div#right > div#downloads > div#alert {
+    display: none;
+}
+
 main > div#right > div#downloads > h2:not(:first-of-type) {
     margin-top: 5%;
 }
@@ -207,8 +211,25 @@ main > div#right > div#doc > ol > li > span {
         font-size: 8vw;
     }
 
-    main > div#right p {
+    main > div#right p, main > div#right ul > li {
         font-size: 5vw;
+        margin-bottom: 5%;
+    }
+
+    main > div#right > div#about > span#openCloseExpl {
+        font-size: 5vw;
+        color: #2997ff;
+        text-decoration: underline;
+    }
+
+    main > div#right > div#downloads > div#alert {
+        display: block;
+        padding: 5%;
+        color: var(--text);
+        border: 1px solid rgb(247, 200, 68);
+        border-radius: 20px;
+        margin-bottom: 5%;
+        margin-top: 0%;
     }
 
     main > div#right > div#downloads > div.downloadBtn > p {
@@ -233,5 +254,13 @@ main > div#right > div#doc > ol > li > span {
         margin-top: auto;
         margin-bottom: 1%;
         margin-left: 5%;
+    }
+
+    main > div#right > div#doc h2, main > div#right > div#doc > div:first-of-type > span.expand, main > div#right > div#doc > ul > li h4, main > div#right > div#doc > ul > li span.expand {
+        font-size: 7vw;
+    }
+
+    main > div#right > div#doc > ol > li, main > div#right > div#doc > ul > li {
+        font-size: 5vw;
     }
 }

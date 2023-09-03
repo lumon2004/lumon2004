@@ -79,14 +79,14 @@
                     <li>
                         <span class="material-symbols-rounded" onclick="closeMobileMenu()">close</span>
                     </li>
-                    <li onclick="openSideMenu(0, 22)">
+                    <li onclick="">
                         <p>Works</p>
                         <span class="material-symbols-rounded">arrow_forward_ios</span>
                     </li>
                     <div class="sideMenu" style="display: none">
                         <ul>
                             <li>
-                                <span class="material-symbols-rounded" onclick="closeSideMenu(0, 22)" style="margin-top: 2.5%;">arrow_back_ios</span>
+                                <span class="material-symbols-rounded" onclick="" style="margin-top: 2.5%;">arrow_back_ios</span>
                             </li>
                             <li>
                                 <p>Web Development</p>
@@ -112,14 +112,14 @@
                             <span class="material-symbols-rounded">arrow_forward_ios</span>
                         </a>
                     </li>
-                    <li onclick="openSideMenu(1, 35)">
+                    <li onclick="">
                         <p>Services</p>
                         <span class="material-symbols-rounded">arrow_forward_ios</span>
                     </li>
                     <div class="sideMenu" style="display: none">
                         <ul style="margin-top: 0%;">
                             <li>
-                                <span class="material-symbols-rounded" onclick="closeSideMenu(1, 35)">arrow_back_ios</span>
+                                <span class="material-symbols-rounded" onclick="">arrow_back_ios</span>
                             </li>
                             <li>
                                 <p>Programming and development</p>
@@ -129,14 +129,14 @@
                             <li><h2><a href="https://lumon2004.github.io/lumon2004/Database%20management.html">Database management</a></h2></li>
                         </ul>
                     </div>
-                    <li onclick="openSideMenu(2, 44)">
+                    <li onclick="">
                         <p>Contacts</p>
                         <span class="material-symbols-rounded">arrow_forward_ios</span>
                     </li>
                     <div class="sideMenu" style="display: none">
                         <ul style="margin-top: 0%;">
                             <li>
-                                <span class="material-symbols-rounded" onclick="closeSideMenu(2, 44)">arrow_back_ios</span>
+                                <span class="material-symbols-rounded" onclick="">arrow_back_ios</span>
                             </li>
                             <li>
                                 <p>Social media</p>
@@ -167,14 +167,14 @@
             </ul>
         </div>
         <div id="right" class="scroll">
-            <div id="about" style="display: block;">
+            <div id="about" style="display: none;">
                 <h1>About</h1>
-                <p>During my Computer Engineering course at university I did learn programming in C.<br>
-                    <span onclick="explainC()" id="openCloseExpl">What's C?</span>
-                    <div id="explC" style="display: none;">
-                        <p>The C language, created in 1972 at Bell Laboratories, is currently the most used programming language in university introductory computer science courses, thanks to its diffusion in the professional field, the close link with the UNIX world and the ease with which it allows switching to other languages such as C++, Java and Perl. <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">Other</a><br></p>
-                    </div>
-                <br>Given that I studied it for a whole semester, I dedicated myself as never before in learning it, and this dedication brought me to program and pull out some interesting programs you can try right now! These are:
+                <p>During my Computer Engineering course at university I did learn programming in C.<br></p>
+                <span onclick="explainC()" id="openCloseExpl">What's C?</span>
+                <div id="explC" style="display: none;">
+                    <p>The C language, created in 1972 at Bell Laboratories, is currently the most used programming language in university introductory computer science courses, thanks to its diffusion in the professional field, the close link with the UNIX world and the ease with which it allows switching to other languages such as C++, Java and Perl. <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">Other</a><br></p>
+                </div>
+                <p><br>Given that I studied it for a whole semester, I dedicated myself as never before in learning it, and this dedication brought me to program and pull out some interesting programs you can try right now! These are:</p>
                 <ul>
                     <li><b>Equation solver</b>: you give it as input some values which will be the degree of your equation, coefficients of your variable and finally it will ask you the value of the x just to give you back the value of the whole function!</li>
                     <li><b>Registry manager</b>: this program is designed for anyone who manages a personal registry where you can enter people's data, delete, modify and sort them, just like a database!</li>
@@ -182,10 +182,13 @@
                     <li><b>Guess the number</b>: this is actually a classic old game that came out in the 70's when the very first computers were born and the nerds and pioneers along with them. It's as easy as in the title, you just have to guess the number your computer has chosen!</li>
                     <li><b>Restaurant menu manager</b>: with my solution, you can easily organize your menu, adding or changing dishes with just a few simple steps. Thanks to its intuitive interface, you will be able to clearly and orderly view all the options available to your customers. I make restaurant menu management a simple and effective experience.</li>
                 </ul>
-                <br>
-                When you download one of these programs to your computer via the appropriate item on the left column, you must first select the correct download!<br>In fact, depending on the operating system you have, you will have to download one file or another!<br>If you are using a Mac, i.e. an Apple computer, then you have macOS as your operating system, and therefore you will have to click on the button with the apple symbol next to it; if you are using a computer equipped with Windows as an operating system, and therefore all those computers produced by Microsoft, Lenovo, HP, Acer or more, just click on the download with the Windows logo nearby.</p>
+                <p>When you download one of these programs to your computer via the appropriate item on the left column, you must first select the correct download!<br>In fact, depending on the operating system you have, you will have to download one file or another!<br>If you are using a Mac, i.e. an Apple computer, then you have macOS as your operating system, and therefore you will have to click on the button with the apple symbol next to it; if you are using a computer equipped with Windows as an operating system, and therefore all those computers produced by Microsoft, Lenovo, HP, Acer or more, just click on the download with the Windows logo nearby.</p>
             </div>
             <div id="downloads" style="display: none;">
+                <div id="alert">
+                    <div style="display: flex"><h3 style="text-transform: uppercase;">⚠️ warning!</h3><span class="material-symbols-rounded" style="margin-left: auto; cursor: pointer;" onclick="closeAlert()">close</span></div>
+                    <p style="margin-bottom: 0%;">These downloads below are not available for mobile devices</p>
+                </div>
                 <h1>Downloads</h1>
                 <h2>Equation solver</h2>
                 <p>You give it as input some values which will be the degree of your equation, coefficients of your variable and finally it will ask you the value of the x just to give you back the value of the whole function!</p>
@@ -238,7 +241,7 @@
                     </div>
                 </div>
             </div>
-            <div id="doc" style="display: none;">
+            <div id="doc" style="display: block;">
                 <h1>Documentation</h1>
                 <div style="display: flex; cursor: pointer;" onclick="introductionCommandLineInterface()">
                     <h2>Introduction to the command line interface</h2>

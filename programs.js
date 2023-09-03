@@ -67,3 +67,7 @@ function downloadOptions(i) {
         downloadOptions.style.display = 'none';
     }
 }
+
+function closeAlert() {
+    document.getElementById('alert').style.display = 'none';
+}

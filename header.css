@@ -107,23 +107,21 @@ div.underHeader {
   position: fixed;
   width: 95%;
   height: max-content;
-  /*margin-top: 3.35%;*/
   margin-top: 3.2%;
   background-color: var(--headerbg);
   padding: 0 2.5% 0 2.5%;
   display: flex;
-  /*max-height: 0;*/
+  max-height: 0;
   z-index: 2;
-  /*transition: max-height .5s ease;*/
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: transform .5s ease;
+  transition: max-height .5s ease;
 }
 
-/*div.underHeader div.left, div.underHeader div.right {
+div.underHeader div.left, div.underHeader div.right {
+  /*display: none;*/
   opacity: 0;
-  transition: opacity 1s ease;
-}*/
+  pointer-events: none;
+  transition: opacity .5s ease;
+}
 
 div.underHeader div.left {
   width: 40%;
@@ -168,19 +166,19 @@ div.underHeader ul li a {
 }
 
 header > ul > li:hover + div.underHeader, div.underHeader:hover {
-  /*display: flex;*/
   max-height: 50vh;
 }
 
-header > ul > li:hover + div.underHeader, div.underHeader:hover,header > ul > li:hover + div.underHeader > div.left, header > ul > li:hover + div.underHeader > div.right, div.underHeader:hover + div.left, div.underHeader:hover + div.right {
-  transform: scaleY(1);
-  /*opacity: 1;*/
+header > ul > li:hover + div.underHeader > div.left, header > ul > li:hover + div.underHeader > div.right, div.underHeader:hover div.left, div.underHeader:hover div.right {
+  /*display: block;*/
+  opacity: 1;
+  pointer-events: auto;
 }
 
 header > ul > div.mobileMenu {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1.5s ease;
+  transition: max-height 1s ease;
   width: 0;
 }
 
