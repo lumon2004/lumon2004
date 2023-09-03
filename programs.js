@@ -67,19 +67,25 @@ function instructions(i) {
 }
 
 
-function downloadOptions(i) {
-    var downloadOptions = document.getElementsByClassName('downloadOptions')[i-1];
+// Definisci uno stato globale per le opzioni di download
+var downloadOptionsOpen = false;
 
-    if (downloadOptions.style.display == 'none') {
+function downloadOptions(i) {
+    var downloadOptions = document.getElementsByClassName('downloadOptions')[i - 1];
+
+    if (!downloadOptionsOpen) {
         if (window.innerWidth <= 415) {
             downloadOptions.style.display = 'grid';
         } else {
             downloadOptions.style.display = 'flex';
         }
+        downloadOptionsOpen = true;
     } else {
         downloadOptions.style.display = 'none';
+        downloadOptionsOpen = false;
     }
 }
+
 
 function closeAlert() {
     document.getElementById('alert').style.display = 'none';
