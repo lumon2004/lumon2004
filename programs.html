@@ -79,14 +79,14 @@
                     <li>
                         <span class="material-symbols-rounded" onclick="closeMobileMenu()">close</span>
                     </li>
-                    <li onclick="">
+                    <li onclick="openSideMenu(1)">
                         <p>Works</p>
                         <span class="material-symbols-rounded">arrow_forward_ios</span>
-                    </li>
+                    </li>                    
                     <div class="sideMenu" style="display: none">
                         <ul>
                             <li>
-                                <span class="material-symbols-rounded" onclick="" style="margin-top: 2.5%;">arrow_back_ios</span>
+                                <span class="material-symbols-rounded" onclick="closeSideMenu(1)" style="margin-top: 2.5%;">arrow_back_ios</span>
                             </li>
                             <li>
                                 <p>Web Development</p>
@@ -112,14 +112,14 @@
                             <span class="material-symbols-rounded">arrow_forward_ios</span>
                         </a>
                     </li>
-                    <li onclick="">
+                    <li onclick="openSideMenu(2)">
                         <p>Services</p>
                         <span class="material-symbols-rounded">arrow_forward_ios</span>
                     </li>
                     <div class="sideMenu" style="display: none">
-                        <ul style="margin-top: 0%;">
+                        <ul style="margin-top: -10%;">
                             <li>
-                                <span class="material-symbols-rounded" onclick="">arrow_back_ios</span>
+                                <span class="material-symbols-rounded" onclick="closeSideMenu(2)">arrow_back_ios</span>
                             </li>
                             <li>
                                 <p>Programming and development</p>
@@ -129,14 +129,14 @@
                             <li><h2><a href="https://lumon2004.github.io/lumon2004/Database%20management.html">Database management</a></h2></li>
                         </ul>
                     </div>
-                    <li onclick="">
+                    <li onclick="openSideMenu(3)">
                         <p>Contacts</p>
                         <span class="material-symbols-rounded">arrow_forward_ios</span>
                     </li>
                     <div class="sideMenu" style="display: none">
-                        <ul style="margin-top: 0%;">
+                        <ul style="margin-top: -10%;">
                             <li>
-                                <span class="material-symbols-rounded" onclick="">arrow_back_ios</span>
+                                <span class="material-symbols-rounded" onclick="closeSideMenu(3)">arrow_back_ios</span>
                             </li>
                             <li>
                                 <p>Social media</p>
@@ -167,7 +167,7 @@
             </ul>
         </div>
         <div id="right" class="scroll">
-            <div id="about" style="display: none;">
+            <div id="about" style="display: block;">
                 <h1>About</h1>
                 <p>During my Computer Engineering course at university I did learn programming in C.<br></p>
                 <span onclick="explainC()" id="openCloseExpl">What's C?</span>
@@ -241,7 +241,7 @@
                     </div>
                 </div>
             </div>
-            <div id="doc" style="display: block;">
+            <div id="doc" style="display: none;">
                 <h1>Documentation</h1>
                 <div style="display: flex; cursor: pointer;" onclick="introductionCommandLineInterface()">
                     <h2>Introduction to the command line interface</h2>
@@ -277,22 +277,22 @@
                         <div class="instructions">
                             <p>When you run the "Equation Solver" program, it will ask you the equation's degree and you have to press a number on your keyboard and press "enter". At this point it will ask you the coefficient of your biggest term, and as you give it the coefficients following always the same way, it will go on asking you for the terms of the lower degree, until it reaches the known term (written as x^0). At this point he will print the equation for you, so that you can check that it is correct, and then you will have to enter the value of the x. This way, you'll have given the program every piece of data it needs and it will return the value of your equation.<br>
                             Here is a simple example:<br></p>
-                                <div class="example">
-                                    <p>
-                                        <span>First step</span><br>
-                                        What's your equation's degree? <b>2</b><br>
-                                        <span>Second step</span><br>
-                                        Coefficient of x^2: <b>4</b><br>
-                                        Coefficient of x^1: <b>3</b><br>
-                                        Coefficient of x^0: <b>2</b><br>
-                                        <span>Third step</span><br>
-                                        f(x) = +4.0x^2 +3.0x + 2.0<br>
-                                        <span>Fourth step</span><br>
-                                        What's the x-value? <b>5</b><br>
-                                        <span>Last step</span><br>
-                                        f(5.0) = 117.0
-                                    </p>
-                                </div>
+                            <div class="example">
+                                <p>
+                                    <span>First step</span><br>
+                                    What's your equation's degree? <b>2</b><br>
+                                    <span>Second step</span><br>
+                                    Coefficient of x^2: <b>4</b><br>
+                                    Coefficient of x^1: <b>3</b><br>
+                                    Coefficient of x^0: <b>2</b><br>
+                                    <span>Third step</span><br>
+                                    f(x) = +4.0x^2 +3.0x + 2.0<br>
+                                    <span>Fourth step</span><br>
+                                    What's the x-value? <b>5</b><br>
+                                    <span>Last step</span><br>
+                                    f(5.0) = 117.0
+                                </p>
+                            </div>
                         </div>
                     </li>
                     <li>

@@ -28,31 +28,44 @@ function explainC() {
     }
 }
 
+// Definisci uno stato globale per il pannello di introduzione
+var introductionState = false;
+
 function introductionCommandLineInterface() {
     var expandIcon = document.getElementsByClassName('expand')[0];
     var introductionC = document.getElementById('introductionC');
 
-    if (expandIcon.style.transform == 'rotate(0deg)') {
+    // Controlla lo stato del pannello di introduzione
+    if (!introductionState) {
         expandIcon.style.transform = 'rotate(90deg)';
         introductionC.style.display = 'block';
+        introductionState = true;
     } else {
         expandIcon.style.transform = 'rotate(0deg)';
         introductionC.style.display = 'none';
+        introductionState = false;
     }
 }
 
-function instructions(i) {
-    var expandIcon = document.getElementsByClassName('expand')[i];
-    var instructionPanel = document.getElementsByClassName('instructions')[i-1];
+// Definisci uno stato globale per tenere traccia dello stato dei pannelli
+var panelStates = {};
 
-    if (expandIcon.style.transform == 'rotate(0deg)') {
+function instructions(i) {
+    var expandIcon = document.querySelectorAll('.expand')[i];
+    var instructionPanel = document.querySelectorAll('.instructions')[i - 1];
+    
+    // Controlla lo stato del pannello corrente
+    if (!panelStates[i]) {
         expandIcon.style.transform = 'rotate(90deg)';
         instructionPanel.style.display = 'block';
+        panelStates[i] = true;
     } else {
         expandIcon.style.transform = 'rotate(0deg)';
         instructionPanel.style.display = 'none';
+        panelStates[i] = false;
     }
 }
+
 
 function downloadOptions(i) {
     var downloadOptions = document.getElementsByClassName('downloadOptions')[i-1];

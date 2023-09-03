@@ -12,10 +12,18 @@ function closeMobileMenu() {
 
 /* APRI E CHIUDI MENU LATERALE INTERNO HEADER MENU */
 
-function openSideMenu(i, j) {
-    
+function openSideMenu(i) {
+    document.getElementsByClassName('sideMenu')[i-1].style.display = 'block';
+    document.getElementsByTagName('li')[21].style.display = 'none';     // works
+    document.getElementsByTagName('li')[33].style.display = 'none';     // repository
+    document.getElementsByTagName('li')[34].style.display = 'none';     // services
+    document.getElementsByTagName('li')[40].style.display = 'none';     // contacts
 }
 
-function closeSideMenu(i, j) {
-    
+function closeSideMenu(i) {
+    document.getElementsByClassName('sideMenu')[i-1].style.display = 'none';
+    document.getElementsByTagName('li')[21].style.display = 'flex';     // works
+    document.getElementsByTagName('li')[33].style.display = 'flex';     // repository
+    document.getElementsByTagName('li')[34].style.display = 'flex';     // services
+    document.getElementsByTagName('li')[40].style.display = 'flex';     // contacts
 }
