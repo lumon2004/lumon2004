@@ -115,6 +115,10 @@ main > div.section > div > div.projects > h3 > a#C {
     color: var(--bg);
 }
 
+main > div.section:nth-child(3) > div {
+    margin-left: 2%;
+}
+
 @media screen and (max-width: 415px) {
     main {
         width: 90%;
@@ -147,7 +151,7 @@ main > div.section > div > div.projects > h3 > a#C {
         width: auto;
     }
 
-    main > div.section:nth-child(2) > div:nth-child(2) {
+    main > div.section:nth-child(2) > div:nth-child(2), main > div.section:nth-child(3) > div {
         margin-left: 0%;
     }
 
