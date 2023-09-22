@@ -1,0 +1,142 @@
+:root {
+    --text: #000;
+    --bg: #fff;
+    --headerBg: rgb(247, 247, 247);
+    --borderShadow: rgba(0,0,0,.2);
+    --shadowInt: rgba(0,0,0,.45);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #fff;
+        --bg: #242424;
+        --headerBg: rgb(87, 87, 87);
+        --borderShadow: rgba(255,255,255,.35);
+        --shadowInt: rgba(0,0,0,.8);
+    }
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0%;
+}
+
+header {
+    display: flex;
+    padding: 2% 3%;
+    background-color: var(--headerBg);
+}
+
+header > * {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header > h1 {
+    margin-right: auto;
+}
+
+header > a {
+    background-color: rgb(255, 213, 0);
+    color: #000;
+    text-decoration: none;
+    padding: .5% 1%;
+    border-radius: 20px;
+}
+
+header > a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    padding: 0%;
+    height: 100%;
+}
+
+div#shadow {
+    background-color: var(--shadowInt);
+    height: 102vh;
+    width: 100%;
+    position: absolute;
+    margin-top: -100vh;
+    z-index: 1;
+    transition-duration: 1s;
+}
+
+div.introduction {
+    position: absolute;
+    transition-duration: 1.5s;
+    top: 100%;
+    background-color: var(--bg);
+    border: 0px solid var(--text);
+    border-radius: 20px;
+    padding: 5% 10%;
+    margin: 0% 27%;
+    box-shadow: 0 0 10px var(--borderShadow); /* Ombra per evidenziare il div */
+    backdrop-filter: blur(10px); /* Applica lo sfocatura */
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+div.introduction > span.material-symbols-rounded {
+    display: none;
+}
+
+div.introduction > button {
+    border: 0;
+    background-color: rgb(255, 213, 0);
+    border-radius: 20px;
+    padding: 5% 10%;
+    font-size: 2vw;
+    color: #fff;
+    width: max-content;
+    margin: 0% 30%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 415px) {
+    :root {
+        --shadowInt: rgba(0,0,0,.8);
+    }
+
+    header {
+        padding: 5% 3%;
+    }
+
+    header > a {
+        padding: 2% 5%;
+    }
+
+    div.introduction {
+        margin: 0%;
+        width: 80%;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        height: 85vh;
+    }
+
+    div.introduction > span.material-symbols-rounded {
+        display: block;
+        font-size: 20vw;
+        text-align: center;
+    }
+
+    div.introduction > h1 {
+        font-size: 12vw;
+        text-align: center;
+        margin-top: 2%;
+    }
+    
+    div.introduction > p {
+        font-size: 6vw;
+    }
+
+    div.introduction > button {
+        font-size: 6vw;
+        margin-top: 5vh;
+    }
+}

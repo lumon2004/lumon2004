@@ -66,11 +66,15 @@ main > div.section > div > div.projects > a {
     transition: 1s;
 }
 
-main > div.section > div > div.projects > a#LS {
-    width: 30%;
+main > div.section > div > div.projects > a#Notes {
     margin-right: 5%;
-    background-image: linear-gradient(160deg, rgb(108, 0, 209) 32.77%, var(--text));
-    height: 2%;
+    text-align: center;
+    background-image: linear-gradient(140deg, var(--text) -50%, rgb(255, 213, 0));
+    color: #000;
+}
+
+main > div.section > div > div.projects > a#Notes > span.material-symbols-rounded {
+    font-size: 6vw;
 }
 
 main > div.section > div > div.projects > a#Marvel {
@@ -181,31 +185,6 @@ main > div.section:nth-child(3) > div {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         margin-top: -1.5%;
-    }
-    
-    main > div.section > div > div.projects > a#LS {
-        width: auto;
-        height: auto;
-        margin-right: 0;
-        background-image: unset;
-    }
-    
-    main > div.section > div > div.projects > a#LS > div {
-        background-color: var(--text);
-    }
-    
-    main > div.section > div > div.projects > a#LS img {
-        background-image: linear-gradient(160deg, rgb(108, 0, 209) 32.77%, var(--text) 76.05%);
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-
-    main > div.section > div > div.projects > a#LS h5 {
-        color: var(--bg);
-        font-size: 6vw;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        width: 100%;
     }
 
     main > div.section > div > div.projects > a#Marvel {
