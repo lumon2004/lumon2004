@@ -187,6 +187,35 @@ main > div.section:nth-child(3) > div {
         margin-top: -1.5%;
     }
 
+    main > div.section > div > div.projects > a#Notes {
+        margin: 0;
+        width: auto;
+        height: auto;
+        background-image: unset;
+        text-align: center;
+    }
+
+    main > div.section > div > div.projects > a#Notes > span.material-symbols-rounded {
+        background-image: linear-gradient(140deg, var(--text) -50%, rgb(255,213,0));
+        font-size: 15vw;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 5% 0%;
+    }
+    
+    main > div.section > div > div.projects > a#Notes > div {
+        background-image: linear-gradient(44deg, var(--text) -80%, rgb(255,213,0));
+        padding: 2.5% 0% 2.5% 0%;
+        margin-bottom: 7.5%;
+    }
+    
+    main > div.section > div > div.projects > a#Notes > div > h5 {
+        font-size: 6vw;
+        text-align: center;
+        width: 100%;
+    }
+
     main > div.section > div > div.projects > a#Marvel {
         width: auto;
         height: auto;
