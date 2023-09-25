@@ -43,7 +43,7 @@ header > a {
     text-decoration: none;
     padding: .5% 1%;
     border-radius: 20px;
-    color: #000;
+    color: #fff;
 }
 
 header > a:hover {
