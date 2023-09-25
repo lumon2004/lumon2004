@@ -1,3 +1,23 @@
+:root {
+    --bg: rgba(111, 132, 230, .06);
+    --passwordBlue: #2997ff;
+    --notesYellow: rgb(255, 213, 0);
+    --marvelRed: rgb(225, 0, 31);
+    --equationBlue: #0099cc;
+    --registryGrey: #666666;
+    --calculatorOrange: rgb(255, 136, 0);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000;
+    }
+}
+
+body {
+    background-color: var(--bg);
+}
+
 main {
     width: 70%;
     margin-left: auto;
@@ -10,40 +30,30 @@ main b {
 }
 
 main > div.section {
-    display: flex;
     margin-top: 5%;
     width: 100%;
 }
 
-main > div.section > div:nth-child(1) {
-    rotate: 90deg;
-    height: max-content;
-}
-
-main > div.section h1.category {
-    border-left: 3px solid var(--text);
-    padding-left: 10%;
-    margin-left: 35%;
+main > div.section > h1.category {
+    margin-left: auto;
+    margin-right: auto;
     font-size: 3vw;
-    transition: 1s;
+    width: fit-content;
+    padding: 0% .5%;
+    text-transform: lowercase;
+    font-weight: 500;
+    margin-bottom: 5%;
 }
 
-main > div.section h1.category:hover {
-    color: rgb(255, 115, 0);
-    border-color: rgb(255, 115, 0);
+main > div.section > h1.category > span.symbols {
+    color: grey;
 }
 
-main > div.section h1#adjTitle {
-    position: relative;
-    top: 15px;
-    width: 180%;
+main > div.section:nth-child(2) > div {
+    width: 100%;
 }
 
-main > div.section:nth-child(2) > div:nth-child(2) {
-    margin-left: -2%;
-}
-
-main > div.section > div > h2 {
+main > div.section > h2 {
     font-size: 2vw;
     margin-bottom: 1%;
 }
@@ -53,57 +63,166 @@ main > div.section p {
     margin-left: 2%;
 }
 
-main > div.section > div > div.projects {
+main > div.section > div.projects {
     width: 100%;
     position: relative;
-    display: flex;
+    display: block;
     margin-bottom: 1%;
 }
 
-main > div.section > div > div.projects > a {
-    padding: 7.5% 7.5% 2.5% 7.5%;
-    border-radius: 20px;
-    transition: 1s;
+main > div.section > div.projects > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-main > div.section > div > div.projects > a#Notes {
-    margin-right: 5%;
+main > div.section > div.projects > ul > li {
+    flex-grow: 0;
+    flex-shrink: 1;
+    position: relative;
+    margin-bottom: 1.2em;
+    border-radius: 0.2rem;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 8px 6px -6px var(--passwordBlue);
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition-property: transform, box-shadow;
+    /*width: 34.85%;*/
+    width: 30%;
+}
+
+main > div.section > div.projects > ul > li:hover {
+    transform: translateY(-8px);
+}
+
+main > div.section > div.projects > ul > li:nth-child(1):hover {
+    box-shadow: 10px  8px 6px -6px var(--passwordBlue);
+}
+
+main > div.section > div.projects > ul > li:nth-child(2):hover {
+    box-shadow: 10px  8px 6px -6px var(--notesYellow);
+}
+
+main > div.section > div.projects > ul > li:nth-child(3):hover {
+    box-shadow: 10px  8px 6px -6px var(--marvelRed);
+}
+
+main > div.section > div.projects > ul > li:nth-child(2) {
+    box-shadow: 0px 8px 6px -6px var(--notesYellow);
+}
+
+main > div.section > div.projects > ul > li:nth-child(3) {
+    box-shadow: 0px 8px 6px -6px var(--marvelRed);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(1) {
+    box-shadow: 0px  8px 6px -6px var(--equationBlue);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(1):hover {
+    box-shadow: 10px  8px 6px -6px var(--equationBlue);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(2):hover {
+    box-shadow: 10px  8px 6px -6px var(--registryGrey);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(3):hover {
+    box-shadow: 10px  8px 6px -6px var(--calculatorOrange);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(2) {
+    box-shadow: 0px 8px 6px -6px var(--registryGrey);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(3) {
+    box-shadow: 0px 8px 6px -6px var(--calculatorOrange);
+}
+
+main > div.section > div.projects > ul > li > span.material-symbols-rounded {
     text-align: center;
-    background-image: linear-gradient(140deg, var(--text) -50%, rgb(255, 213, 0));
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 500%;
+    color: var(--passwordBlue);
+}
+
+main > div.section > div.projects > ul > li:nth-child(2) > span.material-symbols-rounded {
+    color: var(--notesYellow);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(1) > span.material-symbols-rounded {
+    color: var(--equationBlue);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(2) > span.material-symbols-rounded {
+    color: var(--registryGrey);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(3) > span.material-symbols-rounded {
+    color: var(--calculatorOrange);
+}
+
+main > div.section > div.projects > ul > li > img {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 35%;
+}
+
+main > div.section > div.projects > ul > li > div {
+    padding: 1.75em 2em;
+    background-color: #fff;
+    border-bottom-right-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
+}
+
+main > div.section > div.projects > ul > li > div > h5 {
+    font-size: 1.5vw;
+    font-weight: 550;
+    margin-bottom: 2%;
     color: #000;
 }
 
-main > div.section > div > div.projects > a#Notes > span.material-symbols-rounded {
-    font-size: 6vw;
+main > div.section > div.projects > ul > li:nth-child(3) > div > h5 {
+    font-size: 1.3vw;
+    margin-bottom: 3%;
 }
 
-main > div.section > div > div.projects > a#Marvel {
-    width: 55%;
-    background-image: linear-gradient(119deg, rgb(192, 215, 231) 23.11%, #bceff6 39.92%, #edd8e8 54.62%, #8699c7);
-}
-
-main > div.section img {
+main > div.section > div.projects > ul > li > div > a {
+    color: var(--passwordBlue);
     width: 100%;
 }
 
-main > div.section > div > div.projects > a > div > h5 {
-    text-align: center;
-    font-size: 2vw;
+main > div.section > div.projects > ul > li > div > a:hover {
+    text-decoration: underline;
 }
 
-main > div.section > div > div.projects > a#LS > div > h5 {
-    color: var(--bg);
+main > div.section > div.projects > ul > li:nth-child(2) > div > a {
+    color: var(--notesYellow);
 }
 
-main > div.section > div > div.projects > a#Marvel > div > h5 {
-    color: #000;
+main > div.section > div.projects > ul > li:nth-child(3) > div > a {
+    color: var(--marvelRed);
 }
 
-main > div.section > div > div.projects > a#Marvel > div {
-    margin-bottom: 5%;
+main > div.section > div.projects:last-of-type > ul > li:nth-child(1) > div > a {
+    color: var(--equationBlue);
 }
 
-main > div.section > div > div.projects > h3 {
+main > div.section > div.projects:last-of-type > ul > li:nth-child(2) > div > a {
+    color: var(--registryGrey);
+}
+
+main > div.section > div.projects:last-of-type > ul > li:nth-child(3) > div > a {
+    color: var(--calculatorOrange);
+}
+
+main > div.section > div.projects > h3 {
     padding: 2.5%;
     background-color: var(--text);
     border-radius: 20px;
@@ -111,11 +230,11 @@ main > div.section > div > div.projects > h3 {
     transition: .5s;
 }
 
-main > div.section > div > div.projects > h3:hover {
+main > div.section > div.projects > h3:hover {
     background-color: #2997ff;
 }
 
-main > div.section > div > div.projects > h3 > a#C {
+main > div.section > div.projects > h3 > a#C {
     color: var(--bg);
 }
 
@@ -132,15 +251,9 @@ main > div.section:nth-child(3) > div {
         display: block;
     }
 
-    main > div.section > div:nth-child(1) {
-        rotate: 0deg;
-        height: auto;
-    }
-
-    main > div.section h1.category {
+    main > div.section > h1.category {
         font-size: 7vw;
         margin-left: 0%;
-        padding-left: 5%;
         transition: 0s;
     }
 
@@ -149,23 +262,19 @@ main > div.section:nth-child(3) > div {
         margin-top: 5%;
     }
 
-    main > div.section h1#adjTitle {
-        position: unset;
-        top: unset;
-        width: auto;
-    }
-
     main > div.section:nth-child(2) > div:nth-child(2), main > div.section:nth-child(3) > div {
         margin-left: 0%;
     }
 
-    main > div.section > div > h2 {
+    main > div.section > h2 {
         font-size: 5vw;
         margin-top: 2.5%;
         margin-bottom: 2.5%;
+        padding-left: 5%;
+        font-weight: 200;
     }
 
-    main > div.section > div > div.projects {
+    main > div.section > div.projects {
         display: block;
         position: unset;
         width: 90%;
@@ -173,96 +282,36 @@ main > div.section:nth-child(3) > div {
         margin-right: auto;
     }
 
-    main > div.section > div > div.projects > a {
-        border-radius: 20px;
-        transition: 0s;
-        padding: 0;
-    }
-
-    main > div.section > div > div.projects > a > div {
-        display: flex;
-        width: 100%;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        margin-top: -1.5%;
-    }
-
-    main > div.section > div > div.projects > a#Notes {
-        margin: 0;
-        width: auto;
-        height: auto;
-        background-image: unset;
-        text-align: center;
-    }
-
-    main > div.section > div > div.projects > a#Notes > span.material-symbols-rounded {
-        background-image: linear-gradient(140deg, var(--text) -50%, rgb(255,213,0));
-        font-size: 15vw;
-        width: 100%;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        padding: 5% 0%;
-    }
-    
-    main > div.section > div > div.projects > a#Notes > div {
-        background-image: linear-gradient(44deg, var(--text) -80%, rgb(255,213,0));
-        padding: 2.5% 0% 2.5% 0%;
-        margin-bottom: 7.5%;
-    }
-    
-    main > div.section > div > div.projects > a#Notes > div > h5 {
-        font-size: 6vw;
-        text-align: center;
+    main > div.section > div.projects > ul > li {
         width: 100%;
     }
 
-    main > div.section > div > div.projects > a#Marvel {
-        width: auto;
-        height: auto;
-        margin-right: 0;
-        background-image: unset;
+    main > div.section > div.projects > ul > li > div > h5, main > div.section > div.projects > ul > li:nth-child(3) > div > h5 {
+        font-size: 5vw;
     }
 
-    main > div.section > div > div.projects > a#Marvel > div {
-        background-image: linear-gradient(58deg, rgb(192, 215, 231) 23.11%, #bceff6 39.92%, #edd8e8 54.62%, #8699c7);
-        padding: 3% 0%;
+    main > div.section > div.projects > ul > li:nth-child(3) {
+        box-shadow: 0px 15px 6px -6px var(--marvelRed);
     }
 
-    main > div.section > div > div.projects > a#Marvel img {
-        background-image: linear-gradient(119deg, rgb(192, 215, 231) 23.11%, #bceff6 39.92%, #edd8e8 54.62%, #8699c7);
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        padding: 5%;
-        width: 90%;
+    main > div.section > div.projects > ul > li:nth-child(3):hover {
+        box-shadow: 10px 15px 6px -6px var(--marvelRed);
     }
 
-    main > div.section:nth-child(2) > div > div.projects > a#Marvel > div > h5 {
-        color: var(--bg);
-        font-size: 6vw;
-        /*padding-top: 5%;*/
-        padding-bottom: 2%;
-        width: 100%;
-    }
-
-    main > div.section > div > div.projects:last-of-type {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    main > div.section > div > div.projects > h3 {
+    main > div.section > div.projects > h3 {
         font-size: 4vw;
         border-radius: 0px;
         background-color: transparent;
     }
     
-    main > div.section > div > div.projects > h3 > a#C {
+    main > div.section > div.projects > h3 > a#C {
         color: var(--text);
         font-weight: 500;
         text-decoration: underline;
         color: #2997ff;
     }
     
-    main > div.section > div > div.projects > h3:hover {
+    main > div.section > div.projects > h3:hover {
         background-color: transparent;
     }
 }

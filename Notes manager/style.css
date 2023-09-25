@@ -139,4 +139,9 @@ div.introduction > button {
         font-size: 6vw;
         margin-top: 5vh;
     }
+
+    .mce-content-body {
+        color: #fff;
+        margin: 1em;
+    }
 }

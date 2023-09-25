@@ -14,6 +14,31 @@ function howToUse() {
 
 /* GENERATORE PASSWORD */
 
+function placeholderPassword() {
+    // Ottieni riferimenti agli elementi DOM
+    const lengthInput = document.getElementById("length");
+    const passwordInput = document.getElementById("password");
+
+    // Aggiungi un gestore di eventi per rilevare i cambiamenti nella lunghezza
+    lengthInput.addEventListener("input", updatePlaceholder);
+
+    // Funzione per aggiornare il placeholder
+    function updatePlaceholder() {
+        const length = parseInt(lengthInput.value); // Ottieni il valore come numero
+
+        // Crea un placeholder con un numero di pallini corrispondente alla lunghezza
+        const placeholder = "•".repeat(length);
+
+        // Imposta il placeholder nell'input password
+        passwordInput.placeholder = placeholder;
+    }
+
+    // Chiamalo inizialmente per impostare il placeholder in base al valore predefinito
+    updatePlaceholder();
+}
+
+placeholderPassword();
+
 var copyIcon = document.getElementsByClassName("material-symbols-rounded")[1];
 
 function generatePassword() {
@@ -36,33 +61,47 @@ function generatePassword() {
     if (includeSymbols) validCharset += symbolsCharset;
 
     let password = "";
-    for (let i = 0; i < length; i++) {
+    let currentIndex = 0; // Indice per tener traccia della lettera corrente
+
+    function generateLetter() {
+        if (currentIndex < length) {
         const randomIndex = Math.floor(Math.random() * validCharset.length);
         password += validCharset[randomIndex];
+        document.getElementById("password").value = password;
+        currentIndex++;
+
+        // Richiedi il prossimo frame dell'animazione
+        requestAnimationFrame(generateLetter);
+        }
     }
 
-    document.getElementById("password").value = password;
+    // Inizia l'animazione
+    generateLetter();
 }
 
 function copyToClipboard() {
     const passwordField = document.getElementById("password");
     const passwordText = passwordField.value;
-
-    if (!navigator.clipboard) {
-        // Clipboard API non è supportato dal browser
-        alert("Copiare negli appunti non è supportato da questo browser. Puoi copiare manualmente il testo.");
-        return;
-    }
-
-    navigator.clipboard.writeText(passwordText)
+  
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(passwordText)
         .then(() => {
             // Copia riuscita
-            copyIcon.textContent = "done";
             console.log("Password copiata negli appunti con successo!");
+            copyIcon.textContent = "done";
         })
         .catch(err => {
-            copyIcon.textContent = "error";
-            console.error("Errore nella copia negli appunti:", err);
-            alert("Si è verificato un errore durante la copia negli appunti.");
+            // Fallback per la copia manuale
+            copyManually(err);
         });
+    } else {
+        // Fallback per la copia manuale
+        copyManually();
+    }
+}
+  
+function copyManually(err) {
+    copyIcon.textContent = "error";
+    console.error("Errore nella copia negli appunti:", err);
+    alert("Ops! Si è verificato un errore durante la copia negli appunti. Dovrai copiarla manualmente");
 }

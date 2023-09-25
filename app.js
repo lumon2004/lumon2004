@@ -14,16 +14,16 @@ function closeMobileMenu() {
 
 function openSideMenu(i) {
     document.getElementsByClassName('sideMenu')[i-1].style.display = 'block';
-    document.getElementsByTagName('li')[20].style.display = 'none';     // works
-    document.getElementsByTagName('li')[31].style.display = 'none';     // repository
-    document.getElementsByTagName('li')[32].style.display = 'none';     // services
-    document.getElementsByTagName('li')[38].style.display = 'none';     // contacts
+    document.getElementsByTagName('li')[22].style.display = 'none';     // works
+    document.getElementsByTagName('li')[35].style.display = 'none';     // repository
+    document.getElementsByTagName('li')[36].style.display = 'none';     // services
+    document.getElementsByTagName('li')[42].style.display = 'none';     // contacts
 }
 
 function closeSideMenu(i) {
     document.getElementsByClassName('sideMenu')[i-1].style.display = 'none';
-    document.getElementsByTagName('li')[20].style.display = 'flex';     // works
-    document.getElementsByTagName('li')[31].style.display = 'flex';     // repository
-    document.getElementsByTagName('li')[32].style.display = 'flex';     // services
-    document.getElementsByTagName('li')[38].style.display = 'flex';     // contacts
+    document.getElementsByTagName('li')[22].style.display = 'flex';     // works
+    document.getElementsByTagName('li')[35].style.display = 'flex';     // repository
+    document.getElementsByTagName('li')[36].style.display = 'flex';     // services
+    document.getElementsByTagName('li')[42].style.display = 'flex';     // contacts
 }

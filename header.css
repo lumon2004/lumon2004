@@ -162,7 +162,7 @@ div.underHeader ul li a {
 }
 
 header > ul > li:hover + div.underHeader, div.underHeader:hover {
-  max-height: 50vh;
+  max-height: 80vh;
 }
 
 header > ul > li:hover + div.underHeader > div.left, header > ul > li:hover + div.underHeader > div.right, div.underHeader:hover div.left, div.underHeader:hover div.right {

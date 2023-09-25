@@ -1,19 +1,43 @@
+var initial;
+
+// Ottieni l'elemento <main> specifico
+var mainElement = document.getElementsByTagName("main")[0];
+
+// Ottieni il valore di backgroundColor da mainElement
+var computedStyle = getComputedStyle(mainElement);
+var backgroundColor = computedStyle.backgroundColor;
+
+if (backgroundColor.trim().toLowerCase() === "rgb(255, 255, 255)") {
+    initial = "#000";
+} else if (backgroundColor.trim().toLowerCase() === "rgb(0, 0, 0)") {
+    initial = "#fff"; 
+}
+
 function openAbout() {
     document.getElementById('about').style.display="block";
     document.getElementById('downloads').style.display="none";
     document.getElementById('doc').style.display="none";
+    document.getElementById('aboutLabel').style.color = "#2997ff";
+    document.getElementById('downloadLabel').style.color = initial;
+    document.getElementById('docLabel').style.color = initial;
 }
 
 function openDownloads() {
     document.getElementById('about').style.display="none";
     document.getElementById('downloads').style.display="block";
     document.getElementById('doc').style.display="none";
+    document.getElementById('aboutLabel').style.color = initial;
+    document.getElementById('downloadLabel').style.color = "#2997ff";
+    document.getElementById('docLabel').style.color = initial;
 }
 
 function openDocumentation() {
     document.getElementById('about').style.display="none";
     document.getElementById('downloads').style.display="none";
     document.getElementById('doc').style.display="block";
+    document.getElementById('aboutLabel').style.color = initial;
+    document.getElementById('downloadLabel').style.color = initial;
+    document.getElementById('docLabel').style.color = "#2997ff";
 }
 
 function explainC() {
