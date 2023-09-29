@@ -246,6 +246,7 @@ main > div.section:nth-child(3) > div {
 @media screen and (max-width: 415px) {
     main {
         width: 90%;
+        margin-top: 17.5%;
     }
 
     main > div.section {

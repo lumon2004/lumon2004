@@ -223,7 +223,7 @@ cursor: pointer;
 
 @media screen and (max-width: 415px) {
   header {
-    margin-top: -12.5%;
+    margin-top: -17.5%;
   }
 
   header > ul > li:not(:first-child, :last-of-type) {
