@@ -9,6 +9,23 @@
     <link href="programs.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" href="code.png">
+    <style>
+        header {
+            margin-top: -3.5%;
+        }
+        @media screen and (max-width: 415px) {
+            header {
+                position: unset !important;
+                margin-top: 0%;
+            }
+            main {
+                margin-top: 0;
+            }
+            .mobileMenu {
+                z-index: 3;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -153,23 +170,16 @@
             </div>
         </ul>
     </header>
-    <div id="notifica">
-        <p>This webpage is still in beta-testing. For any tips or bugs reporting</p>
-        <div>
-            <a href="mailto: lucamonaco04@libero.it">Feedback</a>
-            <span class="material-symbols-rounded">arrow_forward_ios</span>
-        </div>
-    </div>
     <main>
         <div id="left" class="scroll">
             <ul>
-                <li onclick="openAbout()" id="aboutLabel" style="color: #2997ff">About</li>
+                <li onclick="openAbout()" id="aboutLabel">About</li>
                 <li onclick="openDownloads()" id="downloadLabel">Downloads</li>
                 <li onclick="openDocumentation()" id="docLabel">Documentation</li>
             </ul>
         </div>
         <div id="right" class="scroll">
-            <div id="about" style="display: block;">
+            <div id="about">
                 <h1>About</h1>
                 <p>During my Computer Engineering course at university I did learn programming in C.<br></p>
                 <span onclick="explainC()" id="openCloseExpl">What's C?</span>
@@ -186,7 +196,7 @@
                 </ul>
                 <p>When you download one of these programs to your computer via the appropriate item on the left column, you must first select the correct download!<br>In fact, depending on the operating system you have, you will have to download one file or another!<br>If you are using a Mac, i.e. an Apple computer, then you have macOS as your operating system, and therefore you will have to click on the button with the apple symbol next to it; if you are using a computer equipped with Windows as an operating system, and therefore all those computers produced by Microsoft, Lenovo, HP, Acer or more, just click on the download with the Windows logo nearby.</p>
             </div>
-            <div id="downloads" style="display: none;">
+            <div id="downloads">
                 <div id="alert">
                     <div style="display: flex"><h3 style="text-transform: uppercase;">⚠️ warning!</h3><span class="material-symbols-rounded" style="margin-left: auto; cursor: pointer;" onclick="closeAlert()">close</span></div>
                     <p style="margin-bottom: 0%;">These downloads below are not available for mobile devices</p>
@@ -243,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div id="doc" style="display: none;">
+            <div id="doc">
                 <h1>Documentation</h1>
                 <div style="display: flex; cursor: pointer;" onclick="introductionCommandLineInterface()">
                     <h2>Introduction to the command line interface</h2>
@@ -367,6 +377,7 @@
     </footer>
     <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
     <script src="app.js"></script>
+    <script src="christmas.js"></script>
     <script src="programs.js"></script>
     <script>
         if (window.innerWidth <= 415) {
@@ -377,13 +388,15 @@
 
                 if (!scrolling) {
                     scrolling = true;
-                    if (window.scrollY > 77.5) {
+                    if (window.scrollY > 50) {
                         index.style.position = "fixed";
-                        index.style.marginTop = "-36.5%";
-                        content.style.marginTop = "15%";
+                        index.style.marginTop = "-30%";
+                        index.style.zIndex = "2";
+                        content.style.marginTop = "17.5%";
                     } else {
                         index.style.position = "sticky";
                         index.style.marginTop = "0%";
+                        index.style.zIndex = "0";
                         content.style.marginTop = "0%";
                     }
                     setTimeout(function() {
@@ -391,8 +404,57 @@
                     }, 100);
                 }
             });
+        }        
+    </script>
+    <script>
+        var index = document.getElementById("left");
+        var content = document.getElementById("right");
+        var about = document.getElementById("about");
+        var download = document.getElementById("downloads");
+        var downloadBtns = document.querySelectorAll(".downloadBtn p");
+        var documentation = document.getElementById("doc");
+        if (Christmas) {
+            header.style.paddingBottom = ".5%";
+            document.getElementsByTagName("main")[0].style.backgroundColor = verdeSalvia;
+            index.style.backgroundColor = verdeSalvia;
+            index.style.color = bianco;
+            content.style.backgroundColor = verdeAbete;
+            content.style.color = bianco;
+            for (i=0; i<=2; i++) {
+                document.getElementsByTagName("h1")[i].style.color = rossoScuro;
+            }
+            document.getElementById("openCloseExpl").style.color = rossoScuro;
+            about.getElementsByTagName("a")[0].style.color = rossoScuro;
+            document.getElementById("alert").style.borderColor = rossoNatalizio;
+            document.getElementById("alert").style.color = bianco;
+            for (i=0; i<=4; i++) {
+                about.getElementsByTagName("b")[i].style.color = rossoScuro;
+                download.getElementsByTagName("h2")[i].style.color = rossoBordeaux;
+            }
+            for (i=0; i<=14; i++) {
+                download.getElementsByTagName("a")[i].style.color = verdeSalvia;
+            }
+            downloadBtns.forEach(function(btn) {
+                var buttonText = btn.textContent.toLowerCase();
+                if (!(buttonText.includes('x32') || buttonText.includes('x64'))) {
+                    btn.style.backgroundColor = rossoBordeaux;
+                }
+                if (buttonText.includes('x32') || buttonText.includes('x64')) {
+                    btn.style.color = verdeSalvia;
+                }
+            });
+            documentation.getElementsByTagName("div")[0].style.color = rossoBordeaux;
+            for (i=1; i<=2; i++) {
+                documentation.getElementsByTagName("h2")[i].style.color = rossoBordeaux;
+            }
+            for (i=0; i<=4; i++) {
+                documentation.getElementsByTagName("h4")[i].style.color = rossoBordeaux;
+                documentation.getElementsByClassName("material-symbols-rounded")[i].style.color = rossoBordeaux;
+                if (i == 4) {
+                    documentation.getElementsByClassName("material-symbols-rounded")[i+1].style.color = rossoBordeaux;
+                }
+            }
         }
-        
     </script>
 </body>
 </html>

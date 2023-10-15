@@ -198,5 +198,17 @@
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
     <script src="app.js"></script>
+    <script src="christmas.js"></script>
+    <script>
+        if (Christmas) {
+            document.getElementsByTagName("body")[0].style.backgroundColor = verdePino;
+            document.getElementsByTagName("body")[0].style.color = bianco;
+            document.getElementsByTagName("h2")[30].style.borderColor = verdeSalvia;
+            document.getElementsByTagName("h2")[31].style.borderColor = verdeSalvia;
+            for (i=33; i<=50; i++) {
+                document.getElementsByTagName("a")[i].style.color = rossoScuro;
+            }
+        }
+    </script>
 </body>
 </html>

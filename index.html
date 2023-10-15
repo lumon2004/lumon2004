@@ -153,13 +153,6 @@
             </div>
         </ul>
     </header>
-    <!--div id="notifica">
-        <p>This webpage is still in beta-testing. For any tips or bugs reporting</p>
-        <div>
-            <a href="mailto: lucamonaco04@libero.it">Feedback</a>
-            <span class="material-symbols-rounded">arrow_forward_ios</span>
-        </div>
-    </div-->
     <main>
         <div class="section">
             <h1 class="category"><span class="symbols">/</span>About<span class="symbols">.</span></h1>
@@ -220,7 +213,6 @@
                         </div>
                     </li>
                 </ul>
-                <!--h3><a href="https://lumon2004.github.io/lumon2004/programs.html" id="C">Discover more about my works in C</a></h3-->
             </div>
         </div>
         <div class="section">
@@ -235,5 +227,48 @@
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
     <script src="app.js"></script>
+    <script src="christmas.js"></script>
+    <script>
+        if (Christmas) {
+            main.style.backgroundColor = verdeSalvia;
+            main.getElementsByTagName("p")[18].style.color = bianco;
+            main.getElementsByTagName("p")[19].style.color = bianco;
+            for (i = 0; i <= 2; i++) {
+                main.getElementsByTagName("h1")[i].style.color = "rgb(156, 213, 255)";
+            }
+            for (i = 0; i <= 5; i++) {
+                main.getElementsByClassName("symbols")[i].style.color = rossoNatalizio;
+            }
+            for (i = 0; i <= 13; i++) {
+                main.getElementsByTagName("b")[i].style.color = rossoScuro;
+            }
+            main.getElementsByTagName("h2")[30].style.color = verdeAbete;
+            main.getElementsByTagName("h2")[31].style.color = verdeAbete;
+            for (i = 9; i <= 13; i++) {
+                main.getElementsByClassName("material-symbols-rounded")[i].style.color = rossoScuro;
+            }
+            for (i = 33; i <= 38; i++) {
+                main.getElementsByTagName("a")[i].style.color = rossoScuro;
+            }
+            for (i = 49; i <= 54; i++) {
+                main.getElementsByTagName("li")[i].style.boxShadow = "0px 10px 6px -6px " + rossoScuro;
+                main.getElementsByTagName("li")[i].addEventListener("mouseover", function () {
+                    this.style.boxShadow = "10px 10px 6px -6px " + rossoScuro;
+                })
+                main.getElementsByTagName("li")[i].addEventListener("mouseout", function () {
+                    this.style.boxShadow = "0px 10px 6px -6px " + rossoScuro;
+                })
+                if (i == 51) {
+                    main.getElementsByTagName("li")[i].style.boxShadow = "0px 16px 6px -6px " + rossoScuro;
+                    main.getElementsByTagName("li")[i].addEventListener("mouseover", function () {
+                        this.style.boxShadow = "10px 16px 6px -6px " + rossoScuro;
+                    })
+                    main.getElementsByTagName("li")[i].addEventListener("mouseout", function () {
+                        this.style.boxShadow = "0px 16px 6px -6px " + rossoScuro;
+                    })
+                }
+            }
+        }
+    </script>
 </body>
 </html>

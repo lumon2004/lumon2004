@@ -11,6 +11,7 @@ main {
     display: flex;
     background-color: var(--mainBg);
     color: var(--text);
+    margin-top: 2.5%;
 }
 
 main > div {

@@ -1,4 +1,5 @@
 var initial;
+var highlighted;
 
 // Ottieni l'elemento <main> specifico
 var mainElement = document.getElementsByTagName("main")[0];
@@ -13,21 +14,30 @@ if (backgroundColor.trim().toLowerCase() === "rgb(255, 255, 255)") {
     initial = "#fff"; 
 }
 
+if (!Christmas) {
+    highlighted = "#2997ff";
+} else if (Christmas) {
+    highlighted = rossoScuro;
+    initial = "#fff";
+}
+
 function openAbout() {
     document.getElementById('about').style.display="block";
     document.getElementById('downloads').style.display="none";
     document.getElementById('doc').style.display="none";
-    document.getElementById('aboutLabel').style.color = "#2997ff";
+    document.getElementById('aboutLabel').style.color = highlighted;
     document.getElementById('downloadLabel').style.color = initial;
     document.getElementById('docLabel').style.color = initial;
 }
+
+openAbout();
 
 function openDownloads() {
     document.getElementById('about').style.display="none";
     document.getElementById('downloads').style.display="block";
     document.getElementById('doc').style.display="none";
     document.getElementById('aboutLabel').style.color = initial;
-    document.getElementById('downloadLabel').style.color = "#2997ff";
+    document.getElementById('downloadLabel').style.color = highlighted;
     document.getElementById('docLabel').style.color = initial;
 }
 
@@ -37,7 +47,7 @@ function openDocumentation() {
     document.getElementById('doc').style.display="block";
     document.getElementById('aboutLabel').style.color = initial;
     document.getElementById('downloadLabel').style.color = initial;
-    document.getElementById('docLabel').style.color = "#2997ff";
+    document.getElementById('docLabel').style.color = highlighted;
 }
 
 function explainC() {
