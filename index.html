@@ -217,7 +217,7 @@
         </div>
         <div class="section">
             <h1 class="category"><span class="symbols">/</span>Tech<span class="symbols">.</span></h1>            
-            <p>I've been mostly working with <b>HTML</b> and <b>CSS</b>, designing static pages, but I also worked with <b>JavaScript</b> and introduced myself to <b>PHP</b>, <b>Bootstrap</b>, <b>SASS</b>, <b>jQuery</b> and <b>React</b>.<br><br>I attended a whole online course about <b>SQL</b> too, and finally I studied and collected a lot of experience with <b>C</b> in my first year at college.</p>
+            <p>I've been mostly working with <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b>, but I also introduced myself to <b>PHP</b>, <b>Bootstrap</b>, <b>SASS</b>, <b>jQuery</b> and <b>React</b>.<br><br>I attended a whole online course about <b>SQL</b> too, and finally I studied and collected a lot of experience with <b>C</b> in my first year at college.</p>
         </div>
     </main>
     <footer>
@@ -230,33 +230,29 @@
     <script src="christmas.js"></script>
     <script>
         if (Christmas) {
-            main.style.backgroundColor = verdeSalvia;
-            main.getElementsByTagName("p")[18].style.color = bianco;
-            main.getElementsByTagName("p")[19].style.color = bianco;
-            for (i = 0; i <= 2; i++) {
-                main.getElementsByTagName("h1")[i].style.color = "rgb(156, 213, 255)";
-            }
+            main.getElementsByTagName("p")[18].style.color = "var(--text)";
+            main.getElementsByTagName("p")[19].style.color = "var(--text)";
             for (i = 0; i <= 5; i++) {
-                main.getElementsByClassName("symbols")[i].style.color = rossoNatalizio;
+                main.getElementsByClassName("symbols")[i].style.color = rossoApple;
             }
             for (i = 0; i <= 13; i++) {
-                main.getElementsByTagName("b")[i].style.color = rossoScuro;
+                main.getElementsByTagName("b")[i].style.color = rossoApple;
             }
-            main.getElementsByTagName("h2")[30].style.color = verdeAbete;
-            main.getElementsByTagName("h2")[31].style.color = verdeAbete;
+            main.getElementsByTagName("h2")[30].style.color = "rgb(198, 198, 198)";
+            main.getElementsByTagName("h2")[31].style.color = "rgb(198, 198, 198)";
             for (i = 9; i <= 13; i++) {
-                main.getElementsByClassName("material-symbols-rounded")[i].style.color = rossoScuro;
+                main.getElementsByClassName("material-symbols-rounded")[i].style.color = rossoApple;
             }
             for (i = 33; i <= 38; i++) {
-                main.getElementsByTagName("a")[i].style.color = rossoScuro;
+                main.getElementsByTagName("a")[i].style.color = rossoApple;
             }
             for (i = 49; i <= 54; i++) {
-                main.getElementsByTagName("li")[i].style.boxShadow = "0px 10px 6px -6px " + rossoScuro;
+                main.getElementsByTagName("li")[i].style.boxShadow = "0px 10px 6px -6px " + rossoApple;
                 main.getElementsByTagName("li")[i].addEventListener("mouseover", function () {
-                    this.style.boxShadow = "10px 10px 6px -6px " + rossoScuro;
+                    this.style.boxShadow = "10px 10px 6px -6px " + rossoApple;
                 })
                 main.getElementsByTagName("li")[i].addEventListener("mouseout", function () {
-                    this.style.boxShadow = "0px 10px 6px -6px " + rossoScuro;
+                    this.style.boxShadow = "0px 10px 6px -6px " + rossoApple;
                 })
                 if (i == 51) {
                     main.getElementsByTagName("li")[i].style.boxShadow = "0px 16px 6px -6px " + rossoScuro;

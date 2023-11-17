@@ -1,0 +1,81 @@
+:root {
+    --text: #000;
+    --bg: #fff;
+    --blue: #1997ff;
+    --headerBg: #e9e9e9;
+    --borderShadow: rgba(0,0,0,.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #fff;
+        --bg: #000;
+        --headerBg: #232323;
+        --borderShadow: rgba(255,255,255,.35);
+    }
+}    
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    padding: 2% 3%;
+    background-color: var(--headerBg);
+}
+
+header > * {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header > h1 {
+    margin-right: auto;
+}
+
+header > a {
+    background-color: var(--blue);
+    text-decoration: none;
+    padding: .5% 1%;
+    border-radius: 20px;
+    color: #fff;
+}
+
+header > a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 80%;
+    margin: 0% 10%;
+    padding: 2.5% 0%;
+}
+
+main > * {
+    width: 100%;
+}
+
+@media screen and (max-width: 415px) {
+    header {
+        padding: 5% 3%;
+    }
+
+    header > h1 {
+        font-size: 7vw;
+    }
+
+    header > a {
+        padding: 2% 4%;
+    }
+
+    main {
+        padding: 5% 0%;
+        margin: 0 7.5%;
+        width: 85%;
+    }
+}

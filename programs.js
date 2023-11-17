@@ -17,8 +17,8 @@ if (backgroundColor.trim().toLowerCase() === "rgb(255, 255, 255)") {
 if (!Christmas) {
     highlighted = "#2997ff";
 } else if (Christmas) {
-    highlighted = rossoScuro;
-    initial = "#fff";
+    highlighted = rossoApple;
+    initial = "var(--text)";
 }
 
 function openAbout() {

@@ -390,7 +390,11 @@
                     scrolling = true;
                     if (window.scrollY > 50) {
                         index.style.position = "fixed";
-                        index.style.marginTop = "-30%";
+                        if (Christmas) {
+                            index.style.marginTop = "-31.5%";                           
+                        } else {
+                            index.style.marginTop = "-30%";
+                        }
                         index.style.zIndex = "2";
                         content.style.marginTop = "17.5%";
                     } else {
@@ -415,45 +419,45 @@
         var documentation = document.getElementById("doc");
         if (Christmas) {
             header.style.paddingBottom = ".5%";
-            document.getElementsByTagName("main")[0].style.backgroundColor = verdeSalvia;
-            index.style.backgroundColor = verdeSalvia;
-            index.style.color = bianco;
-            content.style.backgroundColor = verdeAbete;
-            content.style.color = bianco;
+            // document.getElementsByTagName("main")[0].style.backgroundColor = verdeSalvia;
+            // index.style.backgroundColor = verdeSalvia;
+            index.style.color = "var(--text)";
+            // content.style.backgroundColor = verdeAbete;
+            content.style.color = "var(--text)";
             for (i=0; i<=2; i++) {
-                document.getElementsByTagName("h1")[i].style.color = rossoScuro;
+                document.getElementsByTagName("h1")[i].style.color = "rgb(198,198,198)";
             }
-            document.getElementById("openCloseExpl").style.color = rossoScuro;
-            about.getElementsByTagName("a")[0].style.color = rossoScuro;
-            document.getElementById("alert").style.borderColor = rossoNatalizio;
-            document.getElementById("alert").style.color = bianco;
+            document.getElementById("openCloseExpl").style.color = rossoApple;
+            about.getElementsByTagName("a")[0].style.color = rossoApple;
+            document.getElementById("alert").style.borderColor = rossoApple;
+            document.getElementById("alert").style.color = "var(--text)";
             for (i=0; i<=4; i++) {
-                about.getElementsByTagName("b")[i].style.color = rossoScuro;
-                download.getElementsByTagName("h2")[i].style.color = rossoBordeaux;
+                about.getElementsByTagName("b")[i].style.color = rossoApple;
+                // download.getElementsByTagName("h2")[i].style.color = rossoApple;
             }
-            for (i=0; i<=14; i++) {
+            /*for (i=0; i<=14; i++) {
                 download.getElementsByTagName("a")[i].style.color = verdeSalvia;
-            }
+            }*/
             downloadBtns.forEach(function(btn) {
                 var buttonText = btn.textContent.toLowerCase();
                 if (!(buttonText.includes('x32') || buttonText.includes('x64'))) {
-                    btn.style.backgroundColor = rossoBordeaux;
+                    btn.style.backgroundColor = rossoApple;
                 }
-                if (buttonText.includes('x32') || buttonText.includes('x64')) {
+                /*if (buttonText.includes('x32') || buttonText.includes('x64')) {
                     btn.style.color = verdeSalvia;
-                }
+                }*/
             });
-            documentation.getElementsByTagName("div")[0].style.color = rossoBordeaux;
-            for (i=1; i<=2; i++) {
+            // documentation.getElementsByTagName("div")[0].style.color = rossoApple;
+            /*for (i=1; i<=2; i++) {
                 documentation.getElementsByTagName("h2")[i].style.color = rossoBordeaux;
-            }
-            for (i=0; i<=4; i++) {
+            }*/
+            /*for (i=0; i<=4; i++) {
                 documentation.getElementsByTagName("h4")[i].style.color = rossoBordeaux;
                 documentation.getElementsByClassName("material-symbols-rounded")[i].style.color = rossoBordeaux;
                 if (i == 4) {
                     documentation.getElementsByClassName("material-symbols-rounded")[i+1].style.color = rossoBordeaux;
                 }
-            }
+            }*/
         }
     </script>
 </body>

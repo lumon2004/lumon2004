@@ -1,0 +1,163 @@
+:root {
+    --text: #fff;
+    --bg: #000;
+    --headerBg: #232323;
+    --portfolioBack: #e5e5e5;
+    --indexBg: #141414;
+    --indexLabelHighlighted: rgb(64, 64, 64);
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    padding: 2% 3%;
+    background-color: var(--headerBg);
+}
+
+header > * {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header > h1 {
+    margin-right: auto;
+}
+
+header > a {
+    background-color: var(--portfolioBack);
+    text-decoration: none;
+    padding: .5% 1%;
+    border-radius: 20px;
+    color: var(--bg);
+}
+
+header > a:hover {
+    text-decoration: underline;
+}
+
+main {
+    text-align: center;
+}
+
+main > div#index {
+    width: 60%;
+    position: unset;
+    padding: 1% 20%;
+    background-color: var(--indexBg);
+}
+
+main > div#index > ul {
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    margin: .5% 0%;
+}
+
+main > div#index > ul > li {
+    cursor: pointer;
+    padding: .5% 1%;
+    border-radius: 10px;
+}
+
+main > div#content > div#oreLocali {
+    display: block;
+}
+
+main > div#content > div#oreLocali > p:first-of-type {
+    font-size: 1.5vw;
+}
+
+main > div#content > div#oreLocali > p#date, main > div#content > div#oreLocali > p#week {
+    text-transform: lowercase;
+    font-size: 2vw;
+}
+
+main > div#content > div#oreLocali > p#time {
+    font-size: 15vw;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+main > div#content > div#oreLocali > div#places {
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    margin-bottom: 1%;
+}
+
+main > div#content > div#oreLocali > div#places > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+main > div#content > div#sveglie {
+    display: none;
+}
+
+main > div#content > div#cronometro {
+    display: none;
+    background-color: #000;
+    color: #fff;
+}
+
+main > div#content > div#cronometro > div#crono {
+    font-size: 15vw;
+    font-weight: 100;
+    margin: 5% 0;
+    width: 10%;
+    margin-left: 20%;
+}
+
+main > div#content > div#cronometro > button#startStopBtnCrono, main > div#content > div#cronometro > button#resetBtn {
+    border: 0;
+    border-radius: 100%;
+    padding: 2.25vw 1.5vw;
+    font-size: 1.5vw;
+    margin-bottom: 5%;
+}
+
+main > div#content > div#cronometro > button#startStopBtnCrono {
+    background-color: rgba(0, 255, 29, 0.3);
+    color: rgb(0,255,29);
+    margin-right: 15%;
+}
+
+main > div#content > div#cronometro > button#resetBtn {
+    background-color: rgba(106, 106, 106, 0.3);
+    color: rgb(158, 158, 158);
+    padding: 2.25vw 1.35vw;
+}
+
+main > div#content > div#timer {
+    display: none;
+}
+
+main > div#content > div#timer > input[type='number'] {
+    background-color: #ffffff26;
+    color: #ffffff84;
+    font-size: 7vw;
+    width: 10%;
+    border: 0;
+    
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; /* Rimuovi il margine predefinito */
+}

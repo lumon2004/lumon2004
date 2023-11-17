@@ -141,7 +141,7 @@ div.underHeader > div  * {
 
 div.underHeader p {
   color: var(--headerminitext);
-  font-weight: 200;
+  font-weight: 450;
   font-size: 1.25vw;
   margin-bottom: 2%;
 }

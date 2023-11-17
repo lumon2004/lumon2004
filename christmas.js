@@ -11,6 +11,8 @@ const rossoScuro = "#C0392B";
 const verdePino = "#27AE60";
 const rossoBordeaux = "#922B21";
 const verdeSalvia = "rgb(0, 121, 97)";
+
+const rossoApple = "#e30000";
 /* COSTANTI ELEMENTI */
 const header = document.getElementsByTagName("header")[0];
 const underHeaderWorks = document.getElementsByClassName("underHeader")[0];
@@ -28,43 +30,49 @@ if ((day >= 8 && month == 12) || (day <= 6 && month == 1)) {
 }
 function Xmas() {
     /* SISTEMAZIONI DI BASE PER DESKTOP */
-    header.style.backgroundColor = rossoNatalizio;
+    header.style.backgroundColor = rossoApple;
     header.style.color = bianco;
     header.getElementsByTagName("a")[0].style.color = bianco;
     header.getElementsByTagName("a")[9].style.color = bianco;
-    underHeaderWorks.style.backgroundColor = rossoNatalizio;
-    underHeaderContacts.style.backgroundColor = rossoNatalizio;
-    underHeaderServices.style.backgroundColor = rossoNatalizio;
+    underHeaderWorks.style.backgroundColor = rossoApple;
+    underHeaderContacts.style.backgroundColor = rossoApple;
+    underHeaderServices.style.backgroundColor = rossoApple;
     for (i = 0; i <= 7; i++) {
         underHeaderWorks.getElementsByTagName("a")[i].style.color = bianco;
         if (i == 7) {
-            underHeaderWorks.getElementsByTagName("p")[0].style.color = "rgb(0, 115, 10)";
-            underHeaderWorks.getElementsByTagName("p")[1].style.color = "rgb(0, 115, 10)";
-            underHeaderWorks.getElementsByTagName("p")[2].style.color = "rgb(0, 115, 10)";
+            underHeaderWorks.getElementsByTagName("p")[0].style.color = "rgb(198, 198, 198)";
+            underHeaderWorks.getElementsByTagName("p")[1].style.color = "rgb(198, 198, 198)";
+            underHeaderWorks.getElementsByTagName("p")[2].style.color = "rgb(198, 198, 198)";
         }
     }
     for (i = 0; i <= 3; i++) {
         underHeaderContacts.getElementsByTagName("a")[i].style.color = bianco;
         if (i == 3) {
-            underHeaderContacts.getElementsByTagName("p")[0].style.color = "rgb(0, 115, 10)";
+            underHeaderContacts.getElementsByTagName("p")[0].style.color = "rgb(198, 198, 198)";
         }
     }
     for (i = 0; i <= 2; i++) {
         underHeaderServices.getElementsByTagName("a")[i].style.color = bianco;
         if (i == 2) {
-            underHeaderServices.getElementsByTagName("p")[0].style.color = "rgb(0, 115, 10)";
+            underHeaderServices.getElementsByTagName("p")[0].style.color = "rgb(198, 198, 198)";
         }
     }
 
     /* AGGIUSTAMENTI PER MOBILE */
     if (window.innerWidth <= 415) {
-        mobileMenu.style.backgroundColor = rossoNatalizio;
+        mobileMenu.style.backgroundColor = rossoApple;
         for (i = 0; i <= 7; i++) {
             mobileMenu.getElementsByClassName("material-symbols-rounded")[i].style.color = bianco;
         }
         /*mobileMenu.getElementsByTagName("p")[0].style.color = bianco;*/
         for (i = 0; i <= 8; i++) {
             mobileMenu.getElementsByTagName("p")[i].style.color = bianco;
+            if (i == 1 || i == 2 || i == 3 || i == 6 || i == 8) {
+                mobileMenu.getElementsByTagName("p")[i].style.color = "rgb(187,187,187)";
+            }
+        }
+        for (i = 0; i <= 15; i++) {
+            mobileMenu.getElementsByTagName("a")[i].style.color = bianco;
         }
     }
 }
