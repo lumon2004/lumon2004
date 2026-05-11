@@ -33,5 +33,4 @@ Eventually: a complete portfolio linking web apps, iOS demos and Python notebook
 
 ## 📬 Find me
 
-- 🌐 [Portfolio](https://lumon2004.github.io/lumon2004/)
 - 💼 [GitHub](https://github.com/lumon2004)
