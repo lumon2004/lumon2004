@@ -1,4 +1,4 @@
-# Hi, I'm Luca Monaco 👋
+# Hi, I'm Luca 👋
 
 **Computer Engineering Student & Software Developer** based in Rome, Italy 🇮🇹  
 *Engineering clean, purpose-driven software — from native iOS applications to scalable backend systems, with an active focus on Machine Learning and AI.*
