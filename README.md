@@ -41,6 +41,6 @@
 
 ## 📬 Let's Connect
 
-- 💼 **LinkedIn:** [luca-monaco04](https://www.linkedin.com/in/luca-monaco04)
+<!--- 💼 **LinkedIn:** [luca-monaco04](https://www.linkedin.com/in/luca-monaco04)-->
 - 🐙 **GitHub:** [@lumon2004](https://github.com/lumon2004)
 - ✉️ **Email:** [lucamonaco004@gmail.com](mailto:lucamonaco004@gmail.com)

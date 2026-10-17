@@ -1,81 +1,30 @@
-// Theme Management (Dark / Light)
-const themeToggleBtn = document.getElementById('theme-toggle');
-const root = document.documentElement;
-const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-// Helper to determine the effective theme
-function getEffectiveTheme() {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    return savedTheme;
-  }
-  return colorSchemeQuery.matches ? 'dark' : 'light';
+// Initialize current year dynamically
+const yearElement = document.getElementById('year');
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
 }
 
-// Function to apply the theme
-function applyTheme(theme) {
-  root.setAttribute('data-theme', theme);
+// Initialize dynamic age (Birthdate: January 1, 2004)
+const ageElement = document.getElementById('age');
+if (ageElement) {
+  const birthDate = new Date(2004, 0, 1);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  ageElement.textContent = age;
 }
 
-// Initialize theme on load
-applyTheme(getEffectiveTheme());
+// Clean up any previously stored manual theme preference
+try {
+  localStorage.removeItem('theme');
+} catch (e) {
+  // Ignore in environments where localStorage is not accessible
+}
 
-// Listen for system theme changes in real-time
-colorSchemeQuery.addEventListener('change', (e) => {
-  // If the user hasn't explicitly overridden the theme, update automatically with system change
-  if (!localStorage.getItem('theme')) {
-    applyTheme(e.matches ? 'dark' : 'light');
-  }
-});
-
-// Manual theme toggle button
-themeToggleBtn.addEventListener('click', () => {
-  const currentTheme = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-  
-  applyTheme(newTheme);
-  localStorage.setItem('theme', newTheme);
-});
-
-// Dynamic current year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Form Handling with AJAX/Fetch
-const notifyForm = document.getElementById('notify-form');
-const formMsg = document.getElementById('form-msg');
-const formError = document.getElementById('form-error');
-
-notifyForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const submitBtn = notifyForm.querySelector('button');
-  const endpoint = notifyForm.getAttribute('action');
-
-  // Reset errors
-  if (formError) formError.style.display = 'none';
-
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Saving...';
-
-  try {
-    const response = await fetch(endpoint, {
-      method: 'POST',
-      body: new FormData(notifyForm),
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    if (response.ok) {
-      notifyForm.style.display = 'none';
-      formMsg.style.display = 'block';
-    } else {
-      throw new Error('Form submission failed');
-    }
-  } catch (error) {
-    if (formError) {
-      formError.style.display = 'block';
-    }
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Notify Me';
-  }
-});
+// Initialize Lucide Icons
+if (window.lucide) {
+  lucide.createIcons();
+}
