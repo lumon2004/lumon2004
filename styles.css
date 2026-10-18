@@ -3,8 +3,43 @@
   background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
 }
 
+.skill-badge {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background-color: rgba(241, 245, 249, 0.8);
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease, transform 180ms ease;
+}
+
+.skill-badge:hover {
+  color: var(--skill-color);
+  background-color: color-mix(in srgb, var(--skill-color) 10%, white);
+  border-color: color-mix(in srgb, var(--skill-color) 40%, white);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--skill-color) 14%, transparent);
+  transform: translateY(-2px);
+}
+
 @media (prefers-color-scheme: dark) {
   .bg-radial-glow {
     background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+  }
+
+  .skill-badge {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .skill-badge:hover {
+    background-color: color-mix(in srgb, var(--skill-color) 18%, #090d16);
+    border-color: color-mix(in srgb, var(--skill-color) 45%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-badge {
+    transition: none;
+  }
+
+  .skill-badge:hover {
+    transform: none;
   }
 }
