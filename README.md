@@ -15,11 +15,11 @@
 - Designed for tracking progressive overload, workout logs, and personal records with intuitive visual analytics.
 - **Tech:** `Swift` · `SwiftData` · `iOS SDK` · `Xcode`
 
-### 🛡️ [CookieRefuser](https://github.com/lumon2004/Cookie-Refuser)
-**Safari Extension for Automated Privacy Protection**
-- Automated privacy extension for Apple Safari that automatically identifies, detects, and dismisses non-essential cookie consent banners.
-- Enhances web browsing privacy smoothly without friction.
-- **Tech:** `Swift` · `JavaScript` · `Safari API` · `Xcode`
+### 🏎️ [F1 Data Platform](https://github.com/lumon2004/f1-data-platform)
+**End-to-end Data Pipeline & Analytics Platform**
+- End-to-end system that ingests, validates, and normalizes raw Formula 1 datasets with **Python** into a relational **PostgreSQL** model, served by a **Spring Boot** REST API and a web dashboard.
+- Fully reproducible with a single `docker compose up`, covered by 400+ automated tests and end-to-end acceptance tests.
+- **Tech:** `Python` · `PostgreSQL` · `Spring Boot` · `Docker` · `REST API`
 
 ---
 
