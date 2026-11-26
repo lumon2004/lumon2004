@@ -1,45 +1,369 @@
-/* Custom subtle ambient glow */
-.bg-radial-glow {
-  background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
+/* ==========================================================
+   Design tokens
+   Dark only. 60% background, 30% text / surfaces / borders,
+   10% electric violet accent.
+   Values are RGB triplets so Tailwind can apply opacity.
+   ========================================================== */
+:root {
+  --bg: 20 18 22;              /* #141216 */
+  --surface: 31 29 32;         /* #1F1D20 */
+  --raised: 39 37 40;          /* #272528 */
+  --ink: 236 232 227;          /* #ECE8E3 */
+  --ink-2: 167 164 161;        /* #A7A4A1 */
+  --ink-3: 140 137 134;        /* captions, a step below muted */
+  --accent: 157 107 255;       /* #9D6BFF */
+  --accent-hover: 175 134 255; /* #AF86FF */
+  --accent-tint: 42 32 59;     /* #2A203B */
+  --on-accent: 10 10 10;       /* #0A0A0A */
+  --ok: 76 195 138;
+
+  --line: #373437;
+  --line-strong: #4a464b;
+  --focus-ring: 0 0 0 2px rgb(var(--bg)), 0 0 0 4px rgb(var(--accent));
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  color-scheme: dark;
 }
 
+/* Project colour: set --project on <body> or on a .project element */
+body,
+.project {
+  --p: var(--project, rgb(var(--accent)));
+}
+
+::selection {
+  background: rgb(var(--accent-tint));
+  color: rgb(var(--ink));
+}
+
+/* ==========================================================
+   Section labels: mono, numbered automatically
+   ========================================================== */
+main {
+  counter-reset: section;
+}
+
+.label {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: rgb(var(--accent));
+}
+
+.label::before {
+  counter-increment: section;
+  content: counter(section, decimal-leading-zero);
+  color: rgb(var(--ink-3));
+}
+
+/* Small mono caption without a number (key facts, stack groups) */
+.meta {
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(var(--ink-3));
+}
+
+/* ==========================================================
+   Surfaces
+   ========================================================== */
+.card {
+  background: rgb(var(--surface));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.card-hover {
+  transition: border-color 160ms var(--ease);
+}
+
+.card-hover:hover {
+  border-color: var(--line-strong);
+}
+
+.panel {
+  background: rgb(var(--raised) / 0.6);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.dashed {
+  border: 1px dashed var(--line-strong);
+  border-radius: 12px;
+  transition: border-color 160ms var(--ease), background-color 160ms var(--ease);
+}
+
+.dashed:hover {
+  border-color: rgb(var(--ink) / 0.3);
+  background: rgb(var(--surface) / 0.6);
+}
+
+/* ==========================================================
+   Controls
+   ========================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 160ms var(--ease), border-color 160ms var(--ease),
+    color 160ms var(--ease), transform 120ms var(--ease);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-sm {
+  height: 34px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.btn-primary {
+  background: rgb(var(--accent));
+  color: rgb(var(--on-accent));
+}
+
+.btn-primary:hover {
+  background: rgb(var(--accent-hover));
+}
+
+.btn-secondary {
+  background: rgb(var(--surface));
+  border: 1px solid var(--line-strong);
+  color: rgb(var(--ink));
+}
+
+.btn-secondary:hover {
+  background: rgb(var(--raised));
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: rgb(var(--surface));
+  color: rgb(var(--ink-2));
+  transition: color 160ms var(--ease), border-color 160ms var(--ease);
+}
+
+.icon-btn:hover {
+  color: rgb(var(--accent));
+  border-color: var(--line-strong);
+}
+
+.nav-link {
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: rgb(var(--ink-2));
+  transition: color 160ms var(--ease), background-color 160ms var(--ease);
+}
+
+.nav-link:hover {
+  color: rgb(var(--accent));
+  background: rgb(var(--ink) / 0.05);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 6px;
+}
+
+/* ==========================================================
+   Tags and chips
+   ========================================================== */
+
+/* Category tag, coloured with the project colour */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--p);
+  background: color-mix(in srgb, var(--p) 9%, transparent);
+  border: 1px solid color-mix(in srgb, var(--p) 24%, transparent);
+}
+
+/* Quiet tech chip on project cards */
+.chip {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-size: 11px;
+  line-height: 16px;
+  color: rgb(var(--ink-2));
+  background: rgb(var(--raised));
+}
+
+code.inline {
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-size: 0.875em;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgb(var(--raised));
+  color: rgb(var(--ink));
+}
+
+/* Skill badge: neutral at rest, brand colour of the technology on hover */
 .skill-badge {
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  background-color: rgba(241, 245, 249, 0.8);
-  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
-    box-shadow 180ms ease, transform 180ms ease;
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', 'SF Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgb(var(--ink-2));
+  background: rgb(var(--raised));
+  border: 1px solid var(--line);
+  transition: color 160ms var(--ease), background-color 160ms var(--ease),
+    border-color 160ms var(--ease), transform 160ms var(--ease);
 }
 
 .skill-badge:hover {
-  color: var(--skill-color);
-  background-color: color-mix(in srgb, var(--skill-color) 10%, white);
-  border-color: color-mix(in srgb, var(--skill-color) 40%, white);
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--skill-color) 14%, transparent);
-  transform: translateY(-2px);
+  /* Lifted towards white so dark brand colours (C, Flutter...) stay readable */
+  color: color-mix(in srgb, var(--skill-color) 70%, white);
+  background: color-mix(in srgb, var(--skill-color) 16%, rgb(var(--surface)));
+  border-color: color-mix(in srgb, var(--skill-color) 40%, transparent);
+  transform: translateY(-1px);
 }
 
-@media (prefers-color-scheme: dark) {
-  .bg-radial-glow {
-    background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
-  }
+/* ==========================================================
+   Colour on hover
+   ========================================================== */
 
-  .skill-badge {
-    border-color: rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.05);
-  }
+/* Icon that is muted at rest and takes its own colour (--c) when the
+   surrounding .group is hovered. */
+.hue {
+  color: rgb(var(--ink-3));
+  transition: color 160ms var(--ease);
+}
 
-  .skill-badge:hover {
-    background-color: color-mix(in srgb, var(--skill-color) 18%, #090d16);
-    border-color: color-mix(in srgb, var(--skill-color) 45%, transparent);
-  }
+.group:hover .hue {
+  color: var(--c, var(--p));
+}
+
+/* Title that takes the project colour when its card is hovered */
+.project-title {
+  transition: color 160ms var(--ease);
+}
+
+.group:hover .project-title {
+  color: var(--p);
+}
+
+.text-project {
+  color: var(--p);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(var(--ok));
+  box-shadow: 0 0 0 3px rgb(var(--ok) / 0.18);
+}
+
+.arrow-nudge {
+  transition: transform 160ms var(--ease), color 160ms var(--ease);
+}
+
+.group:hover .arrow-nudge {
+  transform: translateX(3px);
+  color: rgb(var(--ink));
+}
+
+/* ==========================================================
+   Screenshots
+   ========================================================== */
+.shot {
+  display: block;
+  overflow: hidden;
+  background: rgb(var(--surface));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: border-color 160ms var(--ease);
+}
+
+.shot:hover {
+  border-color: var(--line-strong);
+}
+
+.shot-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--line);
+  background: rgb(var(--raised) / 0.5);
+}
+
+.shot-bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(var(--ink) / 0.14);
+}
+
+#lightbox {
+  background: rgb(var(--surface));
+  color: rgb(var(--ink));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 24px 64px rgb(0 0 0 / 0.24);
+}
+
+#lightbox::backdrop {
+  background: rgb(10 10 9 / 0.72);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .skill-badge {
-    transition: none;
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
   }
+}
 
-  .skill-badge:hover {
-    transform: none;
-  }
+/* Callout link with an accent on hover (GitHub link on the home page) */
+.callout-accent:hover {
+  border-color: rgb(var(--accent) / 0.55);
+  background: rgb(var(--accent-tint) / 0.35);
+}
+
+.callout-icon {
+  transition: color 160ms var(--ease), background-color 160ms var(--ease);
+}
+
+.callout-accent:hover .callout-icon {
+  background: rgb(var(--accent-tint));
+  color: rgb(var(--accent));
+}
+
+.callout-accent:hover .arrow-nudge {
+  color: rgb(var(--accent));
 }

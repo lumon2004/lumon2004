@@ -6,37 +6,14 @@
   <title>Luca Monaco — Computer Engineering & Software Development</title>
   <meta name="description" content="Portfolio of Luca Monaco: Computer Engineering student & Software Developer specializing in native iOS apps, backend architecture, and AI/ML exploration." />
 
-  <!-- Tailwind CSS CDN with configuration -->
+  <!-- Tailwind CSS CDN; shared theme in theme.js -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-	tailwind.config = {
-	  darkMode: 'media',
-	  theme: {
-		extend: {
-		  fontFamily: {
-			sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-			mono: ['JetBrains Mono', 'SF Mono', 'Fira Code', 'monospace'],
-		  },
-		  colors: {
-			dark: {
-			  bg: '#090d16',
-			  card: 'rgba(15, 23, 42, 0.65)',
-			  border: 'rgba(255, 255, 255, 0.08)',
-			  hover: 'rgba(255, 255, 255, 0.03)',
-			}
-		  },
-		  animation: {
-			'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-		  }
-		}
-	  }
-	}
-  </script>
+  <script src="theme.js"></script>
 
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@1.73.0"></script>
@@ -45,162 +22,143 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-slate-50 text-slate-900 dark:bg-[#090d16] dark:text-slate-100 font-sans antialiased selection:bg-sky-500/20 selection:text-sky-500 transition-colors duration-300 min-h-screen flex flex-col">
-
-  <!-- Ambient background glow effect -->
-  <div class="fixed inset-0 bg-radial-glow pointer-events-none -z-10"></div>
+<body class="bg-bg text-ink font-sans antialiased min-h-screen flex flex-col">
 
   <!-- Navigation Bar -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-50/80 dark:bg-[#090d16]/80 border-b border-slate-200/80 dark:border-white/10 transition-colors">
+  <header class="sticky top-0 z-50 bg-bg/85 backdrop-blur-md border-b border-line">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
 	  <!-- Monogram / Brand -->
-	  <a href="#" class="group flex items-center gap-2.5 font-semibold text-sm tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg py-1 px-1.5">
-		<span class="flex items-center justify-center w-8 h-8 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-950 font-mono text-xs font-bold transition-transform group-hover:scale-105">
-		  LM
-		</span>
-		<span class="hidden sm:inline-block font-medium tracking-tight group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">Luca Monaco</span>
+	  <a href="#" class="group flex items-center gap-2.5 text-sm font-medium">
+		<span class="flex items-center justify-center w-8 h-8 rounded-md bg-accent-tint text-accent font-mono text-xs font-semibold">LM</span>
+		<span class="hidden sm:inline-block group-hover:text-accent transition-colors">Luca Monaco</span>
 	  </a>
 
 	  <!-- Navigation Links -->
-	  <nav class="flex items-center gap-1 sm:gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
-		<a href="#about" class="px-2.5 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all text-xs sm:text-sm">About</a>
-		<a href="#projects" class="px-2.5 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all text-xs sm:text-sm">Projects</a>
-		<a href="#skills" class="px-2.5 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all text-xs sm:text-sm">Skills</a>
-		<a href="#contact" class="hidden md:inline-block px-2.5 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-all text-xs sm:text-sm">Contact</a>
+	  <nav class="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium">
+		<a href="#about" class="nav-link">About</a>
+		<a href="#projects" class="nav-link">Projects</a>
+		<a href="#skills" class="nav-link">Skills</a>
+		<a href="#contact" class="nav-link hidden md:inline-block">Contact</a>
 	  </nav>
 
-	  <!-- Actions: Resume/Contact Button -->
-	  <div class="flex items-center gap-2.5">
-		<!-- CTA Button -->
-		<a href="mailto:lucamonaco004@gmail.com" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium px-3.5 py-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-slate-100 transition-all shadow-sm">
-		  <span>Get in Touch</span>
-		  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-		</a>
-	  </div>
+	  <!-- CTA Button -->
+	  <a href="mailto:lucamonaco004@gmail.com" class="btn btn-sm btn-primary">
+		<span>Get in Touch</span>
+		<i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+	  </a>
 	</div>
   </header>
 
-  <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10 sm:pt-16 pb-24 space-y-24 sm:space-y-32">
-	
+  <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12 sm:pt-24 pb-24 space-y-24 sm:space-y-32">
+
 	<!-- Hero Section -->
-	<section class="flex flex-col items-start pt-6 sm:pt-12">
-	  <!-- Live Status Badge -->
-	  <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur-md shadow-xs mb-6">
-		<span class="relative flex h-2 w-2">
-		  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-		  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-		</span>
-		<span class="text-xs font-mono font-medium text-slate-700 dark:text-slate-300">
-		  Available for internships & junior roles • Rome / Remote
-		</span>
-	  </div>
+	<section class="flex flex-col items-start">
+	  <!-- Status -->
+	  <!--div class="inline-flex items-center gap-2.5 h-8 px-3 rounded-md border border-line bg-surface mb-8">
+		<span class="status-dot"></span>
+		<span class="font-mono text-xs text-ink-2">Available for internships & junior roles · Rome / Remote</span>
+	  </div-->
 
 	  <!-- Main Headline & Intro -->
-	  <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-950 dark:text-white mb-4">
+	  <h1 class="text-5xl sm:text-7xl font-medium tracking-[-0.03em] leading-[1.04] mb-5">
 		Luca Monaco
 	  </h1>
-	  <p class="text-lg sm:text-xl font-medium text-sky-600 dark:text-sky-400 mb-5">
+	  <p class="text-lg sm:text-xl font-medium text-accent mb-4">
 		Computer Engineering Student & Software Developer
 	  </p>
-	  <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-8">
+	  <p class="text-base sm:text-lg text-ink-2 max-w-2xl leading-relaxed mb-10">
 		Engineering clean, purpose-driven software — from native iOS applications to scalable backend systems, with an active focus on Machine Learning and AI.
 	  </p>
 
 	  <!-- Action Buttons & Socials -->
-	  <div class="flex flex-wrap items-center gap-3.5">
-		<a href="#projects" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-950 text-white dark:bg-white dark:text-slate-950 font-medium text-sm hover:opacity-90 transition-all shadow-sm">
+	  <div class="flex flex-wrap items-center gap-3">
+		<a href="#projects" class="btn btn-primary">
 		  <span>View Projects</span>
 		  <i data-lucide="arrow-down" class="w-4 h-4"></i>
 		</a>
-		<a href="#contact" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-white/15 bg-white dark:bg-slate-900/40 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 font-medium text-sm transition-all">
-		  <span>Contact Me</span>
-		</a>
+		<a href="#contact" class="btn btn-secondary">Contact Me</a>
 
-		<div class="h-6 w-px bg-slate-300 dark:bg-white/15 mx-1 hidden sm:block"></div>
+		<div class="h-6 w-px bg-line-strong mx-1 hidden sm:block"></div>
 
 		<!-- Social Quick Links -->
-		<div class="flex items-center gap-2">
-		<a href="https://github.com/lumon2004" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="p-2.5 rounded-xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-slate-900/50 hover:text-sky-600 dark:hover:text-sky-400 hover:border-slate-300 dark:hover:border-white/20 transition-all">
-			<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+		<a href="https://github.com/lumon2004" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="icon-btn">
+		  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-			</svg>
+		  </svg>
 		</a>
-		<!--a href="https://www.linkedin.com/in/luca-monaco04" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="p-2.5 rounded-xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-slate-900/50 hover:text-sky-600 dark:hover:text-sky-400 hover:border-slate-300 dark:hover:border-white/20 transition-all">
-			<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+		<!--a href="https://www.linkedin.com/in/luca-monaco04" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="icon-btn">
+		  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 			<path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.91 0-1.64.73-1.64 1.64a1.64 1.64 0 1 0 3.28 0c0-.91-.73-1.64-1.64-1.64z"/>
-			</svg>
+		  </svg>
 		</a-->
-		</div>
 	  </div>
 	</section>
 
 	<!-- About Section -->
-	<section id="about" class="space-y-6">
-	  <div class="space-y-1">
-		<h2 class="text-xs font-mono uppercase tracking-widest text-sky-600 dark:text-sky-400 font-semibold">About</h2>
-		<p class="text-2xl sm:text-3xl font-bold tracking-tight">Designing systems with precision and purpose.</p>
+	<section id="about" class="space-y-8 scroll-mt-24">
+	  <div class="space-y-3">
+		<h2 class="label">About</h2>
+		<p class="text-2xl sm:text-3xl font-medium tracking-[-0.02em]">Designing systems with precision and purpose.</p>
 	  </div>
 
 	  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 		<!-- Main Bio Card -->
-		<div class="md:col-span-2 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-900/40 backdrop-blur-sm space-y-4">
-		  <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
-			I am a <span id="age"></span>-year-old <span class="font-semibold text-slate-900 dark:text-white">Computer Engineering student based in Rome</span> with a deep curiosity for computing foundations and high-craft software engineering.
+		<div class="card md:col-span-2 p-6 sm:p-8 space-y-4">
+		  <p class="text-ink leading-relaxed">
+			I am a <span id="age"></span>-year-old <span class="font-medium">Computer Engineering student based in Rome</span> with a deep curiosity for computing foundations and high-craft software engineering.
 		  </p>
-		  <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+		  <p class="text-ink-2 leading-relaxed text-sm">
 			My work centers on building cohesive user experiences paired with reliable, performant backends. Whether designing native Swift applications or architecting RESTful services, I emphasize clean architecture, deterministic state handling, and idiomatic code design.
 		  </p>
 		</div>
 
 		<!-- Pillar Highlights Card -->
-		<div class="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-900/40 backdrop-blur-sm flex flex-col justify-between space-y-4">
+		<div class="card p-6 sm:p-8 flex flex-col justify-between gap-6">
 		  <div>
-			<span class="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400">Core Focus</span>
-			<ul class="mt-3 space-y-2.5 text-sm font-medium">
-			  <li class="flex items-center gap-2">
-				<i data-lucide="smartphone" class="w-4 h-4 text-sky-500"></i>
+			<span class="meta">Core focus</span>
+			<ul class="mt-4 space-y-1 text-sm font-medium">
+			  <li class="flex items-center gap-2.5 h-8">
+				<i data-lucide="smartphone" class="w-4 h-4" style="color: #0a84ff"></i>
 				<span>Apple Platform Development</span>
 			  </li>
-			  <li class="flex items-center gap-2">
-				<i data-lucide="server" class="w-4 h-4 text-emerald-500"></i>
+			  <li class="flex items-center gap-2.5 h-8">
+				<i data-lucide="server" class="w-4 h-4" style="color: #16a36a"></i>
 				<span>Systems & Backend Architecture</span>
 			  </li>
-			  <li class="flex items-center gap-2">
-				<i data-lucide="cpu" class="w-4 h-4 text-purple-500"></i>
+			  <li class="flex items-center gap-2.5 h-8">
+				<i data-lucide="cpu" class="w-4 h-4" style="color: #8b5cf6"></i>
 				<span>AI & Machine Learning Foundations</span>
 			  </li>
 			</ul>
 		  </div>
-		  <div class="pt-4 border-t border-slate-200 dark:border-white/5 text-xs text-slate-500">
-			Based in Rome, Italy • Available Worldwide (Remote)
+		  <div class="pt-4 border-t border-line meta">
+			Based in Rome, Italy · Available worldwide (remote)
 		  </div>
 		</div>
 	  </div>
 	</section>
 
 	<!-- Projects Section -->
-	<section id="projects" class="space-y-8">
-	  <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-		<div class="space-y-1">
-		  <h2 class="text-xs font-mono uppercase tracking-widest text-sky-600 dark:text-sky-400 font-semibold">Featured Work</h2>
-		  <p class="text-2xl sm:text-3xl font-bold tracking-tight">Engineered for performance and clarity.</p>
+	<section id="projects" class="space-y-8 scroll-mt-24">
+	  <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+		<div class="space-y-3">
+		  <h2 class="label">Featured work</h2>
+		  <p class="text-2xl sm:text-3xl font-medium tracking-[-0.02em]">Engineered for performance and clarity.</p>
 		</div>
-		<a href="https://github.com/lumon2004" target="_blank" rel="noopener noreferrer" class="text-xs font-mono inline-flex items-center gap-1 text-slate-500 hover:text-sky-500 transition-colors">
+		<a href="https://github.com/lumon2004" target="_blank" rel="noopener noreferrer" class="text-xs font-mono inline-flex items-center gap-1.5 text-ink-3 hover:text-accent transition-colors">
 		  <span>All repositories on GitHub</span>
 		  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
 		</a>
 	  </div>
 
-	  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-		
+	  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
 		<!-- Project 1: RepUp -->
-		<div class="group relative rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-slate-900/40 p-6 sm:p-7 flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/20 transition-all hover:shadow-lg hover:shadow-slate-500/5">
+		<div class="project group card card-hover p-6 sm:p-7 flex flex-col justify-between" style="--project: #ff7a5c;">
 		  <div class="space-y-4">
-			<div class="flex items-center justify-between">
-			<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-[#fff1ed] text-[#c83d25] dark:bg-[#3b1712]/60 dark:text-[#ff8068] border border-[#f7c4b8]/60 dark:border-[#8f382b]/40">
-				<i data-lucide="activity" class="w-3 h-3"></i> iOS Application
-			</span>
-			  <!--a href="https://github.com/lumon2004/RepUp" target="_blank" rel="noopener noreferrer" aria-label="RepUp GitHub" class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+			<div class="flex items-center justify-between h-6">
+			  <span class="tag"><i data-lucide="activity" class="w-3 h-3"></i> iOS Application</span>
+			  <!--a href="https://github.com/lumon2004/RepUp" target="_blank" rel="noopener noreferrer" aria-label="RepUp GitHub" class="text-ink-3 hover:text-ink transition-colors">
 				<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-4 fill-current">
 				  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.455-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.027 1.592 1.027 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.337-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
 				</svg>
@@ -208,23 +166,23 @@
 			</div>
 
 			<div>
-				<h3 class="text-xl font-bold tracking-tight group-hover:text-[#F05138] dark:group-hover:text-[#FF6B4A] transition-colors">RepUp</h3>
-				<p class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">iOS Workout & Strength Progression Tracker</p>
+			  <h3 class="project-title text-xl font-medium tracking-[-0.01em]">RepUp</h3>
+			  <p class="text-sm text-ink-3 mt-1">iOS Workout & Strength Progression Tracker</p>
 			</div>
 
-			<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+			<p class="text-sm text-ink-2 leading-relaxed">
 			  A modern iOS workout tracking application built natively with Swift and SwiftData. Designed for tracking progressive overload, workout history, and personal records with intuitive visual analytics.
 			</p>
 		  </div>
 
-		  <div class="pt-6 mt-6 border-t border-slate-100 dark:border-white/5 flex flex-wrap items-center justify-between gap-3">
-			<div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-600 dark:text-slate-400">
-			  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5">Swift</span>
-			  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5">SwiftData</span>
-			  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5">Xcode</span>
-			  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5">iOS SDK</span>
+		  <div class="pt-5 mt-6 border-t border-line flex flex-wrap items-center justify-between gap-3">
+			<div class="flex flex-wrap gap-1.5">
+			  <span class="chip">Swift</span>
+			  <span class="chip">SwiftData</span>
+			  <span class="chip">Xcode</span>
+			  <span class="chip">iOS SDK</span>
 			</div>
-			<!--a href="https://github.com/lumon2004/RepUp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-slate-900 dark:text-white hover:underline">
+			<!--a href="https://github.com/lumon2004/RepUp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium hover:underline">
 			  <span>Source</span>
 			  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
 			</a-->
@@ -232,13 +190,11 @@
 		</div>
 
 		<!-- Project 2: F1-Data-Platform -->
-		<div class="group relative rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-slate-900/40 p-6 sm:p-7 flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/20 transition-all hover:shadow-lg hover:shadow-slate-500/5">
+		<div class="project group card card-hover p-6 sm:p-7 flex flex-col justify-between" style="--project: #ff5a52;">
 		  <div class="space-y-4">
-			<div class="flex items-center justify-between">
-			  <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-mono font-medium bg-red-50 text-[#E10600] dark:bg-[#E10600]/10 dark:text-[#ff4d4d] border border-red-200/60 dark:border-[#E10600]/30">
-				<i data-lucide="database" class="w-3 h-3"></i> Data Engineering
-			  </span>
-			  <a href="https://github.com/lumon2004/f1-data-platform" target="_blank" rel="noopener noreferrer" aria-label="F1 Data Platform GitHub" class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+			<div class="flex items-center justify-between h-6">
+			  <span class="tag"><i data-lucide="database" class="w-3 h-3"></i> Data Engineering</span>
+			  <a href="https://github.com/lumon2004/f1-data-platform" target="_blank" rel="noopener noreferrer" aria-label="F1 Data Platform GitHub" class="text-ink-3 hover:text-ink transition-colors">
 				<svg aria-hidden="true" viewBox="0 0 24 24" class="w-4 h-4 fill-current">
 				  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.455-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.607.069-.607 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.027 1.592 1.027 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.337-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
 				</svg>
@@ -246,150 +202,150 @@
 			</div>
 
 			<div>
-			  <h3 class="text-xl font-bold tracking-tight group-hover:text-[#E10600] dark:group-hover:text-red-500 transition-colors">F1 Data Platform</h3>
-			  <p class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">End-to-End Data Pipeline & Analytics Platform</p>
+			  <h3 class="project-title text-xl font-medium tracking-[-0.01em]">F1 Data Platform</h3>
+			  <p class="text-sm text-ink-3 mt-1">End-to-End Data Pipeline & Analytics Platform</p>
 			</div>
 
-			<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+			<p class="text-sm text-ink-2 leading-relaxed">
 			  An end-to-end data processing and analytics platform that ingests, cleans, and normalizes raw Formula 1 datasets into PostgreSQL via Python. Features a Spring Boot REST API and interactive web dashboards to query and visualize race statistics.
 			</p>
 		  </div>
 
-		  <div class="pt-6 mt-6 border-t border-slate-100 dark:border-white/5 flex flex-wrap items-center justify-between gap-3">
-			<div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-600 dark:text-slate-400">
-			  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5">Python</span>
-			  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5">PostgreSQL</span>
-			  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5">Spring Boot</span>
-			  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5">Docker</span>
-			  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5">REST API</span>
+		  <div class="pt-5 mt-6 border-t border-line flex flex-wrap items-center justify-between gap-3">
+			<div class="flex flex-wrap gap-1.5">
+			  <span class="chip">Python</span>
+			  <span class="chip">PostgreSQL</span>
+			  <span class="chip">Spring Boot</span>
+			  <span class="chip">Docker</span>
+			  <span class="chip">REST API</span>
 			</div>
-			<a href="projects/f1-data-platform.html" class="inline-flex items-center gap-1 text-xs font-medium text-slate-900 dark:text-white hover:underline">
+			<a href="projects/f1-data-platform.html" class="inline-flex items-center gap-1 text-sm font-medium text-ink hover:text-project transition-colors">
 			  <span>Details</span>
 			  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
+			</a>
 		  </div>
 		</div>
 
 	  </div>
 
 	  <!-- GitHub Explorer Callout -->
-	  <a href="https://github.com/lumon2004" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-5 rounded-xl border border-dashed border-slate-300 dark:border-white/15 hover:border-slate-400 dark:hover:border-white/30 transition-all">
+	  <a href="https://github.com/lumon2004" target="_blank" rel="noopener noreferrer" class="group dashed callout-accent flex items-center justify-between p-5">
 		<div class="flex items-center gap-3">
-		  <div class="p-2 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300">
-			<i data-lucide="folder-git-2" class="w-5 h-5"></i>
+		  <div class="callout-icon flex items-center justify-center w-9 h-9 rounded-md bg-raised text-ink-2">
+			<i data-lucide="folder-git-2" class="w-4 h-4"></i>
 		  </div>
 		  <div>
-			<p class="text-sm font-medium text-slate-900 dark:text-white">Discover more open-source experiments & academic coursework</p>
-			<p class="text-xs text-slate-500">github.com/lumon2004</p>
+			<p class="text-sm font-medium">Discover more open-source experiments & academic coursework</p>
+			<p class="meta mt-0.5">github.com/lumon2004</p>
 		  </div>
 		</div>
-		<i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-1 group-hover:text-slate-900 dark:group-hover:text-white transition-all"></i>
+		<i data-lucide="arrow-right" class="arrow-nudge w-4 h-4 text-ink-3"></i>
 	  </a>
 	</section>
 
-	<!-- Skills & Technologies Bento Grid -->
-	<section id="skills" class="space-y-6">
-	  <div class="space-y-1">
-		<h2 class="text-xs font-mono uppercase tracking-widest text-sky-600 dark:text-sky-400 font-semibold">Technical Stack</h2>
-		<p class="text-2xl sm:text-3xl font-bold tracking-tight">Tools & Technologies</p>
+	<!-- Skills & Technologies -->
+	<section id="skills" class="space-y-8 scroll-mt-24">
+	  <div class="space-y-3">
+		<h2 class="label">Technical stack</h2>
+		<p class="text-2xl sm:text-3xl font-medium tracking-[-0.02em]">Tools & Technologies</p>
 	  </div>
 
 	  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-		
+
 		<!-- Category 1: Languages -->
-		<div class="p-6 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-900/40 backdrop-blur-sm space-y-4">
-		  <div class="flex items-center gap-2 text-slate-900 dark:text-white font-medium text-sm">
-			<i data-lucide="code-2" class="w-4 h-4 text-sky-500"></i>
+		<div class="group card p-6 space-y-4">
+		  <div class="group flex items-center gap-2.5 text-sm font-medium">
+			<i data-lucide="code-2" class="hue w-4 h-4" style="--c: #0a84ff"></i>
 			<span>Languages</span>
 		  </div>
 		  <div class="flex flex-wrap gap-2">
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #e34f26">HTML</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #1572b6">CSS</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #c9a800">JavaScript</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #f05138">Swift</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #3776ab">Python</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #e76f00">Java</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #00599c">C</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #00758f">SQL</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #0175c2">Dart</span>
+			<span class="skill-badge" style="--skill-color: #e34f26">HTML</span>
+			<span class="skill-badge" style="--skill-color: #1572b6">CSS</span>
+			<span class="skill-badge" style="--skill-color: #c9a800">JavaScript</span>
+			<span class="skill-badge" style="--skill-color: #f05138">Swift</span>
+			<span class="skill-badge" style="--skill-color: #3776ab">Python</span>
+			<span class="skill-badge" style="--skill-color: #e76f00">Java</span>
+			<span class="skill-badge" style="--skill-color: #00599c">C</span>
+			<span class="skill-badge" style="--skill-color: #00758f">SQL</span>
+			<span class="skill-badge" style="--skill-color: #0175c2">Dart</span>
 		  </div>
 		</div>
 
 		<!-- Category 2: Frameworks & Databases -->
-		<div class="p-6 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-900/40 backdrop-blur-sm space-y-4">
-		  <div class="flex items-center gap-2 text-slate-900 dark:text-white font-medium text-sm">
-			<i data-lucide="database" class="w-4 h-4 text-emerald-500"></i>
+		<div class="group card p-6 space-y-4">
+		  <div class="group flex items-center gap-2.5 text-sm font-medium">
+			<i data-lucide="database" class="hue w-4 h-4" style="--c: #16a36a"></i>
 			<span>Frameworks & Storage</span>
 		  </div>
 		  <div class="flex flex-wrap gap-2">
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #6db33f">Spring Boot</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #06b6d4">Tailwind CSS</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #f05138">SwiftData</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #336791">PostgreSQL</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #64748b">REST APIs</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #02569b">Flutter</span>
+			<span class="skill-badge" style="--skill-color: #6db33f">Spring Boot</span>
+			<span class="skill-badge" style="--skill-color: #06b6d4">Tailwind CSS</span>
+			<span class="skill-badge" style="--skill-color: #f05138">SwiftData</span>
+			<span class="skill-badge" style="--skill-color: #336791">PostgreSQL</span>
+			<span class="skill-badge" style="--skill-color: #64748b">REST APIs</span>
+			<span class="skill-badge" style="--skill-color: #02569b">Flutter</span>
 		  </div>
 		</div>
 
 		<!-- Category 3: Tools & Ecosystem -->
-		<div class="p-6 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-900/40 backdrop-blur-sm space-y-4 sm:col-span-2 lg:col-span-1">
-		  <div class="flex items-center gap-2 text-slate-900 dark:text-white font-medium text-sm">
-			<i data-lucide="wrench" class="w-4 h-4 text-purple-500"></i>
+		<div class="group card p-6 space-y-4 sm:col-span-2 lg:col-span-1">
+		  <div class="group flex items-center gap-2.5 text-sm font-medium">
+			<i data-lucide="wrench" class="hue w-4 h-4" style="--c: #8b5cf6"></i>
 			<span>Tools & Workflow</span>
 		  </div>
 		  <div class="flex flex-wrap gap-2">
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #f05032">Git / GitHub</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #2496ed">Docker</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #147efb">Xcode</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #007acc">VS Code</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #8b5cf6">Google Antigravity IDE</span>
-			<span class="skill-badge px-2.5 py-1 rounded-md text-xs font-mono font-medium" style="--skill-color: #a259ff">Figma</span>
+			<span class="skill-badge" style="--skill-color: #f05032">Git / GitHub</span>
+			<span class="skill-badge" style="--skill-color: #2496ed">Docker</span>
+			<span class="skill-badge" style="--skill-color: #147efb">Xcode</span>
+			<span class="skill-badge" style="--skill-color: #007acc">VS Code</span>
+			<span class="skill-badge" style="--skill-color: #8b5cf6">Google Antigravity IDE</span>
+			<span class="skill-badge" style="--skill-color: #a259ff">Figma</span>
 		  </div>
 		</div>
 
 	  </div>
 	</section>
 
-	<!-- Contact & Footer Section -->
-	<section id="contact" class="pt-8">
-	  <div class="rounded-3xl border border-slate-200 dark:border-white/10 bg-gradient-to-b from-white/90 to-slate-100/90 dark:from-slate-900/80 dark:to-[#0b0f19] p-8 sm:p-12 text-center space-y-6">
-		<span class="text-xs font-mono uppercase tracking-widest text-sky-600 dark:text-sky-400 font-semibold">Let's Connect</span>
-		
-		<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-950 dark:text-white max-w-xl mx-auto">
+	<!-- Contact Section -->
+	<section id="contact" class="scroll-mt-24">
+	  <div class="panel px-6 py-12 sm:p-16 text-center space-y-6">
+		<h2 class="label">Let's connect</h2>
+
+		<p class="text-3xl sm:text-4xl font-medium tracking-[-0.02em] max-w-xl mx-auto">
 		  Let’s build something impactful together.
-		</h2>
-		
-		<p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-md mx-auto">
+		</p>
+
+		<p class="text-sm sm:text-base text-ink-2 max-w-md mx-auto leading-relaxed">
 		  I am actively seeking software engineering internships, junior developer positions, and research opportunities.
 		</p>
 
 		<div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-            <a href="mailto:lucamonaco004@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-950 text-white dark:bg-white dark:text-slate-950 font-medium text-sm hover:opacity-90 transition-all shadow-sm">
-            <i data-lucide="mail" class="w-4 h-4"></i>
-            <span>lucamonaco004@gmail.com</span>
-            </a>
-            <!--a href="https://www.linkedin.com/in/luca-monaco04" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-300 dark:border-white/15 bg-white dark:bg-slate-900/50 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 font-medium text-sm transition-all">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.91 0-1.64.73-1.64 1.64a1.64 1.64 0 1 0 3.28 0c0-.91-.73-1.64-1.64-1.64z"/>
-            </svg>
-            <span>Connect on LinkedIn</span>
-            </a-->
+		  <a href="mailto:lucamonaco004@gmail.com" class="btn btn-primary w-full sm:w-auto">
+			<i data-lucide="mail" class="w-4 h-4"></i>
+			<span>lucamonaco004@gmail.com</span>
+		  </a>
+		  <!--a href="https://www.linkedin.com/in/luca-monaco04" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full sm:w-auto">
+			<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+			  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.91 0-1.64.73-1.64 1.64a1.64 1.64 0 1 0 3.28 0c0-.91-.73-1.64-1.64-1.64z"/>
+			</svg>
+			<span>Connect on LinkedIn</span>
+		  </a-->
 		</div>
 	  </div>
 	</section>
 
   </main>
 
-  <!-- Clean Footer -->
-  <footer class="border-t border-slate-200/80 dark:border-white/10 py-8 bg-slate-50/50 dark:bg-[#090d16]/50">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500 dark:text-slate-400">
+  <!-- Footer -->
+  <footer class="border-t border-line py-8">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-ink-3">
 	  <p>© <span id="year"></span> Luca Monaco. All rights reserved.</p>
 	  <div class="flex items-center gap-4">
-		<a href="https://github.com/lumon2004" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">GitHub</a>
-		<!--span>•</span>
-		<a href="https://www.linkedin.com/in/luca-monaco04" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">LinkedIn</a-->
-		<span>•</span>
-		<a href="mailto:lucamonaco004@gmail.com" class="hover:text-slate-900 dark:hover:text-white transition-colors">Email</a>
+		<a href="https://github.com/lumon2004" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">GitHub</a>
+		<!--span>·</span>
+		<a href="https://www.linkedin.com/in/luca-monaco04" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">LinkedIn</a-->
+		<span>·</span>
+		<a href="mailto:lucamonaco004@gmail.com" class="hover:text-accent transition-colors">Email</a>
 	  </div>
 	</div>
   </footer>
